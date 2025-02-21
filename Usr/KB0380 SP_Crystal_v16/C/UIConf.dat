@@ -1,0 +1,4 @@
+[ScadaBasic\Alloc_Buffer]
+MaxSize=10
+[ScadaBasic\LegacyBehavior]
+ReturnAsBreak=1

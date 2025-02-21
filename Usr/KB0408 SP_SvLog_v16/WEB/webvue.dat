@@ -1,0 +1,14 @@
+[Parameters]
+Language=0
+ProjectLanguage=0
+Apparence=0
+Window=
+Branche=
+Port=1024
+HttpPort=80
+Delay=500
+AutoRun=0
+Crypto=0
+FreeCache=0
+Description=No description
+ProjectLanguages=FRANCAIS,ENGLISH

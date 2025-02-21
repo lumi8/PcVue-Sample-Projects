@@ -1,0 +1,51 @@
+SUB Main()
+Select_Domain();
+Select_Nature();
+END SUB
+
+ 
+
+'declare variables:
+
+SUB Select_Domain()
+
+DIM lRet As Long;
+
+DIM sCbxText As Str;
+ 
+
+'retrieve contents of selected item in 1st control:
+
+lRet = COMBOBOX ( "GETSELECTEDINDEX", "Synoptique1","","AIComboBox1" );
+
+Print("lRet = ", lRet);
+
+'COMBOBOX ( "SETSELECTEDINDEX", "Synoptique1","","AIComboBox1", lRet);
+
+@Domaine_Nature.Domaine = COMBOBOX ( "GETTEXT", "Synoptique1","","AIComboBox1", lRet);
+
+
+ 
+
+END SUB
+
+SUB Select_Nature()
+
+DIM lRet As Long;
+
+DIM sCbxText As Str;
+ 
+
+'retrieve contents of selected item in 1st control:
+
+lRet = COMBOBOX ( "GETSELECTEDINDEX", "Synoptique1","","AIComboBox2" );
+
+Print("lRet = ", lRet);
+
+'COMBOBOX ( "SETSELECTEDINDEX", "Synoptique1","","AIComboBox2", lRet);
+
+@Domaine_Nature.Nature = COMBOBOX ( "GETTEXT", "Synoptique1","","AIComboBox2", lRet);
+ 
+
+END SUB
+

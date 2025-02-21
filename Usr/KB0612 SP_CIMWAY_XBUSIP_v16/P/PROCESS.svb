@@ -1,0 +1,251 @@
+SUB MAIN()
+	@NBBLOC = 0;
+	@BLOC.TYPE = 0;
+	@BLOC.ADDRESS = 0;
+
+	InitializeBloc();
+END SUB
+
+SUB InitializeBloc()
+	@BLOC.DAY = TOS(DateTime("DAY"));
+	@BLOC.MONTH = TOS(DateTime("MONTH"));
+	@BLOC.YEAR = TOS(DateTime("YEAR"));
+	
+	@BLOC.HOUR = TOS(DateTime("HOUR"));
+	@BLOC.MINUTE = TOS(DateTime("MINUTE"));
+	@BLOC.SECOND = TOS(DateTime("SECOND"));
+	@BLOC.MILLISECOND = TOS(DateTime("MILLISECOND"));
+	
+	@BLOC.VALUE = 0;
+	@BLOC.VALUEBIT = 0;
+	@BLOC.VALUEREAL = 0;
+END SUB
+
+
+
+SUB RazBlocs()
+	DIM BranchName AS STR;
+	DIM VariableName AS STR;
+	DIM i AS INTEGER, IntVal AS INTEGER;
+	
+	FOR(i = 0; i < 15; i++)
+		BranchName = ADDSTRING("BLOC", TOC(i));
+		
+		VariableName = ADDSTRING(BranchName,".TYPE");
+		SET(VariableName, 0);
+		VariableName = ADDSTRING(BranchName,".ADDRESS");
+		SET(VariableName, 0);
+		VariableName = ADDSTRING(BranchName,".VALUEHIGH");
+		SET(VariableName, 0);
+		VariableName = ADDSTRING(BranchName,".VALUELOW");
+		SET(VariableName, 0);
+		VariableName = ADDSTRING(BranchName,".VALUE_REAL");
+		SET(VariableName, 0);
+		VariableName = ADDSTRING(BranchName,".YEAR");
+		SET(VariableName, 0);
+		VariableName = ADDSTRING(BranchName,".MONTHDAY");
+		SET(VariableName, 0);
+		VariableName = ADDSTRING(BranchName,".HOURMINUTE");
+		SET(VariableName, 0);
+		VariableName = ADDSTRING(BranchName,".MILLISECOND");
+		SET(VariableName, 0);
+	NEXT
+	
+	IntVal = SENDLIST("BLOC");
+	Print("Result Sendlist = ",IntVal);
+END SUB
+
+
+SUB AddBloc()
+	DIM BranchName AS STR;
+	DIM VariableName AS STR;
+	DIM MonthDay AS INTEGER;
+	DIM HourMinute AS INTEGER;
+	DIM Millisecond AS INTEGER;
+	DIM Type AS INTEGER;
+		
+	BranchName = ADDSTRING("BLOC", TOC(@NBBLOC));
+	
+	IF(@NBBLOC <= 14)THEN
+		VariableName = ADDSTRING(BranchName,".TYPE");
+	
+		IF(@BLOC.TYPE == 0) THEN
+			Type = 0;
+		END IF
+		
+		IF(@BLOC.TYPE == 1) THEN
+			Type = 2048;
+		END IF
+		
+		IF(@BLOC.TYPE == 2) THEN
+			Type = 512;
+		END IF
+		
+		IF(@BLOC.TYPE == 3) THEN
+			Type = 2560;
+		END IF
+		
+		IF(@BLOC.TYPE == 4) THEN
+			Type = 1024;
+		END IF
+		
+		IF(@BLOC.TYPE == 5) THEN
+			Type = 3072;
+		END IF
+		
+		SET(VariableName, Type);
+		'?VariableName = TOS(Type);
+		
+		VariableName = ADDSTRING(BranchName,".ADDRESS");
+		SET(VariableName, @BLOC.ADDRESS);
+		'?VariableName = @BLOC.ADDRESS;
+
+		IF(@BLOC.TYPE < 2)THEN
+			VariableName = ADDSTRING(BranchName,".VALUEHIGH");
+			?VariableName = 0;
+			VariableName = ADDSTRING(BranchName,".VALUELOW");
+			?VariableName = TOS(@BLOC.VALUEBIT);
+		ELSE
+			IF(@BLOC.TYPE < 4) THEN
+				VariableName = ADDSTRING(BranchName,".VALUEHIGH");
+				?VariableName = 0;
+				VariableName = ADDSTRING(BranchName,".VALUELOW");
+				?VariableName = TOS(@BLOC.VALUE);
+			ELSE
+				print(@BLOC.VALUEREAL);
+				VariableName = ADDSTRING(BranchName,".VALUE_REAL");
+				?VariableName = @BLOC.VALUEREAL;
+			END IF
+		END IF
+
+		VariableName = ADDSTRING(BranchName,".YEAR");
+		?VariableName = TOS(@BLOC.YEAR - 1980);
+
+		VariableName = ADDSTRING(BranchName,".MONTHDAY");
+		MonthDay = TOI( @BLOC.MONTH * 256 + @BLOC.DAY);
+		?VariableName = TOS(MonthDay);
+
+		VariableName = ADDSTRING(BranchName,".HOURMINUTE");
+		HourMinute = TOI( @BLOC.HOUR * 256 + @BLOC.MINUTE);
+		?VariableName = TOS(HourMinute);
+
+		VariableName = ADDSTRING(BranchName,".MILLISECOND");
+		Millisecond = TOI(@BLOC.SECOND * 1000 + @BLOC.MILLISECOND);
+		?VariableName = TOS(Millisecond);
+		
+		
+		SENDLIST("BLOC");
+		
+		@NBBLOC = @NBBLOC + 1;
+		InitializeBloc();
+	END IF
+	
+END SUB
+
+SUB AddType()
+	IF(@BLOC.TYPE  < 5)THEN
+		@BLOC.TYPE = @BLOC.TYPE + 1;
+	END IF
+
+END SUB
+
+SUB DecType()
+	IF(@BLOC.TYPE  > 0)THEN
+		@BLOC.TYPE = @BLOC.TYPE - 1;
+	END IF
+	
+END SUB
+
+SUB SendBlocs()
+	DIM HeaderValue AS INTEGER;
+	
+	IF(@NBBLOC >= 1)THEN
+		HeaderValue = TOI(@HDATECOUNT * 256 + @NBBLOC);
+		@BLOC.HEADER = TOS(HeaderValue);
+	
+		
+		IF(@HDATECOUNT < 256) THEN
+			@HDATECOUNT = @HDATECOUNT + 1;
+		ELSE
+			@HDATECOUNT = 0;	
+		END IF
+	END IF
+END SUB
+
+
+SUB OnHeaderChanged()
+	print(@BLOC.HEADER);
+	IF(Logical("MODULO", @BLOC.HEADER , 256) == 0) THEN
+		print("mod = 0");
+		RazBlocs();
+		@NBBLOC = 0;
+	END IF
+
+END SUB
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

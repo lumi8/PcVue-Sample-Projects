@@ -1,0 +1,33 @@
+' Data.Svb
+' Generates values for variables used in trend
+
+Sub Main ()
+	Dim Counter As Long;
+	Dim Direction As Integer;
+	Dim cVar1 As Str, cVar2 As Str, cVar3 As Str, cVar4 As Str;
+
+	Counter = 0;
+	Direction = 1;
+
+	cVar1 = "TREND.TRACE1";
+	cVar2 = "TREND.TRACE2";
+	cVar3 = "TREND.TRACE3";
+	cVar4 = "TREND.TRACE4";
+
+	While(1)
+		Counter++;
+		?cVar1 = Tos(Cos(Counter) * 50 + 50);
+		?cVar2 = Tos(Sin(Counter) * 50 + 50);
+		?cVar3 = Tos(Irand(40,60));
+		If (?cVar4 > 99) Then
+			Direction = -1;
+		Else
+			If	(?cVar4 < 1) Then
+				Direction = 1;
+			End If
+		End If
+		?cVar4 = ?cVar4 + Tos(Direction);
+		Delay(4);
+	Wend
+
+End Sub

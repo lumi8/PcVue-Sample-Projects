@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<configuration>
+  <realtime value="true" />
+  <start_time value="0" />
+  <period value="1.8000000000000000e+05n" />
+  <trend_id value="Trend1" />
+  <mimic value="SvTrend" />
+  <branch value="" />
+  <curves>
+    <curve index="0">
+      <variable value="" />
+      <active value="true" />
+      <label1 value="" />
+      <label2 value="" />
+      <color r="255" g="0" b="0" index="0" />
+      <color_ns r="255" g="0" b="0" index="0" />
+      <scale visible="true" min="0.0000000000000000e+00" max="0.0000000000000000e+00" autoscale="false" />
+      <drawing visible="true" type="0" markers="0" style="0" thick="1" style_ns="2" thick_ns="1" />
+    </curve>
+    <curve index="1">
+      <variable value="" />
+      <active value="true" />
+      <label1 value="" />
+      <label2 value="" />
+      <color r="0" g="255" b="0" index="0" />
+      <color_ns r="0" g="255" b="0" index="0" />
+      <scale visible="true" min="0.0000000000000000e+00" max="0.0000000000000000e+00" autoscale="false" />
+      <drawing visible="true" type="1" markers="0" style="0" thick="1" style_ns="2" thick_ns="1" />
+    </curve>
+    <curve index="2">
+      <variable value="TREND.TRACE3" />
+      <active value="true" />
+      <label1 value="TREND.TRACE3" />
+      <label2 value="" />
+      <color r="255" g="255" b="0" index="0" />
+      <color_ns r="255" g="255" b="0" index="0" />
+      <scale visible="true" min="0.0000000000000000e+00" max="0.0000000000000000e+00" autoscale="false" />
+      <drawing visible="true" type="1" markers="0" style="0" thick="1" style_ns="2" thick_ns="1" />
+    </curve>
+    <curve index="3">
+      <variable value="TREND.TRACE4" />
+      <active value="true" />
+      <label1 value="TREND.TRACE4" />
+      <label2 value="" />
+      <color r="0" g="0" b="255" index="0" />
+      <color_ns r="0" g="0" b="255" index="0" />
+      <scale visible="true" min="0.0000000000000000e+00" max="0.0000000000000000e+00" autoscale="false" />
+      <drawing visible="true" type="1" markers="0" style="0" thick="1" style_ns="2" thick_ns="1" />
+    </curve>
+  </curves>
+</configuration>

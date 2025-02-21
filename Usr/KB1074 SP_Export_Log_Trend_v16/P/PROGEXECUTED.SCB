@@ -1,0 +1,20 @@
+'#############################################################
+'PROGRAM : PROGEXECUTED.scb
+'Loaded and executed at start-up fron the program 'INIT.scb'
+'Charg‚ et ex‚cut‚ au d‚narrage depuis le programme 'INIT.scb'
+'Display a text message in the program logviewer
+'Affiche un message texte
+'#############################################################
+
+sub main()
+
+FUNCTION01();
+
+end sub
+
+sub FUNCTION01()
+
+G_Trace("PROGEXECUTED.scb","FUNCTION01","Test");
+
+
+end sub

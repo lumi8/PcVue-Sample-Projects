@@ -1,0 +1,16 @@
+'-------- LOADER.SVB
+'-------- Used to load other programs
+
+Sub Main()
+
+	'-------- Initialise variables
+	  @ALARMSOUND.TEST = 0;
+
+	'-------- Programs to be loaded and started
+	  Program("START", "LANGUAGE.SVB", "");
+	  Program("START", "CONFIGSOUND.SVB", "");
+	  Program("START", "GENERAL.SVB", "");
+
+	'-------- Programs to be loaded but not started
+
+End Sub

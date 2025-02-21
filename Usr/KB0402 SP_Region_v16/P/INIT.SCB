@@ -1,0 +1,21 @@
+Sub Main()
+'	-------- LOADER.SCB
+	'-------- Used to load other programs
+	'-------- Programs to be loaded and started
+	  Program("START", "LANGUAGE.SCB", "");
+	  Program("START", "STARTUP.SCB", "");
+	  Program("START", "REGION.SCB", "");
+
+
+	'-------- Programs to be loaded but not started
+
+
+
+	'-------- Run at startup
+	  WINDOW("OPEN", "Control", "");
+	  WINDOW("OPEN", "Title", "");
+	  WINDOW("OPEN", "Region1", "");
+	  
+	  REGION ("SETREGION", 2);
+	  WINDOW("OPEN", "Region2", "");
+End Sub

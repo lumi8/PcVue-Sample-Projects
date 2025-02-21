@@ -1,0 +1,65 @@
+'-------- Language.svb
+
+'-------- Get current languages when program starts
+Sub Main()
+  GetLanguages();
+End Sub
+
+'-------- Get the language number
+Sub GetLangNum()
+  If( Language("GET") ==1) Then
+    @SYSTEM.LANGUAGE = 0;
+  Else
+    @SYSTEM.LANGUAGE = 1;
+  End If
+End Sub
+
+
+'-------- Set the language - The language number is passed to the subroutine as an argument
+Sub SetLanguage()
+  Dim LanguageID As Integer;
+
+  LanguageID = Ival(Getarg("ARG1"));
+  If (LanguageID == 2) Then
+    Language("SET_L2", 1);
+  Else
+    If(LanguageID == 1) Then
+      Language("SET_L1", 1);
+    End If
+  End If
+  GetLangNum();
+End Sub
+
+'-------- Gets the installed languages from the project's configuration file
+Sub GetLanguages()
+  Dim ProjectFolder As Str, ParamFile As Str, InString As Str;
+  Dim Rtn As Integer;
+  Dim Handle As Long;
+
+'-------- Get the project directory and open the config file 
+  ProjectFolder = GetProjectDir();
+  ParamFile = AddString(ProjectFolder, "\\C\\PARAM.DAT");
+  Rtn =  0;
+  Handle = Alloc_buffer (300);
+  Fopen (ParamFile, "r");
+
+'--------  Find the LANGUAGE key and get the two languages
+  While (Rtn == 0) 
+    InString = Fgets (ParamFile, 255 );
+    InString = Addstring (Instring, "\n");       ' AsciiField requires the string to be terminated with \n
+    Put_buffer (Handle, 0, InString);
+    If (CmpString (AsciiField ("STR", Handle, 1 , ","), "LANGUAGE") == 0) Then
+      @SYSTEM.LANGUAGE1 = AsciiField ("STR", Handle, 2 , ",");
+      @SYSTEM.LANGUAGE2 = AsciiField ("STR", Handle, 3 , ",");
+      Rtn = 1;
+    End If
+    Rtn = Feof (ParamFile);
+  Wend
+  Fclose (ParamFile);
+  Free_buffer (Handle);
+
+  GetLangNum();
+End Sub
+
+
+

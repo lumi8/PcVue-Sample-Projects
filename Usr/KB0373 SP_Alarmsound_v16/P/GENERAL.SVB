@@ -1,0 +1,41 @@
+Sub Main ()
+	InitAlarms();
+End Sub
+
+'-------- Plays selected sound file 3 times
+Sub Preview ()
+	Dim cMCIString As Str;
+	Dim iCount As Integer, iDelay As Integer;
+
+	iCount = 0;
+	iDelay = 2;
+	cMCIString = "open ALARMSOUND.WAV alias TEST";
+
+	Multimedia("SEND", cMCIString);
+	@ALARMSOUND.TEST = 1;
+	While (iCount < 3)
+		Multimedia("SEND","seek TEST to start");
+		Multimedia ("SEND","play TEST");
+		Delay(iDelay);
+		iCount ++;
+	Wend
+	@ALARMSOUND.TEST = 0;
+	Multimedia("SEND","close TEST");
+End Sub
+
+
+'-------- Initialise all alarms to 0
+Sub InitAlarms()
+	Dim cVarName As Str;
+	Dim i As Integer, j As Integer;
+
+	For (i=0; i<10; i++)
+		For (j=0; j<4; j++)
+			cVarName = AddString ("ALARM", Toc(i));
+			cVarName = AddString (cVarname, ".");
+			cVarName = AddString (cVarName, Toc(j));
+			?cVarName = 0;
+		 Next
+		Next
+	@ALARMSOUND.ON = 0;
+End Sub

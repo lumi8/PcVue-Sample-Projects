@@ -1,0 +1,2898 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Import>
+  <Group customRef="Main">
+    <Collection type="Branches">
+      <Item id="GENERAL">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+    </Collection>
+    <Collection type="ProgramEvents">
+      <Item id="GENERAL.TRENDSELECTOR.CheckIfConfigExist.INIT">
+        <Property id="VarName">GENERAL.TRENDSELECTOR.CheckIfConfigExist</Property>
+        <Property id="EnableExpression">ALL&gt;1</Property>
+        <Property id="ProgramBranch">GENERAL.TRENDSELECTOR</Property>
+        <Property id="ProgramFunction">CheckIfConfigExist</Property>
+        <Property id="ProgramName">L_General/TRENDS.SCB</Property>
+        <Property id="TriggeringCondition">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="Branches" id="GENERAL">
+      <Item id="TRENDSELECTOR">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="DateTimePicker">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.TRENDSELECTOR">
+      <Item id="Cancel">
+        <Property id="DescriptionLang0">Pour annuler un rafraichissement des tendances</Property>
+        <Property id="DescriptionLang1">To cancel a trends refresh</Property>
+      </Item>
+      <Item id="ProgressBar">
+        <Property id="Maximum">100</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="TimeToUpdateTrends">
+        <Property id="Maximum">99999999999999</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="Variables" id="GENERAL.TRENDSELECTOR">
+      <Item id="CheckIfConfigExist">
+        <Property id="Description">Pour exécuter un événement pendant la synchronisation de l’Application Architect si un nouveau modèle TRENDS a été instancié.</Property>
+        <Property id="DescriptionAlt">To execute an event during Application Architect synchronisation if a new TRENDS template has been instanciated</Property>
+        <Property id="InitialValue">1</Property>
+        <Property id="WithInitialValue">-1</Property>
+      </Item>
+      <Item id="ComboBoxIndex">
+        <Property id="Command">-1</Property>
+        <Property id="Saved">-1</Property>
+        <Property id="Scope">1</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="ConfigFileName">
+        <Property id="InitialValue">GENERAL.TRENDSELECTOR.Config.txt</Property>
+        <Property id="Saved">-1</Property>
+        <Property id="Scope">1</Property>
+        <Property id="Type">3</Property>
+        <Property id="WithInitialValue">-1</Property>
+      </Item>
+      <Item id="ConfigName">
+        <Property id="Command">-1</Property>
+        <Property id="Saved">-1</Property>
+        <Property id="Scope">1</Property>
+        <Property id="Type">3</Property>
+      </Item>
+      <Item id="TrendID">
+        <Property id="Command">-1</Property>
+        <Property id="ControlMaximumValue">100</Property>
+        <Property id="ControlMinimumValue">1</Property>
+        <Property id="Description">Position de la courbe dans le trend viewer</Property>
+        <Property id="DescriptionAlt">Curve position in trend viewer</Property>
+        <Property id="InitialValue">1</Property>
+        <Property id="MaximumValue">100</Property>
+        <Property id="MinimumValue">1</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+        <Property id="WithInitialValue">-1</Property>
+      </Item>
+      <Item id="TrendIdentity">
+        <Property id="InitialValue">Trend1</Property>
+        <Property id="Saved">-1</Property>
+        <Property id="Scope">1</Property>
+        <Property id="Type">3</Property>
+        <Property id="WithInitialValue">-1</Property>
+      </Item>
+      <Item id="TrendsFileName">
+        <Property id="InitialValue">GENERAL.TRENDSELECTOR.VarList.txt</Property>
+        <Property id="Saved">-1</Property>
+        <Property id="Scope">1</Property>
+        <Property id="Type">3</Property>
+        <Property id="WithInitialValue">-1</Property>
+      </Item>
+    </Collection>
+    <Collection type="Branches" id="GENERAL.DateTimePicker">
+      <Item id="End">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Start">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+    </Collection>
+    <Collection type="Branches" id="GENERAL.DateTimePicker.End">
+      <Item id="Week01">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Week02">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Week03">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Week04">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Week05">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Week06">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Year01">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Year02">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Year03">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Year04">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Year05">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Year06">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Year07">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Year08">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Year09">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Year10">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Year11">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Year12">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+    </Collection>
+    <Collection type="Branches" id="GENERAL.DateTimePicker.End.Week01">
+      <Item id="Friday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Monday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Saturday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Sunday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Thursday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Tuesday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Wednesday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+    </Collection>
+    <Collection type="Branches" id="GENERAL.DateTimePicker.End.Week02">
+      <Item id="Friday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Monday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Saturday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Sunday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Thursday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Tuesday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Wednesday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+    </Collection>
+    <Collection type="Branches" id="GENERAL.DateTimePicker.End.Week03">
+      <Item id="Friday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Monday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Saturday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Sunday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Thursday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Tuesday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Wednesday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+    </Collection>
+    <Collection type="Branches" id="GENERAL.DateTimePicker.End.Week04">
+      <Item id="Friday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Monday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Saturday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Sunday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Thursday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Tuesday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Wednesday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+    </Collection>
+    <Collection type="Branches" id="GENERAL.DateTimePicker.End.Week05">
+      <Item id="Friday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Monday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Saturday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Sunday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Thursday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Tuesday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Wednesday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+    </Collection>
+    <Collection type="Branches" id="GENERAL.DateTimePicker.End.Week06">
+      <Item id="Friday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Monday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Saturday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Sunday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Thursday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Tuesday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Wednesday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+    </Collection>
+    <Collection type="Branches" id="GENERAL.DateTimePicker.Start">
+      <Item id="Week01">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Week02">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Week03">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Week04">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Week05">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Week06">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Year01">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Year02">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Year03">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Year04">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Year05">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Year06">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Year07">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Year08">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Year09">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Year10">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Year11">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Year12">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+    </Collection>
+    <Collection type="Branches" id="GENERAL.DateTimePicker.Start.Week01">
+      <Item id="Friday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Monday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Saturday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Sunday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Thursday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Tuesday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Wednesday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+    </Collection>
+    <Collection type="Branches" id="GENERAL.DateTimePicker.Start.Week02">
+      <Item id="Friday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Monday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Saturday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Sunday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Thursday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Tuesday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Wednesday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+    </Collection>
+    <Collection type="Branches" id="GENERAL.DateTimePicker.Start.Week03">
+      <Item id="Friday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Monday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Saturday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Sunday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Thursday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Tuesday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Wednesday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+    </Collection>
+    <Collection type="Branches" id="GENERAL.DateTimePicker.Start.Week04">
+      <Item id="Friday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Monday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Saturday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Sunday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Thursday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Tuesday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Wednesday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+    </Collection>
+    <Collection type="Branches" id="GENERAL.DateTimePicker.Start.Week05">
+      <Item id="Friday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Monday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Saturday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Sunday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Thursday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Tuesday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Wednesday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+    </Collection>
+    <Collection type="Branches" id="GENERAL.DateTimePicker.Start.Week06">
+      <Item id="Friday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Monday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Saturday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Sunday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Thursday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Tuesday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+      <Item id="Wednesday">
+        <Property id="DescriptionLang1"></Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.End">
+      <Item id="MonthIsDisplay">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="SelectedDay">
+        <Property id="DescriptionLang0">Jour sélectionné</Property>
+        <Property id="DescriptionLang1">Selected Day</Property>
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="SelectedHour">
+        <Property id="DescriptionLang0">Heure séléctionnée</Property>
+        <Property id="DescriptionLang1">Selected Hour</Property>
+        <Property id="Maximum">23</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="SelectedMinute">
+        <Property id="DescriptionLang0">Minute sélectionnée</Property>
+        <Property id="DescriptionLang1">Selected Minute</Property>
+        <Property id="Maximum">59</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="SelectedMonth">
+        <Property id="DescriptionLang0">Mois sélectionné</Property>
+        <Property id="DescriptionLang1">Selected Month</Property>
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="SelectedSecond">
+        <Property id="DescriptionLang0">Seconde sélectionné</Property>
+        <Property id="DescriptionLang1">Selected Second</Property>
+        <Property id="Maximum">59</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="SelectedYear">
+        <Property id="DescriptionLang0">Année sélectionnée</Property>
+        <Property id="DescriptionLang1">Selected year</Property>
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="YearIsDisplay">
+        <Property id="Scope">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="Variables" id="GENERAL.DateTimePicker.End">
+      <Item id="SelectedDate">
+        <Property id="Description">Date sélectionnée au format string</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">3</Property>
+      </Item>
+      <Item id="SelectedTime">
+        <Property id="Description">Time sélectionnée au format string</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">3</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.End.Week01.Friday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.End.Week01.Monday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.End.Week01.Saturday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.End.Week01.Sunday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.End.Week01.Thursday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.End.Week01.Tuesday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.End.Week01.Wednesday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.End.Week02.Friday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.End.Week02.Monday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.End.Week02.Saturday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.End.Week02.Sunday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.End.Week02.Thursday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.End.Week02.Tuesday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.End.Week02.Wednesday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.End.Week03.Friday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.End.Week03.Monday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.End.Week03.Saturday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.End.Week03.Sunday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.End.Week03.Thursday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.End.Week03.Tuesday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.End.Week03.Wednesday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.End.Week04.Friday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.End.Week04.Monday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.End.Week04.Saturday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.End.Week04.Sunday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.End.Week04.Thursday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.End.Week04.Tuesday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.End.Week04.Wednesday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.End.Week05.Friday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.End.Week05.Monday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.End.Week05.Saturday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.End.Week05.Sunday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.End.Week05.Thursday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.End.Week05.Tuesday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.End.Week05.Wednesday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.End.Week06.Friday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.End.Week06.Monday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.End.Week06.Saturday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.End.Week06.Sunday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.End.Week06.Thursday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.End.Week06.Tuesday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.End.Week06.Wednesday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.End.Year01">
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.End.Year02">
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.End.Year03">
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.End.Year04">
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.End.Year05">
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.End.Year06">
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.End.Year07">
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.End.Year08">
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.End.Year09">
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.End.Year10">
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.End.Year11">
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.End.Year12">
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.Start">
+      <Item id="MonthIsDisplay">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="SelectedDay">
+        <Property id="DescriptionLang0">Jour sélectionné</Property>
+        <Property id="DescriptionLang1">Selected Day</Property>
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="SelectedHour">
+        <Property id="DescriptionLang0">Heure séléctionnée</Property>
+        <Property id="DescriptionLang1">Selected Hour</Property>
+        <Property id="Maximum">23</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="SelectedMinute">
+        <Property id="DescriptionLang0">Minute sélectionnée</Property>
+        <Property id="DescriptionLang1">Selected Minute</Property>
+        <Property id="Maximum">59</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="SelectedMonth">
+        <Property id="DescriptionLang0">Mois sélectionné</Property>
+        <Property id="DescriptionLang1">Selected Month</Property>
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="SelectedSecond">
+        <Property id="DescriptionLang0">Seconde sélectionné</Property>
+        <Property id="DescriptionLang1">Selected Second</Property>
+        <Property id="Maximum">59</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="SelectedYear">
+        <Property id="DescriptionLang0">Année sélectionnée</Property>
+        <Property id="DescriptionLang1">Selected year</Property>
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="YearIsDisplay">
+        <Property id="Scope">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="Variables" id="GENERAL.DateTimePicker.Start">
+      <Item id="SelectedDate">
+        <Property id="Description">Date sélectionnée au format string</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">3</Property>
+      </Item>
+      <Item id="SelectedTime">
+        <Property id="Description">Time sélectionnée au format string</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">3</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.Start.Week01.Friday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.Start.Week01.Monday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.Start.Week01.Saturday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.Start.Week01.Sunday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.Start.Week01.Thursday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.Start.Week01.Tuesday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.Start.Week01.Wednesday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.Start.Week02.Friday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.Start.Week02.Monday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.Start.Week02.Saturday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.Start.Week02.Sunday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.Start.Week02.Thursday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.Start.Week02.Tuesday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.Start.Week02.Wednesday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.Start.Week03.Friday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.Start.Week03.Monday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.Start.Week03.Saturday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.Start.Week03.Sunday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.Start.Week03.Thursday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.Start.Week03.Tuesday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.Start.Week03.Wednesday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.Start.Week04.Friday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.Start.Week04.Monday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.Start.Week04.Saturday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.Start.Week04.Sunday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.Start.Week04.Thursday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.Start.Week04.Tuesday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.Start.Week04.Wednesday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.Start.Week05.Friday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.Start.Week05.Monday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.Start.Week05.Saturday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.Start.Week05.Sunday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.Start.Week05.Thursday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.Start.Week05.Tuesday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.Start.Week05.Wednesday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.Start.Week06.Friday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.Start.Week06.Monday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.Start.Week06.Saturday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.Start.Week06.Sunday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.Start.Week06.Thursday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.Start.Week06.Tuesday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.Start.Week06.Wednesday">
+      <Item id="Day">
+        <Property id="Maximum">31</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="IsInCurrentMonth">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Month">
+        <Property id="Maximum">12</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.Start.Year01">
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.Start.Year02">
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.Start.Year03">
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.Start.Year04">
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.Start.Year05">
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.Start.Year06">
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.Start.Year07">
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.Start.Year08">
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.Start.Year09">
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.Start.Year10">
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.Start.Year11">
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+    <Collection type="HMIVariables" id="GENERAL.DateTimePicker.Start.Year12">
+      <Item id="Selected">
+        <Property id="Scope">2</Property>
+      </Item>
+      <Item id="Year">
+        <Property id="Maximum">9999</Property>
+        <Property id="Minimum">1980</Property>
+        <Property id="Scope">2</Property>
+        <Property id="Type">2</Property>
+      </Item>
+    </Collection>
+  </Group>
+</Import>

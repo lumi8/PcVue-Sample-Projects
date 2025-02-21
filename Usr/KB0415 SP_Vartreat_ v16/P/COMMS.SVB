@@ -1,0 +1,19 @@
+Sub Main()
+
+  @BLANKNG.NODE1.WORDREAD1.PERIOD = 5;
+
+End Sub
+
+
+Sub SetFramePeriod()
+
+  Dim iPeriod As Integer, iReturn As Integer;
+
+  iPeriod = Ival (GetArg ("ARG1"));
+  iReturn = Cimway ("SCANMDF", "BLANKNG.NODE1.WORDREAD1", iPeriod);
+  @BLANKNG.NODE1.WORDREAD1.PERIOD = Tos (iPeriod);
+
+
+  Print ("Return from SCANMDF = ",iReturn);
+
+End Sub

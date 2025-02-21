@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<TemplatesRoot Name="" SchemaVersion="12.1.0">
+<Library Name="L_DateTimePicker">
+<CategoriesList/>
+<TemplatesList>
+<Template Name="DateTimePicker">
+<DescriptionLang1>C'est le modèle à instancier</DescriptionLang1>
+<DescriptionLang2>This is the template to instanciate</DescriptionLang2>
+<AutoNaming_Prefix/>
+<AutoNaming_StartValue>1</AutoNaming_StartValue>
+<AutoNaming_FixedDigits>2</AutoNaming_FixedDigits>
+<AutoNaming_Step>1</AutoNaming_Step>
+<Enable_Instance>true</Enable_Instance>
+<ParametersList/>
+<TemplatesList>
+<IncludedTemplate Name="Week01">
+<Branch>Week01</Branch>
+<OriginTemplateName>L_DateTimePicker/Week</OriginTemplateName>
+</IncludedTemplate>
+<IncludedTemplate Name="Week02">
+<Branch>Week02</Branch>
+<OriginTemplateName>L_DateTimePicker/Week</OriginTemplateName>
+</IncludedTemplate>
+<IncludedTemplate Name="Week03">
+<Branch>Week03</Branch>
+<OriginTemplateName>L_DateTimePicker/Week</OriginTemplateName>
+</IncludedTemplate>
+<IncludedTemplate Name="Week04">
+<Branch>Week04</Branch>
+<OriginTemplateName>L_DateTimePicker/Week</OriginTemplateName>
+</IncludedTemplate>
+<IncludedTemplate Name="Week05">
+<Branch>Week05</Branch>
+<OriginTemplateName>L_DateTimePicker/Week</OriginTemplateName>
+</IncludedTemplate>
+<IncludedTemplate Name="Week06">
+<Branch>Week06</Branch>
+<OriginTemplateName>L_DateTimePicker/Week</OriginTemplateName>
+</IncludedTemplate>
+<IncludedTemplate Name="Year01">
+<Branch>Year01</Branch>
+<OriginTemplateName>L_DateTimePicker/Year</OriginTemplateName>
+</IncludedTemplate>
+<IncludedTemplate Name="Year02">
+<Branch>Year02</Branch>
+<OriginTemplateName>L_DateTimePicker/Year</OriginTemplateName>
+</IncludedTemplate>
+<IncludedTemplate Name="Year03">
+<Branch>Year03</Branch>
+<OriginTemplateName>L_DateTimePicker/Year</OriginTemplateName>
+</IncludedTemplate>
+<IncludedTemplate Name="Year04">
+<Branch>Year04</Branch>
+<OriginTemplateName>L_DateTimePicker/Year</OriginTemplateName>
+</IncludedTemplate>
+<IncludedTemplate Name="Year05">
+<Branch>Year05</Branch>
+<OriginTemplateName>L_DateTimePicker/Year</OriginTemplateName>
+</IncludedTemplate>
+<IncludedTemplate Name="Year06">
+<Branch>Year06</Branch>
+<OriginTemplateName>L_DateTimePicker/Year</OriginTemplateName>
+</IncludedTemplate>
+<IncludedTemplate Name="Year07">
+<Branch>Year07</Branch>
+<OriginTemplateName>L_DateTimePicker/Year</OriginTemplateName>
+</IncludedTemplate>
+<IncludedTemplate Name="Year08">
+<Branch>Year08</Branch>
+<OriginTemplateName>L_DateTimePicker/Year</OriginTemplateName>
+</IncludedTemplate>
+<IncludedTemplate Name="Year09">
+<Branch>Year09</Branch>
+<OriginTemplateName>L_DateTimePicker/Year</OriginTemplateName>
+</IncludedTemplate>
+<IncludedTemplate Name="Year10">
+<Branch>Year10</Branch>
+<OriginTemplateName>L_DateTimePicker/Year</OriginTemplateName>
+</IncludedTemplate>
+<IncludedTemplate Name="Year11">
+<Branch>Year11</Branch>
+<OriginTemplateName>L_DateTimePicker/Year</OriginTemplateName>
+</IncludedTemplate>
+<IncludedTemplate Name="Year12">
+<Branch>Year12</Branch>
+<OriginTemplateName>L_DateTimePicker/Year</OriginTemplateName>
+</IncludedTemplate>
+</TemplatesList>
+<ObjectsList>
+<Object Name="MonthIsDisplay">
+<InternalType>2</InternalType>
+<SvType>94</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="Scope" Reset="false" Substitute="false">2</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="SelectedDate">
+<InternalType>2</InternalType>
+<SvType>3</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="Description" Reset="false" Substitute="false">Date sélectionnée au format string</Property>
+<Property id="Scope" Reset="false" Substitute="false">2</Property>
+<Property id="Type" Reset="false" Substitute="false">3</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="SelectedDay">
+<InternalType>2</InternalType>
+<SvType>95</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="DescriptionLang0" Reset="false" Substitute="false">Jour sélectionné</Property>
+<Property id="DescriptionLang1" Reset="false" Substitute="false">Selected Day</Property>
+<Property id="Maximum" Reset="false" Substitute="false">31</Property>
+<Property id="Scope" Reset="false" Substitute="false">2</Property>
+<Property id="Type" Reset="false" Substitute="false">2</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="SelectedHour">
+<InternalType>2</InternalType>
+<SvType>95</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="DescriptionLang0" Reset="false" Substitute="false">Heure séléctionnée</Property>
+<Property id="DescriptionLang1" Reset="false" Substitute="false">Selected Hour</Property>
+<Property id="Maximum" Reset="false" Substitute="false">23</Property>
+<Property id="Scope" Reset="false" Substitute="false">2</Property>
+<Property id="Type" Reset="false" Substitute="false">2</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="SelectedMinute">
+<InternalType>2</InternalType>
+<SvType>95</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="DescriptionLang0" Reset="false" Substitute="false">Minute sélectionnée</Property>
+<Property id="DescriptionLang1" Reset="false" Substitute="false">Selected Minute</Property>
+<Property id="Maximum" Reset="false" Substitute="false">59</Property>
+<Property id="Scope" Reset="false" Substitute="false">2</Property>
+<Property id="Type" Reset="false" Substitute="false">2</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="SelectedMonth">
+<InternalType>2</InternalType>
+<SvType>95</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="DescriptionLang0" Reset="false" Substitute="false">Mois sélectionné</Property>
+<Property id="DescriptionLang1" Reset="false" Substitute="false">Selected Month</Property>
+<Property id="Maximum" Reset="false" Substitute="false">31</Property>
+<Property id="Scope" Reset="false" Substitute="false">2</Property>
+<Property id="Type" Reset="false" Substitute="false">2</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="SelectedSecond">
+<InternalType>2</InternalType>
+<SvType>95</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="DescriptionLang0" Reset="false" Substitute="false">Seconde sélectionné</Property>
+<Property id="DescriptionLang1" Reset="false" Substitute="false">Selected Second</Property>
+<Property id="Maximum" Reset="false" Substitute="false">59</Property>
+<Property id="Scope" Reset="false" Substitute="false">2</Property>
+<Property id="Type" Reset="false" Substitute="false">2</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="SelectedTime">
+<InternalType>2</InternalType>
+<SvType>3</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="Description" Reset="false" Substitute="false">Time sélectionnée au format string</Property>
+<Property id="Scope" Reset="false" Substitute="false">2</Property>
+<Property id="Type" Reset="false" Substitute="false">3</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="SelectedYear">
+<InternalType>2</InternalType>
+<SvType>95</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="DescriptionLang0" Reset="false" Substitute="false">Année sélectionnée</Property>
+<Property id="DescriptionLang1" Reset="false" Substitute="false">Selected year</Property>
+<Property id="Maximum" Reset="false" Substitute="false">9999</Property>
+<Property id="Minimum" Reset="false" Substitute="false">1980</Property>
+<Property id="Scope" Reset="false" Substitute="false">2</Property>
+<Property id="Type" Reset="false" Substitute="false">2</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="YearIsDisplay">
+<InternalType>2</InternalType>
+<SvType>94</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="Scope" Reset="false" Substitute="false">2</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+</ObjectsList>
+<InheritedTemplatesList/>
+</Template>
+<Template Name="Day">
+<DescriptionLang1>Utilisé dans le modèle Week</DescriptionLang1>
+<DescriptionLang2>Used in the Week template</DescriptionLang2>
+<AutoNaming_Prefix/>
+<AutoNaming_StartValue>1</AutoNaming_StartValue>
+<AutoNaming_FixedDigits>2</AutoNaming_FixedDigits>
+<AutoNaming_Step>1</AutoNaming_Step>
+<Enable_Instance>false</Enable_Instance>
+<ParametersList/>
+<TemplatesList/>
+<ObjectsList>
+<Object Name="Day">
+<InternalType>2</InternalType>
+<SvType>95</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="Maximum" Reset="false" Substitute="false">31</Property>
+<Property id="Scope" Reset="false" Substitute="false">2</Property>
+<Property id="Type" Reset="false" Substitute="false">2</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="IsInCurrentMonth">
+<InternalType>2</InternalType>
+<SvType>94</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="Scope" Reset="false" Substitute="false">2</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="Month">
+<InternalType>2</InternalType>
+<SvType>95</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="Maximum" Reset="false" Substitute="false">12</Property>
+<Property id="Scope" Reset="false" Substitute="false">2</Property>
+<Property id="Type" Reset="false" Substitute="false">2</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="Selected">
+<InternalType>2</InternalType>
+<SvType>94</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="Scope" Reset="false" Substitute="false">2</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="Year">
+<InternalType>2</InternalType>
+<SvType>95</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="Maximum" Reset="false" Substitute="false">9999</Property>
+<Property id="Minimum" Reset="false" Substitute="false">1980</Property>
+<Property id="Scope" Reset="false" Substitute="false">2</Property>
+<Property id="Type" Reset="false" Substitute="false">2</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+</ObjectsList>
+<InheritedTemplatesList/>
+</Template>
+<Template Name="Week">
+<DescriptionLang1>Utilisé dans le modèle DateTimePicker</DescriptionLang1>
+<DescriptionLang2>Used in the DateTimePicker template</DescriptionLang2>
+<AutoNaming_Prefix/>
+<AutoNaming_StartValue>1</AutoNaming_StartValue>
+<AutoNaming_FixedDigits>2</AutoNaming_FixedDigits>
+<AutoNaming_Step>1</AutoNaming_Step>
+<Enable_Instance>false</Enable_Instance>
+<ParametersList/>
+<TemplatesList>
+<IncludedTemplate Name="Friday">
+<Branch>Friday</Branch>
+<OriginTemplateName>L_DateTimePicker/Day</OriginTemplateName>
+</IncludedTemplate>
+<IncludedTemplate Name="Monday">
+<Branch>Monday</Branch>
+<OriginTemplateName>L_DateTimePicker/Day</OriginTemplateName>
+</IncludedTemplate>
+<IncludedTemplate Name="Saturday">
+<Branch>Saturday</Branch>
+<OriginTemplateName>L_DateTimePicker/Day</OriginTemplateName>
+</IncludedTemplate>
+<IncludedTemplate Name="Sunday">
+<Branch>Sunday</Branch>
+<OriginTemplateName>L_DateTimePicker/Day</OriginTemplateName>
+</IncludedTemplate>
+<IncludedTemplate Name="Thursday">
+<Branch>Thursday</Branch>
+<OriginTemplateName>L_DateTimePicker/Day</OriginTemplateName>
+</IncludedTemplate>
+<IncludedTemplate Name="Tuesday">
+<Branch>Tuesday</Branch>
+<OriginTemplateName>L_DateTimePicker/Day</OriginTemplateName>
+</IncludedTemplate>
+<IncludedTemplate Name="Wednesday">
+<Branch>Wednesday</Branch>
+<OriginTemplateName>L_DateTimePicker/Day</OriginTemplateName>
+</IncludedTemplate>
+</TemplatesList>
+<ObjectsList/>
+<InheritedTemplatesList/>
+</Template>
+<Template Name="Year">
+<DescriptionLang1>Utilisé dans le modèle DateTimePicker</DescriptionLang1>
+<DescriptionLang2>Used in the DateTimePicker template</DescriptionLang2>
+<AutoNaming_Prefix/>
+<AutoNaming_StartValue>1</AutoNaming_StartValue>
+<AutoNaming_FixedDigits>2</AutoNaming_FixedDigits>
+<AutoNaming_Step>1</AutoNaming_Step>
+<Enable_Instance>false</Enable_Instance>
+<ParametersList/>
+<TemplatesList/>
+<ObjectsList>
+<Object Name="Selected">
+<InternalType>2</InternalType>
+<SvType>94</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="Scope" Reset="false" Substitute="false">2</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="Year">
+<InternalType>2</InternalType>
+<SvType>95</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="Maximum" Reset="false" Substitute="false">9999</Property>
+<Property id="Minimum" Reset="false" Substitute="false">1980</Property>
+<Property id="Scope" Reset="false" Substitute="false">2</Property>
+<Property id="Type" Reset="false" Substitute="false">2</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+</ObjectsList>
+<InheritedTemplatesList/>
+</Template>
+</TemplatesList>
+</Library>
+</TemplatesRoot>
+</root>

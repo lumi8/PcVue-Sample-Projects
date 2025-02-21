@@ -1,0 +1,73 @@
+'Global functions and declarations
+
+'Global variables that can be modified in INIT_CRONMGTaccording to the project
+'////////////////////////////////////////////////////////
+
+Dim iRefStation as integer;			'The reference station number
+									'This station is the web server station on which the WebScheduler modifies the Cron.dat
+
+Dim iCronCheckPeriod as integer;		'The Cron.dat check period in seconds
+
+Dim sCronLocation as Str;			'The location of the Cron.dat in the project
+									'Depending on the PcVue version, it may be better to work in the C or in the CTEMP folder
+
+Dim sList as Str;						'The name of the list of stations for the Cron.dat broadcasts
+									'It shall be a list of type "Modification list"
+
+Dim hBuff_BroadcastResult as long;
+'////////////////////////////////////////////////////////
+
+Sub Get_CronFile_Date()
+	Dim hBuff as Long; 
+	Dim sFilename as Str; 
+	Dim sDate as Str;
+	Dim sProjectPath as Str; 
+	Dim hBuffProjectPath as Long; 
+	Dim iRet as Integer;
+	Dim sRet as Str; 
+	Dim iFieldPath as Integer;  
+	
+	Print("Executing function Global:Get_CronFile_Date");
+	
+	hBuffProjectPath =ALLOC_BUFFER(512);
+	
+ 	'Create the Cron.dat file absolute name
+ 	sProjectPath = GETPROJECTDIR();
+ 	sProjectPath = ADDSTRING(sProjectpath,"\n"); 
+ 	PUT_BUFFER(hBuffProjectPath,0,sProjectPath); 
+  	iRet = ASCIIFIELD("COUNT",hBuffProjectPath,"\\"); 
+  	
+  	For(iFieldPath = 1; iFieldPath <= iRet ; iFieldPath++)
+  	
+  		sRet = ASCIIFIELD("STR", hBuffProjectPath, iFieldPath ,"\\");
+		sRet = ADDSTRING(sRet,"\\\\");  
+  		sFilename = ADDSTRING(sFilename,sRet); 
+  	  		
+  	Next
+  	
+	'sFilename = ADDSTRING(sFilename, );
+	sFilename = ADDSTRING(sFilename, sCronLocation);
+	sFilename = ADDSTRING(sFilename, "\\\\Cron.dat");
+	Print("Retrieving date for the file: ", sFilename);
+
+	'Retrieve its date of last modification
+	hBuff = ALLOC_BUFFER(22); 		
+	FSTAT(sFilename,hBuff); 
+	sDate = CGET_BUFFER(hBuff,4,17);
+	FREE_BUFFER(hBuff); 
+	FREE_BUFFER(hBuffProjectPath); 
+	
+	@Cron_Mgt.CronLastModifDate = sDate;
+	Print("Updated date of last modification for the Cron.dat file is: ", sDate);
+
+	return(sDate);
+
+End sub 
+
+Sub Get_Cron_VarName(ch1,ch2,ch3)
+	Dim VarName as str;
+	VarName = ADDSTRING(ch1, ch2);
+	VarName = ADDSTRING(VarName, ch3);
+	Return VarName;	
+End Sub
+

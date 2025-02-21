@@ -1,0 +1,16 @@
+{
+  "proxyConfig": {
+    "globalProxy": {
+      "useSystemProxy": true,
+      "disableProxy": false,
+      "useConfiguredProxy": false,
+      "hostName": "",
+      "ipAddress": "",
+      "portNumber": 3128,
+      "userName": "",
+      "password": "CrP//M5904MNzuWuoFuomA==",
+      "protocolType": "HTTPS"
+    },
+    "proxies": []
+  }
+}

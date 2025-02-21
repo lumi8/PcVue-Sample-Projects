@@ -1,0 +1,3 @@
+TREATMENT,GROUPALARM,AckOnAll,0,,0,,0,,,0,29,,,,,,,System.AckOn,,All,,,,,,,,,,,,
+TREATMENT,GROUPALARM,AlarmSynthesisDIAGNOSTIC,0,,0,,1,,,0,29,#TATT1=DIAGNOSTIC,AlarmSyntheses.Resource.HighestPriority_OnAckAlm,AlarmSyntheses.Resource.HighestPriority_OnNoAckAlm,,,,AlarmSyntheses.Resource,Counter_OnNoAckAlm,Counter_OnAckAlm,Counter_OnAlm,Counter_OffNoAckAlm,Counter_OffAckAlm,,,,,,,,,
+TREATMENT,GROUPALARM,NoAckOnAll,0,,0,,1,,,0,29,,,,,,,System.NoAckOn,All,,,,,,,,,,,,,

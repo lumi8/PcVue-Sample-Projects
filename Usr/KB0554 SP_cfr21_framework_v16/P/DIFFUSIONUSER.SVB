@@ -1,0 +1,43 @@
+'Declare constants
+	CONST CstTAILLE = 0;     'offset taille 
+	CONST CstMODIF = 4;     'offset pour la date du fichier 
+	CONST CstALLOC = 64;   'Taille minimum = 22 
+
+	DIM MybufferFile1 as long;     'Handle du buffer retourn‚ par FSTAT
+	DIM UserFile1 as str; 'Emplacement du fichier user.dat
+	DIM OriginalDate as str;    'Date de Modification du fichier
+
+Sub Main()
+
+	UserFile1 = "..\\CTEMP\\user.dat" ;
+	MybufferFile1 = ALLOC_BUFFER (CstALLOC);
+	FSTAT(UserFile1,MybufferFile1);  'Fournit la taille et la date de derniŠre modification d'un fichier.
+	PRINT("Origin Size in bytes: ",LGET_BUFFER(MybufferFile1,CstTAILLE));
+  	PRINT("Origin Date of file: ",CGET_BUFFER (MybufferFile1,CstMODIF,18));
+
+	OriginalDate = CGET_BUFFER(MybufferFile1,CstMODIF ,20);
+	CYCLIC("ADDPROG",5,"DIFFUSIONUSER.SVB","","GetLastmodif");
+ 
+End Sub
+
+
+Sub GetLastmodif() 
+	DIM date_modif as str;
+
+	FSTAT(UserFile1,MybufferFile1); 'Fournit la taille et la date de derniŠre modification d'un fichier.
+
+	date_modif = CGET_BUFFER(MybufferFile1,CstMODIF ,20);
+
+	IF (CMPSTRING(OriginalDate,date_modif) <> 0) THEN
+		UserDiff();
+	End IF
+	OriginalDate = date_modif;
+End Sub
+
+
+Sub UserDiff()
+	'Cette fonction doit ˆtre compl‚t‚ en lan‡ant un fichier batch qui ex‚cutera
+	'l'instruction de recopie du fichier USER.DAT vers les autres stations.
+	
+	Print("Distribution de user.dat sur toutes les stations (r‚pertoire C and CTEMP)");
+End Sub

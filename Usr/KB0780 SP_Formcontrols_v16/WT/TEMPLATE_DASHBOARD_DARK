@@ -1,0 +1,693 @@
+ASCII32
+W,BEGIN,"TEMPLATE_DASHBOARD_DARK","Mimic1",""
+	TEMPLATE,"",0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+	POSITION,0,0
+	SIZE,1600,900,1600,900,0,0,0,1600,900,1600,900
+	BACKCOLOREX,240,240,240,0,0,0
+	TITLE,0,"Nom vue","Mimic Title"
+	STYLE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+	GRIDEX,1,0,8,8,100,100,100,0,0,0
+	LAYERS,65535
+	RIGHTS,0,1,0.000000,64.000000,1,65535,0,0
+	INCLUDED,0,0,0,0,0
+	LINK,1,"Mimic 01","","Avec les variables","With variables"
+	LINK,2,"Mimic 02","","Avec script","With script"
+	LINK,3,"Mimic 03","","Styles diff‚rents","Different styles"
+	LINK,4,"Mimic 04","","A partir d'un fichier","From a file"
+	LINK,5,"Mimic 05","","Tree view","Tree view"
+	LINK,6,"","","",""
+	LINK,7,"","","",""
+	LINK,8,"","","",""
+	LINK,9,"","","",""
+	LINK,10,"","","",""
+	TABS,0,3,0,0,500,500,0,0,-1,3,16,16,0,FONT,1,FONT,1
+	NAV,0,0,0,100,100,0,0
+	BACKBMP,"",0,0
+	BACKOBJECT,"",0,0
+	BEFORE_OPEN,"","","",""
+	BEFORE_CLOSE,"","","",""
+	EVENTS,1
+	BINOBJ,"TEMPLATE_DASHBOARD_DARK.binary"
+W,END
+VBA_REFERENCES,BEGIN
+	"stdole", 2, 0, "{00020430-0000-0000-C000-000000000046}"
+	"UIALMLib", 1, 0, "{8A2CA162-07F7-11D1-A079-0020AF29DCAE}"
+VBA_REFERENCES,END
+FONTS,BEGIN
+	FONT,1,20,9,700,0,0,"System",0,0
+	FONT,2,-27,0,300,0,0,"Segoe UI Light",0,0
+	FONT,3,-60,0,400,0,0,"Segoe UI",0,0
+	FONT,4,-24,0,300,0,0,"Segoe UI Light",0,0
+	FONT,5,-21,0,300,0,0,"Segoe UI Light",0,0
+	FONT,6,-19,0,400,0,0,"Segoe UI",0,0
+	FONT,7,-19,0,300,0,0,"Segoe UI Light",0,0
+	FONT,8,-17,0,400,0,0,"Segoe UI",0,0
+	FONT,9,-16,0,400,0,0,"Segoe UI",0,0
+	FONT,10,-20,0,400,0,0,"Segoe UI",0,0
+	FONT,11,-26,0,400,0,0,"Segoe UI",0,0
+	FONT,12,-31,0,400,0,0,"Segoe UI",0,0
+	FONT,13,-27,0,400,0,0,"Segoe UI",0,0
+	FONT,14,24,0,400,0,0,"Arial",0,1
+FONTS,END
+COLORS,BEGIN
+	COLOREX,1,0,0,0,0,180,0
+	COLOREX,2,0,0,0,0,0,0
+	COLOREX,3,0,0,0,0,184,0
+	COLOREX,4,0,0,0,0,177,0
+	COLOREX,5,0,0,0,0,167,0
+	COLOREX,6,255,0,255,0,0,0
+	COLOREX,7,240,240,240,0,0,0
+	COLOREX,8,0,0,0,0,197,0
+	COLOREX,9,0,0,0,0,0,1
+	COLOREX,10,0,0,0,0,208,0
+	COLOREX,11,0,0,0,0,203,0
+	COLOREX,12,0,0,0,0,210,0
+	COLOREX,13,0,0,0,0,175,0
+	COLOREX,14,0,0,0,0,182,0
+	COLOREX,15,0,0,0,0,196,0
+	COLOREX,16,0,0,0,0,198,0
+	COLOREX,17,0,0,64,0,0,0
+	COLOREX,18,192,192,192,0,0,0
+	COLOREX,19,0,255,0,0,0,0
+	COLOREX,20,255,255,255,0,0,0
+COLORS,END
+O,BEGIN,R,"TopBackground"
+	B,1598,79,266,0,1598,79,65535,0,6400,0,1,0,0,0,1,0,-1
+	ST,0,1,COLOR,1,COLOR,1,0,0,COLOR,1,0,COLOR,1,0,COLOR,2,0,COLOR,2
+O,END
+O,BEGIN,GRP,"SelectedGroupAlarms"
+	B,762,0,841,79,762,79,65535,0,6400,0,1,0,0,0,1,0,-1
+	O,BEGIN,R,"SelectedSquare"
+		B,841,79,762,0,841,79,65535,0,6400,0,2,0,0,0,1,0,-1
+		ST,0,1,COLOR,3,COLOR,3,0,0,COLOR,3,0,COLOR,3,0,COLOR,2,0,COLOR,2
+	O,END
+	O,BEGIN,P,"SelectedArrow"
+		B,785,79,818,67,785,79,65535,0,6400,0,2,0,0,0,1,0,-1
+		ST,0,1,COLOR,4,COLOR,4,0,0,COLOR,4,0,COLOR,4,0,COLOR,2,0,COLOR,2
+		PP,785,79,801,67,818,79
+	O,END
+	O,BEGIN,R,"SelectedRectangle"
+		B,841,5,762,0,841,5,65535,0,6400,0,2,0,0,0,1,0,-1
+		ST,0,1,COLOR,5,COLOR,5,0,0,COLOR,5,0,COLOR,5,0,COLOR,2,0,COLOR,2
+	O,END
+	O,BEGIN,BM,"SelectedAlarmsIcon"
+		B,778,16,825,63,778,63,1,0,6400,0,2,0,0,0,1,0,-1
+		ST,5,1,COLOR,4,COLOR,4,1,0,COLOR,4,0,COLOR,4,0,COLOR,2,0,COLOR,2
+		PP,"/SH_NAVIGATION_FLAT/NAV_ICONS_WHITE_ALARMS48.png",0,COLOR,6,"","",1,1,0,255
+	O,END
+	A,BEGIN,VT,"Anim1",0,0,"",""
+		PP,2,"#W","",0,1,0,1,2,0,0,1,0
+		ADVANIMATION,"Alarms","",1,0
+	A,END
+O,END
+O,BEGIN,GRP,"SelectedGroupTrends"
+	B,842,0,921,79,842,79,65535,0,6400,0,1,0,0,0,1,0,-1
+	O,BEGIN,R,"SelectedSquare"
+		B,921,79,842,0,921,79,65535,0,6400,0,2,0,0,0,1,0,-1
+		ST,0,1,COLOR,3,COLOR,3,0,0,COLOR,3,0,COLOR,3,0,COLOR,2,0,COLOR,2
+	O,END
+	O,BEGIN,P,"SelectedArrow"
+		B,865,79,898,67,865,79,65535,0,6400,0,2,0,0,0,1,0,-1
+		ST,0,1,COLOR,4,COLOR,4,0,0,COLOR,4,0,COLOR,4,0,COLOR,2,0,COLOR,2
+		PP,865,79,881,67,898,79
+	O,END
+	O,BEGIN,R,"SelectedRectangle"
+		B,921,5,842,0,921,5,65535,0,6400,0,2,0,0,0,1,0,-1
+		ST,0,1,COLOR,5,COLOR,5,0,0,COLOR,5,0,COLOR,5,0,COLOR,2,0,COLOR,2
+	O,END
+	O,BEGIN,BM,"SelectedTrendsIcon"
+		B,858,16,905,63,858,63,1,0,6400,0,2,0,0,0,1,0,-1
+		ST,5,1,COLOR,4,COLOR,4,1,0,COLOR,4,0,COLOR,4,0,COLOR,2,0,COLOR,2
+		PP,"/SH_NAVIGATION_FLAT/NAV_ICONS_WHITE_TRENDS48.png",0,COLOR,7,"/SH_NAVIGATION_FLAT/NAV_ICONS_WHITE_TRENDS48.png","",1,1,0,255
+	O,END
+	A,BEGIN,VT,"Anim1",0,0,"",""
+		PP,2,"#W","",0,1,0,1,2,0,0,1,0
+		ADVANIMATION,"Trends","",1,0
+	A,END
+O,END
+O,BEGIN,GRP,"SelectedGroupLogs"
+	B,922,0,1001,79,922,79,65535,0,6400,0,1,0,0,0,1,0,-1
+	O,BEGIN,R,"SelectedSquare"
+		B,1001,79,922,0,1001,79,65535,0,6400,0,2,0,0,0,1,0,-1
+		ST,0,1,COLOR,3,COLOR,3,0,0,COLOR,3,0,COLOR,3,0,COLOR,2,0,COLOR,2
+	O,END
+	O,BEGIN,P,"SelectedArrow"
+		B,945,79,978,67,945,79,65535,0,6400,0,2,0,0,0,1,0,-1
+		ST,0,1,COLOR,4,COLOR,4,0,0,COLOR,4,0,COLOR,4,0,COLOR,2,0,COLOR,2
+		PP,945,79,961,67,978,79
+	O,END
+	O,BEGIN,R,"SelectedRectangle"
+		B,1001,5,922,0,1001,5,65535,0,6400,0,2,0,0,0,1,0,-1
+		ST,0,1,COLOR,5,COLOR,5,0,0,COLOR,5,0,COLOR,5,0,COLOR,2,0,COLOR,2
+	O,END
+	O,BEGIN,BM,"SelectedLogsIcon"
+		B,938,16,985,63,938,63,1,0,6400,0,2,0,0,0,1,0,-1
+		ST,5,1,COLOR,4,COLOR,4,1,0,COLOR,4,0,COLOR,4,0,COLOR,2,0,COLOR,2
+		PP,"/SH_NAVIGATION_FLAT/NAV_ICONS_WHITE_AGENDA48.png",0,COLOR,7,"/SH_NAVIGATION_FLAT/NAV_ICONS_WHITE_AGENDA48.png","",1,1,0,255
+	O,END
+	A,BEGIN,VT,"Anim1",0,0,"",""
+		PP,2,"#W","",0,1,0,1,2,0,0,1,0
+		ADVANIMATION,"Logs","",1,0
+	A,END
+O,END
+O,BEGIN,GRP,"SelectedGroupDashboard"
+	B,1002,0,1081,79,1002,79,65535,0,6400,0,1,0,0,0,1,0,-1
+	O,BEGIN,R,"SelectedSquare"
+		B,1081,79,1002,0,1081,79,65535,0,6400,0,2,0,0,0,1,0,-1
+		ST,0,1,COLOR,3,COLOR,3,0,0,COLOR,3,0,COLOR,3,0,COLOR,2,0,COLOR,2
+	O,END
+	O,BEGIN,P,"SelectedArrow"
+		B,1025,79,1058,67,1025,79,65535,0,6400,0,2,0,0,0,1,0,-1
+		ST,0,1,COLOR,4,COLOR,4,0,0,COLOR,4,0,COLOR,4,0,COLOR,2,0,COLOR,2
+		PP,1025,79,1041,67,1058,79
+	O,END
+	O,BEGIN,R,"SelectedRectangle"
+		B,1081,5,1002,0,1081,5,65535,0,6400,0,2,0,0,0,1,0,-1
+		ST,0,1,COLOR,5,COLOR,5,0,0,COLOR,5,0,COLOR,5,0,COLOR,2,0,COLOR,2
+	O,END
+	O,BEGIN,BM,"SelectedDashboardIcon"
+		B,1018,16,1065,63,1018,63,1,0,6400,0,2,0,0,0,1,0,-1
+		ST,5,1,COLOR,4,COLOR,4,1,0,COLOR,4,0,COLOR,4,0,COLOR,2,0,COLOR,2
+		PP,"/SH_NAVIGATION_FLAT/NAV_ICONS_WHITE_REPORT48.png",0,COLOR,7,"/SH_NAVIGATION_FLAT/NAV_ICONS_WHITE_DASHBOARD48.png","",1,1,0,255
+	O,END
+	A,BEGIN,VT,"Anim1",0,0,"",""
+		PP,2,"#W","",0,1,0,1,2,0,0,1,0
+		ADVANIMATION,"Dashboard","",1,0
+	A,END
+O,END
+O,BEGIN,BM,"AlarmsIcon"
+	B,778,16,825,63,778,63,1,0,6400,0,1,0,0,0,1,0,-1
+	ST,5,1,COLOR,4,COLOR,4,1,0,COLOR,4,0,COLOR,4,0,COLOR,2,0,COLOR,2
+	PP,"/SH_NAVIGATION_FLAT/NAV_ICONS_WHITE_ALARMS48.png",0,COLOR,7,"","",1,1,0,128
+	A,BEGIN,VT,"Anim1",0,0,"",""
+		PP,2,"#W","",0,1,0,1,1,0,0,1,0
+		ADVANIMATION,"Alarms","",2,0
+	A,END
+	A,BEGIN,LO,"Anim2",0,0,"@Ouvre les alarmes","@Open Alarms"
+		PP,"Alarms","",1,0,1,0,"","",1,0,,1,1,
+	A,END
+O,END
+O,BEGIN,BM,"PrintIcon"
+	B,1327,24,1374,71,1327,71,1,0,6400,0,1,0,0,2,1,0,-1
+	ST,5,1,COLOR,4,COLOR,4,1,0,COLOR,4,0,COLOR,4,0,COLOR,2,0,COLOR,2
+	PP,"/SH_NAVIGATION_FLAT/NAV_ICONS_WHITE_PRINT48.png",0,COLOR,7,"/SH_NAVIGATION_FLAT/NAV_ICONS_WHITE_PRINT48.png","",1,1,0,128
+	A,BEGIN,RS,"Anim1",0,0,"@Imprime l'‚cran courant","@Print the current screen"
+		PP,"HARDCOPY('SCREEN')","","","","",0,0
+	A,END
+O,END
+O,BEGIN,BM,"LogsIcon"
+	B,938,16,985,63,938,63,1,0,6400,0,1,0,0,2,1,0,-1
+	ST,5,1,COLOR,4,COLOR,4,1,0,COLOR,4,0,COLOR,4,0,COLOR,2,0,COLOR,2
+	PP,"/SH_NAVIGATION_FLAT/NAV_ICONS_WHITE_AGENDA48.png",0,COLOR,7,"/SH_NAVIGATION_FLAT/NAV_ICONS_WHITE_AGENDA48.png","",1,1,0,128
+	A,BEGIN,VT,"Anim1",0,0,"",""
+		PP,2,"#W","",0,1,0,1,1,0,0,1,0
+		ADVANIMATION,"Logs","",2,0
+	A,END
+	A,BEGIN,LO,"Anim2",0,0,"@Ouvre les historiques","@Open Logs"
+		PP,"Logs","",1,0,1,0,"","",1,0,,1,1,
+	A,END
+O,END
+O,BEGIN,BM,"LanguageIcon"
+	B,1422,24,1469,71,1422,71,1,0,6400,0,1,0,0,2,1,0,-1
+	ST,5,1,COLOR,4,COLOR,4,1,0,COLOR,4,0,COLOR,4,0,COLOR,2,0,COLOR,2
+	PP,"/SH_NAVIGATION_FLAT/NAV_ICONS_WHITE_LANGUAGE48.png",0,COLOR,7,"/SH_NAVIGATION_FLAT/NAV_ICONS_WHITE_LANGUAGE48.png","",1,1,0,128
+	A,BEGIN,LA,"Anim1",0,0,"@Change la langue du projet","@Switch the language"
+		PP,0,0,0,0,1,0,0,-1
+	A,END
+O,END
+O,BEGIN,BM,"DashboardIcon"
+	B,1018,16,1065,63,1018,63,1,0,6400,0,1,0,0,2,1,0,-1
+	ST,5,1,COLOR,4,COLOR,4,1,0,COLOR,4,0,COLOR,4,0,COLOR,2,0,COLOR,2
+	PP,"/SH_NAVIGATION_FLAT/NAV_ICONS_WHITE_REPORT48.png",0,COLOR,7,"/SH_NAVIGATION_FLAT/NAV_ICONS_WHITE_REPORT48.png","",1,1,0,128
+	A,BEGIN,VT,"Anim1",0,0,"",""
+		PP,2,"#W","",0,1,0,1,1,0,0,1,0
+		ADVANIMATION,"Dashboard","",2,0
+	A,END
+	A,BEGIN,LO,"Anim2",0,0,"@Ouvre le tableau de bord","@Open Dashboard"
+		PP,"Dashboard","",1,0,1,0,"","",1,0,,1,1,
+	A,END
+O,END
+O,BEGIN,BM,"TrendsIcon"
+	B,858,16,905,63,858,63,1,0,6400,0,1,0,0,2,1,0,-1
+	ST,5,1,COLOR,4,COLOR,4,1,0,COLOR,4,0,COLOR,4,0,COLOR,2,0,COLOR,2
+	PP,"/SH_NAVIGATION_FLAT/NAV_ICONS_WHITE_TRENDS48.png",0,COLOR,7,"/SH_NAVIGATION_FLAT/NAV_ICONS_WHITE_TRENDS48.png","",1,1,0,128
+	A,BEGIN,VT,"Anim1",0,0,"",""
+		PP,2,"#W","",0,1,0,1,1,0,0,1,0
+		ADVANIMATION,"Trends","",2,0
+	A,END
+	A,BEGIN,LO,"Anim2",0,0,"@Ouvre les courbes","@Open Trends"
+		PP,"Trends","",1,0,1,0,"","",1,0,,1,1,
+	A,END
+O,END
+O,BEGIN,BM,"ExitIcon"
+	B,1517,24,1564,71,1517,71,1,0,6400,0,1,0,0,2,1,0,-1
+	ST,5,1,COLOR,4,COLOR,4,1,0,COLOR,4,0,COLOR,4,0,COLOR,2,0,COLOR,2
+	PP,"/SH_NAVIGATION_FLAT/NAV_ICONS_WHITE_SHUTDOWN48.png",0,COLOR,7,"/SH_NAVIGATION_FLAT/NAV_ICONS_WHITE_SHUTDOWN48.png","",1,1,0,128
+	A,BEGIN,RS,"Anim1",0,0,"@Sortie du projet","@Exit the application"
+		PP,"StandardAction,10","","","","",0,0
+	A,END
+O,END
+O,BEGIN,R,"LogoBackground"
+	B,265,79,0,0,265,79,65535,0,6400,0,1,0,0,0,1,0,-1
+	ST,0,1,COLOR,5,COLOR,5,0,0,COLOR,5,0,COLOR,5,0,COLOR,2,0,COLOR,2
+O,END
+O,BEGIN,R,"LeftBackground"
+	B,265,900,0,80,265,900,65535,0,6400,0,1,0,0,0,1,0,-1
+	ST,5,1,COLOR,2,COLOR,2,0,0,COLOR,1,0,COLOR,1,0,COLOR,2,0,COLOR,2
+O,END
+O,BEGIN,GRP,"DateTime"
+	B,28,765,247,881,28,881,65535,0,6400,0,1,0,0,0,1,0,-1
+	O,BEGIN,T,"Date"
+		B,28,844,153,881,28,844,65535,0,6400,0,2,0,0,0,1,0,-1
+		ST,0,1,COLOR,8,COLOR,8,0,0,COLOR,9,0,COLOR,9,0,COLOR,2,0,COLOR,2
+		PP,0,28,844,0,0,FONT,2,"08/12/2018",37,FONT,2,"08/12/2018",36
+		A,BEGIN,DT,"Anim1",0,0,"",""
+			PP,"@Date"
+		A,END
+	O,END
+	O,BEGIN,T,"Time"
+		B,28,765,247,846,28,765,65535,0,6400,0,2,0,0,0,1,0,-1
+		ST,0,1,COLOR,10,COLOR,10,0,0,COLOR,9,0,COLOR,9,0,COLOR,2,0,COLOR,2
+		PP,0,28,765,0,0,FONT,3,"10:38:26",37,FONT,3,"10:38:26",36
+		A,BEGIN,DT,"Anim1",0,0,"",""
+			PP,"@Time"
+		A,END
+	O,END
+O,END
+O,BEGIN,R,"MimicBackground"
+	B,1602,900,266,80,1602,900,65535,0,6400,1,1,0,0,0,1,0,-1
+	ST,5,1,COLOR,4,COLOR,4,0,0,COLOR,4,0,COLOR,4,0,COLOR,2,0,COLOR,2
+O,END
+O,BEGIN,T,"Title2"
+	B,274,5,751,73,274,5,65535,0,6400,0,1,0,0,0,1,0,-1
+	ST,0,1,COLOR,11,COLOR,11,0,0,COLOR,9,0,COLOR,9,0,COLOR,2,0,COLOR,2
+	PP,1,274,5,0,0,FONT,4,"#WT",84,FONT,5,"#WT",84
+O,END
+O,BEGIN,GRP,"User"
+	B,73,105,336,174,73,174,65535,0,6400,0,1,0,0,0,1,0,-1
+	O,BEGIN,T,"UserName"
+		B,73,105,303,142,73,105,65535,0,6400,0,2,0,0,0,1,0,-1
+		ST,0,1,COLOR,12,COLOR,12,0,0,COLOR,9,0,COLOR,9,0,COLOR,2,0,COLOR,2
+		PP,1,73,105,0,0,FONT,6,"Nom Pr‚nom",36,FONT,6,"Last name First name",36
+		A,BEGIN,DT,"Anim1",0,0,"",""
+			PP,"@User"
+		A,END
+	O,END
+	O,BEGIN,T,"UserTitle"
+		B,73,137,336,174,73,137,65535,0,6400,0,2,0,0,0,1,0,-1
+		ST,0,1,COLOR,12,COLOR,12,0,0,COLOR,9,0,COLOR,9,0,COLOR,2,0,COLOR,2
+		PP,1,73,137,0,0,FONT,7,"R“le",36,FONT,7,"Title",36
+		A,BEGIN,DT,"Anim1",0,0,"",""
+			PP,"@System.LocalHost.Profile"
+		A,END
+	O,END
+O,END
+O,BEGIN,RR,"BottomBackground"
+	B,1581,881,285,775,1581,881,65535,0,6400,0,1,0,0,0,1,0,-1
+	ST,5,1,COLOR,13,COLOR,13,0,0,COLOR,14,0,COLOR,14,0,COLOR,2,0,COLOR,2
+	PP,13,2
+O,END
+O,BEGIN,ALM,"Alarm1"
+	B,301,791,1399,870,10,195,65535,0,6400,0,1,1,1,0,1,0,1
+	ST,5,1,COLOR,13,COLOR,13,1,0,COLOR,1,0,COLOR,1,0,COLOR,2,0,COLOR,2
+	TOOLBAR,0,8192,MODE,SEPARATOR,F_NOACKON,F_ACKON,F_NOACKOFF,F_ACKOFF,F_NS,F_MASK,SEPARATOR,A_ACK,A_ACKALL,A_MASK,A_UNMASK,SEPARATOR,A_PRINT,F_MASKPROG,F_MASKVAR,F_INHIB,F_NA,F_MASKEXPR,A_MAINT,SEPARATOR,A_MSTART,A_MSTOP
+	SCROLL,0,21,0
+	HEADER,0,35,4,95,124,346,613,0,0,0,0
+	TITLE,"Date","#D/#M/#Y","Date","#D/#M/#Y"
+	TITLE,"Heure","#h:#m:#s","Time","#h:#m:#s"
+	TITLE,"EvŠnement","#E","Event","#E"
+	TITLE,"Description","#T","Title","#T"
+	TITLE,"","","",""
+	TITLE,"","","",""
+	TITLE,"","","",""
+	TITLE,"","","",""
+	LINE,FONT,8,COLOR,13,COLOR,8,1
+	EXEC,100,0,1,0,1,1,1,1,1,1,1,1,0,0,"#D/#M/#Y #h:#m:#s.#l #E #T",0,1,0,0,0,0,-1,-1,0,0
+	FILTER,"","",0,0,29,1,0,1,0,1,8,4,2,16,32,64,0,""
+	MENU,0,52110736,377251333,459127024,459351592,52111440,377251334,459127624,459348504,52110768,377251335,459130104,459322256,462874428,0,8,0,462874404,0,8,0
+O,END
+O,BEGIN,GRP,"AlarmsCounters"
+	B,1413,787,1571,868,1413,866,65535,0,6400,0,1,0,0,0,1,0,-1
+	O,BEGIN,RR,"BackGround"
+		B,1570,866,1413,787,1570,866,65535,0,6400,0,2,0,0,0,1,0,-1
+		ST,5,1,COLOR,13,COLOR,13,0,0,COLOR,13,0,COLOR,13,0,COLOR,2,0,COLOR,2
+		PP,2,2
+	O,END
+	O,BEGIN,GRP,"GroupTexts"
+		B,1422,791,1571,868,1422,859,65535,0,6400,0,2,0,0,0,1,0,-1
+		O,BEGIN,T,"AlaOn"
+			B,1468,796,1564,824,1468,796,65535,0,6400,0,4,0,0,0,1,0,-1
+			ST,0,1,COLOR,15,COLOR,15,0,0,COLOR,13,0,COLOR,13,0,COLOR,2,0,COLOR,2
+			PP,0,1468,796,0,0,FONT,9,"Ala. actives",37,FONT,10,"Alarms ON",36
+		O,END
+		O,BEGIN,T,"AlaAck"
+			B,1468,831,1571,859,1468,831,65535,0,6400,0,4,0,0,0,1,0,-1
+			ST,0,1,COLOR,15,COLOR,15,0,0,COLOR,13,0,COLOR,13,0,COLOR,2,0,COLOR,2
+			PP,0,1468,831,0,0,FONT,9,"Ala. acq.",37,FONT,10,"Alarms ACK",36
+		O,END
+		O,BEGIN,T,"ValAlaOn"
+			B,1422,791,1457,833,1422,791,65535,0,6400,0,4,0,0,0,1,0,-1
+			ST,0,1,COLOR,15,COLOR,15,0,0,COLOR,13,0,COLOR,13,0,COLOR,2,0,COLOR,2
+			PP,0,1422,791,0,0,FONT,11,"99",37,FONT,12,"99",36
+			A,BEGIN,DR,"Anim1",0,0,"",""
+				PP,"@System.NoAckOn.All","",0
+				ADVFORMAT2,2,"00"
+			A,END
+		O,END
+		O,BEGIN,T,"ValAlaAck"
+			B,1422,826,1457,868,1422,826,65535,0,6400,0,4,0,0,0,1,0,-1
+			ST,0,1,COLOR,15,COLOR,15,0,0,COLOR,13,0,COLOR,13,0,COLOR,2,0,COLOR,2
+			PP,0,1422,826,0,0,FONT,11,"99",37,FONT,12,"99",36
+			A,BEGIN,DR,"Anim1",0,0,"",""
+				PP,"@System.AckOn.All","",0
+				ADVFORMAT2,2,"00"
+			A,END
+		O,END
+	O,END
+O,END
+O,BEGIN,BM,"UserIcon"
+	B,10,108,73,171,10,171,65535,0,6400,0,1,0,0,0,1,0,-1
+	ST,5,1,COLOR,10,COLOR,10,1,0,COLOR,10,0,COLOR,10,0,COLOR,2,0,COLOR,2
+	PP,"/SH_NAVIGATION_FLAT/NAV_ICONS_WHITE_USER64.png",0,COLOR,7,"","",1,1,0,255
+	A,BEGIN,USER,"Anim1",0,0,"@Connexion","@Login"
+		PP,1,0
+	A,END
+O,END
+O,BEGIN,GRP,"AlarmsIndicator"
+	B,812,7,843,38,812,38,65535,0,6400,0,1,0,0,0,1,0,-1
+	O,BEGIN,BM,"NotificationIcon"
+		B,812,7,843,38,812,38,65535,0,6400,0,2,0,0,0,1,0,-1
+		ST,5,1,COLOR,10,COLOR,10,1,0,COLOR,10,0,COLOR,10,0,COLOR,2,0,COLOR,2
+		PP,"/SH_NAVIGATION_FLAT/NAV_ICONS_NOTIFICATION.png",0,COLOR,7,"","",1,1,0,255
+	O,END
+	O,BEGIN,T,"NoackOnAll"
+		B,816,9,839,27,816,9,65535,0,6400,0,2,0,0,0,1,0,-1
+		ST,0,1,COLOR,12,COLOR,12,0,0,COLOR,9,0,COLOR,9,0,COLOR,2,0,COLOR,2
+		PP,1,816,9,0,0,FONT,10,"xx",37,FONT,10,"xx",37
+		A,BEGIN,DR,"Anim1",0,0,"",""
+			PP,"@System.NoAckOn.All","",0
+			ADVFORMAT2,2,"00"
+		A,END
+	O,END
+	A,BEGIN,VRL,"Anim1",0,0,"",""
+		PP,"@System.NoAckOn.All",1,2,0,1.000000,0,1,0,0.000000,0,1,0,0.000000,0,1,0,0.000000,0,1,0,0.000000,0,1,0,0.000000,0,1,0,0.000000,0,1,0,0.000000,1,2,0,0.000000,1,1,0,0.000000
+	A,END
+O,END
+O,BEGIN,GRP,"MENUBUTTON_01"
+	B,-2,197,265,276,-2,276,65535,0,6400,0,1,0,0,0,1,0,-1
+	O,BEGIN,GRP,"ButtonSelected"
+		B,-2,197,265,276,-2,276,65535,0,6400,0,2,0,0,0,1,0,-1
+		O,BEGIN,R,"ButtonBackground"
+			B,265,276,-1,197,265,276,65535,0,6400,0,4,0,0,0,1,0,-1
+			ST,0,1,COLOR,3,COLOR,3,0,0,COLOR,3,0,COLOR,3,0,COLOR,2,0,COLOR,2
+		O,END
+		O,BEGIN,P,"ButtonArrow"
+			B,265,248,255,224,265,248,65535,0,6400,0,4,0,0,0,1,0,-1
+			ST,0,1,COLOR,4,COLOR,4,0,0,COLOR,4,0,COLOR,4,0,COLOR,2,0,COLOR,2
+			PP,265,248,265,224,255,237
+		O,END
+		O,BEGIN,R,"MimicSelectedRectangle"
+			B,3,276,-2,197,3,276,65535,0,6400,0,4,0,0,0,1,0,-1
+			ST,0,1,COLOR,5,COLOR,5,0,0,COLOR,5,0,COLOR,5,0,COLOR,2,0,COLOR,2
+		O,END
+		A,BEGIN,VT,"Anim1",0,0,"#W correspond au nom de la fenˆtre. #MX peut-ˆtre remplac‚ par un nom de synoptique. Sinon voir dans les chaŒnages associ‚s des propri‚t‚s du modŠle de fenˆtre pour changer l'association de #MX.","#W corresponds to the name of the window. #MX can be replaced by a synoptic name. Otherwise, see in the associated links properties of the window model to change the association of #MX."
+			PP,2,"#W","",0,1,0,1,2,0,0,1,0
+			ADVANIMATION,"#M1","",1,0
+		A,END
+	O,END
+	O,BEGIN,T,"MimicTitle"
+		B,-2,197,265,276,-2,197,65535,0,6400,0,2,0,0,0,1,0,-1
+		ST,0,1,COLOR,12,COLOR,12,0,0,COLOR,9,0,COLOR,9,0,COLOR,2,0,COLOR,2
+		PP,1,-2,197,30,0,FONT,13," ",36,FONT,13," ",36
+		A,BEGIN,CTXT,"Anim1",0,0,"#W correspond au nom de la fenˆtre. #MX peut-ˆtre remplac‚ par un nom de synoptique. Sinon voir dans les chaŒnages associ‚s des propri‚t‚s du modŠle de fenˆtre pour changer l'association de #MX.","#W corresponds to the name of the window. #MX can be replaced by a synoptic name. Otherwise, see in the associated links properties of the window model to change the association of #MX."
+			PP,2,"#W","",0,0,0,0,1,0,COLOR,6,COLOR,6,COLOR,18,COLOR,18,COLOR,18,COLOR,18,COLOR,17,COLOR,17,COLOR,16,COLOR,16,COLOR,16,COLOR,16
+			ADVANIMATION,"#M1","",0,COLOR,19,COLOR,19,1,COLOR,12,COLOR,12
+		A,END
+		A,BEGIN,LO,"Anim2",0,0,"#MX peut-ˆtre remplac‚ par un nom de synoptique. Sinon voir dans les chaŒnages associ‚s des propri‚t‚s du modŠle de fenˆtre pour changer l'association de #MX.","#MX can be replaced by a synoptic name. Otherwise, see in the associated links properties of the window model to change the association of #MX."
+			PP,"#M1","",1,0,1,0,"","",1,0,,1,1,
+		A,END
+	O,END
+O,END
+O,BEGIN,GRP,"MENUBUTTON_02"
+	B,-2,277,265,356,-2,356,65535,0,6400,0,1,0,0,0,1,0,-1
+	O,BEGIN,GRP,"ButtonSelected"
+		B,-2,277,265,356,-2,356,65535,0,6400,0,2,0,0,0,1,0,-1
+		O,BEGIN,R,"ButtonBackground"
+			B,265,356,-1,277,265,356,65535,0,6400,0,4,0,0,0,1,0,-1
+			ST,0,1,COLOR,3,COLOR,3,0,0,COLOR,3,0,COLOR,3,0,COLOR,2,0,COLOR,2
+		O,END
+		O,BEGIN,P,"ButtonArrow"
+			B,265,328,255,304,265,328,65535,0,6400,0,4,0,0,0,1,0,-1
+			ST,0,1,COLOR,4,COLOR,4,0,0,COLOR,4,0,COLOR,4,0,COLOR,2,0,COLOR,2
+			PP,265,328,265,304,255,317
+		O,END
+		O,BEGIN,R,"MimicSelectedRectangle"
+			B,3,356,-2,277,3,356,65535,0,6400,0,4,0,0,0,1,0,-1
+			ST,0,1,COLOR,5,COLOR,5,0,0,COLOR,5,0,COLOR,5,0,COLOR,2,0,COLOR,2
+		O,END
+		A,BEGIN,VT,"Anim1",0,0,"#W correspond au nom de la fenˆtre. #MX peut-ˆtre remplac‚ par un nom de synoptique. Sinon voir dans les chaŒnages associ‚s des propri‚t‚s du modŠle de fenˆtre pour changer l'association de #MX.","#W corresponds to the name of the window. #MX can be replaced by a synoptic name. Otherwise, see in the associated links properties of the window model to change the association of #MX."
+			PP,2,"#W","",0,1,0,1,2,0,0,1,0
+			ADVANIMATION,"#M2","",1,0
+		A,END
+	O,END
+	O,BEGIN,T,"MimicTitle"
+		B,-2,277,265,356,-2,277,65535,0,6400,0,2,0,0,0,1,0,-1
+		ST,0,1,COLOR,12,COLOR,12,0,0,COLOR,9,0,COLOR,9,0,COLOR,2,0,COLOR,2
+		PP,1,-2,277,30,0,FONT,13," ",36,FONT,13," ",36
+		A,BEGIN,CTXT,"Anim1",0,0,"#W correspond au nom de la fenˆtre. #MX peut-ˆtre remplac‚ par un nom de synoptique. Sinon voir dans les chaŒnages associ‚s des propri‚t‚s du modŠle de fenˆtre pour changer l'association de #MX.","#W corresponds to the name of the window. #MX can be replaced by a synoptic name. Otherwise, see in the associated links properties of the window model to change the association of #MX."
+			PP,2,"#W","",0,0,0,0,1,0,COLOR,6,COLOR,6,COLOR,18,COLOR,18,COLOR,18,COLOR,18,COLOR,17,COLOR,17,COLOR,16,COLOR,16,COLOR,16,COLOR,16
+			ADVANIMATION,"#M2","",0,COLOR,19,COLOR,19,1,COLOR,12,COLOR,12
+		A,END
+		A,BEGIN,LO,"Anim2",0,0,"#MX peut-ˆtre remplac‚ par un nom de synoptique. Sinon voir dans les chaŒnages associ‚s des propri‚t‚s du modŠle de fenˆtre pour changer l'association de #MX.","#MX can be replaced by a synoptic name. Otherwise, see in the associated links properties of the window model to change the association of #MX."
+			PP,"#M2","",1,0,1,0,"","",1,0,,1,1,
+		A,END
+	O,END
+O,END
+O,BEGIN,GRP,"MENUBUTTON_03"
+	B,-2,357,265,436,-2,436,65535,0,6400,0,1,0,0,0,1,0,-1
+	O,BEGIN,GRP,"ButtonSelected"
+		B,-2,357,265,436,-2,436,65535,0,6400,0,2,0,0,0,1,0,-1
+		O,BEGIN,R,"ButtonBackground"
+			B,265,436,-1,357,265,436,65535,0,6400,0,4,0,0,0,1,0,-1
+			ST,0,1,COLOR,3,COLOR,3,0,0,COLOR,3,0,COLOR,3,0,COLOR,2,0,COLOR,2
+		O,END
+		O,BEGIN,P,"ButtonArrow"
+			B,265,408,255,384,265,408,65535,0,6400,0,4,0,0,0,1,0,-1
+			ST,0,1,COLOR,4,COLOR,4,0,0,COLOR,4,0,COLOR,4,0,COLOR,2,0,COLOR,2
+			PP,265,408,265,384,255,397
+		O,END
+		O,BEGIN,R,"MimicSelectedRectangle"
+			B,3,436,-2,357,3,436,65535,0,6400,0,4,0,0,0,1,0,-1
+			ST,0,1,COLOR,5,COLOR,5,0,0,COLOR,5,0,COLOR,5,0,COLOR,2,0,COLOR,2
+		O,END
+		A,BEGIN,VT,"Anim1",0,0,"#W correspond au nom de la fenˆtre. #MX peut-ˆtre remplac‚ par un nom de synoptique. Sinon voir dans les chaŒnages associ‚s des propri‚t‚s du modŠle de fenˆtre pour changer l'association de #MX.","#W corresponds to the name of the window. #MX can be replaced by a synoptic name. Otherwise, see in the associated links properties of the window model to change the association of #MX."
+			PP,2,"#W","",0,1,0,1,2,0,0,1,0
+			ADVANIMATION,"#M3","",1,0
+		A,END
+	O,END
+	O,BEGIN,T,"MimicTitle"
+		B,-2,357,265,436,-2,357,65535,0,6400,0,2,0,0,0,1,0,-1
+		ST,0,1,COLOR,12,COLOR,12,0,0,COLOR,9,0,COLOR,9,0,COLOR,2,0,COLOR,2
+		PP,1,-2,357,30,0,FONT,13," ",36,FONT,13," ",36
+		A,BEGIN,CTXT,"Anim1",0,0,"#W correspond au nom de la fenˆtre. #MX peut-ˆtre remplac‚ par un nom de synoptique. Sinon voir dans les chaŒnages associ‚s des propri‚t‚s du modŠle de fenˆtre pour changer l'association de #MX.","#W corresponds to the name of the window. #MX can be replaced by a synoptic name. Otherwise, see in the associated links properties of the window model to change the association of #MX."
+			PP,2,"#W","",0,0,0,0,1,0,COLOR,6,COLOR,6,COLOR,18,COLOR,18,COLOR,18,COLOR,18,COLOR,17,COLOR,17,COLOR,16,COLOR,16,COLOR,16,COLOR,16
+			ADVANIMATION,"#M3","",0,COLOR,19,COLOR,19,1,COLOR,12,COLOR,12
+		A,END
+		A,BEGIN,LO,"Anim2",0,0,"#MX peut-ˆtre remplac‚ par un nom de synoptique. Sinon voir dans les chaŒnages associ‚s des propri‚t‚s du modŠle de fenˆtre pour changer l'association de #MX.","#MX can be replaced by a synoptic name. Otherwise, see in the associated links properties of the window model to change the association of #MX."
+			PP,"#M3","",1,0,1,0,"","",1,0,,1,1,
+		A,END
+	O,END
+O,END
+O,BEGIN,GRP,"MENUBUTTON_04"
+	B,-2,437,265,516,-2,516,65535,0,6400,0,1,0,0,0,1,0,-1
+	O,BEGIN,GRP,"ButtonSelected"
+		B,-2,437,265,516,-2,516,65535,0,6400,0,2,0,0,0,1,0,-1
+		O,BEGIN,R,"ButtonBackground"
+			B,265,516,-1,437,265,516,65535,0,6400,0,4,0,0,0,1,0,-1
+			ST,0,1,COLOR,3,COLOR,3,0,0,COLOR,3,0,COLOR,3,0,COLOR,2,0,COLOR,2
+		O,END
+		O,BEGIN,P,"ButtonArrow"
+			B,265,488,255,464,265,488,65535,0,6400,0,4,0,0,0,1,0,-1
+			ST,0,1,COLOR,4,COLOR,4,0,0,COLOR,4,0,COLOR,4,0,COLOR,2,0,COLOR,2
+			PP,265,488,265,464,255,477
+		O,END
+		O,BEGIN,R,"MimicSelectedRectangle"
+			B,3,516,-2,437,3,516,65535,0,6400,0,4,0,0,0,1,0,-1
+			ST,0,1,COLOR,5,COLOR,5,0,0,COLOR,5,0,COLOR,5,0,COLOR,2,0,COLOR,2
+		O,END
+		A,BEGIN,VT,"Anim1",0,0,"#W correspond au nom de la fenˆtre. #MX peut-ˆtre remplac‚ par un nom de synoptique. Sinon voir dans les chaŒnages associ‚s des propri‚t‚s du modŠle de fenˆtre pour changer l'association de #MX.","#W corresponds to the name of the window. #MX can be replaced by a synoptic name. Otherwise, see in the associated links properties of the window model to change the association of #MX."
+			PP,2,"#W","",0,1,0,1,2,0,0,1,0
+			ADVANIMATION,"#M4","",1,0
+		A,END
+	O,END
+	O,BEGIN,T,"MimicTitle"
+		B,-2,437,265,516,-2,437,65535,0,6400,0,2,0,0,0,1,0,-1
+		ST,0,1,COLOR,12,COLOR,12,0,0,COLOR,9,0,COLOR,9,0,COLOR,2,0,COLOR,2
+		PP,1,-2,437,30,0,FONT,13," ",36,FONT,13," ",36
+		A,BEGIN,CTXT,"Anim1",0,0,"#W correspond au nom de la fenˆtre. #MX peut-ˆtre remplac‚ par un nom de synoptique. Sinon voir dans les chaŒnages associ‚s des propri‚t‚s du modŠle de fenˆtre pour changer l'association de #MX.","#W corresponds to the name of the window. #MX can be replaced by a synoptic name. Otherwise, see in the associated links properties of the window model to change the association of #MX."
+			PP,2,"#W","",0,0,0,0,1,0,COLOR,6,COLOR,6,COLOR,18,COLOR,18,COLOR,18,COLOR,18,COLOR,17,COLOR,17,COLOR,16,COLOR,16,COLOR,16,COLOR,16
+			ADVANIMATION,"#M4","",0,COLOR,19,COLOR,19,1,COLOR,12,COLOR,12
+		A,END
+		A,BEGIN,LO,"Anim2",0,0,"#MX peut-ˆtre remplac‚ par un nom de synoptique. Sinon voir dans les chaŒnages associ‚s des propri‚t‚s du modŠle de fenˆtre pour changer l'association de #MX.","#MX can be replaced by a synoptic name. Otherwise, see in the associated links properties of the window model to change the association of #MX."
+			PP,"#M4","",1,0,1,0,"","",1,0,,1,1,
+		A,END
+	O,END
+O,END
+O,BEGIN,GRP,"MENUBUTTON_05"
+	B,-2,517,265,596,-2,596,65535,0,6400,0,1,0,0,0,1,0,-1
+	O,BEGIN,GRP,"ButtonSelected"
+		B,-2,517,265,596,-2,596,65535,0,6400,0,2,0,0,0,1,0,-1
+		O,BEGIN,R,"ButtonBackground"
+			B,265,596,-1,517,265,596,65535,0,6400,0,4,0,0,0,1,0,-1
+			ST,0,1,COLOR,3,COLOR,3,0,0,COLOR,3,0,COLOR,3,0,COLOR,2,0,COLOR,2
+		O,END
+		O,BEGIN,P,"ButtonArrow"
+			B,265,568,255,544,265,568,65535,0,6400,0,4,0,0,0,1,0,-1
+			ST,0,1,COLOR,4,COLOR,4,0,0,COLOR,4,0,COLOR,4,0,COLOR,2,0,COLOR,2
+			PP,265,568,265,544,255,557
+		O,END
+		O,BEGIN,R,"MimicSelectedRectangle"
+			B,3,596,-2,517,3,596,65535,0,6400,0,4,0,0,0,1,0,-1
+			ST,0,1,COLOR,5,COLOR,5,0,0,COLOR,5,0,COLOR,5,0,COLOR,2,0,COLOR,2
+		O,END
+		A,BEGIN,VT,"Anim1",0,0,"#W correspond au nom de la fenˆtre. #MX peut-ˆtre remplac‚ par un nom de synoptique. Sinon voir dans les chaŒnages associ‚s des propri‚t‚s du modŠle de fenˆtre pour changer l'association de #MX.","#W corresponds to the name of the window. #MX can be replaced by a synoptic name. Otherwise, see in the associated links properties of the window model to change the association of #MX."
+			PP,2,"#W","",0,1,0,1,2,0,0,1,0
+			ADVANIMATION,"#M5","",1,0
+		A,END
+	O,END
+	O,BEGIN,T,"MimicTitle"
+		B,-2,517,265,596,-2,517,65535,0,6400,0,2,0,0,0,1,0,-1
+		ST,0,1,COLOR,12,COLOR,12,0,0,COLOR,9,0,COLOR,9,0,COLOR,2,0,COLOR,2
+		PP,1,-2,517,30,0,FONT,13," ",36,FONT,13," ",36
+		A,BEGIN,CTXT,"Anim1",0,0,"#W correspond au nom de la fenˆtre. #MX peut-ˆtre remplac‚ par un nom de synoptique. Sinon voir dans les chaŒnages associ‚s des propri‚t‚s du modŠle de fenˆtre pour changer l'association de #MX.","#W corresponds to the name of the window. #MX can be replaced by a synoptic name. Otherwise, see in the associated links properties of the window model to change the association of #MX."
+			PP,2,"#W","",0,0,0,0,1,0,COLOR,6,COLOR,6,COLOR,18,COLOR,18,COLOR,18,COLOR,18,COLOR,17,COLOR,17,COLOR,16,COLOR,16,COLOR,16,COLOR,16
+			ADVANIMATION,"#M5","",0,COLOR,19,COLOR,19,1,COLOR,12,COLOR,12
+		A,END
+		A,BEGIN,LO,"Anim2",0,0,"#MX peut-ˆtre remplac‚ par un nom de synoptique. Sinon voir dans les chaŒnages associ‚s des propri‚t‚s du modŠle de fenˆtre pour changer l'association de #MX.","#MX can be replaced by a synoptic name. Otherwise, see in the associated links properties of the window model to change the association of #MX."
+			PP,"#M5","",1,0,1,0,"","",1,0,,1,1,
+		A,END
+	O,END
+O,END
+O,BEGIN,GRP,"MENUBUTTON_06"
+	B,-2,597,265,676,-2,676,65535,0,6400,0,1,0,0,0,1,0,-1
+	O,BEGIN,GRP,"ButtonSelected"
+		B,-2,597,265,676,-2,676,65535,0,6400,0,2,0,0,0,1,0,-1
+		O,BEGIN,R,"ButtonBackground"
+			B,265,676,-1,597,265,676,65535,0,6400,0,4,0,0,0,1,0,-1
+			ST,0,1,COLOR,3,COLOR,3,0,0,COLOR,3,0,COLOR,3,0,COLOR,2,0,COLOR,2
+		O,END
+		O,BEGIN,P,"ButtonArrow"
+			B,265,648,255,624,265,648,65535,0,6400,0,4,0,0,0,1,0,-1
+			ST,0,1,COLOR,4,COLOR,4,0,0,COLOR,4,0,COLOR,4,0,COLOR,2,0,COLOR,2
+			PP,265,648,265,624,255,637
+		O,END
+		O,BEGIN,R,"MimicSelectedRectangle"
+			B,3,676,-2,597,3,676,65535,0,6400,0,4,0,0,0,1,0,-1
+			ST,0,1,COLOR,5,COLOR,5,0,0,COLOR,5,0,COLOR,5,0,COLOR,2,0,COLOR,2
+		O,END
+		A,BEGIN,VT,"Anim1",0,0,"#W correspond au nom de la fenˆtre. #MX peut-ˆtre remplac‚ par un nom de synoptique. Sinon voir dans les chaŒnages associ‚s des propri‚t‚s du modŠle de fenˆtre pour changer l'association de #MX.","#W corresponds to the name of the window. #MX can be replaced by a synoptic name. Otherwise, see in the associated links properties of the window model to change the association of #MX."
+			PP,2,"#W","",0,1,0,1,2,0,0,1,0
+			ADVANIMATION,"#M6","",1,0
+		A,END
+	O,END
+	O,BEGIN,T,"MimicTitle"
+		B,-2,597,265,676,-2,597,65535,0,6400,0,2,0,0,0,1,0,-1
+		ST,0,1,COLOR,12,COLOR,12,0,0,COLOR,9,0,COLOR,9,0,COLOR,2,0,COLOR,2
+		PP,1,-2,597,30,0,FONT,13," ",36,FONT,13," ",36
+		A,BEGIN,CTXT,"Anim1",0,0,"#W correspond au nom de la fenˆtre. #MX peut-ˆtre remplac‚ par un nom de synoptique. Sinon voir dans les chaŒnages associ‚s des propri‚t‚s du modŠle de fenˆtre pour changer l'association de #MX.","#W corresponds to the name of the window. #MX can be replaced by a synoptic name. Otherwise, see in the associated links properties of the window model to change the association of #MX."
+			PP,2,"#W","",0,0,0,0,1,0,COLOR,6,COLOR,6,COLOR,18,COLOR,18,COLOR,18,COLOR,18,COLOR,17,COLOR,17,COLOR,16,COLOR,16,COLOR,16,COLOR,16
+			ADVANIMATION,"#M6","",0,COLOR,19,COLOR,19,1,COLOR,12,COLOR,12
+		A,END
+		A,BEGIN,LO,"Anim2",0,0,"#MX peut-ˆtre remplac‚ par un nom de synoptique. Sinon voir dans les chaŒnages associ‚s des propri‚t‚s du modŠle de fenˆtre pour changer l'association de #MX.","#MX can be replaced by a synoptic name. Otherwise, see in the associated links properties of the window model to change the association of #MX."
+			PP,"#M6","",1,0,1,0,"","",1,0,,1,1,
+		A,END
+	O,END
+O,END
+O,BEGIN,GRP,"MENUBUTTON_07"
+	B,-2,677,265,756,-2,756,65535,0,6400,0,1,0,0,0,1,0,-1
+	O,BEGIN,GRP,"ButtonSelected"
+		B,-2,677,265,756,-2,756,65535,0,6400,0,2,0,0,0,1,0,-1
+		O,BEGIN,R,"ButtonBackground"
+			B,265,756,-1,677,265,756,65535,0,6400,0,4,0,0,0,1,0,-1
+			ST,0,1,COLOR,3,COLOR,3,0,0,COLOR,3,0,COLOR,3,0,COLOR,2,0,COLOR,2
+		O,END
+		O,BEGIN,P,"ButtonArrow"
+			B,265,728,255,704,265,728,65535,0,6400,0,4,0,0,0,1,0,-1
+			ST,0,1,COLOR,4,COLOR,4,0,0,COLOR,4,0,COLOR,4,0,COLOR,2,0,COLOR,2
+			PP,265,728,265,704,255,717
+		O,END
+		O,BEGIN,R,"MimicSelectedRectangle"
+			B,3,756,-2,677,3,756,65535,0,6400,0,4,0,0,0,1,0,-1
+			ST,0,1,COLOR,5,COLOR,5,0,0,COLOR,5,0,COLOR,5,0,COLOR,2,0,COLOR,2
+		O,END
+		A,BEGIN,VT,"Anim1",0,0,"#W correspond au nom de la fenˆtre. #MX peut-ˆtre remplac‚ par un nom de synoptique. Sinon voir dans les chaŒnages associ‚s des propri‚t‚s du modŠle de fenˆtre pour changer l'association de #MX.","#W corresponds to the name of the window. #MX can be replaced by a synoptic name. Otherwise, see in the associated links properties of the window model to change the association of #MX."
+			PP,2,"#W","",0,1,0,1,2,0,0,1,0
+			ADVANIMATION,"#M7","",1,0
+		A,END
+	O,END
+	O,BEGIN,T,"MimicTitle"
+		B,-2,677,265,756,-2,677,65535,0,6400,0,2,0,0,0,1,0,-1
+		ST,0,1,COLOR,12,COLOR,12,0,0,COLOR,9,0,COLOR,9,0,COLOR,2,0,COLOR,2
+		PP,1,-2,677,30,0,FONT,13," ",36,FONT,13," ",36
+		A,BEGIN,CTXT,"Anim1",0,0,"#W correspond au nom de la fenˆtre. #MX peut-ˆtre remplac‚ par un nom de synoptique. Sinon voir dans les chaŒnages associ‚s des propri‚t‚s du modŠle de fenˆtre pour changer l'association de #MX.","#W corresponds to the name of the window. #MX can be replaced by a synoptic name. Otherwise, see in the associated links properties of the window model to change the association of #MX."
+			PP,2,"#W","",0,0,0,0,1,0,COLOR,6,COLOR,6,COLOR,18,COLOR,18,COLOR,18,COLOR,18,COLOR,17,COLOR,17,COLOR,16,COLOR,16,COLOR,16,COLOR,16
+			ADVANIMATION,"#M7","",0,COLOR,19,COLOR,19,1,COLOR,12,COLOR,12
+		A,END
+		A,BEGIN,LO,"Anim2",0,0,"#MX peut-ˆtre remplac‚ par un nom de synoptique. Sinon voir dans les chaŒnages associ‚s des propri‚t‚s du modŠle de fenˆtre pour changer l'association de #MX.","#MX can be replaced by a synoptic name. Otherwise, see in the associated links properties of the window model to change the association of #MX."
+			PP,"#M7","",1,0,1,0,"","",1,0,,1,0,
+		A,END
+	O,END
+O,END
+O,BEGIN,GRP,"SelectedGroupSettings"
+	B,1082,0,1161,79,1082,79,65535,0,6400,0,1,0,0,0,1,0,-1
+	O,BEGIN,R,"SelectedSquare"
+		B,1161,79,1082,0,1161,79,65535,0,6400,0,2,0,0,0,1,0,-1
+		ST,0,1,COLOR,3,COLOR,3,0,0,COLOR,3,0,COLOR,3,0,COLOR,2,0,COLOR,2
+	O,END
+	O,BEGIN,P,"SelectedArrow"
+		B,1105,79,1138,67,1105,79,65535,0,6400,0,2,0,0,0,1,0,-1
+		ST,0,1,COLOR,4,COLOR,4,0,0,COLOR,4,0,COLOR,4,0,COLOR,2,0,COLOR,2
+		PP,1105,79,1121,67,1138,79
+	O,END
+	O,BEGIN,R,"SelectedRectangle"
+		B,1161,5,1082,0,1161,5,65535,0,6400,0,2,0,0,0,1,0,-1
+		ST,0,1,COLOR,5,COLOR,5,0,0,COLOR,5,0,COLOR,5,0,COLOR,2,0,COLOR,2
+	O,END
+	O,BEGIN,BM,"SelectedSettingsIcon"
+		B,1098,16,1145,63,1098,63,1,0,6400,0,2,0,0,0,1,0,-1
+		ST,5,1,COLOR,4,COLOR,4,1,0,COLOR,4,0,COLOR,4,0,COLOR,2,0,COLOR,2
+		PP,"/SH_NAVIGATION_FLAT/NAV_ICONS_WHITE_SYSTEM48.png",0,COLOR,7,"/SH_NAVIGATION_FLAT/NAV_ICONS_WHITE_SETTINGS48.png","",1,1,0,255
+	O,END
+	A,BEGIN,VT,"Anim1",0,0,"",""
+		PP,2,"#W","",0,1,0,1,2,0,0,1,0
+		ADVANIMATION,"Settings","",1,0
+	A,END
+O,END
+O,BEGIN,BM,"SettingsIcon"
+	B,1098,16,1145,63,1098,63,1,0,6400,0,1,0,0,2,1,0,-1
+	ST,5,1,COLOR,4,COLOR,4,1,0,COLOR,4,0,COLOR,4,0,COLOR,2,0,COLOR,2
+	PP,"/SH_NAVIGATION_FLAT/NAV_ICONS_WHITE_SYSTEM48.png",0,COLOR,7,"/SH_NAVIGATION_FLAT/NAV_ICONS_WHITE_SYSTEM48.png","",1,1,0,128
+	A,BEGIN,VT,"Anim1",0,0,"",""
+		PP,2,"#W","",0,1,0,1,1,0,0,1,0
+		ADVANIMATION,"Settings","",2,0
+	A,END
+	A,BEGIN,LO,"Anim2",0,0,"@Ouvre les r‚glages","@Open Settings"
+		PP,"Settings","",1,0,1,0,"","",1,0,,1,1,
+	A,END
+O,END
+O,BEGIN,BM,"Bitmap1"
+	B,30,0,193,79,30,79,65535,0,6400,0,1,0,0,0,1,0,-1
+	ST,5,1,COLOR,4,COLOR,4,1,0,COLOR,4,0,COLOR,4,0,COLOR,2,0,COLOR,2
+	PP,"PcVue_Logo_WhiteBackground_Full-Colour-Slogan 164x80.png",0,COLOR,7,"","",1,1,0,255
+	A,BEGIN,RA,"Anim1",0,0,"@Visitez notre site web","@Visit our website","0", , 
+		PP,"explorer.exe \'https://www.pcvuesolutions.com/index.php\'","","",0,1,0,0
+	A,END
+O,END
+O,BEGIN,BM,"Bitmap2"
+	B,215,20,246,51,215,51,1,0,6400,0,1,0,0,0,1,0,-1
+	ST,5,1,COLOR,2,COLOR,2,1,0,COLOR,18,0,COLOR,18,0,COLOR,2,0,COLOR,2
+	PP,"/SH_DISPLAYS/DISPLAYS_ICONS_HELP_WHITE_32.png",0,COLOR,7,"","",1,1,0,255
+	A,BEGIN,LN,"Anim1",0,0,"@Informations relatives au projet","@How this project is working","0", , 
+		PP,"Help.rtf",0,1,1,COLOR,2,COLOR,20,FONT,12,1000,700,"",0
+	A,END
+O,END

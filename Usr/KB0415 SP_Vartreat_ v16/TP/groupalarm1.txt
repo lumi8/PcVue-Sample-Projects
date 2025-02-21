@@ -1,0 +1,6 @@
+TREATMENT,ACKALARMBYVAR,Ack by tank,0,,,,,,,1,10,#F=(#A2==LEVEL),#B1.#B2.LEVEL.ACK,1
+
+Alarm variables with a domain of LEVEL and a priority between 1 and 10 are affected.
+
+AREA1.TANK1.LEVEL.ACK will acknowledge alarms with the pattern AREA1.TANK1.*
+AREA1.TANK2.LEVEL.ACK will acknowledge alarms with the pattern AREA1.TANK2.*

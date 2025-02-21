@@ -1,0 +1,121 @@
+ASCII32,29,4,2004,17:13,37
+W,BEGIN,"Filter","Mimic1",""
+	TEMPLATE,"",0,0,0,0,0,0,0,0,0,0,0,0
+	POSITION,175,0
+	SIZE,640,480,640,480,0,0,0,1024,768,632,446
+	BACKCOLOR,236,233,216,0,0,0
+	TITLE,1,"Exemple de l'instruction de LOGDISPLAY mode FILTER.","Example of LOGDISPLAY mode FILTER instruction."
+	STYLE,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0
+	GRID,1,1,8,8,0,0,0,0,0,0
+	LAYERS,65535
+	RIGHTS,0,1,0.000000,64.000000,1,65535,0,0
+	INCLUDED,0,0,0,0,0
+	LINK,1,"","","",""
+	LINK,2,"","","",""
+	LINK,3,"","","",""
+	LINK,4,"","","",""
+	LINK,5,"","","",""
+	LINK,6,"","","",""
+	LINK,7,"","","",""
+	LINK,8,"","","",""
+	LINK,9,"","","",""
+	LINK,10,"","","",""
+	BACKBMP,"",0,0
+	BACKOBJECT,"",0,0
+	BEFORE,"","","",""
+	EVENTS,0
+	BINOBJ,"Filter.binary"
+W,END
+FONTS,BEGIN
+	FONT,1,-13,0,400,0,0,"Arial",0,0
+	FONT,2,0,105000,400,0,0,"Arial",9,2
+FONTS,END
+COLORS,BEGIN
+	COLOR,1,0,0,0,0,0,0
+	COLOR,2,236,233,216,0,0,0
+	COLOR,3,255,255,255,0,0,0
+	COLOR,4,113,111,100,0,0,0
+	COLOR,5,192,192,192,0,0,0
+	COLOR,6,172,168,153,0,0,0
+	COLOR,7,0,0,0,0,63,0
+COLORS,END
+O,BEGIN,R,"Shape1"
+	B,248,184,8,136,248,184,65535,0,6400,0,1,0,0,0
+	ST,0,1,COLOR,1,COLOR,1,0,0,COLOR,2,0,COLOR,2,0,COLOR,1,0,COLOR,1
+O,END
+O,BEGIN,T,"Text3"
+	B,168,152,240,176,164,183,65535,0,6400,0,1,0,0,0
+	ST,0,1,COLOR,1,COLOR,1,0,0,COLOR,2,0,COLOR,2,0,COLOR,1,0,COLOR,1
+	AST,6,1,COLOR,1,COLOR,2,0,COLOR,4,0,COLOR,4,0,COLOR,3,0,COLOR,3
+	PP,1,168,152,0,0,FONT,1,"Appliquez",37,FONT,1,"Apply",37
+	A,BEGIN,RP,"Anim1",0,0,"",""
+		PP,"EXLOGDISPLAY.SVB","","APPLYFILTER","LOG1","",0,0
+	A,END
+O,END
+O,BEGIN,T,"Text8"
+	B,8,8,624,40,-43,50,65535,0,6400,0,1,0,0,0
+	ST,0,1,COLOR,1,COLOR,1,0,0,COLOR,2,0,COLOR,2,0,COLOR,1,0,COLOR,1
+	PP,1,8,8,0,0,FONT,1,"Cet exemple montre l'utilisation de l'instruction de FILTRE de mode de LOGDISPLAY.  L'instruction de LOGDISPLAY s'applique … un affichage sp‚cifique de notation.",84,FONT,1,"This example shows the use of the LOGDISPLAY mode FILTER instruction . The LOGDISPLAY instruction applies to a specific Log Display.",84
+O,END
+O,BEGIN,LOG,"Log1"
+	B,8,208,624,400,10,210,65535,0,6400,0,1,0,0,0
+	ST,5,1,COLOR,1,COLOR,1,1,0,COLOR,5,0,COLOR,5,0,COLOR,1,0,COLOR,1
+	AST,5,2,COLOR,1,COLOR,5,0,COLOR,3,0,COLOR,3,0,COLOR,6,0,COLOR,6
+	TOOLBAR,1,8192,F_NOACKON,F_ACKON,F_NOACKOFF,F_ACKOFF,F_NS,F_MASK,F_ON,F_OFF,SEPARATOR,F_BITON,F_BITOFF,F_BITNS,SEPARATOR,F_PROG,F_COMMAND,F_ACK,F_LOGON,SEPARATOR,F_TIME,SEPARATOR,A_PRINT,F_MASKPROG,F_MASKVAR,F_INHIB,F_NA,SEPARATOR,F_NOBLINK,SEPARATOR,F_MASKEXPR,F_MASKACTION
+	SCROLL,0,17,2
+	BLINK,1
+	HEADER,1,22,6,70,150,150,75,75,75,0,0
+	TITLE,"Heure","#h:#m:#s","Time","#h:#m:#s"
+	TITLE,"Title","#T","Title","#T"
+	TITLE,"Event","#E","Event","#E"
+	TITLE,"Domaine","#d","Domain","#d"
+	TITLE,"Tatt 3","#@A3","Tatt 3","#@A3"
+	TITLE,"Tatt 4","#@A4","Tatt 4","#@A4"
+	TITLE,"","","",""
+	TITLE,"","","",""
+	LINE,FONT,2,COLOR,2,COLOR,2
+	EXEC,100,0,1,0,1,1,1,1,1,""
+	FILTER,"EVENTS","","",0,29,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,1,0
+O,END
+O,BEGIN,T,"Text9"
+	B,568,408,624,432,564,439,65535,0,6400,0,1,0,0,0
+	ST,0,1,COLOR,1,COLOR,1,0,0,COLOR,2,0,COLOR,2,0,COLOR,1,0,COLOR,1
+	AST,6,1,COLOR,1,COLOR,2,0,COLOR,4,0,COLOR,4,0,COLOR,3,0,COLOR,3
+	PP,1,568,408,0,0,FONT,1,"Ferm‚",37,FONT,1,"Close",37
+	A,BEGIN,LC,"Anim1",0,0,"",""
+		PP,"*",""
+	A,END
+O,END
+O,BEGIN,T,"Text2"
+	B,80,152,144,176,75,183,65535,0,6400,0,1,0,0,0
+	ST,0,1,COLOR,1,COLOR,1,0,0,COLOR,7,0,COLOR,7,0,COLOR,1,0,COLOR,1
+	PP,1,80,152,0,0,FONT,1,"Appliquez",37,FONT,1,"Station_2",37
+	A,BEGIN,ST,"Anim1",0,0,"",""
+		PP,"@FILTERSTRING",1,0,1,0,0
+	A,END
+O,END
+O,BEGIN,T,"Text5"
+	B,16,152,80,176,11,215,65535,0,6400,0,1,0,0,0
+	ST,0,1,COLOR,1,COLOR,1,0,0,COLOR,2,0,COLOR,2,0,COLOR,1,0,COLOR,1
+	PP,1,16,152,0,0,FONT,1,"=(#A4 == \'",36,FONT,1,"=(#A4 == \'",36
+O,END
+O,BEGIN,T,"Text1"
+	B,144,152,160,176,143,215,65535,0,6400,0,1,0,0,0
+	ST,0,1,COLOR,1,COLOR,1,0,0,COLOR,2,0,COLOR,2,0,COLOR,1,0,COLOR,1
+	PP,1,144,152,0,0,FONT,1,"\')",36,FONT,1,"\')",36
+O,END
+O,BEGIN,T,"Text4"
+	B,8,48,632,80,-42,89,65535,0,6400,0,1,0,0,0
+	ST,0,1,COLOR,1,COLOR,1,0,0,COLOR,2,0,COLOR,2,0,COLOR,1,0,COLOR,1
+	PP,1,8,48,0,0,FONT,1,"Le filtre utilis‚ est montr‚ ci-dessous.  Il examine que l'attribut 4 des textes ‚gale une valeur particuliŠre.  Par exemple, Station_2.",84,FONT,1,"The filter used is shown below. It tests that the text attribute 4 equals a particular value. For example, Station_2.",84
+O,END
+O,BEGIN,T,"Text7"
+	B,16,128,90,144,11,191,65535,0,6400,0,1,0,0,0
+	ST,0,1,COLOR,1,COLOR,1,0,0,COLOR,2,0,COLOR,2,0,COLOR,1,0,COLOR,1
+	PP,0,16,128,0,0,FONT,1," Texte de filtre ",84,FONT,1," Filter string ",36
+O,END
+O,BEGIN,T,"Text11"
+	B,8,88,616,104,-40,108,65535,0,6400,0,1,0,0,0
+	ST,0,1,COLOR,1,COLOR,1,0,0,COLOR,2,0,COLOR,2,0,COLOR,1,0,COLOR,1
+	PP,1,8,88,0,0,FONT,1,"Cliquetez dessus la texte pour changer le filtre, et cliquetez alors le bouton d'application pour l'appliquer.",84,FONT,1,"Click on the string to change the filter, and then click the Apply button to apply it.",36
+O,END

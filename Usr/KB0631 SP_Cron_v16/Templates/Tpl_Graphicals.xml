@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<Collection type="Mimics" id="Cron_Mgt">
+<ObjectItem ObjectId="Mimic01">
+<Property id="FileName">Cron_Mgt_Mimic01</Property>
+<Property id="Title1"/>
+<Property id="Title2"/>
+<Property id="MimicTemplate_Name"/>
+<Property id="Context Branch">Cron_Mgt</Property>
+</ObjectItem>
+<Collection type="Symbols" id="Cron_Mgt_1">
+<ObjectItem ObjectId="StationInfo">
+<Property id="Name">Cron_Mgt_1_StationInfo</Property>
+<Property id="Local Branch">1</Property>
+<Property id="SymbolTemplate_Name">CRON/StationCron.ani</Property>
+</ObjectItem>
+</Collection>
+<Collection type="Symbols" id="Cron_Mgt_2">
+<ObjectItem ObjectId="StationInfo">
+<Property id="Name">Cron_Mgt_2_StationInfo</Property>
+<Property id="Local Branch">2</Property>
+<Property id="SymbolTemplate_Name">CRON/StationCron.ani</Property>
+</ObjectItem>
+</Collection>
+<Collection type="Symbols" id="Cron_Mgt_3">
+<ObjectItem ObjectId="StationInfo">
+<Property id="Name">Cron_Mgt_3_StationInfo</Property>
+<Property id="Local Branch">3</Property>
+<Property id="SymbolTemplate_Name">CRON/StationCron.ani</Property>
+</ObjectItem>
+</Collection>
+<Collection type="Symbols" id="Cron_Mgt">
+<ObjectItem ObjectId="Symbol01">
+<Property id="Name">Cron_Mgt_Symbol01</Property>
+<Property id="Local Branch">Cron_Mgt</Property>
+<Property id="SymbolTemplate_Name">CRON/InformationCron.ani</Property>
+</ObjectItem>
+</Collection>
+</Collection>
+</root>

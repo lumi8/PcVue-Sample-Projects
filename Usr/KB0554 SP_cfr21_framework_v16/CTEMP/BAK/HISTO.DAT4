@@ -1,0 +1,12 @@
+UNIT,U_PROP1,10000000,0,,,1,,,1000000,0,0,0,0,0,,"","",,,,0,0,"",1,0,0,0,"",,0,0,0,0,0,,0
+LOG,Commands,6,32,0,0,0,0,32768,32768,120,U_PROP1,,#D/#M/#Y #h:#m:#s #E #T,,,0,0,"Log of process commands"
+LOGFILTER,Commands,"[AND]#@A1=Process"
+LOGFORMAT,Commands,"#@A1,#@A2,#@*A3,#@*A4"
+LOG,SendRegister,0,32,1,0,0,0,32768,32768,120,U_PROP1,,#D/#M/#Y #h:#m:#s #E #T,,,0,0,"Log of register sends"
+LOGFILTER,SendRegister,"[AND]#@A1=RegisterSend"
+LOGFORMAT,SendRegister,"#@A1,#@A2,#@*A3,#@A5"
+LOG,USERLOG,0,0,0,1,0,0,32768,32768,120,U_PROP1,0,#D/#M/#Y #h:#m:#s #E #T,,,0,0,""
+LOGFILTER,USERLOG,"=(#T BEG Attempt)"
+LOGFORMAT,USERLOG,"#@A1,#@A2"
+LOG,RuntimeEvent,14,32350,5,1,0,0,32768,32768,120,U_PROP1,0,#D/#M/#Y #h:#m:#s #E #T,,,0,0,""
+LOGFORMAT,RuntimeEvent,"#@A1,#@A2"

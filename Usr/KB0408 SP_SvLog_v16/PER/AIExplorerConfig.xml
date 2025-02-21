@@ -1,0 +1,311 @@
+<?xml version="1.0"?>
+<AIExplorerConfig>
+  <ProjectPersistentFields>
+    <ProjectPersistentField>
+      <AssemblyName dt="string">AIExplorer_x002C__x0020_Version_x003D_1.0.0.0_x002C__x0020_Culture_x003D_neutral_x002C__x0020_PublicKeyToken_x003D_null</AssemblyName>
+      <ClassType dt="string">AIExplorer.WinExplorerWindows</ClassType>
+      <FieldName dt="string">bFilterMimic</FieldName>
+      <FieldValue dt="boolean">True</FieldValue>
+    </ProjectPersistentField>
+    <ProjectPersistentField>
+      <AssemblyName dt="string">AIExplorer_x002C__x0020_Version_x003D_1.0.0.0_x002C__x0020_Culture_x003D_neutral_x002C__x0020_PublicKeyToken_x003D_null</AssemblyName>
+      <ClassType dt="string">AIExplorer.WinExplorerWindows</ClassType>
+      <FieldName dt="string">bFilterMimicTemplate</FieldName>
+      <FieldValue dt="boolean">True</FieldValue>
+    </ProjectPersistentField>
+    <ProjectPersistentField>
+      <AssemblyName dt="string">AIExplorer_x002C__x0020_Version_x003D_1.0.0.0_x002C__x0020_Culture_x003D_neutral_x002C__x0020_PublicKeyToken_x003D_null</AssemblyName>
+      <ClassType dt="string">AIExplorer.WinExplorerWindows</ClassType>
+      <FieldName dt="string">bFilterSymbol</FieldName>
+      <FieldValue dt="boolean">True</FieldValue>
+    </ProjectPersistentField>
+    <ProjectPersistentField>
+      <AssemblyName dt="string">AIExplorer_x002C__x0020_Version_x003D_1.0.0.0_x002C__x0020_Culture_x003D_neutral_x002C__x0020_PublicKeyToken_x003D_null</AssemblyName>
+      <ClassType dt="string">AIExplorer.WinExplorerWindows</ClassType>
+      <FieldName dt="string">bFilterImage</FieldName>
+      <FieldValue dt="boolean">True</FieldValue>
+    </ProjectPersistentField>
+    <ProjectPersistentField>
+      <AssemblyName dt="string">AIExplorer_x002C__x0020_Version_x003D_1.0.0.0_x002C__x0020_Culture_x003D_neutral_x002C__x0020_PublicKeyToken_x003D_null</AssemblyName>
+      <ClassType dt="string">AIExplorer.WinExplorerWindows</ClassType>
+      <FieldName dt="string">bFilterProgram</FieldName>
+      <FieldValue dt="boolean">True</FieldValue>
+    </ProjectPersistentField>
+    <ProjectPersistentField>
+      <AssemblyName dt="string">AIExplorerSV_x002C__x0020_Version_x003D_1.0.0.0_x002C__x0020_Culture_x003D_neutral_x002C__x0020_PublicKeyToken_x003D_null</AssemblyName>
+      <ClassType dt="string">AIExplorer.SV.XmlFileViewerUserControl</ClassType>
+      <FieldName dt="string">m_queryString</FieldName>
+      <FieldValue dt="string">
+      </FieldValue>
+    </ProjectPersistentField>
+    <ProjectPersistentField>
+      <AssemblyName dt="string">AIExplorerSV_x002C__x0020_Version_x003D_1.0.0.0_x002C__x0020_Culture_x003D_neutral_x002C__x0020_PublicKeyToken_x003D_null</AssemblyName>
+      <ClassType dt="string">AIExplorer.SV.IEC104CreateVariable</ClassType>
+      <FieldName dt="string">hideOnCreation</FieldName>
+      <FieldValue dt="boolean">False</FieldValue>
+    </ProjectPersistentField>
+    <ProjectPersistentField>
+      <AssemblyName dt="string">AIExplorerSV_x002C__x0020_Version_x003D_1.0.0.0_x002C__x0020_Culture_x003D_neutral_x002C__x0020_PublicKeyToken_x003D_null</AssemblyName>
+      <ClassType dt="string">AIExplorer.SV.IEC104CreateVariable</ClassType>
+      <FieldName dt="string">bUseNetworkNameAsVariablePrefix</FieldName>
+      <FieldValue dt="boolean">True</FieldValue>
+    </ProjectPersistentField>
+    <ProjectPersistentField>
+      <AssemblyName dt="string">AIExplorerSV_x002C__x0020_Version_x003D_1.0.0.0_x002C__x0020_Culture_x003D_neutral_x002C__x0020_PublicKeyToken_x003D_null</AssemblyName>
+      <ClassType dt="string">AIExplorer.SV.IEC104CreateVariable</ClassType>
+      <FieldName dt="string">eBuildVariableNameTechnics</FieldName>
+      <FieldValue>HierarchicalName</FieldValue>
+    </ProjectPersistentField>
+    <ProjectPersistentField>
+      <AssemblyName dt="string">AIExplorerSV_x002C__x0020_Version_x003D_1.0.0.0_x002C__x0020_Culture_x003D_neutral_x002C__x0020_PublicKeyToken_x003D_null</AssemblyName>
+      <ClassType dt="string">AIExplorer.SV.BACnetLogRetrieval</ClassType>
+      <FieldName dt="string">bWithNoRange</FieldName>
+      <FieldValue dt="boolean">True</FieldValue>
+    </ProjectPersistentField>
+    <ProjectPersistentField>
+      <AssemblyName dt="string">AIExplorerSV_x002C__x0020_Version_x003D_1.0.0.0_x002C__x0020_Culture_x003D_neutral_x002C__x0020_PublicKeyToken_x003D_null</AssemblyName>
+      <ClassType dt="string">AIExplorer.SV.BACnetLogRetrieval</ClassType>
+      <FieldName dt="string">szInitialDate</FieldName>
+      <FieldValue dt="string">
+      </FieldValue>
+    </ProjectPersistentField>
+    <ProjectPersistentField>
+      <AssemblyName dt="string">AIExplorerSV_x002C__x0020_Version_x003D_1.0.0.0_x002C__x0020_Culture_x003D_neutral_x002C__x0020_PublicKeyToken_x003D_null</AssemblyName>
+      <ClassType dt="string">AIExplorer.SV.BACnetLogRetrieval</ClassType>
+      <FieldName dt="string">szItemNumber</FieldName>
+      <FieldValue dt="string">_x0031_00</FieldValue>
+    </ProjectPersistentField>
+    <ProjectPersistentField>
+      <AssemblyName dt="string">AIExplorerSV_x002C__x0020_Version_x003D_1.0.0.0_x002C__x0020_Culture_x003D_neutral_x002C__x0020_PublicKeyToken_x003D_null</AssemblyName>
+      <ClassType dt="string">AIExplorer.SV.BACnetLogRetrieval</ClassType>
+      <FieldName dt="string">bStorage</FieldName>
+      <FieldValue dt="boolean">False</FieldValue>
+    </ProjectPersistentField>
+    <ProjectPersistentField>
+      <AssemblyName dt="string">AIExplorerSV_x002C__x0020_Version_x003D_1.0.0.0_x002C__x0020_Culture_x003D_neutral_x002C__x0020_PublicKeyToken_x003D_null</AssemblyName>
+      <ClassType dt="string">AIExplorer.SV.DNP3CreateVariable</ClassType>
+      <FieldName dt="string">hideOnCreation</FieldName>
+      <FieldValue dt="boolean">False</FieldValue>
+    </ProjectPersistentField>
+    <ProjectPersistentField>
+      <AssemblyName dt="string">AIExplorerSV_x002C__x0020_Version_x003D_1.0.0.0_x002C__x0020_Culture_x003D_neutral_x002C__x0020_PublicKeyToken_x003D_null</AssemblyName>
+      <ClassType dt="string">AIExplorer.SV.DNP3CreateVariable</ClassType>
+      <FieldName dt="string">bUseNetworkNameAsVariablePrefix</FieldName>
+      <FieldValue dt="boolean">True</FieldValue>
+    </ProjectPersistentField>
+    <ProjectPersistentField>
+      <AssemblyName dt="string">AIExplorerSV_x002C__x0020_Version_x003D_1.0.0.0_x002C__x0020_Culture_x003D_neutral_x002C__x0020_PublicKeyToken_x003D_null</AssemblyName>
+      <ClassType dt="string">AIExplorer.SV.DNP3CreateVariable</ClassType>
+      <FieldName dt="string">eBuildVariableNameTechnics</FieldName>
+      <FieldValue>HierarchicalName</FieldValue>
+    </ProjectPersistentField>
+    <ProjectPersistentField>
+      <AssemblyName dt="string">AIExplorerSV_x002C__x0020_Version_x003D_1.0.0.0_x002C__x0020_Culture_x003D_neutral_x002C__x0020_PublicKeyToken_x003D_null</AssemblyName>
+      <ClassType dt="string">AIExplorer.SV.BaseMapping</ClassType>
+      <FieldName dt="string">m_nDataSplitterDistance</FieldName>
+      <FieldValue dt="int">0</FieldValue>
+    </ProjectPersistentField>
+    <ProjectPersistentField>
+      <AssemblyName dt="string">AIExplorerSV_x002C__x0020_Version_x003D_1.0.0.0_x002C__x0020_Culture_x003D_neutral_x002C__x0020_PublicKeyToken_x003D_null</AssemblyName>
+      <ClassType dt="string">AIExplorer.SV.BaseMapping</ClassType>
+      <FieldName dt="string">m_nSubDataSplitterDistance</FieldName>
+      <FieldValue dt="int">0</FieldValue>
+    </ProjectPersistentField>
+    <ProjectPersistentField>
+      <AssemblyName dt="string">AIExplorerSV_x002C__x0020_Version_x003D_1.0.0.0_x002C__x0020_Culture_x003D_neutral_x002C__x0020_PublicKeyToken_x003D_null</AssemblyName>
+      <ClassType dt="string">AIExplorer.SV.CimwayCreateVariable</ClassType>
+      <FieldName dt="string">hideOnCreation</FieldName>
+      <FieldValue dt="boolean">False</FieldValue>
+    </ProjectPersistentField>
+    <ProjectPersistentField>
+      <AssemblyName dt="string">AIExplorerSV_x002C__x0020_Version_x003D_1.0.0.0_x002C__x0020_Culture_x003D_neutral_x002C__x0020_PublicKeyToken_x003D_null</AssemblyName>
+      <ClassType dt="string">AIExplorer.SV.CheckEmailAccountForm</ClassType>
+      <FieldName dt="string">szRecipients</FieldName>
+      <FieldValue dt="string">
+      </FieldValue>
+    </ProjectPersistentField>
+    <ProjectPersistentField>
+      <AssemblyName dt="string">AIExplorerSV_x002C__x0020_Version_x003D_1.0.0.0_x002C__x0020_Culture_x003D_neutral_x002C__x0020_PublicKeyToken_x003D_null</AssemblyName>
+      <ClassType dt="string">AIExplorer.SV.CheckSmsAccountForm</ClassType>
+      <FieldName dt="string">szPhoneNumber</FieldName>
+      <FieldValue dt="string">
+      </FieldValue>
+    </ProjectPersistentField>
+    <ProjectPersistentField>
+      <AssemblyName dt="string">AIExplorerSV_x002C__x0020_Version_x003D_1.0.0.0_x002C__x0020_Culture_x003D_neutral_x002C__x0020_PublicKeyToken_x003D_null</AssemblyName>
+      <ClassType dt="string">AIExplorer.SV.BACnetCreateVariable</ClassType>
+      <FieldName dt="string">hideOnCreation</FieldName>
+      <FieldValue dt="boolean">False</FieldValue>
+    </ProjectPersistentField>
+    <ProjectPersistentField>
+      <AssemblyName dt="string">AIExplorerSV_x002C__x0020_Version_x003D_1.0.0.0_x002C__x0020_Culture_x003D_neutral_x002C__x0020_PublicKeyToken_x003D_null</AssemblyName>
+      <ClassType dt="string">AIExplorer.SV.CreateVariable</ClassType>
+      <FieldName dt="string">hideOnCreation</FieldName>
+      <FieldValue dt="boolean">False</FieldValue>
+    </ProjectPersistentField>
+    <ProjectPersistentField>
+      <AssemblyName dt="string">AIExplorerSV_x002C__x0020_Version_x003D_1.0.0.0_x002C__x0020_Culture_x003D_neutral_x002C__x0020_PublicKeyToken_x003D_null</AssemblyName>
+      <ClassType dt="string">AIExplorer.SV.MultipleProfileWindowsGroupAssociationForm</ClassType>
+      <FieldName dt="string">m_szFilter</FieldName>
+      <FieldValue dt="string">
+      </FieldValue>
+    </ProjectPersistentField>
+    <ProjectPersistentField>
+      <AssemblyName dt="string">AIExplorerSV_x002C__x0020_Version_x003D_1.0.0.0_x002C__x0020_Culture_x003D_neutral_x002C__x0020_PublicKeyToken_x003D_null</AssemblyName>
+      <ClassType dt="string">AIExplorer.SV.MultipleProfileWindowsGroupAssociationForm</ClassType>
+      <FieldName dt="string">m_szLocation</FieldName>
+      <FieldValue dt="string">
+      </FieldValue>
+    </ProjectPersistentField>
+    <ProjectPersistentField>
+      <AssemblyName dt="string">AIExplorerSV_x002C__x0020_Version_x003D_1.0.0.0_x002C__x0020_Culture_x003D_neutral_x002C__x0020_PublicKeyToken_x003D_null</AssemblyName>
+      <ClassType dt="string">AIExplorer.SV.MultipleProfileWindowsGroupAssociationForm</ClassType>
+      <FieldName dt="string">m_szStation</FieldName>
+      <FieldValue dt="string">
+      </FieldValue>
+    </ProjectPersistentField>
+    <ProjectPersistentField>
+      <AssemblyName dt="string">AIExplorerSV_x002C__x0020_Version_x003D_1.0.0.0_x002C__x0020_Culture_x003D_neutral_x002C__x0020_PublicKeyToken_x003D_null</AssemblyName>
+      <ClassType dt="string">AIExplorer.SV.OpcServerMapping</ClassType>
+      <FieldName dt="string">m_szLastSelectedBranch</FieldName>
+      <FieldValue dt="string">
+      </FieldValue>
+    </ProjectPersistentField>
+    <ProjectPersistentField>
+      <AssemblyName dt="string">AIExplorerSV_x002C__x0020_Version_x003D_1.0.0.0_x002C__x0020_Culture_x003D_neutral_x002C__x0020_PublicKeyToken_x003D_null</AssemblyName>
+      <ClassType dt="string">AIExplorer.SV.OpcServerMapping</ClassType>
+      <FieldName dt="string">m_szLastSelectedItem</FieldName>
+      <FieldValue dt="string">
+      </FieldValue>
+    </ProjectPersistentField>
+    <ProjectPersistentField>
+      <AssemblyName dt="string">AIExplorerSV_x002C__x0020_Version_x003D_1.0.0.0_x002C__x0020_Culture_x003D_neutral_x002C__x0020_PublicKeyToken_x003D_null</AssemblyName>
+      <ClassType dt="string">AIExplorer.SV.Snmp.SnmpCreateVariable</ClassType>
+      <FieldName dt="string">hideOnCreation</FieldName>
+      <FieldValue dt="boolean">False</FieldValue>
+    </ProjectPersistentField>
+    <ProjectPersistentField>
+      <AssemblyName dt="string">AIExplorerSV_x002C__x0020_Version_x003D_1.0.0.0_x002C__x0020_Culture_x003D_neutral_x002C__x0020_PublicKeyToken_x003D_null</AssemblyName>
+      <ClassType dt="string">AIExplorer.SV.Snmp.SnmpCreateVariable</ClassType>
+      <FieldName dt="string">bUseNetworkNameAsVariablePrefix</FieldName>
+      <FieldValue dt="boolean">True</FieldValue>
+    </ProjectPersistentField>
+    <ProjectPersistentField>
+      <AssemblyName dt="string">AIExplorerSV_x002C__x0020_Version_x003D_1.0.0.0_x002C__x0020_Culture_x003D_neutral_x002C__x0020_PublicKeyToken_x003D_null</AssemblyName>
+      <ClassType dt="string">AIExplorer.SV.Snmp.SnmpCreateVariable</ClassType>
+      <FieldName dt="string">bUseDeviceNameAsVariablePrefix</FieldName>
+      <FieldValue dt="boolean">True</FieldValue>
+    </ProjectPersistentField>
+    <ProjectPersistentField>
+      <AssemblyName dt="string">AIExplorerSV_x002C__x0020_Version_x003D_1.0.0.0_x002C__x0020_Culture_x003D_neutral_x002C__x0020_PublicKeyToken_x003D_null</AssemblyName>
+      <ClassType dt="string">AIExplorer.SV.Snmp.SnmpCreateVariable</ClassType>
+      <FieldName dt="string">eBuildVariableNameTechnics</FieldName>
+      <FieldValue>HierarchicalName</FieldValue>
+    </ProjectPersistentField>
+    <ProjectPersistentField>
+      <AssemblyName dt="string">AIExplorerSV_x002C__x0020_Version_x003D_1.0.0.0_x002C__x0020_Culture_x003D_neutral_x002C__x0020_PublicKeyToken_x003D_null</AssemblyName>
+      <ClassType dt="string">AIExplorer.SV.Snmp.SnmpMapping</ClassType>
+      <FieldName dt="string">szInitialHierarchicalItemSelected</FieldName>
+      <FieldValue dt="string">
+      </FieldValue>
+    </ProjectPersistentField>
+    <ProjectPersistentField>
+      <AssemblyName dt="string">AIExplorerSV_x002C__x0020_Version_x003D_1.0.0.0_x002C__x0020_Culture_x003D_neutral_x002C__x0020_PublicKeyToken_x003D_null</AssemblyName>
+      <ClassType dt="string">AIExplorerSV.SV.BACnetMapping</ClassType>
+      <FieldName dt="string">bUseNetworkAliasAsVariablePrefix</FieldName>
+      <FieldValue dt="boolean">True</FieldValue>
+    </ProjectPersistentField>
+    <ProjectPersistentField>
+      <AssemblyName dt="string">AIExplorerSV_x002C__x0020_Version_x003D_1.0.0.0_x002C__x0020_Culture_x003D_neutral_x002C__x0020_PublicKeyToken_x003D_null</AssemblyName>
+      <ClassType dt="string">AIExplorerSV.SV.BACnetMapping</ClassType>
+      <FieldName dt="string">bUseDeviceAliasAsVariablePrefix</FieldName>
+      <FieldValue dt="boolean">True</FieldValue>
+    </ProjectPersistentField>
+    <ProjectPersistentField>
+      <AssemblyName dt="string">AIExplorerSV_x002C__x0020_Version_x003D_1.0.0.0_x002C__x0020_Culture_x003D_neutral_x002C__x0020_PublicKeyToken_x003D_null</AssemblyName>
+      <ClassType dt="string">AIExplorerSV.SV.BACnetMapping</ClassType>
+      <FieldName dt="string">eMonitorType</FieldName>
+      <FieldValue dt="int">0</FieldValue>
+    </ProjectPersistentField>
+    <ProjectPersistentField>
+      <AssemblyName dt="string">AIExplorerSV_x002C__x0020_Version_x003D_1.0.0.0_x002C__x0020_Culture_x003D_neutral_x002C__x0020_PublicKeyToken_x003D_null</AssemblyName>
+      <ClassType dt="string">AIExplorerSV.SV.BACnetMapping</ClassType>
+      <FieldName dt="string">eBuildVariableNameTechnics</FieldName>
+      <FieldValue dt="int">1</FieldValue>
+    </ProjectPersistentField>
+    <ProjectPersistentField>
+      <AssemblyName dt="string">AIExplorerSV_x002C__x0020_Version_x003D_1.0.0.0_x002C__x0020_Culture_x003D_neutral_x002C__x0020_PublicKeyToken_x003D_null</AssemblyName>
+      <ClassType dt="string">AIExplorerSV.SV.BACnetMapping</ClassType>
+      <FieldName dt="string">szInitialHierarchicalItemSelected</FieldName>
+      <FieldValue dt="string">
+      </FieldValue>
+    </ProjectPersistentField>
+    <ProjectPersistentField>
+      <AssemblyName dt="string">AIExplorerSV_x002C__x0020_Version_x003D_1.0.0.0_x002C__x0020_Culture_x003D_neutral_x002C__x0020_PublicKeyToken_x003D_null</AssemblyName>
+      <ClassType dt="string">AIExplorerSV.SV.BACnetMapping</ClassType>
+      <FieldName dt="string">m_bOnline</FieldName>
+      <FieldValue dt="boolean">True</FieldValue>
+    </ProjectPersistentField>
+    <ProjectPersistentField>
+      <AssemblyName dt="string">AIExplorerSV_x002C__x0020_Version_x003D_1.0.0.0_x002C__x0020_Culture_x003D_neutral_x002C__x0020_PublicKeyToken_x003D_null</AssemblyName>
+      <ClassType dt="string">AIExplorerSV.SV.OPCUA.OPCUAMapping</ClassType>
+      <FieldName dt="string">bUseNetworkAliasAsVariablePrefix</FieldName>
+      <FieldValue dt="boolean">True</FieldValue>
+    </ProjectPersistentField>
+    <ProjectPersistentField>
+      <AssemblyName dt="string">AIExplorerSV_x002C__x0020_Version_x003D_1.0.0.0_x002C__x0020_Culture_x003D_neutral_x002C__x0020_PublicKeyToken_x003D_null</AssemblyName>
+      <ClassType dt="string">AIExplorerSV.SV.OPCUA.OPCUAMapping</ClassType>
+      <FieldName dt="string">bUseServerAliasAsVariablePrefix</FieldName>
+      <FieldValue dt="boolean">True</FieldValue>
+    </ProjectPersistentField>
+    <ProjectPersistentField>
+      <AssemblyName dt="string">AIExplorerSV_x002C__x0020_Version_x003D_1.0.0.0_x002C__x0020_Culture_x003D_neutral_x002C__x0020_PublicKeyToken_x003D_null</AssemblyName>
+      <ClassType dt="string">AIExplorerSV.SV.OPCUA.OPCUAMapping</ClassType>
+      <FieldName dt="string">bUseNodeBranchAliasAsVariablePrefix</FieldName>
+      <FieldValue dt="boolean">True</FieldValue>
+    </ProjectPersistentField>
+    <ProjectPersistentField>
+      <AssemblyName dt="string">AIExplorerSV_x002C__x0020_Version_x003D_1.0.0.0_x002C__x0020_Culture_x003D_neutral_x002C__x0020_PublicKeyToken_x003D_null</AssemblyName>
+      <ClassType dt="string">AIExplorerSV.SV.OPCUA.OPCUAMapping</ClassType>
+      <FieldName dt="string">m_szMonitoringId</FieldName>
+      <FieldValue dt="string">
+      </FieldValue>
+    </ProjectPersistentField>
+    <ProjectPersistentField>
+      <AssemblyName dt="string">AIExplorerSV_x002C__x0020_Version_x003D_1.0.0.0_x002C__x0020_Culture_x003D_neutral_x002C__x0020_PublicKeyToken_x003D_null</AssemblyName>
+      <ClassType dt="string">AIExplorerSV.SV.OPCUA.OPCUAMapping</ClassType>
+      <FieldName dt="string">eBuildVariableNameTechnics</FieldName>
+      <FieldValue dt="int">1</FieldValue>
+    </ProjectPersistentField>
+    <ProjectPersistentField>
+      <AssemblyName dt="string">AIExplorerSV_x002C__x0020_Version_x003D_1.0.0.0_x002C__x0020_Culture_x003D_neutral_x002C__x0020_PublicKeyToken_x003D_null</AssemblyName>
+      <ClassType dt="string">AIExplorerSV.SV.OPCUA.OPCUAMapping</ClassType>
+      <FieldName dt="string">m_bOnline</FieldName>
+      <FieldValue dt="boolean">True</FieldValue>
+    </ProjectPersistentField>
+    <ProjectPersistentField>
+      <AssemblyName dt="string">AIExplorerSV_x002C__x0020_Version_x003D_1.0.0.0_x002C__x0020_Culture_x003D_neutral_x002C__x0020_PublicKeyToken_x003D_null</AssemblyName>
+      <ClassType dt="string">AIExplorerSV.SV.BACnet.BACnetEDEFilesUserControl</ClassType>
+      <FieldName dt="string">m_szInitialDirectory</FieldName>
+      <FieldValue dt="string">C:_x005C_ARC_x0020_Informatique_x005C_PcVue_x0020_15_x005C_USR_x005C_DEMO_SvLog_x005C_TP_x005C_</FieldValue>
+    </ProjectPersistentField>
+    <ProjectPersistentField>
+      <AssemblyName dt="string">AIExplorerSV_x002C__x0020_Version_x003D_1.0.0.0_x002C__x0020_Culture_x003D_neutral_x002C__x0020_PublicKeyToken_x003D_null</AssemblyName>
+      <ClassType dt="string">AIExplorerSV.SV._61850.IEC61850CreateSCLVariableForm</ClassType>
+      <FieldName dt="string">hideOnCreation</FieldName>
+      <FieldValue dt="boolean">False</FieldValue>
+    </ProjectPersistentField>
+    <ProjectPersistentField>
+      <AssemblyName dt="string">AIExplorerSV_x002C__x0020_Version_x003D_1.0.0.0_x002C__x0020_Culture_x003D_neutral_x002C__x0020_PublicKeyToken_x003D_null</AssemblyName>
+      <ClassType dt="string">AIExplorerSV.SV._61850.IEC61850SCLFilesUserControl</ClassType>
+      <FieldName dt="string">m_szInitialDirectory</FieldName>
+      <FieldValue dt="string">C:_x005C_ARC_x0020_Informatique_x005C_PcVue_x0020_15_x005C_USR_x005C_DEMO_SvLog_x005C_TP_x005C_</FieldValue>
+    </ProjectPersistentField>
+    <ProjectPersistentField>
+      <AssemblyName dt="string">AIExplorerSV_x002C__x0020_Version_x003D_1.0.0.0_x002C__x0020_Culture_x003D_neutral_x002C__x0020_PublicKeyToken_x003D_null</AssemblyName>
+      <ClassType dt="string">AIExplorerSV.SV._61850.IEC61850CreateVariable</ClassType>
+      <FieldName dt="string">hideOnCreation</FieldName>
+      <FieldValue dt="boolean">False</FieldValue>
+    </ProjectPersistentField>
+  </ProjectPersistentFields>
+</AIExplorerConfig>

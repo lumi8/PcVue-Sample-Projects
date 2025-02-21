@@ -1,0 +1,414 @@
+'******************************************************************************************************************************************************************
+'Program CronMgt.scb
+'Version: 1.0c
+'Last edition: Serptember 11th by LOBA
+'Description: This program is designed to be used along with the WebScheduler 2.0 in order to manage Cron.dat reloading and broadcast..
+'It contains the main functions used to
+'	- Check Cron.dat modifications
+'	- Save the Cron.dat
+'	- Broadcast the Cron.Dat
+'******************************************************************************************************************************************************************
+
+
+'******************************************************************************************************************************************************************
+'Function: Main()
+'Description: Initialize the Cron.dat reload and broadcast functions
+'Caller: The application main init function
+'******************************************************************************************************************************************************************
+Sub Main()
+	
+	Dim iRet as Integer;
+	Dim sBuffer as Str;
+	Dim iCountBuffer as Integer; 
+	Dim iCount as Integer; 
+	Dim iStationNumber as Integer; 
+	Dim hBuff_ModifsListStations as Long; 
+	Dim hTempBuff as Long;
+	
+	Print("Executing function CronMgt.scb:Main");
+
+	'On all station: Start checking Cron.dat file modification cyclically
+	iRet = CYCLIC("ADDPROG",iCronCheckPeriod,"CRON/CronMgt.scb","","CheckCron"); 
+	Print("Verb Cyclic mode AddProg to check cron.dat file changes executed with result: ", iRet);
+
+	iRet = EVENT("ADDPROG", Get_Cron_VarName("@Cron_Mgt.", TOC(@SYSTEM.STATION_NUMBER),".Save_ReqFor"),1, "CRON/CronMgt.scb", "", "Save_Cron");
+	Print("Verb Event mode AddProg for the station to detect save requests executed with result: ", iRet);
+	
+	hBuff_ModifsListStations = LAN("GET_STATIONS_INLIST",3,sList);
+	Put_Buffer(hBuff_ModifsListStations,  Asciifield("LEN", hBuff_ModifsListStations)-1, ",");
+
+	iCountBuffer = ASCIIFIELD("COUNT",hBuff_ModifsListStations); 
+	Print(iCountBuffer);
+ 	For(iCount = 1 ; iCount <= iCountBuffer ; iCount++)
+
+		sBuffer = ASCIIFIELD("STR",hBuff_ModifsListStations,iCount);
+		print(sBuffer); 
+		iStationNumber = LAN("GET_STATION_NUMBER",sBuffer); 
+		iRet = EVENT("ADDPROG", Get_Cron_VarName("@Cron_Mgt.",TOC(iStationNumber),".Bdct_InProgBy"),1, "CRON/CronMgt.scb", "", "SuspendCronCheck");
+		Print("Verb Event mode AddProg for the station to detect that another station initiate a broadcast executed with result: ", iRet);		
+
+	Next
+	Free_Buffer(hBuff_ModifsListStations);
+	
+	If (TOI(@SYSTEM.STATION_NUMBER) == iRefStation) Then 
+		'The local station is the reference station
+		
+		'Initialize the reference date
+		Print("The local station is the reference station for Cron.dat - Initialization the date of last modification");
+		Get_CronFile_Date() ;
+
+		iRet = EVENT("ADDPROG", "@Cron_Mgt.BdctRef_Requested",1, "CRON/CronMgt.scb", "", "Initial_Cron_Broadcast");
+		Print("Verb Event mode AddProg for the ref station to detect broadcast requests executed with result: ", iRet);		
+
+		'Trigger a broadcast to make sure all stations have the same configuration
+
+		Print("The local station is the reference station for Cron.dat - Launching the startup broadcast");
+
+		@Cron_Mgt.BdctRef_Requested = 1;
+	
+	Else
+	
+		'If the local station is not the reference station, then ask for a broadcast
+		' Such a station may have missed a broadcast while stopped - It has to be updated
+		'Note: This is useless and can be commented on if users never change the Cron.dat file from PcVue dialog boxes on a non-ref station.
+		Print("The local station is not the reference station for Cron.dat - Requesting a broadcast by the ref");
+		If(VARIABLE("STATUS","@Cron_Mgt.BdctRef_Requested","EXIST") == 1) Then 
+			If(VARIABLE("STATUS","@Cron_Mgt.BdctRef_Requested","VALID") == 1) Then
+				@Cron_Mgt.BdctRef_Requested = 1;
+			Else
+				TRACE("LOG","Broadcast referensce request impossible, reference station is not present"); 
+			End If
+		Else
+			TRACE("LOG","Broadcast referensce request impossible, reference station is not present");
+		End If
+	End if 		
+'	FREE_BUFFER(hTempBuff);
+End Sub
+
+'******************************************************************************************************************************************************************
+'Function: Save_Cron
+'Description: This function saves the Cron.dat from the CTEMP to the C folder.
+'Caller: Event on @Cron_Mgt.Save_RequestedForXX where XX is a station that has just completed a broadcast
+'******************************************************************************************************************************************************************
+Sub Save_Cron()
+
+	Dim iRet as integer;
+	Dim sVar_SaveFlag as Str;
+	Dim sVar_BroadcastFlag as Str; 
+
+	TRACE("LOG","Executing function CronMgt.scb:Save_Cron");
+	
+	
+	'Creation of cyclic for Copy the Cron.dat file from CTEMP to the C folder
+
+		
+	'Reset the flag variable indicating that a save has to be executed
+	sVar_SaveFlag = Get_Cron_VarName("@Cron_Mgt.", TOC(@SYSTEM.STATION_NUMBER),".Save_ReqFor");
+	?sVar_SaveFlag = 0;
+
+	Print("The date of last modification of the local Cron.dat before copy is", @Cron_Mgt.CronLastModifDate); 
+
+	'Save the Cron configuration - Just to make sure both files have the same date of last modification
+	iRet = CRONTAB("SAVE");
+	Print("Verb Crontab mode Save executed with result: ", iRet);
+	
+	'Update the date of the current Cron.dat file
+	Get_CronFile_Date(); 
+
+	'Reset the Broadcast in progress flag
+	sVar_BroadcastFlag = Get_Cron_VarName("@Cron_Mgt.",TOC(@SYSTEM.STATION_NUMBER),".Bdct_InProgBy");
+	?sVar_BroadcastFlag = 0; 
+
+	ResumeCronCheck();
+
+End sub
+
+'******************************************************************************************************************************************************************
+'Function: CheckCron
+'Description: This function checks whether the local Cron.dat is changed, and if necesary initiates a broadcast.
+'Caller: Cyclic function
+'******************************************************************************************************************************************************************
+Sub CheckCron()
+
+	Dim sNewCronDate as Str; 
+	Dim iRet as Integer; 
+
+	Print("Executing function CronMgt.scb:CheckCron");
+
+	Print("Current Cron.dat ref date is: ",@Cron_Mgt.CronLastModifDate);
+	
+	sNewCronDate = Get_CronFile_Date();
+	Print("Current Cron.dat date is: ",sNewCronDate);
+
+	If (cmpstring(@Cron_Mgt.CronLastModifDate,sNewCronDate) != 0) Then
+		'The local Cron.dat file has changed since last checked - It has to be broadcast
+		Print("Cron.dat is modified since last check - Launching a broadcast from this station"); 
+
+		Broadcast_Cron();
+
+	Else 
+		'The local Cron.dat file has not changed since last checked - no action required
+		Print("Cron.dat is not modified since last check"); 
+
+	End if 
+
+End sub
+
+'******************************************************************************************************************************************************************
+'Function: SuspendCronCheck
+'Description: This function removes the cyclic function used to check the Cron.dat file periodically.
+'Caller: Event function on variable @Cron_Mgt.Boadcast.InProgressByXX
+'		Where XX is a station number
+'******************************************************************************************************************************************************************
+Sub SuspendCronCheck()
+
+	Dim iRet as Integer;
+
+	Print("Executing function CronMgt.scb:SuspendCronCheck");
+	iRet = CYCLIC("DEL",iCronCheckPeriod,"CRON/CronMgt.scb","","CheckCron");
+	Print("Cyclic function calling CheckCron deleted with result: ", iret); 
+
+End sub 
+
+'******************************************************************************************************************************************************************
+'Function: ResumeCronCheck
+'Description: This function creates or re-creates the cyclic function used to check the Cron.dat file periodically.
+'Caller: The Save Function
+'******************************************************************************************************************************************************************
+Sub ResumeCronCheck()
+
+	Dim iRet as Integer;
+
+	Print("Executing function CronMgt.scb:ResumeCronCheck");
+	iRet = CYCLIC("ADDPROG",iCronCheckPeriod,"CRON/CronMgt.scb","","CheckCron");
+	Print("Cyclic function calling CheckCron added with result: ", iRet); 
+
+End sub
+
+'******************************************************************************************************************************************************************
+'Function: Broadcast_Cron
+'Description: This function broadcast its Cron.dat to other stations and reload it locally.
+'Caller: On all station upon detection of 
+'		a Cron.dat change
+'******************************************************************************************************************************************************************
+Sub Broadcast_Cron()
+
+	Dim iRet as Integer;
+	Dim sRet as Str;
+	Dim sVar_BroadcastFlag as Str; 		'The name of the variable indicating to all station that I am broadcasting the Cron.dat
+	Dim bCheckProgressFlags as Integer;
+
+	TRACE("LOG","Executing function CronMgt.scb:Broadcast_Cron");
+
+	bCheckProgressFlags = IVAL(GETARG("ARG1"));		'TODO: Not yet used
+
+	'Why is this function called ?
+	sRet = GETARG("SOURCE");
+	If (CMPSTRING(sRet,"EVENT")==0) Then
+		Print("Broadcast_Cron called by an event on variable: ",GETARG("VARNAME"));
+	End If
+	If (CMPSTRING(sRet,"SCRIPT")==0) Then
+		Print("Broadcast_Cron called by a function: ",GETARG("FUNCTION"));
+	End If
+
+	If (@Cron_Mgt.Bdct_Completed == 0) Then
+		'No broadcast in progress from this station
+		'TODO Check the progress flags if necessary
+		'Raise the flag indicating to all station that the local station is about to broadcast its Cron.dat file
+		'Doing so prevent other station from broadcasting their own file at the same time
+		sVar_BroadcastFlag = Get_Cron_VarName("@Cron_Mgt.",TOC(@SYSTEM.STATION_NUMBER),".Bdct_InProgBy");
+		Print("Broadcast from local station flag var is: ",sVar_BroadcastFlag);
+		?sVar_BroadcastFlag = 1;
+			
+		'Copy the Cron.dat file from CTEMP to the C folder
+		'Copy_Cron();
+		Cyclic("ADDPROG",3,"CRON/CronMgt.scb","","Delay_CopyCron"); 
+
+
+		@Cron_Mgt.Bdct_Completed = 0;
+
+		iRet = EVENT("ADDPROG","@Cron_Mgt.Bdct_Completed",1,"CRON/CronMgt.scb","","OnBroadcastCompleted");
+		Print("Verb Event mode AddProg for the broadcast completion event executed with result: ", iRet);
+			
+		CYCLIC("ADDPROG",5,"CRON/CronMgt.scb","","Delay_Broadcast");
+		
+	Else 
+	
+		Print("Broadcast already in progress");
+
+	End if
+End sub
+
+'******************************************************************************************************************************************************************
+'Function: Copy_Cron
+'Description: This function copies the Cron.Dat From CTEMP to C folder
+'Caller: 
+'	
+'******************************************************************************************************************************************************************
+Sub Copy_Cron()
+
+	Dim sCopyCronBatFile as Str;
+	
+	'First copy the Cron.dat file from the CTEMP to the C folder
+	Print("Save the Cron.dat from CTEMP to C"); 
+	TRACE("LOG","Save the Cron.dat from CTEMP to C");
+	
+	sCopyCronBatFile = GETPROJECTDIR(); 
+	sCopyCronBatFile = ADDSTRING(sCopyCronBatFile,"\\TP\\CopyCron.bat"); 
+	APPLICATION("LOAD",sCopyCronBatFile);
+
+End Sub
+
+'******************************************************************************************************************************************************************
+'Function: OnBroadcastCompleted
+'Description: This function checks who received the broadcast, who didn't and request stations to save the Cron locally.
+'Caller: Upon completion of the broadcast - On event on the variable @Cron_Mgt.Boadcast_Completed
+'******************************************************************************************************************************************************************
+Sub OnBroadcastCompleted() 
+
+	Dim sRawResult as Str;
+	Dim TempStationId as Str;
+	Dim TempStationStatus as Str;
+	Dim sVar_SaveFlag as Str;
+	Dim sVar_BroadcastInProgressFlag as Str;
+	Dim iRet as Integer; 
+	Dim iBuffField as Integer; 
+	Dim iField as Integer;
+	Dim sAsciiFieldRet as Str; 
+	Dim sTrace as Str;
+
+	TRACE("LOG","Executing function CronMgt.scb:OnBroadcastCompleted");
+	
+	iRet = EVENT("DEL","@Cron_Mgt.Bdct_Completed",1,"CRON/CronMgt.scb","","OnBroadcastCompleted");
+	Print("Verb Event mode Del for the broadcast completion event  executed with result: ", iRet);
+	
+	sRawResult = cget_buffer(hBuff_BroadcastResult,0,255);
+	Print("The broadcast raw result is: ", sRawResult);
+
+	@Cron_Mgt.Bdct_Completed= 0; 
+	
+	If (LEN(sRawResult) != 0) Then
+		iBuffField = ASCIIFIELD("COUNT",hBuff_BroadcastResult); 
+		print("Number of field in sRawResult : ",iBuffField); 
+
+		iField = 1;
+		sAsciiFieldRet = ASCIIFIELD("STR",hBuff_BroadcastResult,iField);
+		print("sAsciiField = ", sAsciiFieldRet);
+
+		If (CMPSTRING(sAsciiFieldRet,"0") == 0) then 
+			TRACE("LOG","Monostation project. No broadcast result return");
+		Else 
+			For(iField = 1; iField <= iBuffField ; iField++)
+				sAsciiFieldRet = ASCIIFIELD("STR",hBuff_BroadcastResult,iField);
+				sTrace = LAN("GET_STATION_NAME",IVAL(sAsciiFieldRet));
+				sTrace = ADDSTRING("Save flag status for station ",sTrace); 
+				sTrace = ADDSTRING(sTrace," is "); 
+				sVar_SaveFlag = Get_Cron_VarName("@Cron_Mgt.",sAsciiFieldRet,".Save_ReqFor");
+				iField = iField + 1; 
+				sAsciiFieldRet = ASCIIFIELD("STR",hBuff_BroadcastResult,iField);
+				sTrace = ADDSTRING(sTrace,sAsciiFieldRet);
+				TRACE("LOG",sTrace);
+				?sVar_SaveFlag = IVAL(sAsciiFieldRet); 
+
+			Next
+		End if
+	Else
+		Print("No broadcast result to check");
+	End If
+		
+	'Reset the flag indicating a broadcast by this station
+	'Reconstruct the name of the Broadcast in progress flag variable
+	sVar_BroadcastInProgressFlag = Get_Cron_VarName("@Cron_Mgt.",TOC(@SYSTEM.STATION_NUMBER),".Bdct_InProgBy");
+	?sVar_BroadcastInProgressFlag = 0;	
+
+	'Also save the Cron.dat locally
+	'Reconstruct the name of the Save flag variable
+	sVar_SaveFlag = Get_Cron_VarName("@Cron_Mgt.", TOC(@SYSTEM.STATION_NUMBER),".Save_ReqFor");
+	?sVar_SaveFlag = 1;	
+	
+End Sub
+
+'******************************************************************************************************************************************************************
+'Function: Delay_Broadcast
+'Description: This function makes a delay during Cron Broadcast
+'Caller: Program CronMgt.scb, function Broadcast_Cron
+'******************************************************************************************************************************************************************
+Sub Delay_Broadcast()
+	Dim iRet as Integer;
+
+	iRet = CRONTAB("NETWORKBROADCAST",sList,hBuff_BroadcastResult,"@Cron_Mgt.Bdct_Completed",1);
+	Print("Verb Crontab mode NetworkBroadcast executed with result: ", iRet);
+	Cyclic("DEL",5,"CRON/CronMgt.scb","","Delay_Broadcast"); 
+
+End Sub 
+
+'******************************************************************************************************************************************************************
+'Function: Delay_CopyCron
+'Description: This function makes a delay during Cron Copy from CTEMP to C
+'Caller: Program CronMgt.scb, function Broadcast_Cron and Initial_Cron_Broadcast
+'******************************************************************************************************************************************************************
+Sub Delay_CopyCron()
+
+	Copy_Cron();
+	Cyclic("DEL",3,"CRON/CronMgt.scb","","Delay_CopyCron"); 
+
+End Sub
+
+'******************************************************************************************************************************************************************
+'Function: Initial_Cron_Broadcast
+'Description: This function broadcast the reference Cron.dat to other stations and reload it locally. Set to zero all Bdct_InProgBy variable
+'Caller: CronMgt.BdctRef_Req
+'******************************************************************************************************************************************************************
+Sub Initial_Cron_Broadcast()
+
+	Dim iRet as Integer;
+	Dim sRet as Str;
+	Dim sVar_BroadcastFlag as Str; 		'The name of the variable indicating to all station that I am broadcasting the Cron.dat
+	Dim bCheckProgressFlags as Integer;
+	Dim sBuffer as Str;
+	Dim iCountBuffer as Integer; 
+	Dim iCount as Integer; 
+	Dim iStationNumber as Integer; 
+	Dim hBuff_ModifsListStations as Long; 
+	Dim hTempBuff as Long;
+	
+
+	Print("Executing function CronMgt.scb:Initial_Cron_Broadcast");
+	TRACE("LOG","Executing function CronMgt.scb:Initial_Cron_Broadcast");
+
+	bCheckProgressFlags = IVAL(GETARG("ARG1"));		'TODO: Not yet used
+
+	sRet = GETARG("SOURCE");
+	If (CMPSTRING(sRet,"EVENT")==0) Then
+		Print("Broadcast_Cron called by an event on variable: ",GETARG("VARNAME"));
+	End If
+	If (CMPSTRING(sRet,"SCRIPT")==0) Then
+		Print("Broadcast_Cron called by a function: ",GETARG("FUNCTION"));
+	End If
+
+	If (@Cron_Mgt.Bdct_Completed == 0) Then
+		'No broadcast in progress from this station
+		'TODO Check the progress flags if necessary
+		'Raise the flag indicating to all station that the local station is about to broadcast its Cron.dat file
+		'Doing so prevent other station from broadcasting their own file at the same time
+		sVar_BroadcastFlag = Get_Cron_VarName("@Cron_Mgt.",TOC(@SYSTEM.STATION_NUMBER),".Bdct_InProgBy");
+		Print("Broadcast from local station flag var is: ",sVar_BroadcastFlag);
+		?sVar_BroadcastFlag = 1;
+			
+		'Copy the Cron.dat file from CTEMP to the C folder
+		'Copy_Cron();
+		Cyclic("ADDPROG",3,"CRON/CronMgt.scb","","Delay_CopyCron"); 
+
+		@Cron_Mgt.Bdct_Completed = 0;
+
+		iRet = EVENT("ADDPROG","@Cron_Mgt.Bdct_Completed",1,"CRON/CronMgt.scb","","OnBroadcastCompleted");
+		Print("Verb Event mode AddProg for the broadcast completion event executed with result: ", iRet);
+			
+		CYCLIC("ADDPROG",5,"CRON/CronMgt.scb","","Delay_Broadcast");
+		
+	Else 
+	
+		Print("Broadcast already in progress");
+
+	End if
+End sub

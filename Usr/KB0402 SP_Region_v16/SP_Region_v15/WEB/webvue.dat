@@ -1,0 +1,24 @@
+[Parameters]
+Language=0
+ProjectLanguage=0
+Apparence=0
+Window=
+Branche=
+Port=1024
+HttpPort=80
+Delay=500
+AutoRun=0
+Crypto=0
+FreeCache=0
+Description=No description
+ProjectLanguages=FRANCAIS,ENGLISH
+NoSystemMenu=0
+NoLayer=0
+SecurityMode=0
+LeftClickAssociatedAction=0
+EnableConnectURL=0
+EnableAlarmScada=0
+EnableLogScada=0
+LocalRightsFile=
+CompressPercent=70
+Trace=0

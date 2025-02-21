@@ -1,0 +1,11 @@
+'-------- INIT.svb
+'-------- Used to load other programs
+
+Sub Main()
+
+	'-------- Programs to be loaded and started
+	Program("START", "PROCESS.svb", "");
+
+	'-------- Programs to be loaded but not started
+
+End Sub

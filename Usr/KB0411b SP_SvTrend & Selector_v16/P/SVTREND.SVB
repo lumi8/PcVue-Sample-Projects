@@ -1,0 +1,152 @@
+'-------- Global declarations
+	Dim lResultBuffer As Long, lWorkingBuffer As Long;
+
+
+Sub Main ()
+	Init();
+End Sub
+
+
+Sub Init()
+	@SVTREND.EXTRACTOK = 0;
+	@GENERAL.DateTimePicker.Start.SelectedDate = @DATE;
+	@GENERAL.DateTimePicker.Start.SelectedTime = @TIME;
+	@GENERAL.DateTimePicker.End.SelectedDate = @DATE;
+	@GENERAL.DateTimePicker.End.SelectedTime = @TIME;
+End Sub
+
+
+Sub SetVar()
+	Dim Inc As Single;
+	
+	Inc = Sval(GetArg("ARG1"));
+	SP = SP + Inc;
+End Sub
+
+Sub BuildVarlist()
+	Dim sWindow as str, sBranch as str, sIdentity as str, StrVal as str;
+	Dim i as integer;
+	Dim sVarlist as str;
+	
+	sWindow = GetArg("WINDOW");
+	sBranch = GetArg("WBRANCH");
+	sIdentity = "Trend1";
+	for (i=0;i<10;i=i+1)
+		StrVal = TREND("GETVAR", sWindow, sBranch, sIdentity, i);
+		'print ("Find Var: ",StrVal);
+		
+		if (cmpstring(StrVal,"")) then 
+			sVarlist = addstring(sVarlist,StrVal,",");
+			'print ("List: ", sVarlist);
+		End if
+	next
+	return(sVarlist);
+End Sub
+
+
+Sub Extract ()
+	Dim dStartTime As Double, dEndTime As Double, dPeriod As Double;
+	Dim lVarBuffer As Long, lParamBuffer As Long;
+	Dim iDisplayMode As Integer, iResultBufferSize As Integer;
+	Dim cVarList As Str, cParam As Str, cFormat As Str, cFilter As Str, cLogVarName As Str, cProcessVarName As Str;
+	Dim CreateEventResult as integer, svTrendResult as integer;
+	
+	@SVTREND.STATUS = "Initiating request (this may take several seconds)";
+	'-------- Initialise start and end times
+	dStartTime = DateTimeValue(@GENERAL.DateTimePicker.Start.SelectedDate, @GENERAL.DateTimePicker.Start.SelectedTime);
+	dEndTime = DateTimeValue(@GENERAL.DateTimePicker.End.SelectedDate, @GENERAL.DateTimePicker.End.SelectedTime);
+	Print ("Start time = ", DateTimeString(dStartTime), " - End time = ", DateTimeString(dEndTime));
+
+	'-------- Initialise other SvTrend parameters
+	dPeriod = TOD(@SVTREND.PERIOD.SP);
+	iResultBufferSize =	1000 * TOI(@SVTREND.BUFFERSIZE.SP);
+	iDisplayMode = 2;
+	
+	'cVarList = "TREND.TRACE1,TREND.TRACE2,TREND.TRACE3,TREND.TRACE4";
+	cVarList = BuildVarlist();
+	print(cVarList);
+
+	cFormat = "#D/#M/###Y #h:#m:#s";
+	cFilter = "";
+	cLogVarName = "SVTREND.EXTRACTOK";
+	cProcessVarName = "";
+	cParam = Addstring (cFormat, ",", cFilter, ",", cLogVarName, ",", cProcessVarName );
+	Print ("Parameter buffer = ",cParam);
+
+	'-------- Create and populate buffers
+	lResultBuffer = Alloc_Buffer (iResultBufferSize);
+	lWorkingBuffer = Alloc_Buffer (iResultBufferSize * 2);
+	lParamBuffer = Alloc_Buffer(256);
+	lVarBuffer = Alloc_Buffer(256);
+
+	'-------- Set up temporary event
+	CreateEventResult = Event("ADD", "SVTREND.EXTRACTOK", 1, "SVTREND.SVB", "", "NEXTBUFFER");
+	print ("Event Creation Result = ",CreateEventResult);
+	
+	'-------- Run SVTREND
+	Put_Buffer(lParamBuffer, 0, cParam);
+	Put_Buffer(lVarBuffer, 0, cVarList);
+	
+	if (dStartTime <> dEndTime) then 
+		svTrendResult = SvTrend("GETTREND", lVarBuffer, "", dStartTime, dEndTime, dPeriod, iDisplayMode, lResultBuffer, lParamBuffer);
+		print ("svTrendResult = ", svTrendResult); 
+	else 
+		@SVTREND.STATUS = "Process is aborted : Check the date";
+	end if
+	
+	'-------- Free buffers
+	Free_Buffer(lParamBuffer);
+	Free_Buffer(lVarBuffer);
+	if (svTrendResult < 0) then 
+		Event("DELPROG", "SVTREND.EXTRACTOK", 1, "SVTREND.SVB", "", "NEXTBUFFER");
+		SvTrend("CANCEL");
+		Free_Buffer(lResultBuffer);
+		Free_Buffer(lWorkingBuffer);
+		@SVTREND.STATUS = "Process is aborted";
+
+	End if
+End Sub
+
+
+
+'-------------------------------------------------------------------------
+' call by event with SVTREND.EXTRACTOK 
+
+Sub NextBuffer()
+	Dim cTestBuffer As Str, cFileName As Str;
+	Dim iMoreData As Integer, iPassCount As Integer;
+
+	'-------- Initialise variables
+	iMoreData = 1;
+	iPassCount = 0;
+
+	'-------- Delete ouptut file
+	Unlink ("Output.txt");
+
+	'-------- Get further buffers of data until none left
+	While (iMoreData == 1)
+		cTestBuffer = Cget_Buffer(lResultBuffer, 0, 1);
+		
+		If (CmpString (cTestBuffer, "") == 1) Then				' If null then buffer empty
+			cFileName = AddString ("Result", Toc(iPassCount), ".txt");
+			@SVTREND.STATUS = AddString ("Processing data buffer ", Toc(iPassCount));
+			Copy_Buffer(lWorkingBuffer, lResultBuffer);
+			Seq_Buffer("CRTOCRLF", lWorkingBuffer);				' Need spare space for Seq_Buffer to work
+			BufToFile(lWorkingBuffer, cFileName, "USEFULL_PART");
+			BufToFile(lWorkingBuffer, "Output.txt", "USEFULL_PART", "APPEND");
+			iPassCount++;
+			SvTrend("GETNEXTBUFFER", lResultBuffer);
+			Delay(0.2);
+		Else
+			iMoreData = 0;
+		End If
+	Wend
+
+	'-------- Tidy up
+	Event("DELPROG", "SVTREND.EXTRACTOK", 1, "SVTREND.SVB", "", "NEXTBUFFER");
+	SvTrend("CANCEL");
+	Free_Buffer(lResultBuffer);
+	Free_Buffer(lWorkingBuffer);
+	@SVTREND.STATUS = "Processing complete";
+
+End Sub

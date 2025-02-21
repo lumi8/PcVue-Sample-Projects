@@ -1,0 +1,6 @@
+[ScadaBasic\Logging\System\OperatorMode]
+DefaultSetSendList=0
+[ScadaBasic\Alloc_Buffer]
+MaxSize=0
+[ScadaBasic\LegacyBehavior]
+ReturnAsBreak=1

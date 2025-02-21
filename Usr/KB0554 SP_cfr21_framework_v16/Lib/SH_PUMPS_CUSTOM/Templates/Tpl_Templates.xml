@@ -1,0 +1,1371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<TemplatesRoot Name="" SchemaVersion="10.0.0">
+<category Name="_Includes">
+<Description/>
+<TemplatesList>
+<Template Name="Pump_Common">
+<Description/>
+<AutoNaming_Prefix/>
+<AutoNaming_StartValue>1</AutoNaming_StartValue>
+<AutoNaming_FixedDigits>2</AutoNaming_FixedDigits>
+<AutoNaming_Step>1</AutoNaming_Step>
+<Enable_Instance>false</Enable_Instance>
+<ParametersList/>
+<TemplatesList/>
+<ObjectsList>
+<Object Name="_CONF">
+<Description/>
+<InternalType>2</InternalType>
+<SvType>3</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="ExtBinary" Reset="false" Substitute="true"></Property>
+<Property id="ExtText14" Reset="false" Substitute="true">/SH_PUMPS/pPump_Generic_Label</Property>
+<Property id="ExtText9" Reset="false" Substitute="true"></Property>
+<Property id="ExtText15" Reset="false" Substitute="true"></Property>
+<Property id="ExtText8" Reset="false" Substitute="true"></Property>
+<Property id="Description" Reset="false" Substitute="true"></Property>
+<Property id="ExtText16" Reset="false" Substitute="true"></Property>
+<Property id="UseExtendedAttributes" Reset="false" Substitute="false">-1</Property>
+<Property id="DescriptionAlt" Reset="false" Substitute="true"></Property>
+<Property id="ExtText3" Reset="false" Substitute="true"></Property>
+<Property id="Type" Reset="false" Substitute="false">3</Property>
+<Property id="ExtText5" Reset="false" Substitute="true"></Property>
+<Property id="ExtText10" Reset="false" Substitute="true"></Property>
+<Property id="ExtText4" Reset="false" Substitute="true"></Property>
+<Property id="ExtText11" Reset="false" Substitute="true"></Property>
+<Property id="ExtText7" Reset="false" Substitute="true"></Property>
+<Property id="ExtText12" Reset="false" Substitute="true"></Property>
+<Property id="ExtText6" Reset="false" Substitute="true"></Property>
+<Property id="ExtText13" Reset="false" Substitute="true"></Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+</ObjectsList>
+<InheritedTemplatesList/>
+</Template>
+<Template Name="Pump_Base">
+<Description/>
+<AutoNaming_Prefix/>
+<AutoNaming_StartValue>1</AutoNaming_StartValue>
+<AutoNaming_FixedDigits>2</AutoNaming_FixedDigits>
+<AutoNaming_Step>1</AutoNaming_Step>
+<Enable_Instance>false</Enable_Instance>
+<ParametersList/>
+<TemplatesList>
+<IncludedTemplate Name="Pump_Common">
+<Description/>
+<Branch/>
+<OriginTemplateName>/SH_PUMPS/Pump_Common</OriginTemplateName>
+</IncludedTemplate>
+</TemplatesList>
+<ObjectsList>
+<Object Name="DEF">
+<Description/>
+<InternalType>2</InternalType>
+<SvType>1</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="Domain" Reset="false" Substitute="true">/SH_PUMPS/pPump_Domain</Property>
+<Property id="Description" Reset="false" Substitute="true">="Défaut pompe " + TopTemplateinstance.Name</Property>
+<Property id="Alarm" Reset="false" Substitute="false">-1</Property>
+<Property id="UseExtendedAttributes" Reset="false" Substitute="false">-1</Property>
+<Property id="DescriptionAlt" Reset="false" Substitute="true">="Pump default "  + TopTemplateInstance.Name</Property>
+<Property id="Log0_1" Reset="false" Substitute="false">-1</Property>
+<Property id="Log" Reset="false" Substitute="false">-1</Property>
+<Property id="Log1_0" Reset="false" Substitute="false">-1</Property>
+<Property id="Nature" Reset="false" Substitute="true">/SH_PUMPS/pPump_Nature</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="STATUS">
+<Description/>
+<InternalType>2</InternalType>
+<SvType>1</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="Domain" Reset="false" Substitute="true">/SH_PUMPS/pPump_Domain</Property>
+<Property id="Description" Reset="false" Substitute="true">="Etat pompe " + ToptemplateInstance.name</Property>
+<Property id="UseExtendedAttributes" Reset="false" Substitute="false">-1</Property>
+<Property id="DescriptionAlt" Reset="false" Substitute="true">="Pump status " +ToptemplateInstance.name</Property>
+<Property id="Log0_1" Reset="false" Substitute="false">-1</Property>
+<Property id="Log" Reset="false" Substitute="false">-1</Property>
+<Property id="Log1_0" Reset="false" Substitute="false">-1</Property>
+<Property id="Nature" Reset="false" Substitute="true">/SH_PUMPS/pPump_Nature</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="CMD">
+<Description/>
+<InternalType>2</InternalType>
+<SvType>1</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="Domain" Reset="false" Substitute="true">/SH_PUMPS/pPump_Domain</Property>
+<Property id="Description" Reset="false" Substitute="true">= "Commande Pompe " + ToptemplateInstance.name</Property>
+<Property id="Command" Reset="false" Substitute="false">-1</Property>
+<Property id="UseExtendedAttributes" Reset="false" Substitute="false">-1</Property>
+<Property id="DescriptionAlt" Reset="false" Substitute="true">= "Pump control " + ToptemplateInstance.name</Property>
+<Property id="ControlMinimumValue" Reset="false" Substitute="false">0</Property>
+<Property id="ControlMaximumValue" Reset="false" Substitute="false">65535</Property>
+<Property id="Log0_1" Reset="false" Substitute="false">-1</Property>
+<Property id="Log" Reset="false" Substitute="false">-1</Property>
+<Property id="Log1_0" Reset="false" Substitute="false">-1</Property>
+<Property id="Nature" Reset="false" Substitute="true">/SH_PUMPS/pPump_Nature</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+</ObjectsList>
+<InheritedTemplatesList/>
+</Template>
+</TemplatesList>
+<CategoriesList/>
+</category>
+<category Name="Pumps_Advanced">
+<Description/>
+<TemplatesList>
+<Template Name="Pump_Advanced_Arrows">
+<Description/>
+<AutoNaming_Prefix>Pump</AutoNaming_Prefix>
+<AutoNaming_StartValue>1</AutoNaming_StartValue>
+<AutoNaming_FixedDigits>2</AutoNaming_FixedDigits>
+<AutoNaming_Step>1</AutoNaming_Step>
+<Enable_Instance>true</Enable_Instance>
+<ParametersList>
+<ParameterInstance Name="/SH_PUMPS/pPump_Max">
+<Description>pPump_Max</Description>
+<Value/>
+</ParameterInstance>
+<ParameterInstance Name="/SH_PUMPS/pPump_Min">
+<Description>pPump_Min</Description>
+<Value/>
+</ParameterInstance>
+<ParameterInstance Name="/SH_PUMPS/pPump_Unit">
+<Description>pPump_Unit</Description>
+<Value/>
+</ParameterInstance>
+<ParameterInstance Name="/SH_PUMPS/pPump_Nature">
+<Description>pNature</Description>
+<Value/>
+</ParameterInstance>
+<ParameterInstance Name="/SH_PUMPS/pPump_Format">
+<Description>pPump_Format</Description>
+<Value/>
+</ParameterInstance>
+<ParameterInstance Name="/SH_PUMPS/pPump_Domain">
+<Description>pDomain</Description>
+<Value/>
+</ParameterInstance>
+</ParametersList>
+<TemplatesList>
+<IncludedTemplate Name="Pump_Advanced_Base">
+<Description/>
+<Branch/>
+<OriginTemplateName>/SH_PUMPS/Pump_Advanced_Base</OriginTemplateName>
+</IncludedTemplate>
+</TemplatesList>
+<ObjectsList>
+<Object Name="PUMPS_SIMPLE_W_INFOS_ARROWS_L_H">
+<Selected>false</Selected>
+<Description>Desc Symbol01</Description>
+<InternalType>4</InternalType>
+<SvType>5</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="SymbolTemplate_Name" Reset="false" Substitute="false">/SH_PUMPS/PUMPS_SIMPLE_W_INFOS_ARROWS_L_H_32_ANI</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="PUMPS_SIMPLE_W_INFOS_ARROWS_TOP_V">
+<Selected>false</Selected>
+<Description>Desc Symbol01</Description>
+<InternalType>4</InternalType>
+<SvType>5</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="SymbolTemplate_Name" Reset="false" Substitute="false">/SH_PUMPS/PUMPS_SIMPLE_W_INFOS_ARROWS_TOP_V_32_ANI</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="PUMPS_SIMPLE_W_INFOS_ARROWS_BOT_V">
+<Selected>false</Selected>
+<Description>Desc Symbol01</Description>
+<InternalType>4</InternalType>
+<SvType>5</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="SymbolTemplate_Name" Reset="false" Substitute="false">/SH_PUMPS/PUMPS_SIMPLE_W_INFOS_ARROWS_BOT_V_32_ANI</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="PUMPS_SIMPLE_W_INFOS_ARROWS_R_H">
+<Selected>false</Selected>
+<Description>Desc Symbol01</Description>
+<InternalType>4</InternalType>
+<SvType>5</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="SymbolTemplate_Name" Reset="false" Substitute="false">/SH_PUMPS/PUMPS_SIMPLE_W_INFOS_ARROWS_R_H_32_ANI</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+</ObjectsList>
+<InheritedTemplatesList/>
+</Template>
+<Template Name="Pump_Advanced_Base">
+<Description/>
+<AutoNaming_Prefix/>
+<AutoNaming_StartValue>1</AutoNaming_StartValue>
+<AutoNaming_FixedDigits>2</AutoNaming_FixedDigits>
+<AutoNaming_Step>1</AutoNaming_Step>
+<Enable_Instance>false</Enable_Instance>
+<ParametersList/>
+<TemplatesList>
+<IncludedTemplate Name="Pump_Base">
+<Description/>
+<Branch/>
+<OriginTemplateName>/SH_PUMPS/Pump_Base</OriginTemplateName>
+</IncludedTemplate>
+<IncludedTemplate Name="Pump_Common">
+<Description/>
+<Branch/>
+<OriginTemplateName>/SH_PUMPS/Pump_Common</OriginTemplateName>
+</IncludedTemplate>
+</TemplatesList>
+<ObjectsList>
+<Object Name="NB">
+<Description/>
+<InternalType>2</InternalType>
+<SvType>2</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="Domain" Reset="false" Substitute="true">/SH_PUMPS/pPump_Domain</Property>
+<Property id="Description" Reset="false" Substitute="true">="Nombre de démarrages " + TopTemplateInstance.Name</Property>
+<Property id="MinimumValue" Reset="false" Substitute="true">/SH_PUMPS/pPump_Min</Property>
+<Property id="UseExtendedAttributes" Reset="false" Substitute="false">-1</Property>
+<Property id="DescriptionAlt" Reset="false" Substitute="true">="Number of start " +TopTemplateInstance.Name</Property>
+<Property id="Format" Reset="false" Substitute="true">/SH_PUMPS/pPump_Format</Property>
+<Property id="Type" Reset="false" Substitute="false">2</Property>
+<Property id="Unit" Reset="false" Substitute="true">/SH_PUMPS/pPump_Unit</Property>
+<Property id="MaximumValue" Reset="false" Substitute="true">/SH_PUMPS/pPump_Max</Property>
+<Property id="Nature" Reset="false" Substitute="true">/SH_PUMPS/pPump_Nature</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="AUTO">
+<Description/>
+<InternalType>2</InternalType>
+<SvType>1</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="Domain" Reset="false" Substitute="true">/SH_PUMPS/pPump_Domain</Property>
+<Property id="Description" Reset="false" Substitute="true">=TopTemplateInstance.Name + " 1 : MANU 0 : AUTO"</Property>
+<Property id="Command" Reset="false" Substitute="false">-1</Property>
+<Property id="UseExtendedAttributes" Reset="false" Substitute="false">-1</Property>
+<Property id="ControlMinimumValue" Reset="false" Substitute="false">0</Property>
+<Property id="DescriptionAlt" Reset="false" Substitute="true">=TopTemplateInstance.Name + " 1 : MANU 0 : AUTO"</Property>
+<Property id="ControlMaximumValue" Reset="false" Substitute="false">65535</Property>
+<Property id="Log0_1" Reset="false" Substitute="false">-1</Property>
+<Property id="Log" Reset="false" Substitute="false">-1</Property>
+<Property id="Log1_0" Reset="false" Substitute="false">-1</Property>
+<Property id="Nature" Reset="false" Substitute="true">/SH_PUMPS/pPump_Nature</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="P">
+<Description/>
+<InternalType>2</InternalType>
+<SvType>2</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="Domain" Reset="false" Substitute="true">/SH_PUMPS/pPump_Domain</Property>
+<Property id="Description" Reset="false" Substitute="true">="Puissance convertisseur statique " + TopTemplateInstance.Name</Property>
+<Property id="MinimumValue" Reset="false" Substitute="true">/SH_PUMPS/pPump_Min</Property>
+<Property id="Command" Reset="false" Substitute="false">0</Property>
+<Property id="UseExtendedAttributes" Reset="false" Substitute="false">-1</Property>
+<Property id="DescriptionAlt" Reset="false" Substitute="true">="Static converter power " +TopTemplateInstance.Name</Property>
+<Property id="Format" Reset="false" Substitute="true">/SH_PUMPS/pPump_Format</Property>
+<Property id="Type" Reset="false" Substitute="false">2</Property>
+<Property id="Unit" Reset="false" Substitute="true">/SH_PUMPS/pPump_Unit</Property>
+<Property id="Nature" Reset="false" Substitute="true">/SH_PUMPS/pPump_Nature</Property>
+<Property id="MaximumValue" Reset="false" Substitute="true">/SH_PUMPS/pPump_Max</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="FREQ">
+<Description/>
+<InternalType>2</InternalType>
+<SvType>2</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="Domain" Reset="false" Substitute="true">/SH_PUMPS/pPump_Domain</Property>
+<Property id="Description" Reset="false" Substitute="true">="Fréquence convertisseur statique " + TopTemplateInstance.Name</Property>
+<Property id="MinimumValue" Reset="false" Substitute="true">/SH_PUMPS/pPump_Min</Property>
+<Property id="UseExtendedAttributes" Reset="false" Substitute="false">-1</Property>
+<Property id="DescriptionAlt" Reset="false" Substitute="true">="Static converter frequency " + TopTemplateInstance.Name</Property>
+<Property id="Format" Reset="false" Substitute="true">/SH_PUMPS/pPump_Format</Property>
+<Property id="Type" Reset="false" Substitute="false">2</Property>
+<Property id="Unit" Reset="false" Substitute="true">/SH_PUMPS/pPump_Unit</Property>
+<Property id="Nature" Reset="false" Substitute="true">/SH_PUMPS/pPump_Nature</Property>
+<Property id="MaximumValue" Reset="false" Substitute="true">/SH_PUMPS/pPump_Max</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="DISC">
+<Description/>
+<InternalType>2</InternalType>
+<SvType>1</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="Domain" Reset="false" Substitute="true">/SH_PUMPS/pPump_Domain</Property>
+<Property id="Alarm" Reset="false" Substitute="false">-1</Property>
+<Property id="Description" Reset="false" Substitute="true">="Discordance pompe " + toptemplateInstance.Name</Property>
+<Property id="UseExtendedAttributes" Reset="false" Substitute="false">-1</Property>
+<Property id="DescriptionAlt" Reset="false" Substitute="true">="Pump discrepency " + toptemplateInstance.Name</Property>
+<Property id="Log0_1" Reset="false" Substitute="false">-1</Property>
+<Property id="Log" Reset="false" Substitute="false">-1</Property>
+<Property id="Log1_0" Reset="false" Substitute="false">-1</Property>
+<Property id="Nature" Reset="false" Substitute="true">/SH_PUMPS/pPump_Nature</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="LOCAL">
+<Description/>
+<InternalType>2</InternalType>
+<SvType>1</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="Domain" Reset="false" Substitute="true">/SH_PUMPS/pPump_Domain</Property>
+<Property id="Description" Reset="false" Substitute="true">=TopTemplateInstance.Name + " 1 : DISTANT 0 : LOCAL"</Property>
+<Property id="Command" Reset="false" Substitute="false">-1</Property>
+<Property id="UseExtendedAttributes" Reset="false" Substitute="false">-1</Property>
+<Property id="ControlMinimumValue" Reset="false" Substitute="false">0</Property>
+<Property id="DescriptionAlt" Reset="false" Substitute="true">=TopTemplateInstance.Name + " 1 : REMOTE 0 : LOCAL"</Property>
+<Property id="ControlMaximumValue" Reset="false" Substitute="false">65535</Property>
+<Property id="Log0_1" Reset="false" Substitute="false">-1</Property>
+<Property id="Log" Reset="false" Substitute="false">-1</Property>
+<Property id="Log1_0" Reset="false" Substitute="false">-1</Property>
+<Property id="Nature" Reset="false" Substitute="true">/SH_PUMPS/pPump_Nature</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="T">
+<Description/>
+<InternalType>2</InternalType>
+<SvType>2</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="Domain" Reset="false" Substitute="true">/SH_PUMPS/pPump_Domain</Property>
+<Property id="Description" Reset="false" Substitute="true">="Temps de fonctionnement " + TopTemplateInstance.Name</Property>
+<Property id="MinimumValue" Reset="false" Substitute="true">/SH_PUMPS/pPump_Min</Property>
+<Property id="UseExtendedAttributes" Reset="false" Substitute="false">-1</Property>
+<Property id="DescriptionAlt" Reset="false" Substitute="true">="Running time " + TopTemplateInstance.Name</Property>
+<Property id="Format" Reset="false" Substitute="true">/SH_PUMPS/pPump_Format</Property>
+<Property id="Type" Reset="false" Substitute="false">2</Property>
+<Property id="Unit" Reset="false" Substitute="true">/SH_PUMPS/pPump_Unit</Property>
+<Property id="Nature" Reset="false" Substitute="true">/SH_PUMPS/pPump_Nature</Property>
+<Property id="MaximumValue" Reset="false" Substitute="true">/SH_PUMPS/pPump_Max</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+</ObjectsList>
+<InheritedTemplatesList/>
+</Template>
+</TemplatesList>
+<CategoriesList/>
+</category>
+<category Name="Pumps_Simples">
+<Description/>
+<TemplatesList>
+<Template Name="Pump_Standard_Type1">
+<Description/>
+<AutoNaming_Prefix>Pump</AutoNaming_Prefix>
+<AutoNaming_StartValue>1</AutoNaming_StartValue>
+<AutoNaming_FixedDigits>2</AutoNaming_FixedDigits>
+<AutoNaming_Step>1</AutoNaming_Step>
+<Enable_Instance>true</Enable_Instance>
+<ParametersList>
+<ParameterInstance Name="/SH_PUMPS/pPump_Nature">
+<Description>pNature</Description>
+<Value/>
+</ParameterInstance>
+<ParameterInstance Name="/SH_PUMPS/pPump_Domain">
+<Description>pDomain</Description>
+<Value/>
+</ParameterInstance>
+</ParametersList>
+<TemplatesList>
+<IncludedTemplate Name="Pump_Base">
+<Description/>
+<Branch/>
+<OriginTemplateName>/SH_PUMPS/Pump_Base</OriginTemplateName>
+</IncludedTemplate>
+</TemplatesList>
+<ObjectsList>
+<Object Name="PUMPS_2DIR_LEFT_H">
+<Selected>false</Selected>
+<Description>Desc Symbol01</Description>
+<InternalType>4</InternalType>
+<SvType>5</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="SymbolTemplate_Name" Reset="false" Substitute="false">/SH_PUMPS/PUMPS_2DIR_H_L_32_ANI</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="PUMPS_2DIR_LEFT_V">
+<Selected>false</Selected>
+<Description>Desc Symbol01</Description>
+<InternalType>4</InternalType>
+<SvType>5</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="SymbolTemplate_Name" Reset="false" Substitute="false">/SH_PUMPS/PUMPS_2DIR_V_L_32_ANI</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="PUMPS_2DIR_RIGHT_H">
+<Selected>false</Selected>
+<Description>Desc Symbol01</Description>
+<InternalType>4</InternalType>
+<SvType>5</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="SymbolTemplate_Name" Reset="false" Substitute="false">/SH_PUMPS/PUMPS_2DIR_H_R_32_ANI</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="PUMPS_2DIR_RIGHT_V">
+<Selected>false</Selected>
+<Description>Desc Symbol01</Description>
+<InternalType>4</InternalType>
+<SvType>5</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="SymbolTemplate_Name" Reset="false" Substitute="false">/SH_PUMPS/PUMPS_2DIR_V_R_32_ANI</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+</ObjectsList>
+<InheritedTemplatesList/>
+</Template>
+<Template Name="Pump_Magdrive">
+<Description/>
+<AutoNaming_Prefix>Pump</AutoNaming_Prefix>
+<AutoNaming_StartValue>1</AutoNaming_StartValue>
+<AutoNaming_FixedDigits>2</AutoNaming_FixedDigits>
+<AutoNaming_Step>1</AutoNaming_Step>
+<Enable_Instance>true</Enable_Instance>
+<ParametersList>
+<ParameterInstance Name="/SH_PUMPS/pPump_Nature">
+<Description>pNature</Description>
+<Value/>
+</ParameterInstance>
+<ParameterInstance Name="/SH_PUMPS/pPump_Domain">
+<Description>pDomain</Description>
+<Value/>
+</ParameterInstance>
+</ParametersList>
+<TemplatesList>
+<IncludedTemplate Name="Pump_Base">
+<Description/>
+<Branch/>
+<OriginTemplateName>/SH_PUMPS/Pump_Base</OriginTemplateName>
+</IncludedTemplate>
+</TemplatesList>
+<ObjectsList>
+<Object Name="PUMPS_MAGDRIVE_LEFT">
+<Selected>false</Selected>
+<Description>Desc Symbol01</Description>
+<InternalType>4</InternalType>
+<SvType>5</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="SymbolTemplate_Name" Reset="false" Substitute="false">/SH_PUMPS/PUMPS_MAGDRIVE_L_32_ANI</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="PUMPS_MAGDRIVE_RIGHT">
+<Selected>false</Selected>
+<Description>Desc Symbol01</Description>
+<InternalType>4</InternalType>
+<SvType>5</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="SymbolTemplate_Name" Reset="false" Substitute="false">/SH_PUMPS/PUMPS_MAGDRIVE_R_32_ANI</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+</ObjectsList>
+<InheritedTemplatesList/>
+</Template>
+<Template Name="Pump_Vertical">
+<Description/>
+<AutoNaming_Prefix>Pump</AutoNaming_Prefix>
+<AutoNaming_StartValue>1</AutoNaming_StartValue>
+<AutoNaming_FixedDigits>2</AutoNaming_FixedDigits>
+<AutoNaming_Step>1</AutoNaming_Step>
+<Enable_Instance>true</Enable_Instance>
+<ParametersList>
+<ParameterInstance Name="/SH_PUMPS/pPump_Nature">
+<Description>pNature</Description>
+<Value/>
+</ParameterInstance>
+<ParameterInstance Name="/SH_PUMPS/pPump_Domain">
+<Description>pDomain</Description>
+<Value/>
+</ParameterInstance>
+</ParametersList>
+<TemplatesList>
+<IncludedTemplate Name="Pump_Base">
+<Description/>
+<Branch/>
+<OriginTemplateName>/SH_PUMPS/Pump_Base</OriginTemplateName>
+</IncludedTemplate>
+</TemplatesList>
+<ObjectsList>
+<Object Name="PUMPS_VERTICAL_GRAY">
+<Selected>false</Selected>
+<Description>Desc Symbol01</Description>
+<InternalType>4</InternalType>
+<SvType>5</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="SymbolTemplate_Name" Reset="false" Substitute="false">/SH_PUMPS/PUMPS_VERTICAL_GRAY_32_ANI</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="PUMPS_VERTICAL_BLUE">
+<Selected>false</Selected>
+<Description>Desc Symbol01</Description>
+<InternalType>4</InternalType>
+<SvType>5</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="SymbolTemplate_Name" Reset="false" Substitute="false">/SH_PUMPS/PUMPS_VERTICAL_BLUE_32_ANI</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+</ObjectsList>
+<InheritedTemplatesList/>
+</Template>
+<Template Name="Pump_Standard_Type2_Fan">
+<Description/>
+<AutoNaming_Prefix>Pump</AutoNaming_Prefix>
+<AutoNaming_StartValue>1</AutoNaming_StartValue>
+<AutoNaming_FixedDigits>2</AutoNaming_FixedDigits>
+<AutoNaming_Step>1</AutoNaming_Step>
+<Enable_Instance>true</Enable_Instance>
+<ParametersList>
+<ParameterInstance Name="/SH_PUMPS/pPump_Nature">
+<Description>pNature</Description>
+<Value/>
+</ParameterInstance>
+<ParameterInstance Name="/SH_PUMPS/pPump_Domain">
+<Description>pDomain</Description>
+<Value/>
+</ParameterInstance>
+</ParametersList>
+<TemplatesList>
+<IncludedTemplate Name="Pump_Base">
+<Description/>
+<Branch/>
+<OriginTemplateName>/SH_PUMPS/Pump_Base</OriginTemplateName>
+</IncludedTemplate>
+</TemplatesList>
+<ObjectsList>
+<Object Name="PUMPS_SIMPLE_FAN_TOP_V">
+<Selected>false</Selected>
+<Description>Desc Symbol01</Description>
+<InternalType>4</InternalType>
+<SvType>5</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="SymbolTemplate_Name" Reset="false" Substitute="false">/SH_PUMPS/PUMPS_SIMPLE_FAN_TOP_V_32_ANI</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="PUMPS_SIMPLE_FAN_BOT_V">
+<Selected>false</Selected>
+<Description>Desc Symbol01</Description>
+<InternalType>4</InternalType>
+<SvType>5</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="SymbolTemplate_Name" Reset="false" Substitute="false">/SH_PUMPS/PUMPS_SIMPLE_FAN_BOT_V_32_ANI</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="PUMPS_SIMPLE_FAN_R_H">
+<Selected>false</Selected>
+<Description>Desc Symbol01</Description>
+<InternalType>4</InternalType>
+<SvType>5</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="SymbolTemplate_Name" Reset="false" Substitute="false">/SH_PUMPS/PUMPS_SIMPLE_FAN_R_H_32_ANI</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="PUMPS_SIMPLE_FAN_LEFT_H">
+<Selected>false</Selected>
+<Description>Desc Symbol01</Description>
+<InternalType>4</InternalType>
+<SvType>5</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="SymbolTemplate_Name" Reset="false" Substitute="false">/SH_PUMPS/PUMPS_SIMPLE_FAN_L_H_32_ANI</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+</ObjectsList>
+<InheritedTemplatesList/>
+</Template>
+<Template Name="Pump_Vertical_Tripod">
+<Description/>
+<AutoNaming_Prefix>Pumps</AutoNaming_Prefix>
+<AutoNaming_StartValue>1</AutoNaming_StartValue>
+<AutoNaming_FixedDigits>2</AutoNaming_FixedDigits>
+<AutoNaming_Step>1</AutoNaming_Step>
+<Enable_Instance>true</Enable_Instance>
+<ParametersList>
+<ParameterInstance Name="/SH_PUMPS/pPump_Nature">
+<Description>pNature</Description>
+<Value/>
+</ParameterInstance>
+<ParameterInstance Name="/SH_PUMPS/pPump_Domain">
+<Description>pDomain</Description>
+<Value/>
+</ParameterInstance>
+</ParametersList>
+<TemplatesList>
+<IncludedTemplate Name="Pump_Base">
+<Description/>
+<Branch/>
+<OriginTemplateName>/SH_PUMPS/Pump_Base</OriginTemplateName>
+</IncludedTemplate>
+</TemplatesList>
+<ObjectsList>
+<Object Name="PUMPS_VERTICAL_TRIPOD">
+<Description>Desc Symbol01</Description>
+<InternalType>4</InternalType>
+<SvType>5</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="SymbolTemplate_Name" Reset="false" Substitute="false">/SH_PUMPS/PUMPS_VERTICAL_TRIPOD_32_ANI</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+</ObjectsList>
+<InheritedTemplatesList/>
+</Template>
+<Template Name="Pump_Horizontal">
+<Description/>
+<AutoNaming_Prefix>Pump</AutoNaming_Prefix>
+<AutoNaming_StartValue>1</AutoNaming_StartValue>
+<AutoNaming_FixedDigits>2</AutoNaming_FixedDigits>
+<AutoNaming_Step>1</AutoNaming_Step>
+<Enable_Instance>true</Enable_Instance>
+<ParametersList>
+<ParameterInstance Name="/SH_PUMPS/pPump_Nature">
+<Description>pNature</Description>
+<Value/>
+</ParameterInstance>
+<ParameterInstance Name="/SH_PUMPS/pPump_Domain">
+<Description>pDomain</Description>
+<Value/>
+</ParameterInstance>
+</ParametersList>
+<TemplatesList>
+<IncludedTemplate Name="Pump_Base">
+<Description/>
+<Branch/>
+<OriginTemplateName>/SH_PUMPS/Pump_Base</OriginTemplateName>
+</IncludedTemplate>
+</TemplatesList>
+<ObjectsList>
+<Object Name="PUMPS_HORIZONTAL_TYPE2_RIGHT">
+<Selected>false</Selected>
+<Description>Desc Symbol01</Description>
+<InternalType>4</InternalType>
+<SvType>5</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="SymbolTemplate_Name" Reset="false" Substitute="false">/SH_PUMPS/PUMPS_HORIZONTAL_TYPE2_R_ANI</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="PUMPS_HORIZONTAL_TYPE1_RIGHT">
+<Selected>false</Selected>
+<Description>Desc Symbol01</Description>
+<InternalType>4</InternalType>
+<SvType>5</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="SymbolTemplate_Name" Reset="false" Substitute="false">/SH_PUMPS/PUMPS_HORIZONTAL_TYPE1_R_ANI</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="PUMPS_HORIZONTAL_TYPE2_LEFT">
+<Selected>false</Selected>
+<Description>Desc Symbol01</Description>
+<InternalType>4</InternalType>
+<SvType>5</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="SymbolTemplate_Name" Reset="false" Substitute="false">/SH_PUMPS/PUMPS_HORIZONTAL_TYPE2_L_ANI</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="PUMPS_HORIZONTAL_TYPE1_LEFT">
+<Selected>false</Selected>
+<Description>Desc Symbol01</Description>
+<InternalType>4</InternalType>
+<SvType>5</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="SymbolTemplate_Name" Reset="false" Substitute="false">/SH_PUMPS/PUMPS_HORIZONTAL_TYPE1_L_ANI</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+</ObjectsList>
+<InheritedTemplatesList/>
+</Template>
+<Template Name="Pump_High_Viscosity">
+<Description/>
+<AutoNaming_Prefix>Pump</AutoNaming_Prefix>
+<AutoNaming_StartValue>1</AutoNaming_StartValue>
+<AutoNaming_FixedDigits>2</AutoNaming_FixedDigits>
+<AutoNaming_Step>1</AutoNaming_Step>
+<Enable_Instance>true</Enable_Instance>
+<ParametersList>
+<ParameterInstance Name="/SH_PUMPS/pPump_Nature">
+<Description>pNature</Description>
+<Value/>
+</ParameterInstance>
+<ParameterInstance Name="/SH_PUMPS/pPump_Domain">
+<Description>pDomain</Description>
+<Value/>
+</ParameterInstance>
+</ParametersList>
+<TemplatesList>
+<IncludedTemplate Name="Pump_Base">
+<Description/>
+<Branch/>
+<OriginTemplateName>/SH_PUMPS/Pump_Base</OriginTemplateName>
+</IncludedTemplate>
+</TemplatesList>
+<ObjectsList>
+<Object Name="PUMPS_HIGH_VISCOSITY_WATER_LEFT">
+<Selected>false</Selected>
+<Description>Desc Symbol01</Description>
+<InternalType>4</InternalType>
+<SvType>5</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="SymbolTemplate_Name" Reset="false" Substitute="false">/SH_PUMPS/PUMPS_HIGH_VISCOSITY_WATER_L_32_ANI</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="PUMPS_HIGH_VISCOSITY_LEFT">
+<Selected>false</Selected>
+<Description>Desc Symbol01</Description>
+<InternalType>4</InternalType>
+<SvType>5</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="SymbolTemplate_Name" Reset="false" Substitute="false">/SH_PUMPS/PUMPS_HIGH_VISCOSITY_L_32_ANI</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="PUMPS_HIGH_VISCOSITY_RIGHT">
+<Selected>false</Selected>
+<Description>Desc Symbol01</Description>
+<InternalType>4</InternalType>
+<SvType>5</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="SymbolTemplate_Name" Reset="false" Substitute="false">/SH_PUMPS/PUMPS_HIGH_VISCOSITY_R_32_ANI</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="PUMPS_HIGH_VISCOSITY_OIL_LEFT">
+<Selected>false</Selected>
+<Description>Desc Symbol01</Description>
+<InternalType>4</InternalType>
+<SvType>5</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="SymbolTemplate_Name" Reset="false" Substitute="false">/SH_PUMPS/PUMPS_HIGH_VISCOSITY_OIL_L_32_ANI</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="PUMPS_HIGH_VISCOSITY_OIL_RIGHT">
+<Selected>false</Selected>
+<Description>Desc Symbol01</Description>
+<InternalType>4</InternalType>
+<SvType>5</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="SymbolTemplate_Name" Reset="false" Substitute="false">/SH_PUMPS/PUMPS_HIGH_VISCOSITY_OIL_R_32_ANI</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="PUMPS_HIGH_VISCOSITY_WATER_RIGHT">
+<Selected>false</Selected>
+<Description>Desc Symbol01</Description>
+<InternalType>4</InternalType>
+<SvType>5</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="SymbolTemplate_Name" Reset="false" Substitute="false">/SH_PUMPS/PUMPS_HIGH_VISCOSITY_WATER_R_32_ANI</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+</ObjectsList>
+<InheritedTemplatesList/>
+</Template>
+<Template Name="Pump_Centrifugal_Long">
+<Description/>
+<AutoNaming_Prefix>Pump</AutoNaming_Prefix>
+<AutoNaming_StartValue>1</AutoNaming_StartValue>
+<AutoNaming_FixedDigits>2</AutoNaming_FixedDigits>
+<AutoNaming_Step>1</AutoNaming_Step>
+<Enable_Instance>true</Enable_Instance>
+<ParametersList>
+<ParameterInstance Name="/SH_PUMPS/pPump_Nature">
+<Description>pNature</Description>
+<Value/>
+</ParameterInstance>
+<ParameterInstance Name="/SH_PUMPS/pPump_Domain">
+<Description>pDomain</Description>
+<Value/>
+</ParameterInstance>
+</ParametersList>
+<TemplatesList>
+<IncludedTemplate Name="Pump_Base">
+<Description/>
+<Branch/>
+<OriginTemplateName>/SH_PUMPS/Pump_Base</OriginTemplateName>
+</IncludedTemplate>
+</TemplatesList>
+<ObjectsList>
+<Object Name="PUMPS_CENTRIFUGAL_LONG_RIGHT">
+<Selected>false</Selected>
+<Description>Desc Symbol01</Description>
+<InternalType>4</InternalType>
+<SvType>5</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="SymbolTemplate_Name" Reset="false" Substitute="false">/SH_PUMPS/PUMPS_CENTRIFUGAL_LONG_R_32_ANI</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="PUMPS_CENTRIFUGAL_LONG_LEFT">
+<Selected>false</Selected>
+<Description>Desc Symbol01</Description>
+<InternalType>4</InternalType>
+<SvType>5</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="SymbolTemplate_Name" Reset="false" Substitute="false">/SH_PUMPS/PUMPS_CENTRIFUGAL_LONG_L_32_ANI</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+</ObjectsList>
+<InheritedTemplatesList/>
+</Template>
+<Template Name="Pump_Vertical_Sewage">
+<Description/>
+<AutoNaming_Prefix>Pumps</AutoNaming_Prefix>
+<AutoNaming_StartValue>1</AutoNaming_StartValue>
+<AutoNaming_FixedDigits>2</AutoNaming_FixedDigits>
+<AutoNaming_Step>1</AutoNaming_Step>
+<Enable_Instance>true</Enable_Instance>
+<ParametersList>
+<ParameterInstance Name="/SH_PUMPS/pPump_Generic_Label">
+<Description>pPump_Generic_Label</Description>
+<Value>Label</Value>
+<IsOverwritten>true</IsOverwritten>
+</ParameterInstance>
+<ParameterInstance Name="/SH_PUMPS/pPump_Nature">
+<Description>pNature</Description>
+<Value/>
+</ParameterInstance>
+<ParameterInstance Name="/SH_PUMPS/pPump_Domain">
+<Description>pDomain</Description>
+<Value/>
+</ParameterInstance>
+</ParametersList>
+<TemplatesList>
+<IncludedTemplate Name="Pump_Base">
+<Description/>
+<Branch/>
+<OriginTemplateName>/SH_PUMPS/Pump_Base</OriginTemplateName>
+</IncludedTemplate>
+</TemplatesList>
+<ObjectsList>
+<Object Name="PUMPS_VERTICAL_SEWAGE">
+<Description>Desc Symbol01</Description>
+<InternalType>4</InternalType>
+<SvType>5</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="SymbolTemplate_Name" Reset="false" Substitute="false">/SH_PUMPS/PUMPS_VERTICAL_SEWAGE_32_ANI</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+</ObjectsList>
+<InheritedTemplatesList/>
+</Template>
+<Template Name="Pump_Standard_Type2">
+<Description/>
+<AutoNaming_Prefix>Pump</AutoNaming_Prefix>
+<AutoNaming_StartValue>1</AutoNaming_StartValue>
+<AutoNaming_FixedDigits>2</AutoNaming_FixedDigits>
+<AutoNaming_Step>1</AutoNaming_Step>
+<Enable_Instance>true</Enable_Instance>
+<ParametersList>
+<ParameterInstance Name="/SH_PUMPS/pPump_Nature">
+<Description>pNature</Description>
+<Value/>
+</ParameterInstance>
+<ParameterInstance Name="/SH_PUMPS/pPump_Domain">
+<Description>pDomain</Description>
+<Value/>
+</ParameterInstance>
+</ParametersList>
+<TemplatesList>
+<IncludedTemplate Name="Pump_Base">
+<Description/>
+<Branch/>
+<OriginTemplateName>/SH_PUMPS/Pump_Base</OriginTemplateName>
+</IncludedTemplate>
+</TemplatesList>
+<ObjectsList>
+<Object Name="PUMPS_SIMPLE_ARROWS_BOT_V">
+<Selected>false</Selected>
+<Description>Desc Symbol01</Description>
+<InternalType>4</InternalType>
+<SvType>5</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="SymbolTemplate_Name" Reset="false" Substitute="false">/SH_PUMPS/PUMPS_SIMPLE_ARROWS_BOT_V_32_ANI</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="PUMPS_SIMPLE_ARROWS_TOP_V">
+<Selected>false</Selected>
+<Description>Desc Symbol01</Description>
+<InternalType>4</InternalType>
+<SvType>5</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="SymbolTemplate_Name" Reset="false" Substitute="false">/SH_PUMPS/PUMPS_SIMPLE_ARROWS_TOP_V_32_ANI</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="PUMPS_SIMPLE_ARROWS_LEFT_H">
+<Selected>false</Selected>
+<Description>Desc Symbol01</Description>
+<InternalType>4</InternalType>
+<SvType>5</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="SymbolTemplate_Name" Reset="false" Substitute="false">/SH_PUMPS/PUMPS_SIMPLE_ARROWS_L_H_32_ANI</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="PUMPS_SIMPLE_ARROWS_RIGHT_H">
+<Selected>false</Selected>
+<Description>Desc Symbol01</Description>
+<InternalType>4</InternalType>
+<SvType>5</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="SymbolTemplate_Name" Reset="false" Substitute="false">/SH_PUMPS/PUMPS_SIMPLE_ARROWS_R_H_32_ANI</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+</ObjectsList>
+<InheritedTemplatesList/>
+</Template>
+<Template Name="Pump_Centrifugal_Short">
+<Description/>
+<AutoNaming_Prefix>Pump</AutoNaming_Prefix>
+<AutoNaming_StartValue>1</AutoNaming_StartValue>
+<AutoNaming_FixedDigits>2</AutoNaming_FixedDigits>
+<AutoNaming_Step>1</AutoNaming_Step>
+<Enable_Instance>true</Enable_Instance>
+<ParametersList>
+<ParameterInstance Name="/SH_PUMPS/pPump_Nature">
+<Description>pNature</Description>
+<Value/>
+</ParameterInstance>
+<ParameterInstance Name="/SH_PUMPS/pPump_Domain">
+<Description>pDomain</Description>
+<Value/>
+</ParameterInstance>
+</ParametersList>
+<TemplatesList>
+<IncludedTemplate Name="Pump_Base">
+<Description/>
+<Branch/>
+<OriginTemplateName>/SH_PUMPS/Pump_Base</OriginTemplateName>
+</IncludedTemplate>
+</TemplatesList>
+<ObjectsList>
+<Object Name="PUMPS_CENTRIFUGAL_SHORT_L">
+<Selected>false</Selected>
+<Description>Desc Symbol01</Description>
+<InternalType>4</InternalType>
+<SvType>5</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="SymbolTemplate_Name" Reset="false" Substitute="false">/SH_PUMPS/PUMPS_CENTRIFUGAL_SHORT_L_32_ANI</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="PUMPS_CENTRIFUGAL_SHORT_R">
+<Selected>false</Selected>
+<Description>Desc Symbol01</Description>
+<InternalType>4</InternalType>
+<SvType>5</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="SymbolTemplate_Name" Reset="false" Substitute="false">/SH_PUMPS/PUMPS_CENTRIFUGAL_SHORT_R_32_ANI</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+</ObjectsList>
+<InheritedTemplatesList/>
+</Template>
+<Template Name="Pump_Standard_Type1_Fan">
+<Description/>
+<AutoNaming_Prefix>Pump</AutoNaming_Prefix>
+<AutoNaming_StartValue>1</AutoNaming_StartValue>
+<AutoNaming_FixedDigits>2</AutoNaming_FixedDigits>
+<AutoNaming_Step>1</AutoNaming_Step>
+<Enable_Instance>true</Enable_Instance>
+<ParametersList>
+<ParameterInstance Name="/SH_PUMPS/pPump_Nature">
+<Description>pNature</Description>
+<Value/>
+</ParameterInstance>
+<ParameterInstance Name="/SH_PUMPS/pPump_Domain">
+<Description>pDomain</Description>
+<Value/>
+</ParameterInstance>
+</ParametersList>
+<TemplatesList>
+<IncludedTemplate Name="Pump_Base">
+<Description/>
+<Branch/>
+<OriginTemplateName>/SH_PUMPS/Pump_Base</OriginTemplateName>
+</IncludedTemplate>
+</TemplatesList>
+<ObjectsList>
+<Object Name="PUMPS_2DIR_FAN_LEFT_V">
+<Selected>false</Selected>
+<Description>Desc Symbol01</Description>
+<InternalType>4</InternalType>
+<SvType>5</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="SymbolTemplate_Name" Reset="false" Substitute="false">/SH_PUMPS/PUMPS_2DIR_FAN_V_L_32_ANI</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="PUMPS_2DIR_FAN_RIGHT_V">
+<Selected>false</Selected>
+<Description>Desc Symbol01</Description>
+<InternalType>4</InternalType>
+<SvType>5</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="SymbolTemplate_Name" Reset="false" Substitute="false">/SH_PUMPS/PUMPS_2DIR_FAN_V_R_32_ANI</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="PUMPS_2DIR_FAN_RIGHT_H">
+<Selected>false</Selected>
+<Description>Desc Symbol01</Description>
+<InternalType>4</InternalType>
+<SvType>5</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="SymbolTemplate_Name" Reset="false" Substitute="false">/SH_PUMPS/PUMPS_2DIR_FAN_H_R_32_ANI</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="PUMPS_2DIR_FAN_LEFT_H">
+<Selected>false</Selected>
+<Description>Desc Symbol01</Description>
+<InternalType>4</InternalType>
+<SvType>5</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="SymbolTemplate_Name" Reset="false" Substitute="false">/SH_PUMPS/PUMPS_2DIR_FAN_H_L_32_ANI</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+</ObjectsList>
+<InheritedTemplatesList/>
+</Template>
+</TemplatesList>
+<CategoriesList/>
+</category>
+<category Name="Pumps_Double">
+<Description/>
+<TemplatesList>
+<Template Name="Pump_Double_Fan">
+<Description/>
+<AutoNaming_Prefix>Pump</AutoNaming_Prefix>
+<AutoNaming_StartValue>1</AutoNaming_StartValue>
+<AutoNaming_FixedDigits>2</AutoNaming_FixedDigits>
+<AutoNaming_Step>1</AutoNaming_Step>
+<Enable_Instance>true</Enable_Instance>
+<ParametersList>
+<ParameterInstance Name="/SH_PUMPS/pPump_Nature">
+<Description>pNature</Description>
+<Value/>
+</ParameterInstance>
+<ParameterInstance Name="/SH_PUMPS/pPump_Domain">
+<Description>pDomain</Description>
+<Value/>
+</ParameterInstance>
+</ParametersList>
+<TemplatesList>
+<IncludedTemplate Name="Pump_Double_Base">
+<Description/>
+<Branch/>
+<OriginTemplateName>/SH_PUMPS/Pump_Double_Base</OriginTemplateName>
+</IncludedTemplate>
+</TemplatesList>
+<ObjectsList>
+<Object Name="PUMPS_DOUBLE_FAN_BOT_V">
+<Selected>false</Selected>
+<Description>Desc Symbol01</Description>
+<InternalType>4</InternalType>
+<SvType>5</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="SymbolTemplate_Name" Reset="false" Substitute="false">/SH_PUMPS/PUMPS_DOUBLE_FAN_BOT_V_32_ANI</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="PUMPS_DOUBLE_FAN_TOP_V">
+<Selected>false</Selected>
+<Description>Desc Symbol01</Description>
+<InternalType>4</InternalType>
+<SvType>5</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="SymbolTemplate_Name" Reset="false" Substitute="false">/SH_PUMPS/PUMPS_DOUBLE_FAN_TOP_V_32_ANI</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="PUMPS_DOUBLE_FAN_LEFT_H">
+<Selected>false</Selected>
+<Description>Desc Symbol01</Description>
+<InternalType>4</InternalType>
+<SvType>5</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="SymbolTemplate_Name" Reset="false" Substitute="false">/SH_PUMPS/PUMPS_DOUBLE_FAN_L_H_32_ANI</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="PUMPS_DOUBLE_FAN_RIGHT_H">
+<Selected>false</Selected>
+<Description>Desc Symbol01</Description>
+<InternalType>4</InternalType>
+<SvType>5</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="SymbolTemplate_Name" Reset="false" Substitute="false">/SH_PUMPS/PUMPS_DOUBLE_FAN_R_H_32_ANI</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+</ObjectsList>
+<InheritedTemplatesList/>
+</Template>
+<Template Name="Pump_Double_Base">
+<Description/>
+<AutoNaming_Prefix/>
+<AutoNaming_StartValue>1</AutoNaming_StartValue>
+<AutoNaming_FixedDigits>2</AutoNaming_FixedDigits>
+<AutoNaming_Step>1</AutoNaming_Step>
+<Enable_Instance>false</Enable_Instance>
+<ParametersList/>
+<TemplatesList>
+<IncludedTemplate Name="P02">
+<Description/>
+<Branch>P02</Branch>
+<OriginTemplateName>/SH_PUMPS/Pump_Base</OriginTemplateName>
+</IncludedTemplate>
+<IncludedTemplate Name="P01">
+<Description/>
+<Branch>P01</Branch>
+<OriginTemplateName>/SH_PUMPS/Pump_Base</OriginTemplateName>
+</IncludedTemplate>
+<IncludedTemplate Name="Pump_Common">
+<Description/>
+<Branch/>
+<OriginTemplateName>/SH_PUMPS/Pump_Common</OriginTemplateName>
+</IncludedTemplate>
+</TemplatesList>
+<ObjectsList/>
+<InheritedTemplatesList/>
+</Template>
+<Template Name="Pump_Double_Arrow">
+<Description/>
+<AutoNaming_Prefix>Pump</AutoNaming_Prefix>
+<AutoNaming_StartValue>1</AutoNaming_StartValue>
+<AutoNaming_FixedDigits>2</AutoNaming_FixedDigits>
+<AutoNaming_Step>1</AutoNaming_Step>
+<Enable_Instance>true</Enable_Instance>
+<ParametersList>
+<ParameterInstance Name="/SH_PUMPS/pPump_Nature">
+<Description>pNature</Description>
+<Value/>
+</ParameterInstance>
+<ParameterInstance Name="/SH_PUMPS/pPump_Domain">
+<Description>pDomain</Description>
+<Value/>
+</ParameterInstance>
+</ParametersList>
+<TemplatesList>
+<IncludedTemplate Name="Pump_Double_Base">
+<Description/>
+<Branch/>
+<OriginTemplateName>/SH_PUMPS/Pump_Double_Base</OriginTemplateName>
+</IncludedTemplate>
+</TemplatesList>
+<ObjectsList>
+<Object Name="PUMPS_DOUBLE_ARROWS_R_H">
+<Selected>false</Selected>
+<Description>Desc Symbol01</Description>
+<InternalType>4</InternalType>
+<SvType>5</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="SymbolTemplate_Name" Reset="false" Substitute="false">/SH_PUMPS/PUMPS_DOUBLE_ARROWS_R_H_32_ANI</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="PUMPS_DOUBLE_ARROWS_BOT_V">
+<Selected>false</Selected>
+<Description>Desc Symbol01</Description>
+<InternalType>4</InternalType>
+<SvType>5</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="SymbolTemplate_Name" Reset="false" Substitute="false">/SH_PUMPS/PUMPS_DOUBLE_ARROWS_BOT_V_32_ANI</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="PUMPS_DOUBLE_ARROWS_L_H">
+<Selected>false</Selected>
+<Description>Desc Symbol01</Description>
+<InternalType>4</InternalType>
+<SvType>5</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="Substitutions" Reset="false" Substitute="false">...</Property>
+<Property id="SymbolTemplate_Name" Reset="false" Substitute="false">/SH_PUMPS/PUMPS_DOUBLE_ARROWS_L_H_32_ANI</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList>
+<Object Name="CMD">
+<Selected>false</Selected>
+<Description/>
+<InternalType>5</InternalType>
+<SvType>40</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="NewVarName" Reset="false" Substitute="false"></Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+</ObjectsList>
+</Object>
+<Object Name="PUMPS_DOUBLE_ARROWS_TOP_V">
+<Selected>false</Selected>
+<Description>Desc Symbol01</Description>
+<InternalType>4</InternalType>
+<SvType>5</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="SymbolTemplate_Name" Reset="false" Substitute="false">/SH_PUMPS/PUMPS_DOUBLE_ARROWS_TOP_V_32_ANI</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+</ObjectsList>
+<InheritedTemplatesList/>
+</Template>
+</TemplatesList>
+<CategoriesList/>
+</category>
+</TemplatesRoot>
+</root>

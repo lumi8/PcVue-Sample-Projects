@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<!---->
+<GeoDataConf>
+   <ZonesSettings>
+      <NoGeoTagsBehavior>1</NoGeoTagsBehavior>
+   </ZonesSettings>
+   <GeoTagsSettings/>
+</GeoDataConf>

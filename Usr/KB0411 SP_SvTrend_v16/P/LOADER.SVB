@@ -1,0 +1,13 @@
+'-------- LOADER.SVB
+'-------- Used to load other programs
+
+Sub Main()
+
+'-------- Programs to be loaded and started
+	Program("START", "LANGUAGE.SVB", "");
+	Program("START", "DATA.SVB", "");
+	Program("START", "SVTREND.SVB", "");
+
+'-------- Programs to be loaded but not started
+
+End Sub

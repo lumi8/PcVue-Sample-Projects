@@ -1,0 +1,10 @@
+[General]
+DefaultDataConnectionType=2
+DefaultConnectionString=
+DefaultSecureConnectionString=
+AutomaticStart=1
+UseDefaultLocalDatabasesDir=1
+LocalDatabasesDir=
+HistoricalLanguage=12
+LogOpcGroupUpdateRate=0
+LogOpcGroupDeadband=0.00

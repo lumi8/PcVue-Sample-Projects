@@ -1,0 +1,36 @@
+English
+======
+This sample shows the use of the REGION instruction to control the region in which a mimic opens.
+
+Normally regions are used when you have two or more screens on the same PC, but you can also use regions if you only have one screen.
+
+To allow the same mimic to be opened twice in two different regions the following property in the Options tree must be ticked.  Regions.Advanced mode.Multi open capability of the same mimic
+
+The REGION instruction has two modes that affect the region in which a mimic is opened.
+
+Mode SETSELECTION
+=================
+Provides the same functionality as the Region animation. Allows the selection of which region a mimic is to be opened in and if the region selection is to be temporary or permanent. Intended to be used in conjuction with the Link-open animation.
+
+Mode SETREGION
+==============
+Sets the region in which a mimic is opened by the WINDOW instruction. Does not affect the Link-open animation.
+
+Français
+======
+Cet exemple montre l'utilisation de l'instruction REGION afin de contrôler la région dans laquelle un synoptique s'ouvre. 
+
+Généralement les régions sont utilisées lorsque vous avez deux écrans ou plus sur un même PC, mais vous pouvez également utiliser les régions si vous n'avez qu'un seul écran.
+
+Pour permettre l’ouverture d’un même synoptique deux fois dans deux régions différentes, la propriété suivante doit être sélectionnée :
+Région.Nouveau Mode.Synoptique ouvrable dans plusieurs régions simultanément.
+
+L'instruction REGION propose deux modes qui affectent la région dans laquelle un synoptique est ouvert.
+
+Mode SETSELECTION
+=================
+Fournit la même fonctionnalité que l'animation région.  Permet le choix de la région dans laquelle un synoptique doit être ouvert et si le choix de région doit être provisoire ou permanent.  Prévu pour être utilisé avec l'animation ouverture.
+
+Mode SETREGION
+==============
+Détermine la région dans laquelle un synoptique est ouvert par l'instruction WINDOW.  N'affecte pas l'animation ouverture.

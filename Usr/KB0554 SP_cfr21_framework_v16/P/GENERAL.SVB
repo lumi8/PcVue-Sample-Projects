@@ -1,0 +1,44 @@
+Sub Main ()
+	GetRights();
+	Event("ADDPROG", "@SYSTEM.LocalHost.USER", "ALL>ALL", "GENERAL.SVB", "", "GetRights");
+End Sub
+
+Sub GetRights ()
+	@USER.RIGHTS1.WBV = Tos (System("USER", 1));
+	@USER.RIGHTS2.WBV = Tos (System("USER", 2));
+	@USER.RIGHTS3.WBV = Tos (System("USER", 3));
+	@USER.RIGHTS4.WBV = Tos (System("USER", 4));
+	@USER.RIGHTS5.WBV = Tos (System("USER", 5));
+	@USER.RIGHTS6.WBV = Tos (System("USER", 6));
+	@USER.RIGHTS7.WBV = Tos (System("USER", 7));
+	@USER.RIGHTS8.WBV = Tos (System("USER", 8));
+	@USER.RIGHTS9.WBV = Tos (System("USER", 9));
+End Sub
+
+Sub MaskAll ()
+	Const LOGON = 128;
+	Const LOGOFF = 256;
+	Const FAILED = 1073741824;
+	Logdisplay ("EVENTMASK", "UserLog", "", "Log1", LOGON + LOGOFF + FAILED);
+End Sub
+
+Sub MaskLogon ()
+	Const LOGON = 128;
+	Const LOGOFF = 256;
+	Const FAILED = 1073741824;
+	Logdisplay ("EVENTMASK", "UserLog", "", "Log1", LOGON + LOGOFF);
+End Sub
+
+Sub MaskFailed ()
+	Const LOGON = 128;
+	Const LOGOFF = 256;
+	Const FAILED = 1073741824;
+	Logdisplay ("EVENTMASK", "UserLog", "", "Log1", FAILED);
+End Sub
+
+
+Sub SVRestartCheck()
+	dim sArg as str;
+	sArg = getarg("ARG1");
+	@SV_Restart = sval(sArg);
+End Sub

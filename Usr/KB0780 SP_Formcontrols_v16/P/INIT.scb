@@ -1,0 +1,11 @@
+'-------- LOADER.SCB
+'-------- Used to load other programs
+
+Sub Main()
+
+'-------- Programs to be loaded and started
+  Program("START", "FORMS.scb", "");
+
+'-------- Programs to be loaded but not started
+
+End Sub

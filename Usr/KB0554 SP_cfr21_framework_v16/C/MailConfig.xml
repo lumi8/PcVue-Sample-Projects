@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--Message Configuration File-->
+<MessageConfig VersionNumber="2.1">
+  <MailGeneralSettings DefaultTemplateName="" DefaultProfileName="" DefaultAttachmentEncoding="0" MaxAttachmentSize="1000" ProhibitedAttachmentFileExtensions="exe,dll,vbs,js" />
+  <SmsGeneralSettings DefaultTemplateName="" DefaultProfileName="" />
+  <MessageTemplates />
+  <MailProfiles />
+  <SmsProfiles />
+</MessageConfig>

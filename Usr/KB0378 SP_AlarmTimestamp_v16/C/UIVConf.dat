@@ -1,0 +1,15 @@
+[WatchGroup]
+RateUpdate=0
+[Expression]
+MaxForMimic=49152
+MaxForVariable=49152
+MaxNumber=50000
+[EventActions]
+ExecuteActionOnlyOnActiveServer=0
+MaxNumber=32000
+[CyclicActions]
+ExecuteActionOnlyOnActiveServer=0
+[SchedulerActions]
+BrowsingLevel=0
+[MimicsAndSymbols]
+SubstitutionLimit=0

@@ -1,0 +1,14 @@
+'-------- LOADER.SVB
+'-------- Used to load other programs
+
+Sub Main()
+
+'-------- Programs to be loaded and started
+	Program("START", "LANGUAGE.SVB", "");
+
+'-------- Programs to be loaded but not started
+
+'-------- Intialise any variables
+	@CHRONOMETER.RESET = 0;
+
+End Sub

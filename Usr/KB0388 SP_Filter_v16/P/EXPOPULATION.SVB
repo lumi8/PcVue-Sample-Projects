@@ -1,0 +1,35 @@
+'-------- EXPOPULATION.SVB
+'-------- Example of filtering alarm and log displays using a population
+
+Sub Main()
+
+  CreatePop1();
+
+End Sub
+
+
+
+
+'-------- Creates populations POP1 amd POP2 from a text file
+Sub CreatePop1()
+  Dim Handle As Long;
+  
+  Handle =  FileToBuf("Pop.txt");
+  Population("CREATE", Handle);
+  Free_Buffer(Handle);
+
+End Sub
+
+'-------- Apply a Population to both the Alarm displays. The name of the Population is passed as an argument
+Sub ApplyPopulation()
+  Dim PopulationID As Str;
+  Dim Rtn As Integer;
+  Const ALARMS = 1;
+
+  PopulationID = Getarg ("ARG1");
+  If( CmpString( PopulationID, "CLEAR") == 0) Then
+    Station_Filter("CLEAR",ALARMS);
+   Else
+    Station_Filter("APPLY", ALARMS, PopulationID);
+  End If
+End Sub     

@@ -1,0 +1,111 @@
+Const ALARM_ON = 1, ALARM_OFF = 2, ALARM_ON_NACK = 4, ALARM_OFF_NOTACK = 8; 
+Const ALARM_ON_ACK = 16, ALARM_OFF_ACK = 32, ALARM_NOT_ACCESSIBLE = 64, ALARM_INHIBITED = 128; 
+Const ALARM_PROGRAM_MASKED = 256, ALARM_VARAIBLE_MASKED = 512, ALARM_USER_MASKED = 1024, ALARM_EXPRESSION_MASKED = 2048; 
+Const ALARM_TAKEN_INTO_ACCOUNT = 4096, BIT_TO_0 = 8192, BIT_TO_1 = 16384, BIT_UNAVAILABLE = 32768; 
+Const ACTION_COMMAND = 65536, ACTION_ACKNOWLEDGE = 131072, ACTION_LOGONOFF = 262144, ACTION_EXECUTE_PROGRAM = 524288; 
+Const ACTION_MASK = 1048576; 
+ 
+Const NONE = 0, TOTAL_TRANSITION_COUNT = 1, COUNT_AT_0 = 2, COUNT_AT_1 = 4; 
+Const COUNT_AT_NS = 8, DUR_AT_0 = 16, DUR_AT_1 = 32, DUR_AT_NS = 64; 
+ 
+Const COUNT_AT_ALARM_OFF = 128, COUNT_AT_ALARM_ON = 256, COUNT_AT_ALARM_OFFACK = 512, COUNT_AT_ALARM_OFFNOACK = 1024; 
+Const COUNT_AT_ALARM_ONACK = 2048, COUNT_AT_ALARM_ONNOACK = 4096, COUNT_AT_ALARM_UNAVAILABLE = 8192, COUNT_AT_ALARM_MASKEDBYEXPRESSION = 16384; 
+Const COUNT_AT_ALARM_INHIBITED = 32768, COUNT_AT_ALARM_NOT_ACCESSIBLE = 65536, COUNT_AT_ALARM_MASKEDBYPROGRAM = 131072, COUNT_AT_ALARM_MASKEDBYUSER = 262144; 
+Const COUNT_AT_ALARM_MASKEDBYVARIABLE = 524288; 
+ 
+Const DUR_AT_ALARM_OFF = 1048576, DUR_AT_ALARM_ON = 2097152, DUR_AT_ALARM_OFFACK = 4194304, DUR_AT_ALARM_OFFNOACK = 8388608; 
+Const DUR_AT_ALARM_ONACK = 16777216, DUR_AT_ALARM_ONNOACK = 33554432, DUR_AT_ALARM_UNAVAILABLE = 67108864, DUR_AT_ALARM_MASKEDBYEXPRESSION = 134217728; 
+Const DUR_AT_ALARM_INHIBITED = 268435456, DUR_AT_ALARM_NOT_ACCESSIBLE = 536870912, DUR_AT_ALARM_MASKEDBYPROGRAM = 1073741824, DUR_AT_ALARM_MASKEDBYUSER = 2147483648; 
+Const DURATION_AT_ALARM_MASKEDBYVARIABLE = 4294967296; 
+ 
+Sub Main () 
+'-------- Set up event that is triggered when Export_trend is complete 
+Event("ADDPROG", "Export_Log.Status_Export_Log", "S>S", "Export_Log.scb", "", "OnChangeOfStatus"); 
+End Sub 
+
+'-------- Export_Log of records 
+Sub Export_Log_EX1() 
+ Dim dStartTime As Double, dEndTime As Double; 
+  Dim iResult As Integer; 
+  Dim llEvents As Double; 
+ 
+ Unlink("export_log.xlsx");
+ 
+ dEndTime = DateTimeValue(); 
+  dStartTime = dEndtime - 3600000; ' Current time less 1 hour 
+' dStartTime = DateTimeValue("21/09/20", "18:00:00");
+ 
+  llEvents = ALARM_ON + ALARM_OFF + BIT_TO_0 + BIT_TO_1 + ALARM_ON_NACK + ALARM_OFF_NOTACK; 
+  iResult = Export_Log("GETRECORD", "Loglist01", dStartTime, dEndTime, llEvents, 0, 29, "", "@Export_Log.Status_Export_Log", "\n", ",", 0, "#D/#M/#Y|#h:#m:#s|#E|#T", "Date|Time|Event|Title"); 
+ print(llEvents);
+ 
+'-------- Check return and, if a previous request is still running, cancel it and clear buffer 
+  If(iResult != 0) Then 
+    Print("Result != 0, historic request not sent ,", iResult); 
+    If(iResult == -30) Then 
+      Export_Log("CANCEL"); 
+      Export_Log("DISPOSE"); 
+    End If 
+  End If 
+End Sub 
+ 
+'-------- Export_Log of statistics 
+Sub Export_Log_EX2() 
+ Dim dStartTime As Double, dEndTime As Double; 
+  Dim iResult As Integer; 
+  Dim llEvents As Double , llStatFlag As LongLong ; 
+
+ Unlink("export_log.xlsx");
+ 
+  dEndTime = DateTimeValue(); dStartTime = dEndtime - 3600000; ' Current time less 1 hour 
+  llEvents = ALARM_ON + ALARM_OFF + BIT_TO_0 + BIT_TO_1 + ALARM_ON_NACK + ALARM_OFF_NOTACK; 
+  llStatFlag = DUR_AT_ALARM_OFFNOACK + DUR_AT_ALARM_ONNOACK; 
+  iResult = Export_Log("GETSTATISTIC", "Loglist01", dStartTime, dEndTime, llEvents, 0, 29, "", "@Export_Log.Status_Export_Log", "\n", ",", 0, 0, llStatFlag, 0, 1, 0); 
+ 
+'-------- Check return and, if a previous request is still running, cancel it and clear buffer 
+  If(iResult != 0) Then 
+    Print("Result != 0, historic request not sent"); 
+    If(iResult == -30) Then 
+      Export_Log("CANCEL"); 
+      Export_Log("DISPOSE"); 
+    End If 
+  End If 
+End Sub 
+ 
+'-------- On change of status variable process if complete else clean up 
+Sub OnChangeOfStatus() 
+ Dim sStatus As Single; 
+  Dim lBufferHandle As Long; 
+  Dim iResult As Integer, iLineNumber As Integer; 
+
+ sStatus = @Export_Log.Status_Export_Log; 
+ Print("Export_Log status is ", sStatus); 
+  If(sStatus==0 || sStatus==4 || sStatus ==5) Then ' Export complete or reached limits 
+    Print("Export_Log complete - status is ", sStatus); 
+    lBufferHandle = Alloc_Buffer(32000); 
+    iResult = 1; 
+    iLineNumber = 1; 
+    While(iResult > 0) 
+      iResult = Export_Log("READBUFFER", lBufferHandle); 
+      If (iResult> 0) Then 
+        BufToExcel(lBufferHandle, "\n", ",", "export_log.xlsx", "ex1", "APPEND"); 
+        iLineNumber = iLineNumber + iResult; 
+        Print("Exported ",iResult, " lines to Excel"); 
+     End If 
+    Delay(1); ' Allow program thread to break in case of overlong processing time 
+    Wend 
+    Print("Total lines = ",iLineNumber); 
+    Export_Log("DISPOSE"); 
+    Free_Buffer(lBufferHandle); 
+  Else 
+    If(sStatus==1) Then ' Export running - do nothing 
+      Print("Export_Log running"); 
+    Else ' Export failed - cancel and clean up 
+      Print("Export_Log failed - status is ", sStatus); 
+      Export_Log("CANCEL"); 
+      Export_Log("DISPOSE"); 
+    End If 
+
+ End If
+End Sub 
+

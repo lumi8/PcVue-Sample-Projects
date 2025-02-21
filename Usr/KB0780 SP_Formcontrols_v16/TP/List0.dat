@@ -1,0 +1,21 @@
+ASCII32,2,4,2012,14:13,27
+FONTS,BEGIN
+FONTS,END
+COLORS,BEGIN
+COLORS,END
+CI,BEGIN,0,"Item 0","Renault","Renault",0
+CI,END
+CI,BEGIN,0,"Item 1","Citroen","Citroen",0
+CI,END
+CI,BEGIN,0,"Item 2","Peugeot","Peugeot",0
+CI,END
+CI,BEGIN,0,"Item 3","Ford","Ford",0
+CI,END
+CI,BEGIN,0,"Item 4","Opel","Opel",0
+CI,END
+CI,BEGIN,0,"Item 5","Toyota","Toyota",0
+CI,END
+CI,BEGIN,0,"Item 6","Mitsubishi","Mitsubishi",0
+CI,END
+CI,BEGIN,0,"Item 7","Land Rover","Land Rover",0
+CI,END

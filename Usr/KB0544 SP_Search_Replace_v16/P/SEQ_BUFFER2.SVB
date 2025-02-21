@@ -1,0 +1,92 @@
+'-------- SEQ_BUFFER2.SVB
+' Polpulates a 2 dimensional array from a CSV file
+' Each array element utilises 1 symbol. The maximum number of symbols is 4200.
+' Remember array indexing starts at 0 but first line of file is line 1!
+
+Dim cArray [100] [20] As Str;			'[Rows] [Cols]
+
+Sub Import ()
+  Dim cFileName As Str, cLine As Str, cSubString As Str, cComment As Str;
+  Dim iError As Integer, iIndex As Integer, iIndexCol As Integer, iEof As Integer;
+  Dim iStartRow As Integer, iStartCol As Integer, iRows As Integer, iCols As Integer;
+  Dim iArrayCol As Integer, iArrayRow As Integer;
+  Dim lHandle As Long;
+  
+  CONST MAXROWCHARS = 255;
+  
+  cFileName = @SEQ.CSV.FILENAME;
+   Fclose (cFileName);
+
+  @SEQ.CSV.COMMENT = "";
+  Delay (0.1);
+
+'-------- Check file exists
+  iError = Fopen (cFileName, "r");
+  If (iError == 0) Then
+    @SEQ.CSV.COMMENT = "ERROR - Unable to open file";
+    Return (0);
+  End If
+
+'-------- Get limits for file read
+  iStartRow = Toi (@SEQ.CSV.FILESTARTROW);
+  iStartCol = Toi (@SEQ.CSV.FILESTARTCOL);
+  iRows = Toi (@SEQ.CSV.FILEROWS);
+  iCols = Toi (@SEQ.CSV.FILECOLS);
+
+'-------- Process file and populate array
+  lHandle = Alloc_Buffer (MAXROWCHARS);
+  iEof = 0;
+  iArrayRow = 0;
+  iArrayCol = 0;
+  For (iIndex = 1; iIndex < (iStartRow + iRows); iIndex ++)
+
+    cLine = Fgets(cFileName, MAXROWCHARS);
+
+    iEof = Feof (cFileName);											' Check if end of file reached
+    If (iEof != 0) Then
+      @SEQ.CSV.COMMENT = "ERROR - Unexpected end of file";
+      Break;
+    End If
+
+    If (iIndex >= iStartRow)	Then										' Process lines when start row reached
+      Put_Buffer (lHandle, 0, cLine);
+      Seq_Buffer ("BEGIN", lHandle);
+      
+      iArrayCol = 0;													' Process columns when start col reached
+      For (iIndexCol = 1; iIndexCol < (iStartCol + iCols); iIndexCol ++)	
+        cSubString = Seq_Buffer("NEXTFIELD", lHandle, ",", "STR");
+        If (iIndexCol >= iStartCol) Then
+          cArray[iArrayRow][iArrayCol] = cSubString;
+          ' Print ( "Array[R][C] ", iArrayRow, ",", iArrayCol, " = ", cArray[iArrayRow][iArrayCol]  );  	' Comment out when not testing
+          iArrayCol ++;
+        End If
+      
+      Next
+      iArrayRow ++;
+    End If
+  Next
+
+   Fclose (cFileName);
+   Free_Buffer (lHandle);
+
+   cComment = AddString ("OK - Populated array with ", Toc (iArrayRow));
+   cComment = AddString (cComment, " rows and ");
+   cComment = AddString (cComment, Toc (iArrayCol));
+   cComment = AddString (cComment, " columns");
+   @SEQ.CSV.COMMENT = cComment;
+
+End Sub
+
+
+Sub Display ()
+  @SEQ.CSV.ARRAYVALUE = cArray[@SEQ.CSV.ARRAYROW][@SEQ.CSV.ARRAYCOL];
+End Sub
+
+
+
+
+
+
+
+
+

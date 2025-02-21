@@ -1,0 +1,8 @@
+   C	   | SCADA
+ ========|=======
+ Short   | Integer
+ Integer | Long
+ Long    | Long
+ Double  | Double
+ Float   | Single
+ Char *  | Long

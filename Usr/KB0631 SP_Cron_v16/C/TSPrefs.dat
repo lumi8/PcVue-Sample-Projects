@@ -1,0 +1,15 @@
+[Preferences]
+DisplayCurrentTime=1
+ViewType=0
+FirstDayOfWeek=2
+MouseResolution=5
+HoursHeight=60
+TimeFormat=0
+UseLocalTime=1
+DragDrop=0
+[Window]
+Left=0
+Top=0
+Width=640
+Height=600
+BottomPane=471

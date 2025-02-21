@@ -1,0 +1,11 @@
+Sub Main ()
+  EQT.WORD0.CHANGE = 1;  
+End Sub
+
+
+Sub OnChange()
+  EQT.WORD0.CHRONO_COPY = EQT.WORD0.CHRONO;
+  EQT.WORD0.CHANGE = 0;
+  Delay (0.1);
+  EQT.WORD0.CHANGE = 1;
+End Sub

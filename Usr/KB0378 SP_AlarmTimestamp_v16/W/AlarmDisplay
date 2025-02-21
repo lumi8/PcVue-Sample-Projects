@@ -1,0 +1,152 @@
+ASCII32
+W,BEGIN,"AlarmDisplay","Mimic1",""
+	TEMPLATE,"TEMPLATE_DASHBOARD_DARK",1,1,1,0,1,0,0,0,0,1,0,0,1,0,0,0
+	POSITION,0,0
+	SIZE,1600,900,1600,900,0,0,0,1280,800,1600,900
+	BACKCOLOREX,240,240,240,0,0,0
+	TITLE,0,"Formats d'affichage des Horodates","Alarm Timestamp Format"
+	STYLE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+	GRIDEX,1,1,4,4,0,0,0,0,0,0
+	LAYERS,65535
+	RIGHTS,0,1,0.000000,64.000000,1,65535,0,0
+	INCLUDED,0,0,0,0,0
+	LINK,1,"AlarmDisplay","","Affichage Horodates","Timestamp Format"
+	LINK,2,"","","",""
+	LINK,3,"","","",""
+	LINK,4,"","","",""
+	LINK,5,"","","",""
+	LINK,6,"","","",""
+	LINK,7,"","","",""
+	LINK,8,"","","",""
+	LINK,9,"","","",""
+	LINK,10,"","","",""
+	TABS,0,3,0,0,100,100,0,0,-1,0,16,16,0,FONT,1,FONT,1
+	NAV,0,0,0,100,100,0,0
+	BACKBMP,"",0,0
+	BACKOBJECT,"",0,0
+	BEFORE_OPEN,"","","",""
+	BEFORE_CLOSE,"","","",""
+	EVENTS,1
+	BINOBJ,"AlarmDisplay.binary"
+W,END
+VBA_REFERENCES,BEGIN
+	"stdole", 2, 0, "{00020430-0000-0000-C000-000000000046}"
+	"UIALMLib", 1, 0, "{8A2CA162-07F7-11D1-A079-0020AF29DCAE}"
+VBA_REFERENCES,END
+FONTS,BEGIN
+	FONT,1,16,7,700,0,0,"System",0,0
+	FONT,2,-15,0,400,0,0,"Segoe UI Semibold",0,0
+	FONT,3,-13,0,400,0,0,"Segoe UI",0,0
+	FONT,4,-15,0,400,0,0,"Segoe UI Light",0,0
+	FONT,5,-15,0,600,0,0,"Segoe UI Semibold",0,0
+FONTS,END
+COLORS,BEGIN
+	COLOREX,1,0,0,0,0,0,0
+	COLOREX,2,160,160,160,0,0,0
+	COLOREX,3,192,192,192,0,0,0
+	COLOREX,4,0,0,0,0,0,1
+	COLOREX,5,236,233,216,0,0,0
+	COLOREX,6,224,224,224,0,0,0
+COLORS,END
+O,BEGIN,R,"Shape1"
+	B,1280,479,356,417,1280,479,65535,0,6400,0,1,0,0,0,1,0,-1
+	ST,0,1,COLOR,1,COLOR,1,0,0,COLOR,2,0,COLOR,2,0,COLOR,1,0,COLOR,1
+O,END
+O,BEGIN,T,"Text1"
+	B,548,437,668,461,541,469,65535,0,6400,0,1,0,0,0,1,0,-1
+	ST,0,1,COLOR,1,COLOR,1,0,0,COLOR,3,0,COLOR,3,0,COLOR,1,0,COLOR,1
+	AST,7,2,COLOR,1,COLOR,3,0,COLOR,4,0,COLOR,4,0,COLOR,4,0,COLOR,4,0
+	PP,1,548,437,0,0,FONT,2,"Reset alarmes",37,FONT,2,"Reset all alarms",37
+	A,BEGIN,RP,"Anim1",0,0,"","","0", , 
+		PP,"DATA.SVB","","ResetAlarms","","",0,0
+	A,END
+O,END
+O,BEGIN,ALM,"Alarm1"
+	B,354,166,1280,365,10,195,65535,0,6400,0,1,1,1,0,1,0,1
+	ST,0,1,COLOR,1,COLOR,1,1,0,COLOR,5,0,COLOR,5,0,COLOR,1,0,COLOR,1
+	TOOLBAR,1,8192,F_NOACKON,F_ACKON,F_NOACKOFF,F_ACKOFF,A_ACK,A_ACKALL
+	SCROLL,0,17,2
+	HEADER,1,22,4,262,156,154,201,0,0,0,0
+	TITLE,"Title","#T","Description"," #T"
+	TITLE,"Apparition","#DAlaOn/#MAlaOn/#YAlaOn #hAlaOn:#mAlaOn:#sAlaOn","Time on","#DAlaOn/#MAlaOn/#YAlaOn #hAlaOn:#mAlaOn:#sAlaOn"
+	TITLE,"Acquittement","#DAlaAck/#MAlaAck/#YAlaAck #hAlaAck:#mAlaAck:#sAlaAck","Time ack.","#DAlaAck/#MAlaAck/#YAlaAck #hAlaAck:#mAlaAck:#sAlaAck"
+	TITLE,"Disparition","#DAlaOff/#MAlaOff/#YAlaOff #hAlaOff:#mAlaOff:#sAlaOff","Time off","#DAlaOff/#MAlaOff/#YAlaOff #hAlaOff:#mAlaOff:#sAlaOff"
+	TITLE,"","","",""
+	TITLE,"","","",""
+	TITLE,"","","",""
+	TITLE,"","","",""
+	LINE,FONT,3,COLOR,2,COLOR,3,1
+	EXEC,100,0,1,0,1,1,1,1,1,1,1,1,0,0,"#D/#M/#Y #h:#m:#s.#l #E #T",0,1,0,0,0,0,-1,-1,0,0
+	FILTER,"","",0,0,29,1,1,1,0,0,0,0,0,0,0,0,0,""
+	MENU,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+O,END
+O,BEGIN,T,"Text2"
+	B,364,432,436,464,362,474,65535,0,6400,0,1,0,0,0,1,0,-1
+	ST,0,1,COLOR,1,COLOR,1,0,0,COLOR,4,0,COLOR,4,0,COLOR,1,0,COLOR,1
+	PP,1,364,432,0,0,FONT,4,"Al‚atoire",37,FONT,4,"Random",38
+O,END
+O,BEGIN,T,"Text3"
+	B,681,436,789,460,676,468,65535,0,6400,0,1,0,0,0,1,0,-1
+	ST,0,1,COLOR,1,COLOR,1,0,0,COLOR,3,0,COLOR,3,0,COLOR,1,0,COLOR,1
+	AST,7,2,COLOR,1,COLOR,3,0,COLOR,4,0,COLOR,4,0,COLOR,4,0,COLOR,4,0
+	PP,1,681,436,0,0,FONT,2,"Cascade",37,FONT,2,"Cascade",37
+	A,BEGIN,RP,"Anim1",0,0,"","","0", , 
+		PP,"DATA.SVB","","CascadeAlarms","","",0,0
+	A,END
+O,END
+O,BEGIN,S,"Symbol6"
+	B,444,432,512,464,444,464,65535,0,6400,0,1,0,0,0,1,0,-1
+	PP,"On","",444,432,512,464,1,0,0,1,0,0,1,0,1380,630,1380,630
+	A,BEGIN,OB,"Anim1",0,0,"","","0", , 
+		PP,"@Random","",324,288,392,320,1,"Off",1,"On",1,"Off"
+	A,END
+O,END
+O,BEGIN,T,"Text11"
+	B,804,436,1012,460,794,468,65535,0,6400,0,1,0,0,0,1,0,-1
+	ST,0,1,COLOR,1,COLOR,1,0,0,COLOR,3,0,COLOR,3,0,COLOR,1,0,COLOR,1
+	AST,7,2,COLOR,1,COLOR,3,0,COLOR,4,0,COLOR,4,0,COLOR,4,0,COLOR,4,0
+	PP,1,804,436,0,0,FONT,2,"Acquitter toutes les alarmes",37,FONT,2,"Acknowledge all alarms",37
+	A,BEGIN,RP,"Anim1",0,0,"","","0", , 
+		PP,"DATA.SVB","","AckAllAlarms","","",0,0
+	A,END
+O,END
+O,BEGIN,T,"Text18"
+	B,357,521,601,541,357,521,65535,0,6400,0,1,0,0,0,1,0,-1
+	ST,0,1,COLOR,6,COLOR,6,0,0,COLOR,4,0,COLOR,4,0,COLOR,1,0,COLOR,1
+	PP,0,357,521,0,0,FONT,5," Formats d'affichage des horodates ",36,FONT,2," Format for timestamp columns ",36
+O,END
+O,BEGIN,T,"Text22"
+	B,368,552,512,568,361,573,65535,0,6400,0,1,0,0,0,1,0,-1
+	ST,0,1,COLOR,6,COLOR,6,0,0,COLOR,4,0,COLOR,4,0,COLOR,1,0,COLOR,1
+	PP,1,368,552,0,0,FONT,4,"Apparition d'alarme",36,FONT,4,"Alarm on",36
+O,END
+O,BEGIN,T,"Text30"
+	B,368,576,512,592,362,597,65535,0,6400,0,1,0,0,0,1,0,-1
+	ST,0,1,COLOR,6,COLOR,6,0,0,COLOR,4,0,COLOR,4,0,COLOR,1,0,COLOR,1
+	PP,1,368,576,0,0,FONT,4,"Acquittement d'alarme",36,FONT,4,"Alarm acknowledge",36
+O,END
+O,BEGIN,T,"Text31"
+	B,368,600,516,616,361,621,65535,0,6400,0,1,0,0,0,1,0,-1
+	ST,0,1,COLOR,6,COLOR,6,0,0,COLOR,4,0,COLOR,4,0,COLOR,1,0,COLOR,1
+	PP,1,368,600,0,0,FONT,4,"Disparition d'alarme",36,FONT,4,"Alarm off",36
+O,END
+O,BEGIN,T,"Text32"
+	B,528,552,1248,568,493,573,65535,0,6400,0,1,0,0,0,1,0,-1
+	ST,0,1,COLOR,6,COLOR,6,0,0,COLOR,4,0,COLOR,4,0,COLOR,1,0,COLOR,1
+	PP,1,528,552,0,0,FONT,4,"#DAlaOn/#MAlaOn/#YAlaOn #hAlaOn:#mAlaOn:#sAlaOn",36,FONT,4,"#DAlaOn/#MAlaOn/#YAlaOn #hAlaOn:#mAlaOn:#sAlaOn",36
+O,END
+O,BEGIN,T,"Text33"
+	B,528,576,1248,592,493,597,65535,0,6400,0,1,0,0,0,1,0,-1
+	ST,0,1,COLOR,6,COLOR,6,0,0,COLOR,4,0,COLOR,4,0,COLOR,1,0,COLOR,1
+	PP,1,528,576,0,0,FONT,4,"#DAlaAck/#MAlaAck/#YAlaAck #hAlaAck:#mAlaAck:#sAlaAck",36,FONT,4,"#DAlaAck/#MAlaAck/#YAlaAck #hAlaAck:#mAlaAck:#sAlaAck",36
+O,END
+O,BEGIN,T,"Text34"
+	B,528,600,1248,616,493,621,65535,0,6400,0,1,0,0,0,1,0,-1
+	ST,0,1,COLOR,6,COLOR,6,0,0,COLOR,4,0,COLOR,4,0,COLOR,1,0,COLOR,1
+	PP,1,528,600,0,0,FONT,4,"#DAlaOff/#MAlaOff/#YAlaOff #hAlaOff:#mAlaOff:#sAlaOff",36,FONT,4,"#DAlaOff/#MAlaOff/#YAlaOff #hAlaOff:#mAlaOff:#sAlaOff",36
+O,END
+O,BEGIN,T,"Text4"
+	B,357,399,425,419,348,420,65535,0,6400,0,1,0,0,0,1,0,-1
+	ST,0,1,COLOR,1,COLOR,1,0,0,COLOR,2,0,COLOR,2,0,COLOR,1,0,COLOR,1
+	PP,0,357,399,0,0,FONT,5," Contr“le ",36,FONT,2," Control ",36
+O,END

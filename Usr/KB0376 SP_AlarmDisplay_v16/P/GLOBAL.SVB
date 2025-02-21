@@ -1,0 +1,9 @@
+'-------- Global Program
+
+'-------- Sub to display VBA like message box
+Sub MessageBox (MyCaption, MyMessage, Type)
+	@MESSAGEBOX.MESSAGE = MyMessage;
+	@MESSAGEBOX.TYPE = Tos (Type);		' 0 = Information, 1 = Tip, 2 = Warning
+	Window("OPEN", "MESSAGEBOX", "");
+	Window("CAPTION",	"MESSAGEBOX",	"", MyCaption);
+End Sub

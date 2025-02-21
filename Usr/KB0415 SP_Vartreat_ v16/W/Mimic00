@@ -1,0 +1,98 @@
+ASCII32,19,7,2006,16:25,31
+W,BEGIN,"Menu","Mimic1",""
+	TEMPLATE,"Silver",1,1,1,1,1,1,1,1,1,1,0,1
+	POSITION,0,0
+	SIZE,1016,734,1016,734,0,0,0,1024,768,1016,734
+	BACKCOLOR,255,255,239,0,55,0
+	TITLE,0,"Mimic1",""
+	STYLE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+	GRID,1,1,4,4,0,0,0,0,0,0
+	LAYERS,65535
+	RIGHTS,0,1,0.000000,64.000000,1,65535,0,0
+	INCLUDED,0,0,0,0,0
+	LINK,1,"","","",""
+	LINK,2,"","","",""
+	LINK,3,"","","",""
+	LINK,4,"","","",""
+	LINK,5,"","","",""
+	LINK,6,"","","",""
+	LINK,7,"","","",""
+	LINK,8,"","","",""
+	LINK,9,"","","",""
+	LINK,10,"","","",""
+	BACKBMP,"",0,0
+	BACKOBJECT,"",0,0
+	BEFORE,"","","",""
+	EVENTS,0
+	BINOBJ,"Menu.binary"
+W,END
+FONTS,BEGIN
+	FONT,1,-27,0,700,0,0,"Arial",0,0
+	FONT,2,-16,0,700,0,0,"Arial",0,0
+FONTS,END
+COLORS,BEGIN
+	COLOR,1,0,0,0,0,62,0
+	COLOR,2,0,0,0,0,0,0
+	COLOR,3,0,0,0,0,0,1
+	COLOR,4,0,0,0,0,55,0
+	COLOR,5,255,255,255,0,0,0
+COLORS,END
+O,BEGIN,T,"Text1"
+	B,364,16,700,48,311,58,65535,0,6400,0,1,0,0,0
+	ST,0,1,COLOR,1,COLOR,1,0,0,COLOR,3,0,COLOR,3,0,COLOR,2,0,COLOR,2
+	PP,1,364,16,0,0,FONT,1,"Treatment - Groupalarm",37,FONT,1,"Treatment - Groupalarm",37
+O,END
+O,BEGIN,GRP,"Group1"
+	B,4,364,168,389,4,389,65535,0,6400,0,1,0,0,0
+	O,BEGIN,T,"Text3"
+		B,48,364,168,388,39,396,65535,0,6400,0,2,0,0,0
+		ST,0,1,COLOR,1,COLOR,1,0,0,COLOR,4,0,COLOR,4,0,COLOR,2,0,COLOR,2
+		PP,1,48,364,0,0,FONT,2,"Watchdog",36,FONT,2,"Watchdog",36
+	O,END
+	O,BEGIN,BM,"Bitmap8"
+		B,4,364,34,389,4,389,65535,0,6400,0,2,0,0,0
+		ST,0,1,COLOR,2,COLOR,2,0,0,COLOR,4,0,COLOR,4,0,COLOR,2,0,COLOR,2
+		PP,"bullet_orange.bmp",1,COLOR,5
+		A,BEGIN,LO,"Anim1",0,0,"",""
+			PP,"Bat1","",1,0,1,0,"*","",0
+		A,END
+	O,END
+	A,BEGIN,LO,"Anim1",0,0,"",""
+		PP,"Watchdog","",1,0,1,0,"*","",0
+	A,END
+O,END
+O,BEGIN,GRP,"Group2"
+	B,4,328,157,356,4,356,65535,0,6400,0,1,0,0,0
+	O,BEGIN,BM,"Bitmap7"
+		B,4,328,34,353,4,353,65535,0,6400,0,2,0,0,0
+		ST,0,1,COLOR,2,COLOR,2,0,0,COLOR,4,0,COLOR,4,0,COLOR,2,0,COLOR,2
+		PP,"bullet_orange.bmp",1,COLOR,5
+	O,END
+	O,BEGIN,T,"Text2"
+		B,48,332,157,356,39,364,65535,0,6400,0,2,0,0,0
+		ST,0,1,COLOR,1,COLOR,1,0,0,COLOR,4,0,COLOR,4,0,COLOR,2,0,COLOR,2
+		PP,1,48,332,0,0,FONT,2,"Group alarm",36,FONT,2,"Group alarm",36
+	O,END
+	A,BEGIN,LO,"Anim1",0,0,"",""
+		PP,"Bat1","",1,0,1,0,"*","",0
+	A,END
+O,END
+O,BEGIN,GRP,"Group3"
+	B,4,396,168,421,4,421,65535,0,6400,0,1,0,0,0
+	O,BEGIN,T,"Text3"
+		B,48,396,168,420,39,428,65535,0,6400,0,2,0,0,0
+		ST,0,1,COLOR,1,COLOR,1,0,0,COLOR,4,0,COLOR,4,0,COLOR,2,0,COLOR,2
+		PP,1,48,396,0,0,FONT,2,"Ack. by variable",36,FONT,2,"Ack. by variable",36
+	O,END
+	O,BEGIN,BM,"Bitmap8"
+		B,4,396,34,421,4,421,65535,0,6400,0,2,0,0,0
+		ST,0,1,COLOR,2,COLOR,2,0,0,COLOR,4,0,COLOR,4,0,COLOR,2,0,COLOR,2
+		PP,"bullet_orange.bmp",1,COLOR,5
+		A,BEGIN,LO,"Anim1",0,0,"",""
+			PP,"Bat1","",1,0,1,0,"*","",0
+		A,END
+	O,END
+	A,BEGIN,LO,"Anim1",0,0,"",""
+		PP,"Tank","",1,0,1,0,"*","",0
+	A,END
+O,END

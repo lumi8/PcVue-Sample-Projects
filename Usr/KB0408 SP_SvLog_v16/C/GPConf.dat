@@ -1,0 +1,42 @@
+[FILTER\DOM1]
+Description=DOM1
+Sql Cmde= [Attribute01] = 'DOM1'
+Label_0=DOM1
+Label_1=DOM1
+Mask_0=
+Mask_1=
+[FILTER\DOM2]
+Description=DOM2
+Sql Cmde= [Attribute01] = 'DOM2'
+Label_0=DOM2
+Label_1=DOM2
+Mask_0=
+Mask_1=
+[FILTER\DOM3]
+Description=DOM3
+Sql Cmde= [Attribute01] = 'DOM3'
+Label_0=DOM3
+Label_1=DOM3
+Mask_0=
+Mask_1=
+[FILTER\DOM4]
+Description=DOM4
+Sql Cmde= [Attribute01] = 'DOM4'
+Label_0=DOM4
+Label_1=DOM4
+Mask_0=
+Mask_1=
+[FILTER\Tank1]
+Description=Tank1
+Sql Cmde= [Attribute01]='Tank1'
+Label_0=Tank1
+Label_1=Tank1
+Mask_0=
+Mask_1=
+[FILTER\Tank2]
+Description=Tank2
+Sql Cmde= [Attribute01]='Tank2'
+Label_0=Tank2
+Label_1=Tank2
+Mask_0=
+Mask_1=

@@ -1,0 +1,11 @@
+[HIS\GeneralOperation]
+TrendQuickStop=0
+RecordOnDeviceTimestampChange=0
+RecordOnUnavailableToAvailableChange=0
+[HIS\Compatibility\Units\ProprietaryFreeODBC\Log]
+RecordOnlyLoadedVariablesAndLocalActions=1
+[TrendRecordingMode]
+FilteringOrSampling=1
+[RemoteDesktopSessions]
+CheckNTFSFoldersPermissions=1
+SessionStartingTimeout=600

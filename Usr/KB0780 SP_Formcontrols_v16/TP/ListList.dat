@@ -1,0 +1,15 @@
+ASCII32,2,4,2012,13:44,9
+FONTS,BEGIN
+FONTS,END
+COLORS,BEGIN
+COLORS,END
+CI,BEGIN,0,"List0.dat","Liste 0","List 0",0
+CI,END
+CI,BEGIN,0,"List1.dat","Liste 1","List 1",0
+CI,END
+CI,BEGIN,0,"List2.dat","Liste 2","List 2",0
+CI,END
+CI,BEGIN,0,"List3.dat","Liste 3","List 3",0
+CI,END
+CI,BEGIN,0,"ListList.dat","Liste de listes","List of lists",0
+CI,END

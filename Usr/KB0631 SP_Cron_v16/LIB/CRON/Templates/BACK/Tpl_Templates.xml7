@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<TemplatesRoot Name="" SchemaVersion="10.0.0">
+<category Name="Included">
+<Description/>
+<TemplatesList>
+<Template Name="Station">
+<Description/>
+<AutoNaming_Prefix/>
+<AutoNaming_StartValue>1</AutoNaming_StartValue>
+<AutoNaming_FixedDigits>2</AutoNaming_FixedDigits>
+<AutoNaming_Step>1</AutoNaming_Step>
+<ParametersList/>
+<TemplatesList/>
+<ObjectsList>
+<Object Name="Bdct_InProgBy">
+<Description/>
+<InternalType>2</InternalType>
+<SvType>1</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="ClientListName" Reset="false" Substitute="true">CRON/pClientList</Property>
+<Property id="ServerListName" Reset="false" Substitute="true">CRON/PServerList</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="Save_ReqFor">
+<Description/>
+<InternalType>2</InternalType>
+<SvType>1</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="ClientListName" Reset="false" Substitute="true">CRON/pClientList</Property>
+<Property id="ServerListName" Reset="false" Substitute="true">CRON/PServerList</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="StationInfo">
+<Description>Desc Symbol01</Description>
+<InternalType>4</InternalType>
+<SvType>5</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="Filters" Reset="false" Substitute="false">Sym_Cron</Property>
+<Property id="SymbolTemplate_Name" Reset="false" Substitute="false">CRON/StationCron.ani</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+</ObjectsList>
+<InheritedTemplatesList/>
+</Template>
+</TemplatesList>
+<CategoriesList/>
+</category>
+<Template Name="Cron_Mgt">
+<Description/>
+<AutoNaming_Prefix/>
+<AutoNaming_StartValue>1</AutoNaming_StartValue>
+<AutoNaming_FixedDigits>2</AutoNaming_FixedDigits>
+<AutoNaming_Step>1</AutoNaming_Step>
+<ParametersList>
+<ParameterInstance Name="CRON/PServerList">
+<Description>PServerList</Description>
+<Value/>
+</ParameterInstance>
+<ParameterInstance Name="CRON/pClientList">
+<Description>pClientList</Description>
+<Value/>
+</ParameterInstance>
+</ParametersList>
+<TemplatesList>
+<IncludedTemplate Name="3">
+<Description/>
+<Branch>3</Branch>
+<OriginTemplateName>CRON/Station</OriginTemplateName>
+</IncludedTemplate>
+<IncludedTemplate Name="2">
+<Description/>
+<Branch>2</Branch>
+<OriginTemplateName>CRON/Station</OriginTemplateName>
+</IncludedTemplate>
+<IncludedTemplate Name="1">
+<Description/>
+<Branch>1</Branch>
+<OriginTemplateName>CRON/Station</OriginTemplateName>
+</IncludedTemplate>
+</TemplatesList>
+<ObjectsList>
+<Object Name="Bdct_Completed">
+<Description/>
+<InternalType>2</InternalType>
+<SvType>1</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="ClientListName" Reset="false" Substitute="true">CRON/pClientList</Property>
+<Property id="ServerListName" Reset="false" Substitute="true">CRON/PServerList</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="BdctRef_Requested">
+<Description/>
+<InternalType>2</InternalType>
+<SvType>1</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="ClientListName" Reset="false" Substitute="true">CRON/pClientList</Property>
+<Property id="ServerListName" Reset="false" Substitute="true">CRON/PServerList</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="CronLastModifDate">
+<Description/>
+<InternalType>2</InternalType>
+<SvType>3</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="Type" Reset="false" Substitute="false">3</Property>
+<Property id="ServerListName" Reset="false" Substitute="true">CRON/PServerList</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="Mimic01">
+<Description>Desc Mimic01</Description>
+<InternalType>3</InternalType>
+<SvType>4</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="Filters" Reset="false" Substitute="false">Sym_Cron</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="Symbol01">
+<Description>Desc Symbol01</Description>
+<InternalType>4</InternalType>
+<SvType>5</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="Filters" Reset="false" Substitute="false">Sym_Cron</Property>
+<Property id="SymbolTemplate_Name" Reset="false" Substitute="false">CRON/InformationCron.ani</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+</ObjectsList>
+<InheritedTemplatesList/>
+</Template>
+</TemplatesRoot>
+</root>

@@ -1,0 +1,146 @@
+'-------- Global declarations
+Dim lResultBuffer As Long, lWorkingBuffer As Long;
+
+Sub Main ()
+	Init();
+End Sub
+
+
+Sub Init()
+	@SVTREND.EXTRACTOK = 0;
+	Now();
+End Sub
+
+
+
+Sub Now()
+	Dim dTimeNow As Double, dTime5m As Double;
+
+	dTimeNow = DateTimeValue();
+	dTime5m = dTimeNow - 300000;
+
+	@END.YEAR.SP = Sval (DateTimeString (dTimeNow, "#Y"));
+	@END.MONTH.SP = Sval (DateTimeString (dTimeNow, "#M"));
+	@END.DAY.SP = Sval (DateTimeString (dTimeNow, "#D"));
+	@END.HOUR.SP = Sval (DateTimeString (dTimeNow, "#h"));
+	@END.MINUTE.SP = Sval (DateTimeString (dTimeNow, "#m"));
+
+	@START.YEAR.SP = Sval (DateTimeString (dTime5m, "#Y"));
+	@START.MONTH.SP = Sval (DateTimeString (dTime5m, "#M"));
+	@START.DAY.SP = Sval (DateTimeString (dTime5m, "#D"));
+	@START.HOUR.SP = Sval (DateTimeString (dTime5m, "#h"));
+	@START.MINUTE.SP = Sval (DateTimeString (dTime5m, "#m"));
+End Sub
+
+
+
+Sub SetVar()
+	Dim Inc As Single;
+	Inc = Sval(GetArg("ARG1"));
+	SP = SP + Inc;
+End Sub
+
+
+
+Sub Extract ()
+	Dim dStartTime As Double, dEndTime As Double, dPeriod As Double;
+	Dim lVarBuffer As Long, lParamBuffer As Long;
+	Dim iDay As Integer, iMonth As Integer, iYear As Integer, iHour As Integer, iMinute As Integer;
+	Dim iDisplayMode As Integer, iResultBufferSize As Integer;
+	Dim cVarList As Str, cParam As Str, cFormat As Str, cFilter As Str, cLogVarName As Str, cProcessVarName As Str;
+
+'-------- Initialise start and end times
+	iDay = Toi (@START.DAY.SP);
+	iMonth = Toi (@START.MONTH.SP);
+	iYear = Toi (@START.YEAR.SP);
+	iHour = Toi (@START.HOUR.SP);
+	iMinute = Toi (@START.MINUTE.SP);
+	dStartTime = DateTimeValue(iDay, iMonth, iYear, iHour, iMinute, 0);
+	@SVTREND.STATUS = "Initiating request (this may take several seconds)";
+	Delay(0);
+	
+	iDay = Toi (@END.DAY.SP);
+	iMonth = Toi (@END.MONTH.SP);
+	iYear = Toi (@END.YEAR.SP);
+	iHour = Toi (@END.HOUR.SP);
+	iMinute = Toi (@END.MINUTE.SP);
+	dEndTime= DateTimeValue(iDay, iMonth, iYear, iHour, iMinute, 0);
+	
+	Print ("Start time = ", DateTimeString(dStartTime), " End time = ", DateTimeString(dEndTime));
+
+'-------- Initialise other SvTrend parameters
+	dPeriod = Tod(@SVTREND.PERIOD.SP);
+	iResultBufferSize =	1000 * Toi(@SVTREND.BUFFERSIZE.SP);
+	iDisplayMode = 2;
+	cVarList = "TREND.TRACE1,TREND.TRACE2,TREND.TRACE3,TREND.TRACE4";
+
+	cFormat = "#D/#M/###Y #h:#m:#s";
+	cFilter = "";
+	cLogVarName = "SVTREND.EXTRACTOK";
+	cProcessVarName = "";
+	cParam = Addstring (cFormat, ",");
+	cParam = Addstring (cParam, cFilter);
+	cParam = Addstring (cParam, ",");
+	cParam = Addstring (cParam, cLogVarName);
+	cParam = Addstring (cParam, ",");
+	cParam = Addstring (cParam, cProcessVarName);
+	Print ("Parameter buffer = ",cParam);
+
+'-------- Create and populate buffers
+	lResultBuffer = Alloc_Buffer (iResultBufferSize);
+	lWorkingBuffer = Alloc_Buffer (iResultBufferSize * 2);
+	lParamBuffer = Alloc_Buffer(256);
+	lVarBuffer = Alloc_Buffer(256);
+
+'-------- Set up temporary event
+	Event("ADD", "SVTREND.EXTRACTOK", 1, "SVTREND.SVB", "", "NEXTBUFFER");
+
+'-------- Run SVTREND
+	Put_Buffer(lParamBuffer, 0, cParam);
+	Put_Buffer(lVarBuffer, 0, cVarList);
+	SvTrend("GETTREND", lVarBuffer, "", dStartTime, dEndTime, dPeriod, iDisplayMode, lResultBuffer, lParamBuffer);
+
+'-------- Free buffers
+	Free_Buffer(lParamBuffer);
+	Free_Buffer(lVarBuffer);
+End Sub
+
+
+Sub NextBuffer()
+	Dim cTestBuffer As Str, cFileName As Str;
+	Dim iMoreData As Integer, iPassCount As Integer;
+
+'-------- Initialise variables
+	iMoreData = 1;
+	iPassCount = 0;
+
+'-------- Delete ouptut file
+	Unlink ("Output.txt");
+
+'-------- Get further buffers of data until none left
+	While (iMoreData ==1)
+		cTestBuffer = Cget_Buffer(lResultBuffer, 0, 1);
+		If (CmpString (cTestBuffer, "") ==1) Then				' If null then buffer empty
+			cFileName = AddString ("Result", Toc(iPassCount));
+			cFileName = AddString (cFileName, ".txt");
+			@SVTREND.STATUS = AddString ("Processing data buffer ", Toc(iPassCount));
+			Copy_Buffer(lWorkingBuffer, lResultBuffer);
+			Seq_Buffer ("CRTOCRLF", lWorkingBuffer);				' Need spare space for Seq_Buffer to work
+			BufToFile(lWorkingBuffer, cFileName, "USEFULL_PART");
+			BufToFile(lWorkingBuffer, "Output.txt", "USEFULL_PART", "APPEND");
+			iPassCount++;
+			SvTrend("GETNEXTBUFFER", lResultBuffer);
+			Delay(0.2);
+		Else
+			iMoreData = 0;
+		End If
+	Wend
+
+'-------- Tidy up
+	Event("DELPROG", "SVTREND.EXTRACTOK", 1, "SVTREND.SVB", "", "NEXTBUFFER");
+	SvTrend("CANCEL");
+	Free_Buffer(lResultBuffer);
+	Free_Buffer(lWorkingBuffer);
+	@SVTREND.STATUS = "Processing complete";
+
+End Sub

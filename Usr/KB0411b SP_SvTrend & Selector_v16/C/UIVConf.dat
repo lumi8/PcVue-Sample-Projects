@@ -1,0 +1,14 @@
+[WatchGroup]
+RateUpdate=0
+[Expression]
+MaxForVariable=49152
+MaxNumber=50000
+[EventActions]
+MaxNumber=32000
+ExecuteActionOnlyOnActiveServer=0
+[CyclicActions]
+ExecuteActionOnlyOnActiveServer=0
+[SchedulerActions]
+BrowsingLevel=0
+[MimicsAndSymbols]
+SubstitutionLimit=1

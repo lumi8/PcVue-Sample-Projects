@@ -1,0 +1,7 @@
+"SEQ.OUTPUTFILENAME","output.txt"
+"SEQ.FILETYPE",0.000000
+"SEQ.SEPA","/"
+"SEQ.CASESENSITIVE",1
+"SEQ.FILENAME","input.txt"
+"SEQ.FIND","dog"
+"SEQ.REPLACE","cat"

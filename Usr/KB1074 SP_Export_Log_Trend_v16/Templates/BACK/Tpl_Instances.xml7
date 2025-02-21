@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<InstancesRoot SchemaVersion="12.0.0">
+<TopologyTree Name="_Root">
+<ObjectInstancesList/>
+<TemplatesList>
+<TemplateInstance Name="Sample">
+<Branch/>
+<OriginTemplateName/>
+<ObjectInstancesList>
+<ObjectInstance Name="Sample">
+<ObjectInstanceType>2</ObjectInstanceType>
+<ParametersList>
+<ParameterInstance Name="pg_ClientList">
+<Value/>
+<Scope>0</Scope>
+</ParameterInstance>
+<ParameterInstance Name="pg_ServerList">
+<Value/>
+<Scope>0</Scope>
+</ParameterInstance>
+</ParametersList>
+</ObjectInstance>
+</ObjectInstancesList>
+<TemplatesList>
+<TemplateInstance Name="BUILDING">
+<Branch>BUILDING</Branch>
+<OriginTemplateName/>
+<ObjectInstancesList/>
+<TemplatesList>
+<TemplateInstance Name="FLOOR_01">
+<Branch>FLOOR_01</Branch>
+<OriginTemplateName>FLOOR</OriginTemplateName>
+<ObjectInstancesList>
+<ObjectInstance Name="FLOOR_01">
+<ObjectInstanceType>2</ObjectInstanceType>
+<ParametersList>
+<ParameterInstance Name="pg_Domain">
+<DescriptionLang1>pg_Domain</DescriptionLang1>
+<DescriptionLang2>pg_Domain</DescriptionLang2>
+<Value/>
+<Scope>0</Scope>
+</ParameterInstance>
+</ParametersList>
+</ObjectInstance>
+</ObjectInstancesList>
+<TemplatesList>
+<TemplateInstance Name="ROOM_001">
+<Branch>ROOM_001</Branch>
+<OriginTemplateName>ROOM</OriginTemplateName>
+<ObjectInstancesList/>
+<TemplatesList>
+<TemplateInstance Name="AC">
+<Branch>AC</Branch>
+<OriginTemplateName>AC</OriginTemplateName>
+<ObjectInstancesList>
+<ObjectInstance Name="AC">
+<ObjectInstanceType>2</ObjectInstanceType>
+<ParametersList>
+<ParameterInstance Name="pg_Nature">
+<DescriptionLang1>pg_Nature</DescriptionLang1>
+<DescriptionLang2>pg_Nature</DescriptionLang2>
+<Value/>
+<Scope>1</Scope>
+</ParameterInstance>
+</ParametersList>
+</ObjectInstance>
+</ObjectInstancesList>
+<TemplatesList/>
+</TemplateInstance>
+<TemplateInstance Name="LT">
+<Branch>LT</Branch>
+<OriginTemplateName>LT</OriginTemplateName>
+<ObjectInstancesList>
+<ObjectInstance Name="LT">
+<ObjectInstanceType>2</ObjectInstanceType>
+<ParametersList>
+<ParameterInstance Name="pg_Nature">
+<DescriptionLang1>pg_Nature</DescriptionLang1>
+<DescriptionLang2>pg_Nature</DescriptionLang2>
+<Value/>
+<Scope>1</Scope>
+</ParameterInstance>
+</ParametersList>
+</ObjectInstance>
+</ObjectInstancesList>
+<TemplatesList/>
+</TemplateInstance>
+</TemplatesList>
+</TemplateInstance>
+</TemplatesList>
+</TemplateInstance>
+<TemplateInstance Name="FLOOR_02">
+<Branch>FLOOR_02</Branch>
+<OriginTemplateName>FLOOR</OriginTemplateName>
+<ObjectInstancesList>
+<ObjectInstance Name="FLOOR_02">
+<ObjectInstanceType>2</ObjectInstanceType>
+<ParametersList>
+<ParameterInstance Name="pg_Domain">
+<DescriptionLang1>pg_Domain</DescriptionLang1>
+<DescriptionLang2>pg_Domain</DescriptionLang2>
+<Value/>
+<Scope>0</Scope>
+</ParameterInstance>
+</ParametersList>
+</ObjectInstance>
+</ObjectInstancesList>
+<TemplatesList>
+<TemplateInstance Name="ROOM_001">
+<Branch>ROOM_001</Branch>
+<OriginTemplateName>ROOM</OriginTemplateName>
+<ObjectInstancesList/>
+<TemplatesList>
+<TemplateInstance Name="AC">
+<Branch>AC</Branch>
+<OriginTemplateName>AC</OriginTemplateName>
+<ObjectInstancesList>
+<ObjectInstance Name="AC">
+<ObjectInstanceType>2</ObjectInstanceType>
+<ParametersList>
+<ParameterInstance Name="pg_Nature">
+<DescriptionLang1>pg_Nature</DescriptionLang1>
+<DescriptionLang2>pg_Nature</DescriptionLang2>
+<Value/>
+<Scope>1</Scope>
+</ParameterInstance>
+</ParametersList>
+</ObjectInstance>
+</ObjectInstancesList>
+<TemplatesList/>
+</TemplateInstance>
+<TemplateInstance Name="LT">
+<Branch>LT</Branch>
+<OriginTemplateName>LT</OriginTemplateName>
+<ObjectInstancesList>
+<ObjectInstance Name="LT">
+<ObjectInstanceType>2</ObjectInstanceType>
+<ParametersList>
+<ParameterInstance Name="pg_Nature">
+<DescriptionLang1>pg_Nature</DescriptionLang1>
+<DescriptionLang2>pg_Nature</DescriptionLang2>
+<Value/>
+<Scope>1</Scope>
+</ParameterInstance>
+</ParametersList>
+</ObjectInstance>
+</ObjectInstancesList>
+<TemplatesList/>
+</TemplateInstance>
+</TemplatesList>
+</TemplateInstance>
+<TemplateInstance Name="ROOM_002">
+<Branch>ROOM_002</Branch>
+<OriginTemplateName>ROOM</OriginTemplateName>
+<ObjectInstancesList/>
+<TemplatesList>
+<TemplateInstance Name="AC">
+<Branch>AC</Branch>
+<OriginTemplateName>AC</OriginTemplateName>
+<ObjectInstancesList>
+<ObjectInstance Name="AC">
+<ObjectInstanceType>2</ObjectInstanceType>
+<ParametersList>
+<ParameterInstance Name="p_TrendPeriod">
+<Value>5</Value>
+</ParameterInstance>
+<ParameterInstance Name="pg_Nature">
+<DescriptionLang1>pg_Nature</DescriptionLang1>
+<DescriptionLang2>pg_Nature</DescriptionLang2>
+<Value/>
+<Scope>1</Scope>
+</ParameterInstance>
+</ParametersList>
+</ObjectInstance>
+</ObjectInstancesList>
+<TemplatesList/>
+</TemplateInstance>
+<TemplateInstance Name="LT">
+<Branch>LT</Branch>
+<OriginTemplateName>LT</OriginTemplateName>
+<ObjectInstancesList>
+<ObjectInstance Name="LT">
+<ObjectInstanceType>2</ObjectInstanceType>
+<ParametersList>
+<ParameterInstance Name="pg_Nature">
+<DescriptionLang1>pg_Nature</DescriptionLang1>
+<DescriptionLang2>pg_Nature</DescriptionLang2>
+<Value/>
+<Scope>1</Scope>
+</ParameterInstance>
+</ParametersList>
+</ObjectInstance>
+</ObjectInstancesList>
+<TemplatesList/>
+</TemplateInstance>
+</TemplatesList>
+</TemplateInstance>
+</TemplatesList>
+</TemplateInstance>
+</TemplatesList>
+</TemplateInstance>
+<TemplateInstance Name="GENERAL">
+<Branch>GENERAL</Branch>
+<OriginTemplateName>GENERAL</OriginTemplateName>
+<ObjectInstancesList/>
+<TemplatesList/>
+</TemplateInstance>
+</TemplatesList>
+</TemplateInstance>
+</TemplatesList>
+</TopologyTree>
+</InstancesRoot>
+</root>

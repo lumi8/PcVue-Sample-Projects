@@ -1,0 +1,19 @@
+'-------- Language.svb
+
+Sub Main()
+End Sub
+
+'-------- Set the language - The language number is passed to the subroutine as an argument
+Sub SetLanguage()
+	Dim LanguageID As Integer;
+
+	LanguageID = Ival(Getarg("ARG1"));
+	If (LanguageID == 2) Then
+		Language("SET_L2", 1);
+	Else
+		If(LanguageID == 1) Then
+			Language("SET_L1", 1);
+		End If
+	End If
+End Sub
+

@@ -1,0 +1,44 @@
+'###############################################
+'PROGRAM : PROGLOADED.scb
+'Loaded at start-up from the program 'INIT.scb'
+'Charg‚ au d‚marrage par le programms 'INIT.scb'
+'###############################################
+
+'[external declaration 1];
+'[external declaration 2];
+'...
+'[external declaration n];
+
+SUB main ()
+'[declaration 1];
+'.
+'[declaration n];
+'[instruction 1];
+'...
+'[instruction n];
+
+END SUB
+
+SUB proc1 ([parameters])
+'[declaration 1];
+'[declaration 2];
+' .
+' .
+'  [declaration N];
+'  [instruction 1];
+'  [instruction 2];
+'  .
+'  .
+'  [instruction N];
+END SUB
+
+SUB proc2 ([parameters])
+
+END SUB
+'...
+
+SUB procn ([parameters])
+
+END SUB
+
+

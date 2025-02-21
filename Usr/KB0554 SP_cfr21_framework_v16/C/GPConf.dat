@@ -1,0 +1,28 @@
+[FILTER\Process]
+Description=Process
+Sql Cmde= [Attribute01]='Process'
+Label_0=Process
+Label_1=Process
+Mask_0=
+Mask_1=
+[FILTER\RegisterSend]
+Description=RegisterSend
+Sql Cmde= [Attribute01]='RegisterSend'
+Label_0=RegisterSend
+Label_1=RegisterSend
+Mask_0=
+Mask_1=
+[FILTER\System]
+Description=System
+Sql Cmde= [Attribute01]='System'
+Label_0=System
+Label_1=System
+Mask_0=
+Mask_1=
+[FILTER\RunTime_Started]
+Description=RunTime_Started
+Sql Cmde= [Attribute02]='RunTime_Started'
+Label_0=RunTime_Started
+Label_1=RunTime_Started
+Mask_0=
+Mask_1=

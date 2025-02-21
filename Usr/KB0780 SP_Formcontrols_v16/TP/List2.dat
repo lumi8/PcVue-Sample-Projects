@@ -1,0 +1,21 @@
+ASCII32,2,4,2012,13:44,9
+FONTS,BEGIN
+FONTS,END
+COLORS,BEGIN
+COLORS,END
+CI,BEGIN,0,"Item 0","L'oignon","Onion",0
+CI,END
+CI,BEGIN,0,"Item 1","Les pois","Pea",0
+CI,END
+CI,BEGIN,0,"Item 2","Champignon","Mushroom",0
+CI,END
+CI,BEGIN,0,"Item 3","Pomme de terre","Potato",0
+CI,END
+CI,BEGIN,0,"Item 4","Chou-fleur","Cauilflower",0
+CI,END
+CI,BEGIN,0,"Item 5","Chou","Cabbage",0
+CI,END
+CI,BEGIN,0,"Item 6","Pousse","Sprout",0
+CI,END
+CI,BEGIN,0,"Item 7","De panais","Parsnip",0
+CI,END

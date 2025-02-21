@@ -1,0 +1,154 @@
+ASCII32
+W,BEGIN,"Mimic 02","Mimic1",""
+	TEMPLATE,"TEMPLATE_DASHBOARD_DARK",1,1,0,0,0,0,0,0,0,1,0,0,1,0,0,0
+	POSITION,0,0
+	SIZE,1600,900,1600,900,0,0,0,1280,800,1600,900
+	BACKCOLOREX,192,192,192,0,24,0
+	TITLE,0,"Utiliser les listbox, checkbox et autres avec le Scada Basic.","Using listbox, checkbox and other with the Scada Basic."
+	STYLE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+	GRIDEX,1,1,4,4,0,0,0,0,0,0
+	LAYERS,65535
+	RIGHTS,0,1,0.000000,64.000000,1,65535,0,0
+	INCLUDED,0,0,0,0,0
+	LINK,1,"Mimic 01","","Avec les variables","With variables"
+	LINK,2,"Mimic 02","","Avec script","With script"
+	LINK,3,"Mimic 03","","Styles diff‚rents","Different styles"
+	LINK,4,"Mimic 04","","A partir d'un fichier","From a file"
+	LINK,5,"Mimic 05","","Tree view","Tree view"
+	LINK,6,"","","",""
+	LINK,7,"","","",""
+	LINK,8,"","","",""
+	LINK,9,"","","",""
+	LINK,10,"","","",""
+	TABS,0,3,0,0,100,100,0,0,-1,0,16,16,0,FONT,1,FONT,1
+	NAV,0,0,0,100,100,0,0
+	BACKBMP,"",0,0
+	BACKOBJECT,"",0,0
+	BEFORE_OPEN,"FORMS.ScB","","InitCheckList",""
+	BEFORE_CLOSE,"","","",""
+	EVENTS,1
+	BINOBJ,"Mimic 02.binary"
+W,END
+VBA_REFERENCES,BEGIN
+	"stdole", 2, 0, "{00020430-0000-0000-C000-000000000046}"
+	"MimicControls", 1, 0, "{C959A51F-AAFE-40D5-A4A7-3A00A7AF76B4}"
+VBA_REFERENCES,END
+FONTS,BEGIN
+	FONT,1,16,7,700,0,0,"System",0,0
+	FONT,2,-15,0,300,0,0,"Segoe UI Light",0,0
+	FONT,3,-15,0,400,0,0,"Segoe UI Light",0,0
+	FONT,4,-15,0,700,0,0,"Segoe UI Light",0,0
+FONTS,END
+COLORS,BEGIN
+	COLOREX,1,0,0,0,0,0,0
+	COLOREX,2,0,0,0,0,32,0
+	COLOREX,3,192,192,192,0,0,0
+	COLOREX,4,255,255,255,0,0,0
+	COLOREX,5,224,224,224,0,0,0
+	COLOREX,6,0,0,0,0,0,1
+	COLOREX,7,160,160,160,0,0,0
+	COLOREX,8,0,0,0,0,4,0
+COLORS,END
+O,BEGIN,R,"Shape1"
+	B,959,420,412,164,959,420,65535,0,6400,0,1,0,0,0,1,0,-1
+	ST,0,1,COLOR,1,COLOR,1,0,0,COLOR,2,0,COLOR,2,0,COLOR,1,0,COLOR,1
+O,END
+O,BEGIN,LBCX,"AICheckBoxList1"
+	B,426,181,622,408,10,195,65535,0,6400,0,1,1,1,0,1,0,1
+	ST,0,1,COLOR,1,COLOR,1,1,0,COLOR,3,0,COLOR,3,0,COLOR,1,0,COLOR,1
+	PP,2,2,"",-1,1,FONT,2,0,COLOR,4,0,COLOR,1
+	CI,BEGIN,0,"Item 0","pomme","Apple","0","","","-1","-1","1","1","-1"
+	CI,END
+	CI,BEGIN,0,"Item 1","poire","Pear","0","","","-1","-1","1","1","-1"
+	CI,END
+	CI,BEGIN,0,"Item 2","ananas","Pineaple","0","","","-1","-1","1","1","-1"
+	CI,END
+	CI,BEGIN,0,"Item 3","pˆche","Peach","0","","","-1","-1","1","1","-1"
+	CI,END
+	CI,BEGIN,0,"Item 4","prune","Plum","0","","","-1","-1","1","1","-1"
+	CI,END
+	CI,BEGIN,0,"Item 5","groseille","Gooseberry","0","","","-1","-1","1","1","-1"
+	CI,END
+	CI,BEGIN,0,"Item 6","m–re","Blackberry","0","","","-1","-1","1","1","-1"
+	CI,END
+	CI,BEGIN,0,"Item 7","fraise","Strawberry","0","","","-1","-1","1","1","-1"
+	CI,END
+	A,BEGIN,LBCXA,"Anim1",0,0,"",""
+		PP,"","@CHECKBOXLIST1.INDEX","@CHECKBOXLIST1.STATE","@CHECKBOXLIST1.USERDATA","FORMS.SCB","","OnCheckListClick","",0,0,0,0,-1249885682
+	A,END
+O,END
+O,BEGIN,T,"Text1"
+	B,707,181,727,201,707,181,65535,0,6400,0,1,0,0,0,1,0,-1
+	ST,0,1,COLOR,1,COLOR,1,0,0,COLOR,3,0,COLOR,3,0,COLOR,1,0,COLOR,1
+	AST,5,1,COLOR,1,COLOR,3,0,COLOR,1,0,COLOR,1,0,COLOR,1,0,COLOR,1,0
+	PP,1,707,181,0,0,FONT,3,"#",37,FONT,3,"#",37
+	A,BEGIN,DR,"Anim1",0,0,"",""
+		PP,"@CHECKBOXLIST1.INDEX","",0
+	A,END
+O,END
+O,BEGIN,T,"Text3"
+	B,707,205,727,225,707,205,65535,0,6400,0,1,0,0,0,1,0,-1
+	ST,0,1,COLOR,1,COLOR,1,0,0,COLOR,3,0,COLOR,3,0,COLOR,1,0,COLOR,1
+	AST,5,1,COLOR,1,COLOR,3,0,COLOR,1,0,COLOR,1,0,COLOR,1,0,COLOR,1,0
+	PP,1,707,205,0,0,FONT,3,"#",37,FONT,3,"#",37
+	A,BEGIN,DR,"Anim1",0,0,"",""
+		PP,"@CHECKBOXLIST1.STATE","",0
+	A,END
+O,END
+O,BEGIN,T,"Text4"
+	B,707,229,911,249,707,229,65535,0,6400,0,1,0,0,0,1,0,-1
+	ST,0,1,COLOR,1,COLOR,1,0,0,COLOR,3,0,COLOR,3,0,COLOR,1,0,COLOR,1
+	AST,5,1,COLOR,1,COLOR,3,0,COLOR,1,0,COLOR,1,0,COLOR,1,0,COLOR,1,0
+	PP,1,707,229,0,0,FONT,3,"qwerty",37,FONT,3,"qwerty",37
+	A,BEGIN,DT,"Anim1",0,0,"",""
+		PP,"@CHECKBOXLIST1.USERDATA"
+	A,END
+O,END
+O,BEGIN,T,"Text5"
+	B,642,181,698,201,642,181,65535,0,6400,0,1,0,0,0,1,0,-1
+	ST,0,1,COLOR,5,COLOR,5,0,0,COLOR,6,0,COLOR,6,0,COLOR,1,0,COLOR,1
+	PP,1,642,181,0,0,FONT,3,"Index",38,FONT,3,"Index",38
+O,END
+O,BEGIN,T,"Text6"
+	B,643,205,699,225,643,205,65535,0,6400,0,1,0,0,0,1,0,-1
+	ST,0,1,COLOR,5,COLOR,5,0,0,COLOR,6,0,COLOR,6,0,COLOR,1,0,COLOR,1
+	PP,1,643,205,0,0,FONT,3,"Etat",38,FONT,3,"State",38
+O,END
+O,BEGIN,T,"Text7"
+	B,630,229,699,249,458,141,65535,0,6400,0,1,0,0,0,1,0,-1
+	ST,0,1,COLOR,5,COLOR,5,0,0,COLOR,6,0,COLOR,6,0,COLOR,1,0,COLOR,1
+	PP,1,630,229,0,0,FONT,3,"Donn‚es",38,FONT,3,"User data",38
+O,END
+O,BEGIN,T,"Text19"
+	B,426,154,531,174,426,154,65535,0,6400,0,1,0,0,0,1,0,-1
+	ST,0,1,COLOR,1,COLOR,1,0,0,COLOR,7,0,COLOR,7,0,COLOR,1,0,COLOR,1
+	PP,0,426,154,0,0,FONT,4," Checkbox list ",38,FONT,4," Checkbox list ",38
+O,END
+O,BEGIN,T,"Text24"
+	B,426,485,1378,521,426,485,65535,0,6400,0,1,0,0,0,1,0,-1
+	ST,0,1,COLOR,5,COLOR,5,0,0,COLOR,6,0,COLOR,6,0,COLOR,1,0,COLOR,1
+	PP,1,426,485,0,0,FONT,3,"Dans cet exemple, une fonction est ex‚cut‚e lorsque le synoptique s'ouvre et intialise la liste avec le r‚glage pr‚c‚dent. (Enregistr‚ dans une variable en registre.)",84,FONT,3,"In this example a function runs when the mimic is opened to intialise the list with the previous setting. (Saved in a register variable.)",84
+O,END
+O,BEGIN,T,"Text2"
+	B,412,424,1356,460,412,424,65535,0,6400,0,1,0,0,0,1,0,-1
+	ST,0,1,COLOR,1,COLOR,1,0,0,COLOR,8,0,COLOR,8,0,COLOR,1,0,COLOR,1
+	AST,5,1,COLOR,1,COLOR,8,0,COLOR,1,0,COLOR,1,0,COLOR,1,0,COLOR,1,0
+	PP,1,412,424,0,0,FONT,4,"qwerty",37,FONT,4,"qwerty",37
+	A,BEGIN,DT,"Anim1",0,0,"",""
+		PP,"@INFO"
+	A,END
+O,END
+O,BEGIN,T,"Text8"
+	B,426,526,1370,578,426,526,65535,0,6400,0,1,0,0,0,1,0,-1
+	ST,0,1,COLOR,5,COLOR,5,0,0,COLOR,6,0,COLOR,6,0,COLOR,1,0,COLOR,1
+	PP,1,426,526,0,0,FONT,3,"Une fonction est ex‚cut‚e lorsque la s‚lection est modifi‚e, qui recueille tous les ‚l‚ments s‚lectionn‚s. Vous pouvez r‚cup‚rer le texte ainsi que les donn‚es de l'utilisateur.",84,FONT,3,"A function also runs whenever the selection is changed, that collects all the selected items. You can retreive the Text as well as the User Data.",84
+O,END
+O,BEGIN,T,"Text9"
+	B,763,205,911,225,763,205,65535,0,6400,0,1,0,0,0,1,0,-1
+	ST,0,1,COLOR,1,COLOR,1,0,0,COLOR,3,0,COLOR,3,0,COLOR,1,0,COLOR,1
+	AST,5,1,COLOR,1,COLOR,3,0,COLOR,1,0,COLOR,1,0,COLOR,1,0,COLOR,1,0
+	PP,1,763,205,0,0,FONT,3,"#",37,FONT,3,"#",37
+	A,BEGIN,DR,"Anim1",0,0,"",""
+		PP,"@CHECKBOXLIST1.ALLSTATES","",0
+	A,END
+O,END

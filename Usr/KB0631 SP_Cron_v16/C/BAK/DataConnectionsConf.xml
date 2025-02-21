@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataConnections>
+<Settings>
+<Version>1</Version>
+<Regulation>
+<Suspension>20</Suspension>
+<Continuation>2</Continuation>
+<WriteSuspension>20</WriteSuspension>
+<WriteContinuation>2</WriteContinuation>
+</Regulation>
+</Settings>
+</DataConnections>

@@ -1,0 +1,84 @@
+[FILTER\DOM1]
+Description=DOM1
+Sql Cmde= [Attribute01] = 'DOM1'
+Label_0=DOM1
+Label_1=DOM1
+Mask_0=
+Mask_1=
+[FILTER\DOM2]
+Description=DOM2
+Sql Cmde= [Attribute01] = 'DOM2'
+Label_0=DOM2
+Label_1=DOM2
+Mask_0=
+Mask_1=
+[FILTER\DOM3]
+Description=DOM3
+Sql Cmde= [Attribute01] = 'DOM3'
+Label_0=DOM3
+Label_1=DOM3
+Mask_0=
+Mask_1=
+[FILTER\DOM4]
+Description=DOM4
+Sql Cmde= [Attribute01] = 'DOM4'
+Label_0=DOM4
+Label_1=DOM4
+Mask_0=
+Mask_1=
+[FILTER\AREA1]
+Description=AREA1
+Sql Cmde= [Attribute01]='AREA1'
+Label_0=AREA1
+Label_1=AREA1
+Mask_0=
+Mask_1=
+[FILTER\AREA2]
+Description=AREA2
+Sql Cmde= [Attribute01]='AREA2'
+Label_0=AREA2
+Label_1=AREA2
+Mask_0=
+Mask_1=
+[FILTER\BAT1]
+Description=BAT1
+Sql Cmde= [Attribute01]='BAT1'
+Label_0=BAT1
+Label_1=BAT1
+Mask_0=
+Mask_1=
+[FILTER\DOM1]
+Description=DOM1
+Sql Cmde= [Attribute01]='DOM1'
+Label_0=DOM1
+Label_1=DOM1
+Mask_0=
+Mask_1=
+[FILTER\LEVEL]
+Description=LEVEL
+Sql Cmde= [Attribute01]='LEVEL'
+Label_0=LEVEL
+Label_1=LEVEL
+Mask_0=
+Mask_1=
+[FILTER\ZONE1]
+Description=ZONE1
+Sql Cmde= [Attribute01]='ZONE1'
+Label_0=ZONE1
+Label_1=ZONE1
+Mask_0=
+Mask_1=
+[FILTER\ZONE2]
+Description=ZONE2
+Sql Cmde= [Attribute01]='ZONE2'
+Label_0=ZONE2
+Label_1=ZONE2
+Mask_0=
+Mask_1=
+[FILTER\LEVEL]
+Description=LEVEL
+Sql Cmde= [Attribute02]='LEVEL'
+Label_0=LEVEL
+Label_1=LEVEL
+Mask_0=
+Mask_1=

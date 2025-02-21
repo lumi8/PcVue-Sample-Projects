@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<InstancesRoot SchemaVersion="16.0.0">
+<TopologyTree Name="_Root">
+<ObjectInstancesList/>
+<TemplatesList>
+<TemplateInstance Name="DEMO_SvTREND">
+<Branch/>
+<OriginTemplateName/>
+<Status>0</Status>
+<ObjectInstancesList/>
+<TemplatesList>
+<TemplateInstance Name="GENERAL">
+<Branch>GENERAL</Branch>
+<OriginTemplateName/>
+<Status>0</Status>
+<ObjectInstancesList/>
+<TemplatesList>
+<TemplateInstance Name="DateTimePicker">
+<Branch>DateTimePicker</Branch>
+<OriginTemplateName/>
+<Status>0</Status>
+<ObjectInstancesList/>
+<TemplatesList>
+<TemplateInstance Name="End">
+<Branch>End</Branch>
+<OriginTemplateName>L_DateTimePicker/DateTimePicker</OriginTemplateName>
+<Status>0</Status>
+<ObjectInstancesList/>
+<TemplatesList/>
+</TemplateInstance>
+<TemplateInstance Name="Start">
+<Branch>Start</Branch>
+<OriginTemplateName>L_DateTimePicker/DateTimePicker</OriginTemplateName>
+<Status>0</Status>
+<ObjectInstancesList/>
+<TemplatesList/>
+</TemplateInstance>
+</TemplatesList>
+</TemplateInstance>
+<TemplateInstance Name="TRENDSELECTOR">
+<Branch>TRENDSELECTOR</Branch>
+<OriginTemplateName>L_General/TRENDS</OriginTemplateName>
+<Status>0</Status>
+<ObjectInstancesList/>
+<TemplatesList/>
+</TemplateInstance>
+</TemplatesList>
+</TemplateInstance>
+</TemplatesList>
+</TemplateInstance>
+</TemplatesList>
+</TopologyTree>
+</InstancesRoot>
+</root>

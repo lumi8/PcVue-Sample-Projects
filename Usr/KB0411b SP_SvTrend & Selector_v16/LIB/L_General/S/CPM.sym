@@ -1,0 +1,28 @@
+ASCII32
+FONTS,BEGIN
+	FONT,1,-21,0,400,0,0,"Arial",0,1
+FONTS,END
+COLORS,BEGIN
+	COLOREX,1,0,0,0,0,0,0
+	COLOREX,2,240,240,240,0,0,0
+	COLOREX,3,0,0,0,0,0,1
+	COLOREX,4,192,192,192,0,0,0
+COLORS,END
+O,BEGIN,GRP,""
+	B,744,44,1048,80,744,44,1,0,6400,0,1,0,0,0,1,0,-1
+	O,BEGIN,T,"BtnCMP"
+		B,744,44,1048,80,744,44,1,0,6400,0,2,0,0,0,1,0,-1
+		ST,0,1,COLOR,1,COLOR,1,0,0,COLOR,2,0,COLOR,2,0,COLOR,1,0,COLOR,1
+		AST,4,2,COLOR,1,COLOR,4,0,COLOR,3,0,COLOR,3,0,COLOR,3,0,COLOR,3,1
+		PP,1,744,44,0,0,FONT,1,"Gestion Centrale de Projet",37,FONT,1,"Central Project Management",37
+		A,BEGIN,RP,"Anim2",0,0,"","","0", , 
+			PP,"L_General/INIT_GENERAL.SCB","","UpdateLanguageValue","","",0,0
+		A,END
+		A,BEGIN,RS,"Anim1",0,0,"@Ouvre la gestion centrale de version de projet","@Open Central Project Management dialog","0", , 
+			PP,"StandardAction,124","","","","",0,0
+		A,END
+		A,BEGIN,VRL,"Anim3",0,0,"","","0", , 
+			PP,"@System.LocalHost.Session.Type",1,1,0,2.000000,0,1,0,0.000000,0,1,0,0.000000,0,1,0,0.000000,0,1,0,0.000000,0,1,0,0.000000,0,1,0,0.000000,0,1,0,0.000000,1,2,0,0.000000,1,2,0,0.000000
+		A,END
+	O,END
+O,END

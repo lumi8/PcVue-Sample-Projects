@@ -1,0 +1,59 @@
+'#########################################
+'Project : Quickstart
+'#########################################
+
+'Program : GLOBAL.scb
+
+'The global declaration program is used to declare working variables and functions that are used throughout a project. It does not directly run functions itself. 
+'The global declaration program must exist, even if it is empty, otherwise other programs on the station will not run. 
+'The global program can have any name and its source file is stored in the same folder (P) as the other programs.
+'A global program does not have a MAIN function and can only be loaded; it cannot be run.
+'Only one global declaration program may be loaded at a time.
+'Any working variable that has been declared in a global program is known to all other programs and is referenced by name only. It must not be declared again in any other program.
+'Any function that has been declared in the global program is known to all other programs and is referenced by name only. It must not be declared again in any other program.
+'The global program may be (re)loaded at any time from the Program Management dialog box. On a working system it would normally be started by referencing it in the project start-up dialog box. 
+'If a global program is reloaded, any other programs currently running will stop and unload.
+ 
+'Le programme GLOBAL est utilis‚ pour d‚clarer les variables de travail et les fonctions qui sont utilis‚es dans tout le projet. Il n'ex‚cute pas lui-mˆme directement des fonctions.
+'Le programme GLOBAL doit exister, mˆme s'il est vide, sinon les autres programmes du projet ne peuvent pas fonctionner. 
+'Le programme GLOBAL peut avoir n'importe quel nom et son fichier source est sauvegard‚ dans le mˆme r‚pertoire que les autres programmes (P).
+'Le programme GLOBAL n'a pas de fonction MAIN et peut seulement ˆtre charg‚, mais il ne s'ex‚cute pas.
+'Un seul programme GLOBAL peut ˆtre charg‚ en mˆme temps.
+'Chaque variable de travail qui a ‚t‚ d‚clar‚e dans un programme GLOBAL est connue de tous les autres programmes et est r‚f‚renc‚e seulement par son nom. Elle ne doit pas ˆtre d‚clar‚e de nouveau dans un autre programme.
+'Chaque fonction qui a ‚t‚ d‚clar‚e dans un programme GLOBAL est connue de tous les autres programmes et est r‚f‚renc‚e seulement par son nom. Elle ne doit pas ˆtre d‚clar‚e de nouveau dans un autre programme.
+'Le programme GLOBAL peut ˆtre (re)charg‚ … n'importe quel moment … l'aide de la boŒte de dialogue Mise au point des programmes, bien qu'en exploitation il est normalement lanc‚ en le r‚f‚ren‡ant dans la boŒte de dialogue Lancement du sous-menu Projet.
+'Si un programme global est recharg‚, tous les autres programmes qui tournent sont stopp‚s et enlev‚s.
+ 
+
+'An example of a simple global program follows : 
+' Declare global working variables 
+  DIM G_TraceEnable as integer;		'Print
+  DIM G_LogTraceEnable as integer;	'Log to the event viewer
+  
+' Global functions
+'********************************************************************************
+'Function : G_Trace
+'IN : Program name/Function name/Message
+'OUT : Print DateTime, Prog name and Function Name, Message
+'Param entree : Nom du programme/Nom d'une fonction
+'=>Retourne l'affichage de la date/heure, le nom du programme et de la fonction
+'*********************************************************************************
+sub G_Trace(PROG,FUNC,MSG)
+
+DIM L_DateTime as STR;
+DIM L_Prog_Name as STR;
+DIM L_Func_Name as STR;
+
+L_DateTime=DATETIMESTRING(DATETIMEVALUE());'Display the date and time/Affiche la date et l'heure
+L_Prog_Name = AddString("Prog : ",PROG);'Display the name of the program/Affiche le nom du programme 
+L_Func_Name = AddString("Func : ",FUNC);'Display the name of the function/Affiche le nom de la fonction
+if(G_TraceEnable==1) then
+	Print(AddString(L_DateTime," -> ",L_Prog_Name ," -> ",L_Func_Name, " -> ", MSG));
+end if
+
+if(G_LogTraceEnable==1) then
+	TRACE("LOG",AddString(L_DateTime," -> ",L_Prog_Name ," -> ",L_Func_Name, " -> ", MSG));
+end if
+
+end sub
+

@@ -1,0 +1,54 @@
+PROFILE,Administrator,136,1,1,0,1879048192,65535,,,28,0,0,"User administrator",0,,1,1,1,0,2147483647,1
+PROGRAMS,Administrator,,,,"",,,,""
+WEBVUE,,,0,0,0,0,"","",0,0
+ADMIN,0,21,600
+EXPORTS,1,1,1,1
+PROFILE,DEFPROFILE,131208,1,1,0,2147483136,1,,,0,1073741823,0,"",0,,1,1,1,1073741823,2147483647,1
+PROGRAMS,DEFPROFILE,,,,"",,,,""
+WEBVUE,,,0,0,0,0,"","",0,0
+ADMIN,2,21,132
+EXPORTS,1,1,1,1
+PROFILE,Operator,136,1073741823,1073741823,1073741821,1879048192,65535,,,0,1073741821,0,"",0,,1073741823,1,1,1073741821,2147483647,1
+PROGRAMS,Operator,,,,"",,,,""
+WEBVUE,,,0,0,0,0,"","",0,0
+ADMIN,2,21,600
+EXPORTS,1,1,1,1
+PROFILE,Supervisor,392,0,1,0,1879048192,0,,,128,0,0,"For confirmation of double logon controls only",0,,0,1,1,0,2147483647,1
+PROGRAMS,Supervisor,,,,"",,,,""
+WEBVUE,,,0,0,0,0,"","",0,0
+ADMIN,0,21,5
+EXPORTS,1,1,1,1
+PROFILE,System,131071,1073741823,1073741823,1073741823,1879048703,65535,,,255,0,1,"",0,,1073741823,1,1,0,2147483647,1
+PROGRAMS,System,,,,"",,,,""
+WEBVUE,,,0,0,0,0,"","",0,0
+ADMIN,0,21,600
+EXPORTS,1,1,1,1
+USER,Administrator1,ugxUHU9F,"User that is allowed to create and modify other users",15420,0,ADMINISTRATOR,User,,0,0,0,,,,0
+USERPWD,Administrator1,1,Password1
+USERPROFILE,Administrator1,Administrator,1
+STATION,Administrator1,Administrator,,-1
+USER,DEFUSER,,"",0,0,,,,0,0,0,,,,0
+USERPROFILE,DEFUSER,DEFPROFILE,1
+STATION,DEFUSER,DEFPROFILE,,-1
+USER,DeleteUser1,I==8ogZ?H,"",19744,-1,,,,0,1,0,,,,0
+USER,JBloggs,Password1,"",15420,0,BLOGGS,Joe,,3,1,0,,,,0
+USERPROFILE,JBloggs,Operator,1
+STATION,JBloggs,Operator,,-1
+USER,JSmith,Password1,"De-activated user",15418,-3,SMITH,John,,0,1,0,,,,0
+USERPROFILE,JSmith,Operator,1
+STATION,JSmith,Operator,,-1
+USER,NewUser1,Password1,"New user can changed his psw",19744,0,,,,0,1,0,,,,0
+USERPROFILE,NewUser1,Operator,1
+STATION,NewUser1,Operator,,-1
+USER,Operator1,a5essRIg,"Operator",15420,0,WEBB,John,,2,0,0,j.webb@arcinfo.com,,,0
+USERPWD,Operator1,1,Password1
+USERPROFILE,Operator1,Operator,1
+STATION,Operator1,Operator,,-1
+USER,Supervisor1,2C8cWlVG,"Operator with limited rights",15420,0,MARTIN,Robin,,0,0,0,r.martin@arcinfo.com,,,0
+USERPWD,Supervisor1,1,Password1
+USERPROFILE,Supervisor1,Supervisor,1
+STATION,Supervisor1,Supervisor,,-1
+USER,System1,FXP9mruB,"System user with all rights",15420,0,ADMINISTRATOR,System,,0,0,0,,,,0
+USERPWD,System1,1,Password1
+USERPROFILE,System1,System,1
+STATION,System1,System,,-1

@@ -1,0 +1,21 @@
+'#########################################
+'PROGRAM : INIT_General.scb
+'Must be Executed at start-up
+'Load and execute TRENDS program at start up
+'#########################################
+'#################################################
+'PROGRAM : INIT_General.scb
+'Doit ˆtre execut‚ au d‚marrage
+'Charge et ex‚cute le programme TRENDS au d‚marrage
+'##################################################
+
+Sub Main()
+	Variable("ADD_HMIREG", "GENERAL.LANGUAGE");
+	GENERAL.LANGUAGE = TOD(Language("GET"));
+	PROGRAM("PRELOAD","L_General/TRENDS.SCB","");
+
+End Sub
+
+Sub UpdateLanguageValue()
+	GENERAL.LANGUAGE = TOD(Language("GET"));	
+End Sub

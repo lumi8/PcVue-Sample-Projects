@@ -1,0 +1,10 @@
+'-------- Run at startup
+
+Sub Main ()
+
+  Window("OPEN", "Control", "");
+  Window("OPEN", "Title", "");
+  Window("OPEN", "Region1", "");
+  Window("OPEN", "Region2", "");
+
+End Sub

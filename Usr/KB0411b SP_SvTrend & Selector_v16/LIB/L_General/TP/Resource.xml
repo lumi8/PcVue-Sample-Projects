@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<configuration>
+  <realtime value="true" />
+  <start_time value="0" />
+  <period value="1.8000000000000000e+05n" />
+  <trend_id value="Trend1" />
+  <mimic value="Trends" />
+  <branch value="" />
+  <curves>
+    <curve index="0">
+      <variable value="System.Localhost.Mimic.OpenCount" />
+      <active value="true" />
+      <label1 value="System.Localhost.Mimic.OpenCount" />
+      <label2 value="Temperature FLOOR_01 ROOM_001" />
+      <color r="255" g="0" b="0" index="0" />
+      <color_ns r="255" g="0" b="0" index="0" />
+      <scale visible="true" min="0.0000000000000000e+00" max="5.0000000000000000e+01" autoscale="false" />
+      <drawing visible="true" type="0" markers="0" style="0" thick="1" style_ns="2" thick_ns="1" />
+    </curve>
+    <curve index="1">
+      <variable value="System.Localhost.resource.FreeVirtualMemory" />
+      <active value="true" />
+      <label1 value="System.Localhost.resource.FreeVirtualMemory" />
+      <label2 value="Temperature FLOOR_01 ROOM_002" />
+      <color r="0" g="255" b="0" index="0" />
+      <color_ns r="0" g="255" b="0" index="0" />
+      <scale visible="true" min="0.0000000000000000e+00" max="4.0000000000000000e+06" autoscale="false" />
+      <drawing visible="true" type="0" markers="0" style="0" thick="1" style_ns="2" thick_ns="1" />
+    </curve>
+    <curve index="2">
+      <variable value="System.Localhost.resource.GDI" />
+      <active value="true" />
+      <label1 value="System.Localhost.resource.GDI" />
+      <label2 value="Temperature FLOOR_02 ROOM_001" />
+      <color r="255" g="255" b="0" index="0" />
+      <color_ns r="255" g="255" b="0" index="0" />
+      <scale visible="true" min="0.0000000000000000e+00" max="1.0000000000000000e+04" autoscale="false" />
+      <drawing visible="true" type="0" markers="0" style="0" thick="1" style_ns="2" thick_ns="1" />
+    </curve>
+    <curve index="3">
+      <variable value="System.Localhost.resource.Handles" />
+      <active value="true" />
+      <label1 value="System.Localhost.resource.Handles" />
+      <label2 value="Temperature FLOOR_02 ROOM_002" />
+      <color r="0" g="255" b="255" index="0" />
+      <color_ns r="0" g="255" b="255" index="0" />
+      <scale visible="false" min="0.0000000000000000e+00" max="1.0000000000000000e+04" autoscale="false" />
+      <drawing visible="true" type="0" markers="0" style="0" thick="1" style_ns="2" thick_ns="1" />
+    </curve>
+    <curve index="4">
+      <variable value="System.Localhost.resource.MemoryUsage" />
+      <active value="true" />
+      <label1 value="System.Localhost.resource.MemoryUsage" />
+      <label2 value="" />
+      <color r="0" g="0" b="255" index="0" />
+      <color_ns r="0" g="0" b="255" index="0" />
+      <scale visible="false" min="0.0000000000000000e+00" max="4.0000000000000000e+06" autoscale="false" />
+      <drawing visible="true" type="0" markers="0" style="0" thick="1" style_ns="2" thick_ns="1" />
+    </curve>
+    <curve index="5">
+      <variable value="System.Localhost.resource.RAM" />
+      <active value="true" />
+      <label1 value="System.Localhost.resource.RAM" />
+      <label2 value="" />
+      <color r="255" g="0" b="255" index="0" />
+      <color_ns r="255" g="0" b="255" index="0" />
+      <scale visible="true" min="0.0000000000000000e+00" max="1.0000000000000000e+02" autoscale="false" />
+      <drawing visible="true" type="0" markers="0" style="0" thick="1" style_ns="2" thick_ns="1" />
+    </curve>
+    <curve index="6">
+      <variable value="System.Localhost.resource.Threads" />
+      <active value="true" />
+      <label1 value="System.Localhost.resource.Threads" />
+      <label2 value="" />
+      <color r="128" g="128" b="0" index="0" />
+      <color_ns r="128" g="128" b="0" index="0" />
+      <scale visible="true" min="0.0000000000000000e+00" max="2.0000000000000000e+03" autoscale="false" />
+      <drawing visible="true" type="0" markers="0" style="0" thick="1" style_ns="2" thick_ns="1" />
+    </curve>
+    <curve index="7">
+      <variable value="System.Localhost.resource.User" />
+      <active value="true" />
+      <label1 value="System.Localhost.resource.User" />
+      <label2 value="" />
+      <color r="160" g="160" b="160" index="0" />
+      <color_ns r="160" g="160" b="160" index="0" />
+      <scale visible="false" min="0.0000000000000000e+00" max="1.0000000000000000e+04" autoscale="false" />
+      <drawing visible="true" type="0" markers="0" style="0" thick="1" style_ns="2" thick_ns="1" />
+    </curve>
+  </curves>
+</configuration>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<ParametersRoot Name="" SchemaVersion="10.0.0">
+<Parameter Name="pPump_Max">
+<Description/>
+<nDataType>0</nDataType>
+<nType>0</nType>
+<DefaultValue>100</DefaultValue>
+<SvPropertyValidation>true</SvPropertyValidation>
+<SvObjectType>1</SvObjectType>
+<SvPropertyName>ControlMaximumValue</SvPropertyName>
+</Parameter>
+<Parameter Name="pPump_Min">
+<Description/>
+<nDataType>0</nDataType>
+<nType>0</nType>
+<DefaultValue>0</DefaultValue>
+<SvPropertyValidation>true</SvPropertyValidation>
+<SvObjectType>1</SvObjectType>
+<SvPropertyName>MinimumValue</SvPropertyName>
+</Parameter>
+<Parameter Name="pPump_Generic_Label">
+<Description/>
+<nDataType>0</nDataType>
+<nType>0</nType>
+<DefaultValue/>
+<SvPropertyValidation>true</SvPropertyValidation>
+<SvObjectType>1</SvObjectType>
+<SvPropertyName>ExtText14</SvPropertyName>
+</Parameter>
+<Parameter Name="pPump_Unit">
+<Description/>
+<nDataType>0</nDataType>
+<nType>0</nType>
+<DefaultValue>%</DefaultValue>
+<SvPropertyValidation>true</SvPropertyValidation>
+<SvObjectType>1</SvObjectType>
+<SvPropertyName>Unit</SvPropertyName>
+</Parameter>
+<Parameter Name="pPump_Nature">
+<Description/>
+<nDataType>0</nDataType>
+<nType>0</nType>
+<DefaultValue/>
+<SvPropertyValidation>true</SvPropertyValidation>
+<SvObjectType>1</SvObjectType>
+<SvPropertyName>Nature</SvPropertyName>
+</Parameter>
+<Parameter Name="pPump_Format">
+<Description/>
+<nDataType>0</nDataType>
+<nType>0</nType>
+<DefaultValue>####u</DefaultValue>
+<SvPropertyValidation>true</SvPropertyValidation>
+<SvObjectType>1</SvObjectType>
+<SvPropertyName>Format</SvPropertyName>
+</Parameter>
+<Parameter Name="pPump_Domain">
+<Description/>
+<nDataType>0</nDataType>
+<nType>0</nType>
+<DefaultValue>Pompes</DefaultValue>
+<SvPropertyValidation>true</SvPropertyValidation>
+<SvObjectType>1</SvObjectType>
+<SvPropertyName>Domain</SvPropertyName>
+</Parameter>
+</ParametersRoot>
+</root>

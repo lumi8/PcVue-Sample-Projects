@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<TemplatesRoot Name="" SchemaVersion="12.0.0">
+<Template Name="AC">
+<AutoNaming_Prefix/>
+<AutoNaming_StartValue>1</AutoNaming_StartValue>
+<AutoNaming_FixedDigits>2</AutoNaming_FixedDigits>
+<AutoNaming_Step>1</AutoNaming_Step>
+<Enable_Instance>true</Enable_Instance>
+<ParametersList>
+<ParameterInstance Name="p_TrendPeriod">
+<DescriptionLang1>p_TrendPeriod</DescriptionLang1>
+<DescriptionLang2>p_TrendPeriod</DescriptionLang2>
+<Value>0</Value>
+<IsOverwritten>true</IsOverwritten>
+</ParameterInstance>
+<ParameterInstance Name="pg_Nature">
+<DescriptionLang1>pg_Nature</DescriptionLang1>
+<DescriptionLang2>pg_Nature</DescriptionLang2>
+<Value>AIRCOND</Value>
+<Scope>1</Scope>
+<IsOverwritten>true</IsOverwritten>
+</ParameterInstance>
+</ParametersList>
+<TemplatesList/>
+<ObjectsList>
+<Object Name="CMD">
+<InternalType>2</InternalType>
+<SvType>1</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="BitCommandLevel" Reset="false" Substitute="false">1</Property>
+<Property id="Command" Reset="false" Substitute="false">-1</Property>
+<Property id="Description" Reset="false" Substitute="false">Command</Property>
+<Property id="Log" Reset="false" Substitute="false">-1</Property>
+<Property id="Log0_1" Reset="false" Substitute="false">-1</Property>
+<Property id="Log1_0" Reset="false" Substitute="false">-1</Property>
+<Property id="OPC_Group" Reset="false" Substitute="false">Group01</Property>
+<Property id="OPC_ItemId" Reset="false" Substitute="true">=Me.FullBranch</Property>
+<Property id="OPC_Server" Reset="false" Substitute="false">Server01</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="INFO">
+<InternalType>2</InternalType>
+<SvType>3</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="Description" Reset="false" Substitute="false">Information</Property>
+<Property id="ExtText3" Reset="false" Substitute="false">MITSUBISHI</Property>
+<Property id="ExtText4" Reset="false" Substitute="false">012345789</Property>
+<Property id="ExtText5" Reset="false" Substitute="false">firstname@operator.com</Property>
+<Property id="Type" Reset="false" Substitute="false">3</Property>
+<Property id="UseExtendedAttributes" Reset="false" Substitute="false">-1</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="SETPOINT">
+<InternalType>2</InternalType>
+<SvType>2</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="Command" Reset="false" Substitute="false">-1</Property>
+<Property id="ControlMaximumValue" Reset="false" Substitute="false">40</Property>
+<Property id="Description" Reset="false" Substitute="false">Temperature setpoint</Property>
+<Property id="MaximumValue" Reset="false" Substitute="false">40</Property>
+<Property id="OPC_Group" Reset="false" Substitute="false">Group01</Property>
+<Property id="OPC_ItemId" Reset="false" Substitute="true">=Me.FullBranch</Property>
+<Property id="OPC_Server" Reset="false" Substitute="false">Server01</Property>
+<Property id="Type" Reset="false" Substitute="false">2</Property>
+<Property id="Unit" Reset="false" Substitute="false">Celsius</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="Symbol01">
+<DescriptionLang1>Desc Symbol01</DescriptionLang1>
+<InternalType>4</InternalType>
+<SvType>5</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="SymbolTemplate_Name" Reset="false" Substitute="false">ac</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="TEMP">
+<InternalType>2</InternalType>
+<SvType>2</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="Description" Reset="false" Substitute="false">Temperature</Property>
+<Property id="MaximumValue" Reset="false" Substitute="false">40</Property>
+<Property id="OPC_Group" Reset="false" Substitute="false">Group01</Property>
+<Property id="OPC_ItemId" Reset="false" Substitute="true">=Me.FullBranch</Property>
+<Property id="OPC_Server" Reset="false" Substitute="false">Server01</Property>
+<Property id="Type" Reset="false" Substitute="false">2</Property>
+<Property id="Unit" Reset="false" Substitute="false">Celsius</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList>
+<Object Name="Thresholds">
+<InternalType>5</InternalType>
+<SvType>13</SvType>
+<ObjectItem SubType="ThresholdSystem_ThresholdSystem_2">
+<Properties>
+<Property id="Threshold_0" Reset="false" Substitute="false">0</Property>
+<Property id="Threshold_1" Reset="false" Substitute="false">-1</Property>
+<Property id="Threshold_2" Reset="false" Substitute="false">-1</Property>
+<Property id="Threshold_3" Reset="false" Substitute="false">0</Property>
+<Property id="ThresholdSystem" Reset="false" Substitute="false">ThresholdSystem_ThresholdSystem_2</Property>
+<Property id="ThresholdValue_1" Reset="false" Substitute="false">25</Property>
+<Property id="ThresholdValue_2" Reset="false" Substitute="false">15</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList>
+<Object Name="high">
+<InternalType>5</InternalType>
+<SvType>14</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="Alarm" Reset="false" Substitute="false">-1</Property>
+<Property id="Description" Reset="false" Substitute="true">=Parent.Parent.Description + " High"</Property>
+<Property id="Log" Reset="false" Substitute="false">-1</Property>
+<Property id="Log0_1" Reset="false" Substitute="false">-1</Property>
+<Property id="Log1_0" Reset="false" Substitute="false">-1</Property>
+<Property id="Threshold" Reset="false" Substitute="false">-1</Property>
+<Property id="ThresholdHigh" Reset="false" Substitute="false">-1</Property>
+<Property id="ThresholdSystem" Reset="false" Substitute="false">2</Property>
+<Property id="ThresholdTypeInSystem" Reset="false" Substitute="false">1</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="low">
+<InternalType>5</InternalType>
+<SvType>14</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="Alarm" Reset="false" Substitute="false">-1</Property>
+<Property id="Description" Reset="false" Substitute="true">=Parent.Parent.Description + " Low"</Property>
+<Property id="Log" Reset="false" Substitute="false">-1</Property>
+<Property id="Log0_1" Reset="false" Substitute="false">-1</Property>
+<Property id="Log1_0" Reset="false" Substitute="false">-1</Property>
+<Property id="Threshold" Reset="false" Substitute="false">-1</Property>
+<Property id="ThresholdHigh" Reset="false" Substitute="false">0</Property>
+<Property id="ThresholdSystem" Reset="false" Substitute="false">2</Property>
+<Property id="ThresholdTypeInSystem" Reset="false" Substitute="false">2</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+</ObjectsList>
+</Object>
+<Object Name="Trend01">
+<InternalType>5</InternalType>
+<SvType>7</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="FilteringPeriod" Reset="false" Substitute="true">p_TrendPeriod</Property>
+<Property id="TemplateArchiveUnit_Name" Reset="false" Substitute="false">PROP_UNIT01</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+</ObjectsList>
+</Object>
+<Object Name="TEMP_F">
+<InternalType>2</InternalType>
+<SvType>2</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="Description" Reset="false" Substitute="false">Temperature in Fahrenheit</Property>
+<Property id="Type" Reset="false" Substitute="false">2</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList>
+<Object Name="Expression01">
+<InternalType>5</InternalType>
+<SvType>19</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="Branch" Reset="false" Substitute="true">=Inst.FullBranch</Property>
+<Property id="Description" Reset="false" Substitute="false">Celsius to Fahrenheit</Property>
+<Property id="Expression" Reset="false" Substitute="false">(TEMP*1.8)+32</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+</ObjectsList>
+</Object>
+</ObjectsList>
+<InheritedTemplatesList/>
+</Template>
+<Template Name="FLOOR">
+<AutoNaming_Prefix/>
+<AutoNaming_StartValue>1</AutoNaming_StartValue>
+<AutoNaming_FixedDigits>2</AutoNaming_FixedDigits>
+<AutoNaming_Step>1</AutoNaming_Step>
+<Enable_Instance>true</Enable_Instance>
+<ParametersList>
+<ParameterInstance Name="pg_Domain">
+<DescriptionLang1>pg_Domain</DescriptionLang1>
+<DescriptionLang2>pg_Domain</DescriptionLang2>
+<Value/>
+<Scope>0</Scope>
+</ParameterInstance>
+</ParametersList>
+<TemplatesList/>
+<ObjectsList>
+<Object Name="Mim">
+<DescriptionLang1>Desc Mim</DescriptionLang1>
+<InternalType>3</InternalType>
+<SvType>4</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="MimicTemplate_Name" Reset="false" Substitute="false">TEMPLATE_DASHBOARD_DARK</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+</ObjectsList>
+<InheritedTemplatesList/>
+</Template>
+<Template Name="GENERAL">
+<AutoNaming_Prefix/>
+<AutoNaming_StartValue>1</AutoNaming_StartValue>
+<AutoNaming_FixedDigits>2</AutoNaming_FixedDigits>
+<AutoNaming_Step>1</AutoNaming_Step>
+<Enable_Instance>true</Enable_Instance>
+<ParametersList/>
+<TemplatesList/>
+<ObjectsList>
+<Object Name="DOOR">
+<InternalType>2</InternalType>
+<SvType>60</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="ChangeTo0Lang0" Reset="false" Substitute="false">Door closing command</Property>
+<Property id="ChangeTo1Lang0" Reset="false" Substitute="false">Door opening command</Property>
+<Property id="CommandTo0Lang0" Reset="false" Substitute="false">Door closing</Property>
+<Property id="CommandTo1Lang0" Reset="false" Substitute="false">Door closing command</Property>
+<Property id="TemplateAlias" Reset="false" Substitute="false">2</Property>
+<Property id="Value0Lang0" Reset="false" Substitute="false">Closed</Property>
+<Property id="Value1Lang0" Reset="false" Substitute="false">Open</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="ON_OFF">
+<InternalType>2</InternalType>
+<SvType>60</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="ChangeTo0Lang0" Reset="false" Substitute="false">Switch off</Property>
+<Property id="ChangeTo1Lang0" Reset="false" Substitute="false">Switch on</Property>
+<Property id="CommandTo0Lang0" Reset="false" Substitute="false">Turning off</Property>
+<Property id="CommandTo1Lang0" Reset="false" Substitute="false">Turning on</Property>
+<Property id="TemplateAlias" Reset="false" Substitute="false">2</Property>
+<Property id="Value0Lang0" Reset="false" Substitute="false">Off</Property>
+<Property id="Value1Lang0" Reset="false" Substitute="false">On</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="PROP_UNIT01">
+<InternalType>2</InternalType>
+<SvType>25</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="Backup" Reset="false" Substitute="false">-1</Property>
+<Property id="BackupBitName" Reset="false" Substitute="true">=Inst.FullBranch + "." + Me.Name + ".BACKUP"</Property>
+<Property id="BackupDir" Reset="false" Substitute="true">="C:\\BACKUP\\" + Me.Name + "\\"</Property>
+<Property id="ClientListName" Reset="false" Substitute="false">#LC_AllStations</Property>
+<Property id="ServerListName" Reset="false" Substitute="false">LSHDS_ASSOC1</Property>
+<Property id="TemplateAlias" Reset="false" Substitute="false">2</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList>
+<Object Name="LogList01">
+<InternalType>5</InternalType>
+<SvType>68</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="FilterEventMask_ExecuteProgram" Reset="false" Substitute="false">-1</Property>
+<Property id="FilterEventMask_ExpMaskedAlarm" Reset="false" Substitute="false">-1</Property>
+<Property id="FilterEventMask_InhibitedAlarm" Reset="false" Substitute="false">-1</Property>
+<Property id="FilterEventMask_NonAccessAlarm" Reset="false" Substitute="false">-1</Property>
+<Property id="FilterEventMask_ProgMaskedAlarm" Reset="false" Substitute="false">-1</Property>
+<Property id="FilterEventMask_Unavailable" Reset="false" Substitute="false">-1</Property>
+<Property id="FilterEventMask_UserMaskedAlarm" Reset="false" Substitute="false">-1</Property>
+<Property id="FilterEventMask_VariableMaskedAlarm" Reset="false" Substitute="false">-1</Property>
+<Property id="TemplateAlias" Reset="false" Substitute="false">2</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+</ObjectsList>
+</Object>
+<Object Name="PROP_UNIT01.BACKUP">
+<InternalType>2</InternalType>
+<SvType>1</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="Command" Reset="false" Substitute="false">-1</Property>
+<Property id="InitialValue" Reset="false" Substitute="false">0</Property>
+<Property id="WithInitialValue" Reset="false" Substitute="false">-1</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="SimuLights">
+<InternalType>2</InternalType>
+<SvType>1</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="Command" Reset="false" Substitute="false">-1</Property>
+<Property id="Description" Reset="false" Substitute="false">Autorise la simulation ou non</Property>
+<Property id="DescriptionAlt" Reset="false" Substitute="false">Start / Stop simulation</Property>
+<Property id="InitialValue" Reset="false" Substitute="false">1</Property>
+<Property id="Log" Reset="false" Substitute="false">-1</Property>
+<Property id="Log0_1" Reset="false" Substitute="false">-1</Property>
+<Property id="Log1_0" Reset="false" Substitute="false">-1</Property>
+<Property id="Saved" Reset="false" Substitute="false">-1</Property>
+<Property id="WithInitialValue" Reset="false" Substitute="false">-1</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="SimuTemperatures">
+<InternalType>2</InternalType>
+<SvType>1</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="Command" Reset="false" Substitute="false">-1</Property>
+<Property id="Description" Reset="false" Substitute="false">Autorise la simulation ou non</Property>
+<Property id="DescriptionAlt" Reset="false" Substitute="false">Start / Stop simulation</Property>
+<Property id="InitialValue" Reset="false" Substitute="false">1</Property>
+<Property id="Log" Reset="false" Substitute="false">-1</Property>
+<Property id="Log0_1" Reset="false" Substitute="false">-1</Property>
+<Property id="Log1_0" Reset="false" Substitute="false">-1</Property>
+<Property id="Saved" Reset="false" Substitute="false">-1</Property>
+<Property id="WithInitialValue" Reset="false" Substitute="false">-1</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+</ObjectsList>
+<InheritedTemplatesList/>
+</Template>
+<Template Name="LT">
+<AutoNaming_Prefix/>
+<AutoNaming_StartValue>1</AutoNaming_StartValue>
+<AutoNaming_FixedDigits>2</AutoNaming_FixedDigits>
+<AutoNaming_Step>1</AutoNaming_Step>
+<Enable_Instance>true</Enable_Instance>
+<ParametersList>
+<ParameterInstance Name="pg_Nature">
+<DescriptionLang1>pg_Nature</DescriptionLang1>
+<DescriptionLang2>pg_Nature</DescriptionLang2>
+<Value>LIGHTING</Value>
+<Scope>1</Scope>
+<IsOverwritten>true</IsOverwritten>
+</ParameterInstance>
+</ParametersList>
+<TemplatesList/>
+<ObjectsList>
+<Object Name="CMD">
+<InternalType>2</InternalType>
+<SvType>1</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="AssociatedLabels" Reset="false" Substitute="false">ON_OFF</Property>
+<Property id="BitCommandLevel" Reset="false" Substitute="false">1</Property>
+<Property id="Command" Reset="false" Substitute="false">-1</Property>
+<Property id="Description" Reset="false" Substitute="false">Command</Property>
+<Property id="Log" Reset="false" Substitute="false">-1</Property>
+<Property id="Log0_1" Reset="false" Substitute="false">-1</Property>
+<Property id="Log1_0" Reset="false" Substitute="false">-1</Property>
+<Property id="OPC_Group" Reset="false" Substitute="false">Group01</Property>
+<Property id="OPC_ItemId" Reset="false" Substitute="true">=Me.FullBranch</Property>
+<Property id="OPC_Server" Reset="false" Substitute="false">Server01</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="ON">
+<InternalType>2</InternalType>
+<SvType>1</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="AssociatedLabels" Reset="false" Substitute="false">ON_OFF</Property>
+<Property id="Command" Reset="false" Substitute="false">-1</Property>
+<Property id="Description" Reset="false" Substitute="false">Light on</Property>
+<Property id="OPC_Group" Reset="false" Substitute="false">Group01</Property>
+<Property id="OPC_ItemId" Reset="false" Substitute="true">=ME.FullBranch</Property>
+<Property id="OPC_Server" Reset="false" Substitute="false">Server01</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList>
+<Object Name="Expression01">
+<InternalType>5</InternalType>
+<SvType>19</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="Branch" Reset="false" Substitute="true">=Inst.FullBranch</Property>
+<Property id="Expression" Reset="false" Substitute="false">CMD</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+</ObjectsList>
+</Object>
+<Object Name="Symbol01">
+<DescriptionLang1>Desc Symbol01</DescriptionLang1>
+<InternalType>4</InternalType>
+<SvType>5</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="SymbolTemplate_Name" Reset="false" Substitute="false">light</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+</ObjectsList>
+<InheritedTemplatesList/>
+</Template>
+</TemplatesRoot>
+</root>

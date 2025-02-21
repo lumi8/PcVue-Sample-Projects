@@ -1,0 +1,9 @@
+"SEQ.FILENAME","input.txt",0
+"SEQ.FIND","dog",0
+"SEQ.REPLACE","DOGGY",0
+"SEQ.OUTPUTFILENAME","output.txt",0
+"SEQ.FILETYPE",0,0
+"SEQ.SEPA","/",0
+"SEQ.CASESENSITIVE",1,0
+"SEQ.CSV.FILENAME","TEST.CSV",0
+"SEQ.CSV.COMMENT","OK - Populated array with 15 rows and 5 columns",0

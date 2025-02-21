@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataExport>
+<Settings>
+<Version>2</Version>
+<Wizard>
+<WorkingFolder>C:\Users\Dev\Documents</WorkingFolder>
+<MaxCount_RequestRawDataToProcess>60000</MaxCount_RequestRawDataToProcess>
+<MaxCount_ResponseData>12000</MaxCount_ResponseData>
+</Wizard>
+<DefaultDirectory>DataExports</DefaultDirectory>
+<ValueNSData>NS</ValueNSData>
+<ValueUnknownData>NA</ValueUnknownData>
+<DefaultTemplateDirectory>DataExportTemplates</DefaultTemplateDirectory>
+<EnableTracesForUnconsistentGeneration>0</EnableTracesForUnconsistentGeneration>
+<LimitMaxCount_RequestRawDataToProcess>1</LimitMaxCount_RequestRawDataToProcess>
+<MaxCountRequestRawDataToProcessValue>60000</MaxCountRequestRawDataToProcessValue>
+<LimitMaxCountResponseData>1</LimitMaxCountResponseData>
+<MaxCountResponseDataValue>12000</MaxCountResponseDataValue>
+<ConfigureExportPathAsFolder>1</ConfigureExportPathAsFolder>
+<ConfigureExportTemplatePathAsFolder>1</ConfigureExportTemplatePathAsFolder>
+</Settings>
+</DataExport>

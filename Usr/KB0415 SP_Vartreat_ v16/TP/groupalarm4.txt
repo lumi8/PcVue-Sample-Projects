@@ -1,0 +1,3 @@
+TREATMENT,ACKALARMBYVAR,Ack by level 10,0,,,,,,,10,10,#F=(#A2==LEVEL),ACK.LEVEL10,1
+
+ACK.LEVEL10 will acknowledge all alarm variables with a nature of LEVEL and a priority of 10.

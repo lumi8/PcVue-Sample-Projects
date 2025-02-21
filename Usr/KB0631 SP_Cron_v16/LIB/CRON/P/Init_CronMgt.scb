@@ -1,0 +1,73 @@
+'******************************************************************************************************************************************************************
+'Program Init_CronMgt.scb
+'Version: 1.0c
+'Last edition: September 11th by LOBA
+'Description: This program is designed to be used along with the WebScheduler 2.0 in order to manage Cron.dat reloading and broadcast..
+'It contains
+'	- Common declarations
+'	- Initialization functions
+'	- General use functions
+'******************************************************************************************************************************************************************
+
+Sub Main()
+
+	Dim iRet as Integer;
+	Dim sVariableName as Str;
+	Dim hBatFile as Long;
+	Dim iRetBatFile as Integer; 
+	Dim sBatFile as Str;
+
+	'///////////////////////////////////////////////////
+	iRefStation = 1;				'The reference station number
+	iCronCheckPeriod = 30;		'The Cron.dat check period in seconds
+	sList = "LMDFCLIENT1"; 			'Initialization of modification list used for Cron Broadcast
+	sCronLocation = "CTEMP";	'Initialization of the Cron.dat location: C or CTEMP
+	'///////////////////////////////////////////////////
+	
+	hBuff_BroadcastResult = alloc_buffer(1024);
+
+	'Load the main program
+	Program("PRELOAD","CRON/CronMgt.scb","");
+	
+	'Check and creation of bat file for cron copy
+	hBatFile = ALLOC_BUFFER(256);
+	iRetBatFile = FSTAT("CopyCron.bat",hBatFile);
+	If(iRetBatFile == 0) Then 
+	
+		Print("CopyCron.bat not present. Files creating by PcVue");
+		sBatFile = GETPROJECTDIR();
+		sBatFile = ADDSTRING(sBatFile,"\\TP\\CopyCron.bat"); 
+		Print(sBatFile); 
+		FOPEN(sBatFile,"w+"); 
+		Fputs(sBatFile,"copy ..\\CTEMP\\Cron.dat ..\\C\\");
+		FCLOSE(sBatFile);  
+	
+	Else
+	
+		Print("CopyCron.bat present. No need to create it."); 
+	
+	End If
+	FREE_BUFFER(hBatFile);
+
+	'On all station: Start checking Cron.dat file modification cyclically
+	iRet = CYCLIC("ADDPROG",iCronCheckPeriod,"CRON/CronMgt.scb","","CheckCron"); 
+	Print("Verb Cyclic mode AddProg to check cron.dat file changes executed with result: ", iRet);
+	
+	'Initialize my flag variables
+	sVariableName = Get_Cron_VarName("@Cron_Mgt.",TOC(@SYSTEM.STATION_NUMBER),".Bdct_InProgBy");
+	print(sVariableName);
+	?sVariableName = 0;
+	sVariableName = Get_Cron_VarName("@Cron_Mgt.", TOC(@SYSTEM.STATION_NUMBER),".Save_ReqFor");
+	?sVariableName = 0;
+
+	@Cron_Mgt.BdctRef_Requested = 0;
+	@Cron_Mgt.Bdct_Completed = 0;
+
+	iRet = PROGRAM("PRELOAD","CRON/CronMgt.scb","");
+'	Print("Verb Program Mode Preload for program CronMgt.scb executed with result: ", iRet);
+
+	iRet = PROGRAM("FUNCTION","CRON/CronMgt.scb","","MAIN");
+'	iRet = PROGRAM("START","CronMgt.scb","");
+	Print("Verb Program Mode Function for program CronMgt.scb Main executed with result: ", iRet);
+	
+End Sub

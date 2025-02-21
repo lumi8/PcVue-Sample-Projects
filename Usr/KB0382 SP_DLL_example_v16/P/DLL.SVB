@@ -1,0 +1,48 @@
+'-------- Example of the use of an external DLL to extend SCADA Basic
+
+'-------- Declare functions in DLL
+'-------- The default folder for PcVue is TP.	The DLL is in tp\sample\release\sample.dll
+'-------- Declared here the fuctions will only be available to this program
+'-------- If declared in the global program the functions would be available to all programs
+
+Declare Function F_Add Lib "Sample\\Release\\Sample.DLL" (A As Integer, B As Integer) As Integer;
+Declare Function F_Compar Lib "Sample\\Release\\Sample.DLL" (Str1 as Long, Str2 as Long) as Integer;
+
+Sub Main ()
+End Sub
+
+'-------- Use of DLL function F_Add	to add two integers
+Sub Try_F_Add()
+	Dim Arg1 As Integer, Arg2 As Integer, Result As Integer;
+	Arg1 = TOI(@NUM1);
+	Arg2 = TOI(@NUM2);
+	Result = F_Add (Arg1, Arg2);
+	@NUM3 = TOS(Result);
+End Sub
+
+'-------- Use of DLL function F_Compar to compare two strings
+'-------- Note - strings are passed as a pointers to buffers containing the strings
+Sub Try_F_Compar()
+	Dim HandleStr1 as Long, HandleStr2 As Long;
+	Dim Result as Integer;
+
+	HandleStr1 = Alloc_buffer(100);
+	HandleStr2 = Alloc_buffer(100);
+
+	Put_Buffer (HandleStr1, 0, @TEXT1);
+	Put_Buffer (HandleStr2, 0, @TEXT2);
+
+	Result = F_Compar (HandleStr1, HandleStr2);
+	If (Result < 0) Then 
+		@COMPARERESULT = "Text1 < Text2";
+	Else
+		If (Result == 0) Then
+			@COMPARERESULT = "Text1 = Text2";
+		Else
+			@COMPARERESULT = "Text1 > Text2";
+		End If
+	End If 
+
+	Free_Buffer(HandleStr1);
+	Free_Buffer(HandleStr2);
+End Sub

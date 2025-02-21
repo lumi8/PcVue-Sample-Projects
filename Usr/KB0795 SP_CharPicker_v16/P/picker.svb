@@ -1,0 +1,66 @@
+Sub Main ()
+
+End Sub
+
+
+Sub Init ()
+	Dim i As Integer, j As Integer, iChar As Integer;
+	Dim cVarName As Str, cWindow As Str;
+
+	cWindow = GetArg("WINDOW");
+	
+	cVarName = "TextVar%";
+	For (i=0;i<16;i++)
+		For (j=0;j<16;j++)
+			iChar = (i*16) + j;
+			Selector("PUTCELL", cWindow, "", "AIGrid1", i, j, Chr(iChar));
+		Next
+	Next
+	Selector("SELPROG", cWindow, "", "AIGrid1", "picker.svb", "", "GetCellChar", "AIGrid1");
+	?cVarName = "";
+End Sub
+
+
+
+Sub GetCellChar()
+	Dim iLine As Integer, iCol As Integer;
+	Dim cChar As Str, cVarName As Str, cWindow As Str, cTextVal As Str;
+	
+	cWindow = GetArg("WINDOW");
+	cVarName = "TextVar%";
+
+	iLine = Selector("SELECTLINE", cWindow, "", "AIGrid1");
+	iCol = Selector("SELECTCOL", cWindow, "", "AIGrid1");
+	cChar = Selector("GETCELL", cWindow, "", "AIGrid1", iLine, iCol);
+	cTextVal = ?cVarNAme;
+	?cVarName = AddString(cTextVal, cChar);
+End Sub
+
+
+
+Sub Backspace()
+	Dim cVarName As Str, cVarVal As Str;
+	Dim iLen As Integer;
+	
+	cVarName = "TextVar%";
+	cVarVal = ?cVarName;
+	iLen = Len(cVarVal);
+	If(iLen > 0) Then
+		cVarVal = Left(cVarVal, iLen - 1);
+		?cVarName = cVarVal;	
+	End If
+End Sub
+
+
+
+Sub Clipboard()
+	Dim cVarName As Str, cVarVal As Str;
+	Dim cCommand As Str;
+
+	cVarName = "TextVar%";
+	cVarVal = ?cVarName;
+	cCommand = AddString("echo ",cVarVal);
+	cCommand = Addstring(cCommand, "| clip");
+	Print(cCommand);
+	System("SYSTEM", cCommand);
+End Sub

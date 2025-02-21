@@ -1,0 +1,28 @@
+English
+======
+This project shows the CORRECT use of SvTrend to extract historic data.
+
+SvTrend allows you to extract historic data for one or more variables between two times. Values are provided at the specifed interval. For example, if there is 5 minutes between the two times, and the interval is 10 seconds, you will get 30 values.
+
+SvTrend is first called using mode GETTREND. The requested data is collected in the background, setting a bit variable when it has finished and returning the first buffer of data. SvTrend must then be called again and again in a loop using mode GETNEXTBUFFER to collect further buffers of data until all the collected data has been retrieved.
+
+Finally SvTrend mode CANCEL should be used to make sure any outstanding requests are cleared.
+
+You can see the effect that the period and buffer size have on SvTrend using the spin buttons in the mimic. You can see the resulting file using the "Show historic data" button.
+
+WARNING. If you use a small period and a large difference between the start and end times SvTrend may take several minutes to execute and generate a very large file. For example if you ask for 24 hours worth of data with a period of 1 second it will create a file with 24 x 60 x 60 lines. In this particular example each line contains the value for 4 variables and is typically about 50 bytes - this would create a of 4.3Mb.
+
+Français
+======
+Ce projet montre l'utilisation CORRECTE de SvTrend pour extraire des données historiques.  
+
+SvTrend vous permet d'extraire des données historiques pour une ou plusieurs variables entre deux dates. Les valeurs sont fournies à l'intervalle spécifié. Par exemple, s'il y a 5 minutes entre les deux dates et l'intervalle est de 10 secondes, vous obtiendrez 30 valeurs.  
+
+SvTrend est d'abord appelé en utilisant le mode GETTREND.  Les données demandées sont rassemblées en tâche de fond, une variable bit est positionnée lorsque le traitement est terminé. Le premier Buffer de données est alors renvoyé.  SvTrend doit alors être appelé à plusieurs reprises dans une boucle en utilisant le mode GETNEXTBUFFER pour récupérer les autres Buffers de données jusqu'à ce que toutes les données rassemblées aient été récupérées.  
+
+A la fin, le mode CANCEL doit être utilisé pour s'assurer que toutes les demandes en attente sont effacées.
+
+Vous pouvez voir l'effet de la période et de la taille du buffer sur SvTrend en les modifiant depuis le synoptique. Vous pouvez voir le fichier résultant en cliquant sur le bouton "Montrer les données historiques".  
+
+AVERTISSEMENT.  Entre si vous utilisez une petite période et une grande différence entre la date de début et la date de fin SvTrend peut prendre plusieurs minutes pour s'exécuter et générer un fichier de grande taille. Par exemple si vous demandez 24 heures de données avec une période de 1 seconde il créera un fichier avec 24 x 60 x 60 lignes.  Dans ce cas particulier chaque ligne contient la valeur pour 4 variables et est en général d'environ 50 octets - ceci créerait un fichier de 4.3Mo.
+

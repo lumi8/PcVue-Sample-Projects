@@ -1,0 +1,187 @@
+LB,03541,0,L,EVENTS,040429142148546,040429142150812
+LC
+040429142148546,9,16384, ,,PROD.ALARM1,"Alarme 1 de production",,1280,040429142148546,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM1,,Prod,Station_1
+040429142148546,9,16384, ,,PROD.ALARM2,"Alarme 2 de production",,1280,040429142148546,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM2,,Prod,Station_2
+040429142149109,9,4096, ,,PROD.ALARM1,"Alarme 1 de production",,768,040429142149109,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM1,,Prod,Station_1
+040429142149109,9,4096, ,,PROD.ALARM2,"Alarme 2 de production",,768,040429142149109,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM2,,Prod,Station_2
+040429142149421,9,16384, ,,PROD.ALARM1,"Alarme 1 de production",,1280,040429142149421,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM1,,Prod,Station_1
+040429142149437,9,16384, ,,PROD.ALARM2,"Alarme 2 de production",,1280,040429142149421,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM2,,Prod,Station_2
+040429142149781,9,4096, ,,PROD.ALARM1,"Alarme 1 de production",,768,040429142149781,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM1,,Prod,Station_1
+040429142149781,9,4096, ,,PROD.ALARM2,"Alarme 2 de production",,768,040429142149781,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM2,,Prod,Station_2
+040429142150171,9,16384, ,,MAINT.ALARM1,"Alarme 1 d'entretien",,1280,040429142150171,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM1,,Maint,Station_1
+040429142150171,9,16384, ,,MAINT.ALARM2,"Alarme 2 d'entretien",,1280,040429142150171,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM2,,Maint,Station_3
+040429142150171,9,16384, ,,MAINT.ALARM3,"Alarme 3 d'entretien",,1280,040429142150171,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM3,,Maint,Station_1
+040429142150171,9,16384, ,,MAINT.ALARM4,"Alarme 4 d'entretien",,1280,040429142150171,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM4,,Maint,Station_2
+040429142150484,9,4096, ,,MAINT.ALARM1,"Alarme 1 d'entretien",,768,040429142150484,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM1,,Maint,Station_1
+040429142150484,9,4096, ,,MAINT.ALARM2,"Alarme 2 d'entretien",,768,040429142150484,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM2,,Maint,Station_3
+040429142150500,9,4096, ,,MAINT.ALARM3,"Alarme 3 d'entretien",,768,040429142150484,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM3,,Maint,Station_1
+040429142150500,9,4096, ,,MAINT.ALARM4,"Alarme 4 d'entretien",,768,040429142150500,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM4,,Maint,Station_2
+040429142150796,9,16384, ,,MAINT.ALARM1,"Alarme 1 d'entretien",,1280,040429142150796,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM1,,Maint,Station_1
+040429142150796,9,16384, ,,MAINT.ALARM2,"Alarme 2 d'entretien",,1280,040429142150796,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM2,,Maint,Station_3
+040429142150812,9,16384, ,,MAINT.ALARM3,"Alarme 3 d'entretien",,1280,040429142150796,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM3,,Maint,Station_1
+040429142150812,9,16384, ,,MAINT.ALARM4,"Alarme 4 d'entretien",,1280,040429142150812,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM4,,Maint,Station_2
+LB,00757,0,L,EVENTS,040504172132718,040504172132734
+LC
+040504172132718,9,16384, ,,MAINT.ALARM1,"Alarme 1 d'entretien",,1280,040504172132718,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM1,,Maint,Station_1
+040504172132718,9,16384, ,,MAINT.ALARM2,"Alarme 2 d'entretien",,1280,040504172132718,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM2,,Maint,Station_3
+040504172132734,9,16384, ,,MAINT.ALARM3,"Alarme 3 d'entretien",,1280,040504172132734,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM3,,Maint,Station_1
+040504172132734,9,16384, ,,MAINT.ALARM4,"Alarme 4 d'entretien",,1280,040504172132734,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM4,,Maint,Station_2
+LB,01453,0,L,EVENTS,040514171945500,040514171946046
+LC
+040514171945500,9,16384, ,,PROD.ALARM1,"Alarme 1 de production",,1280,040514171945500,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM1,,Prod,Station_1
+040514171945500,9,16384, ,,PROD.ALARM2,"Alarme 2 de production",,1280,040514171945500,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM2,,Prod,Station_2
+040514171945796,9,16384, ,,MAINT.ALARM1,"Alarme 1 d'entretien",,1280,040514171945796,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM1,,Maint,Station_1
+040514171945796,9,16384, ,,MAINT.ALARM2,"Alarme 2 d'entretien",,1280,040514171945796,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM2,,Maint,Station_3
+040514171945796,9,16384, ,,MAINT.ALARM3,"Alarme 3 d'entretien",,1280,040514171945796,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM3,,Maint,Station_1
+040514171945796,9,16384, ,,MAINT.ALARM4,"Alarme 4 d'entretien",,1280,040514171945796,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM4,,Maint,Station_2
+040514171946046,9,4096, ,,PROD.ALARM1,"Alarme 1 de production",,768,040514171946046,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM1,,Prod,Station_1
+040514171946046,9,4096, ,,PROD.ALARM2,"Alarme 2 de production",,768,040514171946046,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM2,,Prod,Station_2
+LB,04060,0,L,EVENTS,040517094854578,040517100325390
+LC
+040517094854578,9,16384, ,,PROD.ALARM1,"Alarme 1 de production",,1280,040517094854578,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM1,,Prod,Station_1
+040517094854578,9,16384, ,,PROD.ALARM2,"Alarme 2 de production",,1280,040517094854578,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM2,,Prod,Station_2
+040517094855015,9,16384, ,,MAINT.ALARM1,"Alarme 1 d'entretien",,1280,040517094855015,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM1,,Maint,Station_1
+040517094855015,9,16384, ,,MAINT.ALARM2,"Alarme 2 d'entretien",,1280,040517094855015,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM2,,Maint,Station_3
+040517094855015,9,16384, ,,MAINT.ALARM3,"Alarme 3 d'entretien",,1280,040517094855015,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM3,,Maint,Station_1
+040517094855031,9,16384, ,,MAINT.ALARM4,"Alarme 4 d'entretien",,1280,040517094855031,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM4,,Maint,Station_2
+040517094856453,9,4096, ,,PROD.ALARM1,"Alarme 1 de production",,768,040517094856453,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM1,,Prod,Station_1
+040517094856453,9,4096, ,,PROD.ALARM2,"Alarme 2 de production",,768,040517094856453,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM2,,Prod,Station_2
+040517094857390,9,4096, ,,MAINT.ALARM1,"Alarme 1 d'entretien",,768,040517094857390,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM1,,Maint,Station_1
+040517094857390,9,4096, ,,MAINT.ALARM2,"Alarme 2 d'entretien",,768,040517094857390,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM2,,Maint,Station_3
+040517094857390,9,4096, ,,MAINT.ALARM3,"Alarme 3 d'entretien",,768,040517094857390,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM3,,Maint,Station_1
+040517094857406,9,4096, ,,MAINT.ALARM4,"Alarme 4 d'entretien",,768,040517094857406,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM4,,Maint,Station_2
+040517094901234,9,16384, ,,MAINT.ALARM1,"Alarme 1 d'entretien",,1280,040517094901234,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM1,,Maint,Station_1
+040517094901234,9,16384, ,,MAINT.ALARM2,"Alarme 2 d'entretien",,1280,040517094901234,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM2,,Maint,Station_3
+040517094901250,9,16384, ,,MAINT.ALARM3,"Alarme 3 d'entretien",,1280,040517094901250,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM3,,Maint,Station_1
+040517094901250,9,16384, ,,MAINT.ALARM4,"Alarme 4 d'entretien",,1280,040517094901250,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM4,,Maint,Station_2
+040517094901812,9,16384, ,,PROD.ALARM1,"Alarme 1 de production",,1280,040517094901812,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM1,,Prod,Station_1
+040517094901812,9,16384, ,,PROD.ALARM2,"Alarme 2 de production",,1280,040517094901812,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM2,,Prod,Station_2
+040517094902484,9,4096, ,,MAINT.ALARM1,"Alarme 1 d'entretien",,768,040517094902484,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM1,,Maint,Station_1
+040517094902484,9,4096, ,,MAINT.ALARM2,"Alarme 2 d'entretien",,768,040517094902484,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM2,,Maint,Station_3
+040517094902484,9,4096, ,,MAINT.ALARM3,"Alarme 3 d'entretien",,768,040517094902484,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM3,,Maint,Station_1
+040517094902484,9,4096, ,,MAINT.ALARM4,"Alarme 4 d'entretien",,768,040517094902484,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM4,,Maint,Station_2
+040517100325390,9,4096, ,,PROD.ALARM1,"Alarme 1 de production",,768,040517100325390,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM1,,Prod,Station_1
+LB,03714,0,L,EVENTS,040517100325390,040517100338484
+LC
+040517100325390,9,4096, ,,PROD.ALARM2,"Alarme 2 de production",,768,040517100325390,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM2,,Prod,Station_2
+040517100328296,9,16384, ,,PROD.ALARM1,"Alarme 1 de production",,1280,040517100328296,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM1,,Prod,Station_1
+040517100328312,9,16384, ,,PROD.ALARM2,"Alarme 2 de production",,1280,040517100328296,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM2,,Prod,Station_2
+040517100328640,9,4096, ,,PROD.ALARM1,"Alarme 1 de production",,768,040517100328640,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM1,,Prod,Station_1
+040517100328640,9,4096, ,,PROD.ALARM2,"Alarme 2 de production",,768,040517100328640,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM2,,Prod,Station_2
+040517100328968,9,16384, ,,PROD.ALARM1,"Alarme 1 de production",,1280,040517100328968,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM1,,Prod,Station_1
+040517100328968,9,16384, ,,PROD.ALARM2,"Alarme 2 de production",,1280,040517100328968,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM2,,Prod,Station_2
+040517100329296,9,4096, ,,PROD.ALARM1,"Alarme 1 de production",,768,040517100329296,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM1,,Prod,Station_1
+040517100329312,9,4096, ,,PROD.ALARM2,"Alarme 2 de production",,768,040517100329296,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM2,,Prod,Station_2
+040517100329625,9,16384, ,,PROD.ALARM1,"Alarme 1 de production",,1280,040517100329625,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM1,,Prod,Station_1
+040517100329640,9,16384, ,,PROD.ALARM2,"Alarme 2 de production",,1280,040517100329640,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM2,,Prod,Station_2
+040517100329968,9,4096, ,,PROD.ALARM1,"Alarme 1 de production",,768,040517100329968,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM1,,Prod,Station_1
+040517100329968,9,4096, ,,PROD.ALARM2,"Alarme 2 de production",,768,040517100329968,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM2,,Prod,Station_2
+040517100330281,9,16384, ,,PROD.ALARM1,"Alarme 1 de production",,1280,040517100330281,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM1,,Prod,Station_1
+040517100330296,9,16384, ,,PROD.ALARM2,"Alarme 2 de production",,1280,040517100330281,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM2,,Prod,Station_2
+040517100330656,9,4096, ,,PROD.ALARM1,"Alarme 1 de production",,768,040517100330656,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM1,,Prod,Station_1
+040517100330656,9,4096, ,,PROD.ALARM2,"Alarme 2 de production",,768,040517100330656,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM2,,Prod,Station_2
+040517100338468,9,16384, ,,MAINT.ALARM1,"Alarme 1 d'entretien",,1280,040517100338468,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM1,,Maint,Station_1
+040517100338468,9,16384, ,,MAINT.ALARM2,"Alarme 2 d'entretien",,1280,040517100338468,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM2,,Maint,Station_3
+040517100338484,9,16384, ,,MAINT.ALARM3,"Alarme 3 d'entretien",,1280,040517100338484,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM3,,Maint,Station_1
+040517100338484,9,16384, ,,MAINT.ALARM4,"Alarme 4 d'entretien",,1280,040517100338484,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM4,,Maint,Station_2
+LB,03541,0,L,EVENTS,040707114830812,040707114834093
+LC
+040707114830812,1,16384, ,,MAINT.ALARM2,"Alarme 2 d'entretien",,1280,040707114830812,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM2,,Maint,Station_3
+040707114830812,1,16384, ,,MAINT.ALARM1,"Alarme 1 d'entretien",,1280,040707114830812,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM1,,Maint,Station_1
+040707114830828,1,16384, ,,MAINT.ALARM3,"Alarme 3 d'entretien",,1280,040707114830828,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM3,,Maint,Station_1
+040707114830828,1,16384, ,,MAINT.ALARM4,"Alarme 4 d'entretien",,1280,040707114830828,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM4,,Maint,Station_2
+040707114832812,1,4096, ,,MAINT.ALARM2,"Alarme 2 d'entretien",,768,040707114832812,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM2,,Maint,Station_3
+040707114832812,1,4096, ,,MAINT.ALARM1,"Alarme 1 d'entretien",,768,040707114832812,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM1,,Maint,Station_1
+040707114832812,1,4096, ,,MAINT.ALARM3,"Alarme 3 d'entretien",,768,040707114832812,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM3,,Maint,Station_1
+040707114832828,1,4096, ,,MAINT.ALARM4,"Alarme 4 d'entretien",,768,040707114832828,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM4,,Maint,Station_2
+040707114833406,1,16384, ,,MAINT.ALARM2,"Alarme 2 d'entretien",,1280,040707114833406,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM2,,Maint,Station_3
+040707114833406,1,16384, ,,MAINT.ALARM1,"Alarme 1 d'entretien",,1280,040707114833406,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM1,,Maint,Station_1
+040707114833421,1,16384, ,,MAINT.ALARM3,"Alarme 3 d'entretien",,1280,040707114833421,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM3,,Maint,Station_1
+040707114833421,1,16384, ,,MAINT.ALARM4,"Alarme 4 d'entretien",,1280,040707114833421,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM4,,Maint,Station_2
+040707114833750,1,4096, ,,MAINT.ALARM2,"Alarme 2 d'entretien",,768,040707114833734,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM2,,Maint,Station_3
+040707114833750,1,4096, ,,MAINT.ALARM1,"Alarme 1 d'entretien",,768,040707114833750,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM1,,Maint,Station_1
+040707114833750,1,4096, ,,MAINT.ALARM3,"Alarme 3 d'entretien",,768,040707114833750,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM3,,Maint,Station_1
+040707114833750,1,4096, ,,MAINT.ALARM4,"Alarme 4 d'entretien",,768,040707114833750,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM4,,Maint,Station_2
+040707114834093,1,16384, ,,MAINT.ALARM2,"Alarme 2 d'entretien",,1280,040707114834078,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM2,,Maint,Station_3
+040707114834093,1,16384, ,,MAINT.ALARM1,"Alarme 1 d'entretien",,1280,040707114834093,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM1,,Maint,Station_1
+040707114834093,1,16384, ,,MAINT.ALARM3,"Alarme 3 d'entretien",,1280,040707114834093,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM3,,Maint,Station_1
+040707114834093,1,16384, ,,MAINT.ALARM4,"Alarme 4 d'entretien",,1280,040707114834093,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM4,,Maint,Station_2
+LB,00757,0,L,EVENTS,120223170121843,120223170121859
+LC
+120223170121843,1,16384, ,,MAINT.ALARM2,"Alarme 2 d'entretien",,1280,120223170121843,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM2,,Maint,Station_3
+120223170121843,1,16384, ,,MAINT.ALARM1,"Alarme 1 d'entretien",,1280,120223170121843,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM1,,Maint,Station_1
+120223170121843,1,16384, ,,MAINT.ALARM3,"Alarme 3 d'entretien",,1280,120223170121843,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM3,,Maint,Station_1
+120223170121859,1,16384, ,,MAINT.ALARM4,"Alarme 4 d'entretien",,1280,120223170121859,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM4,,Maint,Station_2
+LB,04064,0,L,EVENTS,120309104259765,120309104307984
+LC
+120309104259765,1,16384, ,,PROD.ALARM2,"Alarme 2 de production",,1280,120309104259765,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM2,,Prod,Station_2
+120309104259765,1,16384, ,,PROD.ALARM1,"Alarme 1 de production",,1280,120309104259765,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM1,,Prod,Station_1
+120309104302265,1,16384, ,,MAINT.ALARM2,"Alarme 2 d'entretien",,1280,120309104302265,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM2,,Maint,Station_3
+120309104302281,1,16384, ,,MAINT.ALARM1,"Alarme 1 d'entretien",,1280,120309104302265,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM1,,Maint,Station_1
+120309104302281,1,16384, ,,MAINT.ALARM3,"Alarme 3 d'entretien",,1280,120309104302281,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM3,,Maint,Station_1
+120309104302281,1,16384, ,,MAINT.ALARM4,"Alarme 4 d'entretien",,1280,120309104302281,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM4,,Maint,Station_2
+120309104302781,1,4096, ,,PROD.ALARM2,"Alarme 2 de production",,768,120309104302781,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM2,,Prod,Station_2
+120309104302781,1,4096, ,,PROD.ALARM1,"Alarme 1 de production",,768,120309104302781,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM1,,Prod,Station_1
+120309104304921,1,16384, ,,PROD.ALARM2,"Alarme 2 de production",,1280,120309104304921,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM2,,Prod,Station_2
+120309104304937,1,16384, ,,PROD.ALARM1,"Alarme 1 de production",,1280,120309104304937,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM1,,Prod,Station_1
+120309104305562,1,4096, ,,MAINT.ALARM2,"Alarme 2 d'entretien",,768,120309104305562,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM2,,Maint,Station_3
+120309104305562,1,4096, ,,MAINT.ALARM1,"Alarme 1 d'entretien",,768,120309104305562,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM1,,Maint,Station_1
+120309104305562,1,4096, ,,MAINT.ALARM3,"Alarme 3 d'entretien",,768,120309104305562,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM3,,Maint,Station_1
+120309104305562,1,4096, ,,MAINT.ALARM4,"Alarme 4 d'entretien",,768,120309104305562,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM4,,Maint,Station_2
+120309104305968,1,4096, ,,PROD.ALARM2,"Alarme 2 de production",,768,120309104305968,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM2,,Prod,Station_2
+120309104305984,1,4096, ,,PROD.ALARM1,"Alarme 1 de production",,768,120309104305968,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM1,,Prod,Station_1
+120309104306578,1,16384, ,,MAINT.ALARM2,"Alarme 2 d'entretien",,1280,120309104306578,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM2,,Maint,Station_3
+120309104306578,1,16384, ,,MAINT.ALARM1,"Alarme 1 d'entretien",,1280,120309104306578,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM1,,Maint,Station_1
+120309104306578,1,16384, ,,MAINT.ALARM3,"Alarme 3 d'entretien",,1280,120309104306578,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM3,,Maint,Station_1
+120309104306578,1,16384, ,,MAINT.ALARM4,"Alarme 4 d'entretien",,1280,120309104306578,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM4,,Maint,Station_2
+120309104306937,1,16384, ,,PROD.ALARM2,"Alarme 2 de production",,1280,120309104306937,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM2,,Prod,Station_2
+120309104306937,1,16384, ,,PROD.ALARM1,"Alarme 1 de production",,1280,120309104306937,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM1,,Prod,Station_1
+120309104307984,1,4096, ,,MAINT.ALARM2,"Alarme 2 d'entretien",,768,120309104307984,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM2,,Maint,Station_3
+LB,04060,0,L,EVENTS,120309104307984,120309104317312
+LC
+120309104307984,1,4096, ,,MAINT.ALARM1,"Alarme 1 d'entretien",,768,120309104307984,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM1,,Maint,Station_1
+120309104308000,1,4096, ,,MAINT.ALARM3,"Alarme 3 d'entretien",,768,120309104307984,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM3,,Maint,Station_1
+120309104308000,1,4096, ,,MAINT.ALARM4,"Alarme 4 d'entretien",,768,120309104307984,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM4,,Maint,Station_2
+120309104308281,1,4096, ,,PROD.ALARM2,"Alarme 2 de production",,768,120309104308281,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM2,,Prod,Station_2
+120309104308296,1,4096, ,,PROD.ALARM1,"Alarme 1 de production",,768,120309104308281,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM1,,Prod,Station_1
+120309104308609,1,16384, ,,MAINT.ALARM2,"Alarme 2 d'entretien",,1280,120309104308609,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM2,,Maint,Station_3
+120309104308625,1,16384, ,,MAINT.ALARM1,"Alarme 1 d'entretien",,1280,120309104308609,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM1,,Maint,Station_1
+120309104308625,1,16384, ,,MAINT.ALARM3,"Alarme 3 d'entretien",,1280,120309104308625,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM3,,Maint,Station_1
+120309104308625,1,16384, ,,MAINT.ALARM4,"Alarme 4 d'entretien",,1280,120309104308625,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM4,,Maint,Station_2
+120309104308906,1,16384, ,,PROD.ALARM2,"Alarme 2 de production",,1280,120309104308906,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM2,,Prod,Station_2
+120309104308906,1,16384, ,,PROD.ALARM1,"Alarme 1 de production",,1280,120309104308906,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM1,,Prod,Station_1
+120309104316296,1,4096, ,,MAINT.ALARM2,"Alarme 2 d'entretien",,768,120309104316296,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM2,,Maint,Station_3
+120309104316296,1,4096, ,,MAINT.ALARM1,"Alarme 1 d'entretien",,768,120309104316296,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM1,,Maint,Station_1
+120309104316296,1,4096, ,,MAINT.ALARM3,"Alarme 3 d'entretien",,768,120309104316296,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM3,,Maint,Station_1
+120309104316312,1,4096, ,,MAINT.ALARM4,"Alarme 4 d'entretien",,768,120309104316312,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM4,,Maint,Station_2
+120309104316625,1,4096, ,,PROD.ALARM2,"Alarme 2 de production",,768,120309104316625,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM2,,Prod,Station_2
+120309104316625,1,4096, ,,PROD.ALARM1,"Alarme 1 de production",,768,120309104316625,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM1,,Prod,Station_1
+120309104316984,1,16384, ,,MAINT.ALARM2,"Alarme 2 d'entretien",,1280,120309104316984,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM2,,Maint,Station_3
+120309104316984,1,16384, ,,MAINT.ALARM1,"Alarme 1 d'entretien",,1280,120309104316984,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM1,,Maint,Station_1
+120309104316984,1,16384, ,,MAINT.ALARM3,"Alarme 3 d'entretien",,1280,120309104316984,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM3,,Maint,Station_1
+120309104316984,1,16384, ,,MAINT.ALARM4,"Alarme 4 d'entretien",,1280,120309104316984,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM4,,Maint,Station_2
+120309104317296,1,16384, ,,PROD.ALARM2,"Alarme 2 de production",,1280,120309104317296,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM2,,Prod,Station_2
+120309104317312,1,16384, ,,PROD.ALARM1,"Alarme 1 de production",,1280,120309104317296,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM1,,Prod,Station_1
+LB,01095,0,L,EVENTS,120309104317718,120309104318046
+LC
+120309104317718,1,4096, ,,MAINT.ALARM2,"Alarme 2 d'entretien",,768,120309104317718,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM2,,Maint,Station_3
+120309104317734,1,4096, ,,MAINT.ALARM1,"Alarme 1 d'entretien",,768,120309104317734,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM1,,Maint,Station_1
+120309104317734,1,4096, ,,MAINT.ALARM3,"Alarme 3 d'entretien",,768,120309104317734,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM3,,Maint,Station_1
+120309104317734,1,4096, ,,MAINT.ALARM4,"Alarme 4 d'entretien",,768,120309104317734,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM4,,Maint,Station_2
+120309104318046,1,4096, ,,PROD.ALARM2,"Alarme 2 de production",,768,120309104318046,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM2,,Prod,Station_2
+120309104318046,1,4096, ,,PROD.ALARM1,"Alarme 1 de production",,768,120309104318046,0,"                                        ","#@A1,#@A2,#@A3,#@A4",DOM1,,Prod,Station_1
+LB,01798,0,L,EVENTS,20220126T171518.686Z,20220126T175235.125Z
+LC
+20220126T171518.686Z,1,16384, ,,MAINT.ALARM2,"Alarme 2 d'entretien",,1280,20220126T171518.686Z,0,"                                        ","#@A1,#@A2,#@A3,#@A4","DOM2","","Maint","Station_3"
+20220126T171518.686Z,1,16384, ,,MAINT.ALARM1,"Alarme 1 d'entretien",,1280,20220126T171518.686Z,0,"                                        ","#@A1,#@A2,#@A3,#@A4","DOM1","","Maint","Station_1"
+20220126T171518.686Z,1,16384, ,,MAINT.ALARM3,"Alarme 3 d'entretien",,1280,20220126T171518.686Z,0,"                                        ","#@A1,#@A2,#@A3,#@A4","DOM3","","Maint","Station_1"
+20220126T171518.701Z,1,16384, ,,MAINT.ALARM4,"Alarme 4 d'entretien",,1280,20220126T171518.686Z,0,"                                        ","#@A1,#@A2,#@A3,#@A4","DOM4","","Maint","Station_2"
+20220126T171519.530Z,1,16384, ,,PROD.ALARM2,"Alarme 2 de production",,1280,20220126T171519.530Z,0,"                                        ","#@A1,#@A2,#@A3,#@A4","DOM2","","Prod","Station_2"
+20220126T171519.530Z,1,16384, ,,PROD.ALARM1,"Alarme 1 de production",,1280,20220126T171519.530Z,0,"                                        ","#@A1,#@A2,#@A3,#@A4","DOM1","","Prod","Station_1"
+20220126T174049.485Z,1,4096, ,,PROD.ALARM2,"Alarme 2 de production",,768,20220126T174049.485Z,0,"                                        ","#@A1,#@A2,#@A3,#@A4","DOM2","","Prod","Station_2"
+20220126T174049.485Z,1,4096, ,,PROD.ALARM1,"Alarme 1 de production",,768,20220126T174049.485Z,0,"                                        ","#@A1,#@A2,#@A3,#@A4","DOM1","","Prod","Station_1"
+20220126T175235.125Z,1,2048, ,,PROD.ALARM2,"Alarme 2 de production",,512,20220126T175235.125Z,0,"                                        ","#@A1,#@A2,#@A3,#@A4","DOM2","","Prod","Station_2"
+LB,00453,0,L,EVENTS,20231129T164601.567Z,20231129T164601.569Z
+LC
+20231129T164601.567Z,1,16384, ,,PROD.ALARM2,"Alarme 2 de production",,1280,20231129T164601.567Z,0,"                                        ","#@A1,#@A2,#@A3,#@A4","DOM2","","Prod","Station_2"
+20231129T164601.569Z,1,16384, ,,PROD.ALARM1,"Alarme 1 de production",,1280,20231129T164601.567Z,0,"                                        ","#@A1,#@A2,#@A3,#@A4","DOM1","","Prod","Station_1"

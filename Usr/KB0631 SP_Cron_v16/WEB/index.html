@@ -1,0 +1,80 @@
+<HTML>
+<HEAD>
+<TITLE>WebVue</TITLE>
+</HEAD>
+
+<BODY leftmargin=0 topmargin=0>
+
+<SCRIPT language="Javascript">
+<!--
+
+function IsJavaPluginInstalled()
+{
+	for(var i = 0; i < navigator.plugins.length; i++)
+	{
+		if (navigator.plugins[i].name.indexOf("Java")==0)
+			return true;
+	}
+
+	return false;
+}
+
+
+var no_plugin = "Welcome to Webvue !\n"
+	+ "\n"
+	+ "<P>\n"
+	+ "The Java Plug-in has not been detected on your computer.<BR>\n"
+	+ "That component is required in order to run WebVue.<BR>\n"
+	+ "You need to install it before the first use.\n"
+	+ "\n"
+	+ "<P>\n"
+	+ "The Java Plugin is available:\n"
+	+ "\n"
+	+ "<UL>\n"
+	+ "<LI>On the supervisor CD-ROM, in the directory \\\\JavaPlugin</LI>\n"
+	+ "<LI>On download on the <A href=\"/classes/jre-7u2-windows-i586.exe\">WebVue Server</A></LI>\n"
+	+ "<LI>On download on <A href=\"http://java.sun.com/javase/downloads/index.jsp\">Oracle's Web Site</A></LI>\n"
+	+ "</UL>\n"
+	+ "\n"
+	+ "<P>\n"
+	+ "When the Java Plug-in is installed, please click on the <A href=\"javascript:location.reload()\">Refresh</A> button.\n"
+	+ "\n"
+	+ "<P>\n"
+	+ "If you are sill experiencing problems, please read the <A href=\"/help/\">online help</A>.\n";
+
+if (navigator.appName.toLowerCase().indexOf("microsoft") == 0)
+{
+	// Internet Explorer
+	document.write("<OBJECT classid=\"clsid:8AD9C840-044E-11D1-B3E9-00805F499D93\" width=100% height=100% align=baseline>\n"
+	+ "<PARAM name=archive value=\"AiWebVue.jar,AiTools.jar,AiTrend.jar,AiAlarmList.jar,AiLogList.jar\">\n"
+	+ "<PARAM name=code value=\"svfc/launcher/WebVueClient.class\">\n"
+	+ "<PARAM name=codebase value=\"/classes/\">\n"
+	+ "<PARAM name=type value=\"application/x-java-applet;version=1.2\">\n"
+	+ "<PARAM name=scriptable value=\"true\">\n"
+	+ no_plugin + "</OBJECT>\n");
+}
+else
+{
+	// Netscape
+	if (IsJavaPluginInstalled())
+	{
+		document.write("<EMBED width=100% height=100% align=baseline\n"
+	+ "	archive=\"AiWebVue.jar,AiTools.jar,AiTrend.jar,AiAlarmList.jar,AiLogList.jar\"\n"
+	+ "	code=\"svfc/launcher/WebVueClient.class\"\n"
+	+ "	codebase=\"/classes/\"\n"
+	+ "	type=\"application/x-java-applet;version=1.2\"\n"
+	+ "	scriptable=\"true\"\n"
+	+ "></EMBED>\n");
+	}
+	else
+	{
+		document.write(no_plugin);
+	}
+
+}
+
+// -->
+</SCRIPT>
+
+</BODY>
+</HTML>

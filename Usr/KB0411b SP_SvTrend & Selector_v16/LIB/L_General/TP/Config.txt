@@ -1,0 +1,9 @@
+ASCII32
+FONTS,BEGIN
+FONTS,END
+COLORS,BEGIN
+COLORS,END
+CI,BEGIN,0,"Resource","Resource","Resource","0","","","-1","-1","1","1","-1"
+CI,END
+CI,BEGIN,0,"Empty","Empty","Empty","1","","","-1","-1","1","1","-1"
+CI,END

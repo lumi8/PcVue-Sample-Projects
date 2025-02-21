@@ -1,0 +1,13 @@
+ASCII32
+FONTS,BEGIN
+FONTS,END
+COLORS,BEGIN
+COLORS,END
+CI,BEGIN,0,"Empty","Empty","","0","","","-1","-1","1","1","-1"
+CI,END
+CI,BEGIN,0,"SVTrend","SVTrend","","0","","","-1","-1","1","1","-1"
+CI,END
+CI,BEGIN,0,"SVTrend 3-4","SVTrend 3-4","","0","","","-1","-1","1","1","-1"
+CI,END
+CI,BEGIN,0,"SVTrend 1-2","SVTrend 1-2","","0","","","-1","-1","1","1","-1"
+CI,END

@@ -1,0 +1,595 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Import type="Template">
+<Group customRef="Main">
+<Collection type="Branches">
+<Item id="BUILDING">
+<Property id="DescriptionLang1"></Property>
+</Item>
+</Collection>
+<Collection type="Branches" id="BUILDING">
+<Item id="FLOOR_01">
+<Property id="DescriptionLang1"></Property>
+</Item>
+</Collection>
+<Collection type="Branches" id="BUILDING.FLOOR_01">
+<Item id="ROOM_001">
+<Property id="DescriptionLang1"></Property>
+</Item>
+</Collection>
+<Collection type="Branches" id="BUILDING.FLOOR_01.ROOM_001">
+<Item id="AC">
+<Property id="DescriptionLang1"></Property>
+</Item>
+<Item id="LT">
+<Property id="DescriptionLang1"></Property>
+</Item>
+</Collection>
+<Collection type="Branches" id="BUILDING">
+<Item id="FLOOR_02">
+<Property id="DescriptionLang1"></Property>
+</Item>
+</Collection>
+<Collection type="Branches" id="BUILDING.FLOOR_02">
+<Item id="ROOM_001">
+<Property id="DescriptionLang1"></Property>
+</Item>
+</Collection>
+<Collection type="Branches" id="BUILDING.FLOOR_02.ROOM_001">
+<Item id="AC">
+<Property id="DescriptionLang1"></Property>
+</Item>
+<Item id="LT">
+<Property id="DescriptionLang1"></Property>
+</Item>
+</Collection>
+<Collection type="Branches" id="BUILDING.FLOOR_02">
+<Item id="ROOM_002">
+<Property id="DescriptionLang1"></Property>
+</Item>
+</Collection>
+<Collection type="Branches" id="BUILDING.FLOOR_02.ROOM_002">
+<Item id="AC">
+<Property id="DescriptionLang1"></Property>
+</Item>
+<Item id="LT">
+<Property id="DescriptionLang1"></Property>
+</Item>
+</Collection>
+<Collection type="Branches">
+<Item id="GENERAL">
+<Property id="DescriptionLang1"></Property>
+</Item>
+</Collection>
+<Collection type="BitAssociatedLabels">
+<Item id="DOOR">
+<Property id="ChangeTo0Lang0">Door closing command</Property>
+<Property id="ChangeTo1Lang0">Door opening command</Property>
+<Property id="CommandTo0Lang0">Door closing</Property>
+<Property id="CommandTo1Lang0">Door closing command</Property>
+<Property id="Value0Lang0">Closed</Property>
+<Property id="Value1Lang0">Open</Property>
+</Item>
+<Item id="ON_OFF">
+<Property id="ChangeTo0Lang0">Switch off</Property>
+<Property id="ChangeTo1Lang0">Switch on</Property>
+<Property id="CommandTo0Lang0">Turning off</Property>
+<Property id="CommandTo1Lang0">Turning on</Property>
+<Property id="Value0Lang0">Off</Property>
+<Property id="Value1Lang0">On</Property>
+</Item>
+</Collection>
+<Collection type="Variables" id="BUILDING.FLOOR_01.ROOM_001.AC">
+<Item id="CMD">
+<Property id="BitCommandLevel">1</Property>
+<Property id="ClientListName">LCCLIENTS</Property>
+<Property id="Command">-1</Property>
+<Property id="Description">Command</Property>
+<Property id="Domain">FLOOR_01</Property>
+<Property id="InitialValue">1</Property>
+<Property id="Log0_1">-1</Property>
+<Property id="Log1_0">-1</Property>
+<Property id="Nature">AIRCOND</Property>
+<Property id="OPC_Group">Group01</Property>
+<Property id="OPC_ItemId">BUILDING.FLOOR_01.ROOM_001.AC.CMD</Property>
+<Property id="OPC_Server">Server01</Property>
+<Property id="ServerListName">LSDAS_ASSOC1</Property>
+<Property id="WithInitialValue">-1</Property>
+</Item>
+<Item id="INFO">
+<Property id="ClientListName">LCCLIENTS</Property>
+<Property id="Description">Information</Property>
+<Property id="Domain">FLOOR_01</Property>
+<Property id="ExtText3">MITSUBISHI</Property>
+<Property id="ExtText4">012345789</Property>
+<Property id="ExtText5">firstname@operator.com</Property>
+<Property id="Nature">AIRCOND</Property>
+<Property id="ServerListName">LSDAS_ASSOC1</Property>
+<Property id="Type">3</Property>
+<Property id="UseExtendedAttributes">-1</Property>
+</Item>
+<Item id="SETPOINT">
+<Property id="ClientListName">LCCLIENTS</Property>
+<Property id="Command">-1</Property>
+<Property id="ControlMaximumValue">40</Property>
+<Property id="Description">Temperature setpoint</Property>
+<Property id="Domain">FLOOR_01</Property>
+<Property id="InitialValue">20</Property>
+<Property id="MaximumValue">40</Property>
+<Property id="Nature">AIRCOND</Property>
+<Property id="OPC_Group">Group01</Property>
+<Property id="OPC_ItemId">BUILDING.FLOOR_01.ROOM_001.AC.SETPOINT</Property>
+<Property id="OPC_Server">Server01</Property>
+<Property id="ServerListName">LSDAS_ASSOC1</Property>
+<Property id="Type">2</Property>
+<Property id="Unit">Celsius</Property>
+<Property id="WithInitialValue">-1</Property>
+</Item>
+<Item id="TEMP">
+<Property id="ClientListName">LCCLIENTS</Property>
+<Property id="Command">-1</Property>
+<Property id="ControlMaximumValue">40</Property>
+<Property id="Description">Température FLOOR_01 ROOM_001</Property>
+<Property id="DescriptionAlt">Temperature FLOOR_01 ROOM_001</Property>
+<Property id="Domain">FLOOR_01</Property>
+<Property id="InitialValue">2</Property>
+<Property id="MaximumValue">40</Property>
+<Property id="Nature">AIRCOND</Property>
+<Property id="OPC_Group">Group01</Property>
+<Property id="OPC_ItemId">BUILDING.FLOOR_01.ROOM_001.AC.TEMP</Property>
+<Property id="OPC_Server">Server01</Property>
+<Property id="ServerListName">LSDAS_ASSOC1</Property>
+<Property id="Type">2</Property>
+<Property id="Unit">Celsius</Property>
+<Property id="WithInitialValue">-1</Property>
+</Item>
+<Item id="TEMP_high">
+<Property id="ThresholdSource">BUILDING.FLOOR_01.ROOM_001.AC.TEMP</Property>
+<Property id="Alarm">-1</Property>
+<Property id="ClientListName">LCCLIENTS</Property>
+<Property id="Description">Température FLOOR_01 ROOM_001 High</Property>
+<Property id="Domain">FLOOR_01</Property>
+<Property id="Log0_1">-1</Property>
+<Property id="Log1_0">-1</Property>
+<Property id="Nature">AIRCOND</Property>
+<Property id="ServerListName">LSDAS_ASSOC1</Property>
+<Property id="Threshold">-1</Property>
+<Property id="ThresholdHigh">-1</Property>
+<Property id="ThresholdSystem">2</Property>
+<Property id="ThresholdTypeInSystem">1</Property>
+<Property id="ThresholdValue">25</Property>
+</Item>
+<Item id="TEMP_low">
+<Property id="ThresholdSource">BUILDING.FLOOR_01.ROOM_001.AC.TEMP</Property>
+<Property id="Alarm">-1</Property>
+<Property id="ClientListName">LCCLIENTS</Property>
+<Property id="Description">Température FLOOR_01 ROOM_001 Low</Property>
+<Property id="Domain">FLOOR_01</Property>
+<Property id="Log0_1">-1</Property>
+<Property id="Log1_0">-1</Property>
+<Property id="Nature">AIRCOND</Property>
+<Property id="ServerListName">LSDAS_ASSOC1</Property>
+<Property id="Threshold">-1</Property>
+<Property id="ThresholdHigh">0</Property>
+<Property id="ThresholdSystem">2</Property>
+<Property id="ThresholdTypeInSystem">2</Property>
+<Property id="ThresholdValue">15</Property>
+</Item>
+<Item id="TEMP_F">
+<Property id="ClientListName">LCCLIENTS</Property>
+<Property id="Description">Temperature in Fahrenheit</Property>
+<Property id="Domain">FLOOR_01</Property>
+<Property id="Nature">AIRCOND</Property>
+<Property id="ServerListName">LSDAS_ASSOC1</Property>
+<Property id="Type">2</Property>
+</Item>
+</Collection>
+<Collection type="Variables" id="BUILDING.FLOOR_01.ROOM_001.LT">
+<Item id="CMD">
+<Property id="AssociatedLabels">ON_OFF</Property>
+<Property id="BitCommandLevel">1</Property>
+<Property id="ClientListName">LCCLIENTS</Property>
+<Property id="Command">-1</Property>
+<Property id="Description">Command</Property>
+<Property id="Domain">FLOOR_01</Property>
+<Property id="Log0_1">-1</Property>
+<Property id="Log1_0">-1</Property>
+<Property id="Nature">LIGHTING</Property>
+<Property id="OPC_Group">Group01</Property>
+<Property id="OPC_ItemId">BUILDING.FLOOR_01.ROOM_001.LT.CMD</Property>
+<Property id="OPC_Server">Server01</Property>
+<Property id="ServerListName">LSDAS_ASSOC1</Property>
+</Item>
+<Item id="ON">
+<Property id="AssociatedLabels">ON_OFF</Property>
+<Property id="ClientListName">LCCLIENTS</Property>
+<Property id="Command">-1</Property>
+<Property id="Description">Light on</Property>
+<Property id="Domain">FLOOR_01</Property>
+<Property id="Nature">LIGHTING</Property>
+<Property id="OPC_Group">Group01</Property>
+<Property id="OPC_ItemId">BUILDING.FLOOR_01.ROOM_001.LT.ON</Property>
+<Property id="OPC_Server">Server01</Property>
+<Property id="ServerListName">LSDAS_ASSOC1</Property>
+</Item>
+</Collection>
+<Collection type="Variables" id="BUILDING.FLOOR_02.ROOM_001.AC">
+<Item id="CMD">
+<Property id="BitCommandLevel">1</Property>
+<Property id="ClientListName">LCCLIENTS</Property>
+<Property id="Command">-1</Property>
+<Property id="Description">Command</Property>
+<Property id="Domain">FLOOR_02</Property>
+<Property id="InitialValue">1</Property>
+<Property id="Log0_1">-1</Property>
+<Property id="Log1_0">-1</Property>
+<Property id="Nature">AIRCOND</Property>
+<Property id="OPC_Group">Group01</Property>
+<Property id="OPC_ItemId">BUILDING.FLOOR_02.ROOM_001.AC.CMD</Property>
+<Property id="OPC_Server">Server01</Property>
+<Property id="ServerListName">LSDAS_ASSOC1</Property>
+<Property id="WithInitialValue">-1</Property>
+</Item>
+<Item id="INFO">
+<Property id="ClientListName">LCCLIENTS</Property>
+<Property id="Description">Information</Property>
+<Property id="Domain">FLOOR_02</Property>
+<Property id="ExtText3">MITSUBISHI</Property>
+<Property id="ExtText4">012345789</Property>
+<Property id="ExtText5">firstname@operator.com</Property>
+<Property id="Nature">AIRCOND</Property>
+<Property id="ServerListName">LSDAS_ASSOC1</Property>
+<Property id="Type">3</Property>
+<Property id="UseExtendedAttributes">-1</Property>
+</Item>
+<Item id="SETPOINT">
+<Property id="ClientListName">LCCLIENTS</Property>
+<Property id="Command">-1</Property>
+<Property id="ControlMaximumValue">40</Property>
+<Property id="Description">Temperature setpoint</Property>
+<Property id="Domain">FLOOR_02</Property>
+<Property id="InitialValue">20</Property>
+<Property id="MaximumValue">40</Property>
+<Property id="Nature">AIRCOND</Property>
+<Property id="OPC_Group">Group01</Property>
+<Property id="OPC_ItemId">BUILDING.FLOOR_02.ROOM_001.AC.SETPOINT</Property>
+<Property id="OPC_Server">Server01</Property>
+<Property id="ServerListName">LSDAS_ASSOC1</Property>
+<Property id="Type">2</Property>
+<Property id="Unit">Celsius</Property>
+<Property id="WithInitialValue">-1</Property>
+</Item>
+<Item id="TEMP">
+<Property id="ClientListName">LCCLIENTS</Property>
+<Property id="Command">-1</Property>
+<Property id="ControlMaximumValue">40</Property>
+<Property id="Description">Température FLOOR_02 ROOM_001</Property>
+<Property id="DescriptionAlt">Temperature FLOOR_02 ROOM_001</Property>
+<Property id="Domain">FLOOR_02</Property>
+<Property id="InitialValue">3</Property>
+<Property id="MaximumValue">40</Property>
+<Property id="Nature">AIRCOND</Property>
+<Property id="OPC_Group">Group01</Property>
+<Property id="OPC_ItemId">BUILDING.FLOOR_02.ROOM_001.AC.TEMP</Property>
+<Property id="OPC_Server">Server01</Property>
+<Property id="ServerListName">LSDAS_ASSOC1</Property>
+<Property id="Type">2</Property>
+<Property id="Unit">Celsius</Property>
+<Property id="WithInitialValue">-1</Property>
+</Item>
+<Item id="TEMP_high">
+<Property id="ThresholdSource">BUILDING.FLOOR_02.ROOM_001.AC.TEMP</Property>
+<Property id="Alarm">-1</Property>
+<Property id="ClientListName">LCCLIENTS</Property>
+<Property id="Description">Température FLOOR_02 ROOM_001 High</Property>
+<Property id="Domain">FLOOR_02</Property>
+<Property id="Log0_1">-1</Property>
+<Property id="Log1_0">-1</Property>
+<Property id="Nature">AIRCOND</Property>
+<Property id="ServerListName">LSDAS_ASSOC1</Property>
+<Property id="Threshold">-1</Property>
+<Property id="ThresholdHigh">-1</Property>
+<Property id="ThresholdSystem">2</Property>
+<Property id="ThresholdTypeInSystem">1</Property>
+<Property id="ThresholdValue">25</Property>
+</Item>
+<Item id="TEMP_low">
+<Property id="ThresholdSource">BUILDING.FLOOR_02.ROOM_001.AC.TEMP</Property>
+<Property id="Alarm">-1</Property>
+<Property id="ClientListName">LCCLIENTS</Property>
+<Property id="Description">Température FLOOR_02 ROOM_001 Low</Property>
+<Property id="Domain">FLOOR_02</Property>
+<Property id="Log0_1">-1</Property>
+<Property id="Log1_0">-1</Property>
+<Property id="Nature">AIRCOND</Property>
+<Property id="ServerListName">LSDAS_ASSOC1</Property>
+<Property id="Threshold">-1</Property>
+<Property id="ThresholdHigh">0</Property>
+<Property id="ThresholdSystem">2</Property>
+<Property id="ThresholdTypeInSystem">2</Property>
+<Property id="ThresholdValue">15</Property>
+</Item>
+<Item id="TEMP_F">
+<Property id="ClientListName">LCCLIENTS</Property>
+<Property id="Description">Temperature in Fahrenheit</Property>
+<Property id="Domain">FLOOR_02</Property>
+<Property id="Nature">AIRCOND</Property>
+<Property id="ServerListName">LSDAS_ASSOC1</Property>
+<Property id="Type">2</Property>
+</Item>
+</Collection>
+<Collection type="Variables" id="BUILDING.FLOOR_02.ROOM_001.LT">
+<Item id="CMD">
+<Property id="AssociatedLabels">ON_OFF</Property>
+<Property id="BitCommandLevel">1</Property>
+<Property id="ClientListName">LCCLIENTS</Property>
+<Property id="Command">-1</Property>
+<Property id="Description">Command</Property>
+<Property id="Domain">FLOOR_02</Property>
+<Property id="Log0_1">-1</Property>
+<Property id="Log1_0">-1</Property>
+<Property id="Nature">LIGHTING</Property>
+<Property id="OPC_Group">Group01</Property>
+<Property id="OPC_ItemId">BUILDING.FLOOR_02.ROOM_001.LT.CMD</Property>
+<Property id="OPC_Server">Server01</Property>
+<Property id="ServerListName">LSDAS_ASSOC1</Property>
+</Item>
+<Item id="ON">
+<Property id="AssociatedLabels">ON_OFF</Property>
+<Property id="ClientListName">LCCLIENTS</Property>
+<Property id="Command">-1</Property>
+<Property id="Description">Light on</Property>
+<Property id="Domain">FLOOR_02</Property>
+<Property id="Nature">LIGHTING</Property>
+<Property id="OPC_Group">Group01</Property>
+<Property id="OPC_ItemId">BUILDING.FLOOR_02.ROOM_001.LT.ON</Property>
+<Property id="OPC_Server">Server01</Property>
+<Property id="ServerListName">LSDAS_ASSOC1</Property>
+</Item>
+</Collection>
+<Collection type="Variables" id="BUILDING.FLOOR_02.ROOM_002.AC">
+<Item id="CMD">
+<Property id="BitCommandLevel">1</Property>
+<Property id="ClientListName">LCCLIENTS</Property>
+<Property id="Command">-1</Property>
+<Property id="Description">Command</Property>
+<Property id="Domain">FLOOR_02</Property>
+<Property id="InitialValue">1</Property>
+<Property id="Log0_1">-1</Property>
+<Property id="Log1_0">-1</Property>
+<Property id="Nature">AIRCOND</Property>
+<Property id="OPC_Group">Group01</Property>
+<Property id="OPC_ItemId">BUILDING.FLOOR_02.ROOM_002.AC.CMD</Property>
+<Property id="OPC_Server">Server01</Property>
+<Property id="ServerListName">LSDAS_ASSOC1</Property>
+<Property id="WithInitialValue">-1</Property>
+</Item>
+<Item id="INFO">
+<Property id="ClientListName">LCCLIENTS</Property>
+<Property id="Description">Information</Property>
+<Property id="Domain">FLOOR_02</Property>
+<Property id="ExtText3">MITSUBISHI</Property>
+<Property id="ExtText4">012345789</Property>
+<Property id="ExtText5">firstname@operator.com</Property>
+<Property id="Nature">AIRCOND</Property>
+<Property id="ServerListName">LSDAS_ASSOC1</Property>
+<Property id="Type">3</Property>
+<Property id="UseExtendedAttributes">-1</Property>
+</Item>
+<Item id="SETPOINT">
+<Property id="ClientListName">LCCLIENTS</Property>
+<Property id="Command">-1</Property>
+<Property id="ControlMaximumValue">40</Property>
+<Property id="Description">Temperature setpoint</Property>
+<Property id="Domain">FLOOR_02</Property>
+<Property id="InitialValue">20</Property>
+<Property id="MaximumValue">40</Property>
+<Property id="Nature">AIRCOND</Property>
+<Property id="OPC_Group">Group01</Property>
+<Property id="OPC_ItemId">BUILDING.FLOOR_02.ROOM_002.AC.SETPOINT</Property>
+<Property id="OPC_Server">Server01</Property>
+<Property id="ServerListName">LSDAS_ASSOC1</Property>
+<Property id="Type">2</Property>
+<Property id="Unit">Celsius</Property>
+<Property id="WithInitialValue">-1</Property>
+</Item>
+<Item id="TEMP">
+<Property id="ClientListName">LCCLIENTS</Property>
+<Property id="Command">-1</Property>
+<Property id="ControlMaximumValue">40</Property>
+<Property id="Description">Température FLOOR_02 ROOM_002</Property>
+<Property id="DescriptionAlt">Temperature FLOOR_02 ROOM_002</Property>
+<Property id="Domain">FLOOR_02</Property>
+<Property id="InitialValue">4</Property>
+<Property id="MaximumValue">40</Property>
+<Property id="Nature">AIRCOND</Property>
+<Property id="OPC_Group">Group01</Property>
+<Property id="OPC_ItemId">BUILDING.FLOOR_02.ROOM_002.AC.TEMP</Property>
+<Property id="OPC_Server">Server01</Property>
+<Property id="ServerListName">LSDAS_ASSOC1</Property>
+<Property id="Type">2</Property>
+<Property id="Unit">Celsius</Property>
+<Property id="WithInitialValue">-1</Property>
+</Item>
+<Item id="TEMP_high">
+<Property id="ThresholdSource">BUILDING.FLOOR_02.ROOM_002.AC.TEMP</Property>
+<Property id="Alarm">-1</Property>
+<Property id="ClientListName">LCCLIENTS</Property>
+<Property id="Description">Température FLOOR_02 ROOM_002 High</Property>
+<Property id="Domain">FLOOR_02</Property>
+<Property id="Log0_1">-1</Property>
+<Property id="Log1_0">-1</Property>
+<Property id="Nature">AIRCOND</Property>
+<Property id="ServerListName">LSDAS_ASSOC1</Property>
+<Property id="Threshold">-1</Property>
+<Property id="ThresholdHigh">-1</Property>
+<Property id="ThresholdSystem">2</Property>
+<Property id="ThresholdTypeInSystem">1</Property>
+<Property id="ThresholdValue">25</Property>
+</Item>
+<Item id="TEMP_low">
+<Property id="ThresholdSource">BUILDING.FLOOR_02.ROOM_002.AC.TEMP</Property>
+<Property id="Alarm">-1</Property>
+<Property id="ClientListName">LCCLIENTS</Property>
+<Property id="Description">Température FLOOR_02 ROOM_002 Low</Property>
+<Property id="Domain">FLOOR_02</Property>
+<Property id="Log0_1">-1</Property>
+<Property id="Log1_0">-1</Property>
+<Property id="Nature">AIRCOND</Property>
+<Property id="ServerListName">LSDAS_ASSOC1</Property>
+<Property id="Threshold">-1</Property>
+<Property id="ThresholdHigh">0</Property>
+<Property id="ThresholdSystem">2</Property>
+<Property id="ThresholdTypeInSystem">2</Property>
+<Property id="ThresholdValue">15</Property>
+</Item>
+<Item id="TEMP_F">
+<Property id="ClientListName">LCCLIENTS</Property>
+<Property id="Description">Temperature in Fahrenheit</Property>
+<Property id="Domain">FLOOR_02</Property>
+<Property id="Nature">AIRCOND</Property>
+<Property id="ServerListName">LSDAS_ASSOC1</Property>
+<Property id="Type">2</Property>
+</Item>
+</Collection>
+<Collection type="Variables" id="BUILDING.FLOOR_02.ROOM_002.LT">
+<Item id="CMD">
+<Property id="AssociatedLabels">ON_OFF</Property>
+<Property id="BitCommandLevel">1</Property>
+<Property id="ClientListName">LCCLIENTS</Property>
+<Property id="Command">-1</Property>
+<Property id="Description">Command</Property>
+<Property id="Domain">FLOOR_02</Property>
+<Property id="Log0_1">-1</Property>
+<Property id="Log1_0">-1</Property>
+<Property id="Nature">LIGHTING</Property>
+<Property id="OPC_Group">Group01</Property>
+<Property id="OPC_ItemId">BUILDING.FLOOR_02.ROOM_002.LT.CMD</Property>
+<Property id="OPC_Server">Server01</Property>
+<Property id="ServerListName">LSDAS_ASSOC1</Property>
+</Item>
+<Item id="ON">
+<Property id="AssociatedLabels">ON_OFF</Property>
+<Property id="ClientListName">LCCLIENTS</Property>
+<Property id="Command">-1</Property>
+<Property id="Description">Light on</Property>
+<Property id="Domain">FLOOR_02</Property>
+<Property id="Nature">LIGHTING</Property>
+<Property id="OPC_Group">Group01</Property>
+<Property id="OPC_ItemId">BUILDING.FLOOR_02.ROOM_002.LT.ON</Property>
+<Property id="OPC_Server">Server01</Property>
+<Property id="ServerListName">LSDAS_ASSOC1</Property>
+</Item>
+</Collection>
+<Collection type="Variables" id="GENERAL.PROP_UNIT01">
+<Item id="BACKUP">
+<Property id="ClientListName">LCCLIENTS</Property>
+<Property id="Command">-1</Property>
+<Property id="InitialValue">0</Property>
+<Property id="ServerListName">LSDAS_ASSOC1</Property>
+<Property id="WithInitialValue">-1</Property>
+</Item>
+</Collection>
+<Collection type="Variables" id="GENERAL">
+<Item id="SimuLights">
+<Property id="ClientListName">LCCLIENTS</Property>
+<Property id="Command">-1</Property>
+<Property id="Description">Autorise la simulation ou non</Property>
+<Property id="DescriptionAlt">Start / Stop simulation</Property>
+<Property id="InitialValue">1</Property>
+<Property id="Log0_1">-1</Property>
+<Property id="Log1_0">-1</Property>
+<Property id="Saved">-1</Property>
+<Property id="ServerListName">LSDAS_ASSOC1</Property>
+<Property id="WithInitialValue">-1</Property>
+</Item>
+<Item id="SimuTemperatures">
+<Property id="ClientListName">LCCLIENTS</Property>
+<Property id="Command">-1</Property>
+<Property id="Description">Autorise la simulation ou non</Property>
+<Property id="DescriptionAlt">Start / Stop simulation</Property>
+<Property id="InitialValue">1</Property>
+<Property id="Log0_1">-1</Property>
+<Property id="Log1_0">-1</Property>
+<Property id="Saved">-1</Property>
+<Property id="ServerListName">LSDAS_ASSOC1</Property>
+<Property id="WithInitialValue">-1</Property>
+</Item>
+</Collection>
+<Collection type="OnVariableExpressions">
+<Item id="BUILDING_FLOOR_01_ROOM_001_AC_TEMP_F_Expression01">
+<Property id="VariableResult">@BUILDING.FLOOR_01.ROOM_001.AC.TEMP_F</Property>
+<Property id="Branch">BUILDING.FLOOR_01.ROOM_001.AC</Property>
+<Property id="Description">Celsius to Fahrenheit</Property>
+<Property id="Expression">(TEMP*1.8)+32</Property>
+</Item>
+<Item id="BUILDING_FLOOR_01_ROOM_001_LT_ON_Expression01">
+<Property id="VariableResult">@BUILDING.FLOOR_01.ROOM_001.LT.ON</Property>
+<Property id="Branch">BUILDING.FLOOR_01.ROOM_001.LT</Property>
+<Property id="Expression">CMD</Property>
+</Item>
+<Item id="BUILDING_FLOOR_02_ROOM_001_AC_TEMP_F_Expression01">
+<Property id="VariableResult">@BUILDING.FLOOR_02.ROOM_001.AC.TEMP_F</Property>
+<Property id="Branch">BUILDING.FLOOR_02.ROOM_001.AC</Property>
+<Property id="Description">Celsius to Fahrenheit</Property>
+<Property id="Expression">(TEMP*1.8)+32</Property>
+</Item>
+<Item id="BUILDING_FLOOR_02_ROOM_001_LT_ON_Expression01">
+<Property id="VariableResult">@BUILDING.FLOOR_02.ROOM_001.LT.ON</Property>
+<Property id="Branch">BUILDING.FLOOR_02.ROOM_001.LT</Property>
+<Property id="Expression">CMD</Property>
+</Item>
+<Item id="BUILDING_FLOOR_02_ROOM_002_AC_TEMP_F_Expression01">
+<Property id="VariableResult">@BUILDING.FLOOR_02.ROOM_002.AC.TEMP_F</Property>
+<Property id="Branch">BUILDING.FLOOR_02.ROOM_002.AC</Property>
+<Property id="Description">Celsius to Fahrenheit</Property>
+<Property id="Expression">(TEMP*1.8)+32</Property>
+</Item>
+<Item id="BUILDING_FLOOR_02_ROOM_002_LT_ON_Expression01">
+<Property id="VariableResult">@BUILDING.FLOOR_02.ROOM_002.LT.ON</Property>
+<Property id="Branch">BUILDING.FLOOR_02.ROOM_002.LT</Property>
+<Property id="Expression">CMD</Property>
+</Item>
+</Collection>
+<Collection type="ArchiveUnits_Proprietary">
+<Item id="PROP_UNIT01">
+<Property id="Backup">-1</Property>
+<Property id="BackupBitName">GENERAL.PROP_UNIT01.BACKUP</Property>
+<Property id="BackupDir">C:\BACKUP\PROP_UNIT01\</Property>
+<Property id="ClientListName">#LC_AllStations</Property>
+<Property id="ServerListName">LSHDS_ASSOC1</Property>
+</Item>
+</Collection>
+<Collection type="Trends_Proprietary" id="PROP_UNIT01">
+<Item id="BUILDING.FLOOR_01.ROOM_001.AC.TEMP">
+<Property id="FilteringPeriod">0</Property>
+</Item>
+<Item id="BUILDING.FLOOR_01.ROOM_001.LT.ON">
+<Property id="FilteringPeriod">0</Property>
+</Item>
+<Item id="BUILDING.FLOOR_02.ROOM_001.AC.TEMP">
+<Property id="FilteringPeriod">0</Property>
+</Item>
+<Item id="BUILDING.FLOOR_02.ROOM_001.LT.ON">
+<Property id="FilteringPeriod">0</Property>
+</Item>
+<Item id="BUILDING.FLOOR_02.ROOM_002.AC.TEMP">
+<Property id="FilteringPeriod">5</Property>
+</Item>
+<Item id="BUILDING.FLOOR_02.ROOM_002.LT.ON">
+<Property id="FilteringPeriod">0</Property>
+</Item>
+</Collection>
+<Collection type="LogFilters_Proprietary" id="PROP_UNIT01">
+<Item id="LogList01">
+<Property id="FilterEventMask_ExecuteProgram">-1</Property>
+<Property id="FilterEventMask_ExpMaskedAlarm">-1</Property>
+<Property id="FilterEventMask_InhibitedAlarm">-1</Property>
+<Property id="FilterEventMask_NonAccessAlarm">-1</Property>
+<Property id="FilterEventMask_ProgMaskedAlarm">-1</Property>
+<Property id="FilterEventMask_Unavailable">-1</Property>
+<Property id="FilterEventMask_UserMaskedAlarm">-1</Property>
+<Property id="FilterEventMask_VariableMaskedAlarm">-1</Property>
+</Item>
+</Collection>
+</Group>
+</Import>

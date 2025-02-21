@@ -1,0 +1,85 @@
+'-------- Program to configure and generate sound on alarm
+Sub Main ()
+	LoadMask();
+	Delay(0);
+	ConfigureEvents();
+	Cyclic ("ADD", 2, "CONFIGSOUND.SVB", "", "PLAYSOUND");
+	Multimedia("SEND","close ALARMSOUND");
+	Multimedia("SEND", "open ALARMSOUND.WAV alias ALARMSOUND");
+End Sub
+
+
+'-------- Run to open config window
+Sub On_Config ()
+	LoadMask ();
+	Window ("OPEN", "Configuration", "", "Menu");
+End Sub
+
+
+'-------- Run when configuration is changed
+Sub On_Apply ()
+	SaveMask ();
+	ConfigureEvents();
+End Sub
+
+
+'-------- Configures the events that enable the audio alarm
+Sub ConfigureEvents()
+	Dim iLevel As Integer;
+	Dim iValue As Integer;
+	Dim cAlarmCounter As Str, cAlarmEnable As Str, cEvent As Str;
+
+'-------- Create events for those alarm levels that are selected
+	For (iLevel = 0; ILevel <= 9; iLevel++)
+		cAlarmCounter = AddString ("SYSTEM.NOACKON.", Toc(iLevel));
+		cAlarmEnable = AddString ("ALARMSOUND.", Toc(iLevel));
+		cEvent = AddString ("EVENT", Toc(iLevel));
+		iValue = ?cAlarmEnable;
+		If (iValue == 1) Then
+			Event ("ADDPROGEVT", cEvent, "Created by SCADA Basic", "", cAlarmCounter, "+1", "CONFIGSOUND.SVB", "", "SOUNDON");
+		Else
+			Event ("DELPROGEVT", cEvent);
+		End If
+	Next
+End Sub
+
+
+'-------- Set the variable that enables the sound
+Sub SoundOn ()
+	@ALARMSOUND.ON = 1;
+End Sub
+
+
+'-------- Calculate the alarm mask
+Sub SaveMask ()
+	Dim iMask As Integer, i As Integer, iWeight As Integer;
+	Dim cVarNAme As Str;
+	For (i=0; i<10; i++)
+		iWeight = Toi (Pow (2, Tos(i)));
+		cVarname = AddString ("ALARMSOUND.", Toc(i));
+		iMask = imask + ?cVarName * iWeight;
+	Next
+	@ALARMSOUND.MASK = Tos (iMask);
+End Sub
+
+
+'-------- Load alarm mask
+Sub LoadMask ()
+	Dim iMask As Integer, i As Integer;
+	Dim cVarName As Str;
+	iMask = Toi (@ALARMSOUND.MASK);
+	For (i=0; i<10; i++)
+		cVarname = AddString ("ALARMSOUND.", Toc(i));
+		?cVarName = Toi (Logical ("AND", iMask, 1));
+		iMask = Toi (Logical ("SHIFT_RIGHT", iMask, 1));
+	Next
+End Sub
+
+
+'-------- Play sound
+Sub PlaySound ()
+	If (@ALARMSOUND.ON == 1) Then
+		Multimedia ("SEND","seek ALARMSOUND to start");
+		Multimedia ("SEND","play ALARMSOUND");
+	End If
+End Sub

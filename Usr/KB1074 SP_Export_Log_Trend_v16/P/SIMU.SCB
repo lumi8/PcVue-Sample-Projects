@@ -1,0 +1,44 @@
+'- Please restart the project if you change this program --------------------------------------------------------------------
+Const MaxFloor = 2;
+Const MaxRoom = 2;
+Const SimuLightsDelay = 1;
+Const SimuTemperaturesDelay = 1;
+
+Sub Main()
+	Cyclic("ADDPROGBYID", "SimuTemperatures", "Launched by SIMU.SCB program", "LSDAS_ASSOC1", SimuTemperaturesDelay, "SIMU.SCB", "", "SimuTemperatures", "", "@GENERAL.SimuTemperatures");
+	Cyclic("ADDPROGBYID", "SimuLights", "Launched by SIMU.SCB program", "LSDAS_ASSOC1", SimuLightsDelay, "SIMU.SCB", "", "SimuLights", "", "@GENERAL.SimuLights");
+End Sub
+
+Sub SimuTemperatures()
+	DIM iFloor as integer, iRoom as integer;
+	DIM strBranch as str, strVar as str;
+	
+	For(iFloor = 1;iFloor <= MaxFloor;iFloor++)'Browse the floors
+		For(iRoom = 1;iRoom <= MaxRoom;iRoom++)	'Browse the rooms
+			strBranch = AddString(Format("@BUILDING.FLOOR_%.2d",iFloor),Format(".ROOM_%.3d",iRoom));
+			strVar = AddString(strBranch,".AC.TEMP");
+			If (Variable("STATUS", strVar, 1)==1) Then	'The variable exist
+				If (?strVar<40) Then
+					?strVar = ?strVar + 1;
+				Else
+					?strVar = 0;
+				End If
+			End If
+		Next iRoom;
+	Next iFloor;	
+End Sub
+
+Sub SimuLights()
+	DIM iFloor as integer, iRoom as integer;
+	DIM strBranch as str, strVar as str;
+	
+	For(iFloor = 1;iFloor <= MaxFloor;iFloor++)'Browse the floors
+		For(iRoom = 1;iRoom <= MaxRoom;iRoom++)	'Browse the rooms
+			strBranch = AddString(Format("@BUILDING.FLOOR_%.2d",iFloor),Format(".ROOM_%.3d",iRoom));
+			strVar = AddString(strBranch,".LT.CMD");
+			If (Variable("STATUS", strVar, 1)==1) Then	'The variable exist
+				?strVar = !?strVar;
+			End If
+		Next iRoom;
+	Next iFloor;	
+End Sub

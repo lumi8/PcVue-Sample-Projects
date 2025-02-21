@@ -1,0 +1,81 @@
+'#########################################
+'PROGRAM : INIT.scb
+'Executed at start-up
+'Load and execute all programs at start up
+'#########################################
+'#################################################
+'PROGRAM : INIT.scb
+'Execut‚ au d‚marrage
+'Charge et ex‚cute tous les programmes au d‚marrage
+'##################################################
+
+sub main()
+
+Dim ret as integer;
+'If G_TraceEnable=1, the global function G_Trace will display a message when used/
+'Si G_TraceEnable=1 la fonction globale G_Trace affichera un message lorsqu'elle sera appel‚e
+G_TraceEnable=1;
+G_LogTraceEnable=0;
+'The following instructions may be used to preload and execute any programs at start-up :
+'Les instructions suivantes peuvent ˆtre utils‚es pour pr‚charger et d‚marrer des programmes au d‚marrage
+
+
+'Example of a dummy program loaded/
+'Exemple de programme charg‚
+ret=PROGRAM("PRELOAD","PROGLOADED.scb","");
+if (ret == 1) then
+	G_Trace("INIT","Main","Program PROGLOADED.scb successfully preloaded");
+else
+	G_Trace("INIT","Main","Program PROGLOADED.scb not preloaded");
+end if
+
+ret=PROGRAM("PRELOAD","PROGLOADED.scb","");
+if (ret == 1) then
+	G_Trace("INIT","Main","Program PROGLOADED.scb successfully preloaded");
+else
+	G_Trace("INIT","Main","Program PROGLOADED.scb not preloaded");
+end if
+
+'Example of a dummy program loaded and executed/
+'Exemple de programme charg‚ et ex‚cut‚
+ret=PROGRAM("START","PROGEXECUTED.SCB","");
+if (ret == 1) then
+	G_Trace("INIT","Main","Program PROGEXECUTED.scb successfully preloaded and executed");
+else
+	G_Trace("INIT","Main","Program PROGEXECUTED.scb not preloaded and not executed");
+end if
+
+'Program loaded and executed to initialise Variable Tracking library/
+'Programme charg‚ et ex‚cut‚ pour initialiser la bibliothŠque de suivi de variables
+ret=PROGRAM("START","L_VariableTracking/INIT_Tracking.scb","");
+if (ret == 1) then
+	G_Trace("INIT","Main","Program L_VariableTracking/INIT_Tracking.scb successfully preloaded and executed");
+else
+	G_Trace("INIT","Main","Program L_VariableTracking/INIT_Tracking.scb not preloaded and not executed");
+end if
+
+'Program loaded and executed to initialise Variable simulation
+'Programme charg‚ et ex‚cut‚ pour initialiser la simulation des variables
+ret=PROGRAM("START","SIMU.SCB","");
+if (ret == 1) then
+	G_Trace("INIT","Main","Program SIMU.SCB successfully preloaded and executed");
+else
+	G_Trace("INIT","Main","Program SIMU.SCB not preloaded and not executed");
+end if
+
+
+ret=PROGRAM("START","Export_Log.scb","");
+if (ret == 1) then
+	G_Trace("INIT","Main","Program Export_Log.scb successfully preloaded and executed");
+else
+	G_Trace("INIT","Main","Program Export_Log.scb not preloaded and not executed");
+end if
+
+ret=PROGRAM("START","Export_Trend.scb","");
+if (ret == 1) then
+	G_Trace("INIT","Main","Program Export_Trend.scb successfully preloaded and executed");
+else
+	G_Trace("INIT","Main","Program Export_Trend.scb not preloaded and not executed");
+end if
+
+end sub

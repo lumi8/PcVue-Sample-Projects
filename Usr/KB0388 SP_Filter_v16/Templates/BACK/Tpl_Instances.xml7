@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<InstancesRoot SchemaVersion="12.1.0">
+<TopologyTree Name="_Root">
+<ObjectInstancesList/>
+<TemplatesList>
+<TemplateInstance Name="DEMO_Filter_v15">
+<Branch/>
+<OriginTemplateName/>
+<ObjectInstancesList/>
+<TemplatesList/>
+</TemplateInstance>
+</TemplatesList>
+</TopologyTree>
+</InstancesRoot>
+</root>

@@ -1,0 +1,33 @@
+Sub Main ()
+
+End Sub
+
+Sub TestSetSelection()
+	Dim iRegion As Integer, iSubMode As Integer, iresult as integer;
+
+	iRegion = Toi(@REGION.REGION);
+	iSubMode = Toi(@REGION.MODE);
+	
+	iresult=REGION ("SETSELECTION", iRegion, iSubMode);
+	Print("TestSetSelection - Region= ",iRegion," Mode= ",iSubMode, " Result= ", iresult);
+End Sub
+
+
+Sub TestSetRegion ()
+	Dim iRegion As Integer;
+
+	iRegion = Toi(@REGION.REGIONBASIC);
+	REGION ("SETREGION", iRegion);
+  
+End Sub
+
+
+Sub OpenWindow()
+ 	Dim cWindowName As Str, cBranchName As Str;
+
+	cWindowName = GetArg ("ARG1");
+	cBranchName = GetARg ("ARG2");
+
+	WINDOW("OPEN", cWindowName, cBranchName);
+
+End Sub

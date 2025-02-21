@@ -1,0 +1,12 @@
+[FILTER\DOM1]
+Description=DOM1
+Sql Cmde=[Attribute01] = 'DOM1'
+[FILTER\DOM2]
+Description=DOM2
+Sql Cmde=[Attribute01] = 'DOM2'
+[FILTER\DOM3]
+Description=DOM3
+Sql Cmde=[Attribute01] = 'DOM3'
+[FILTER\DOM4]
+Description=DOM4
+Sql Cmde=[Attribute01] = 'DOM4'

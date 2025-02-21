@@ -1,0 +1,54 @@
+ASCII32
+W,BEGIN,"Menu","Mimic1",""
+	TEMPLATE,"TEMPLATE_DASHBOARD_DARK",1,1,1,0,1,1,1,1,1,1,0,1,1,0,0,0
+	POSITION,0,0
+	SIZE,1600,900,1600,900,0,0,0,1024,768,1600,900
+	BACKCOLOREX,240,240,240,0,0,0
+	TITLE,0,"Exemples de fenˆtre d'Alarme","Alarm Display Examples"
+	STYLE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+	GRIDEX,1,0,8,8,100,100,100,0,0,0
+	LAYERS,65535
+	RIGHTS,0,1,0.000000,64.000000,1,65535,0,0
+	INCLUDED,0,0,0,0,0
+	LINK,1,"ALARM1","","Mode Liste, Fil de l'Eau","On-line and List Modes"
+	LINK,2,"ALARM2","","Couleurs mode avanc‚","Advanced Colour Mode"
+	LINK,3,"ALARM3","","Couleur, Niv, Clignot","Colour, Level, Blinking"
+	LINK,4,"ALARM4","","Fenˆtre Contextuelle","Contextual Window"
+	LINK,5,"ALARM5","","Tri des Alarmes (Temps)","Alarm Sorting (Time)"
+	LINK,6,"ALARM6","","Tri des Alarmes (Priorit‚)","Alarm Sorting (Priority)"
+	LINK,7,"","","",""
+	LINK,8,"","","",""
+	LINK,9,"","","",""
+	LINK,10,"","","",""
+	TABS,0,3,0,0,100,100,0,0,-1,0,16,16,0,FONT,1,FONT,1
+	NAV,0,0,0,100,100,0,0
+	BACKBMP,"",0,0
+	BACKOBJECT,"",0,0
+	BEFORE_OPEN,"","","",""
+	BEFORE_CLOSE,"","","",""
+	EVENTS,1
+	SCRIPT,BEGIN
+		
+		Private Sub Mimic_Open()
+		
+		End Sub
+	SCRIPT,END
+	BINOBJ,"Menu.binary"
+W,END
+VBA_REFERENCES,BEGIN
+	"stdole", 2, 0, "{00020430-0000-0000-C000-000000000046}"
+VBA_REFERENCES,END
+FONTS,BEGIN
+	FONT,1,20,9,700,0,0,"System",0,0
+	FONT,2,-11,0,400,0,0,"Arial",0,0
+FONTS,END
+COLORS,BEGIN
+	COLOREX,1,0,0,0,0,31,0
+	COLOREX,2,0,0,0,0,0,0
+	COLOREX,3,0,0,0,0,0,1
+COLORS,END
+O,BEGIN,T,"Text3"
+	B,980,8,1010,22,969,39,65535,0,6400,0,1,0,0,0,1,0,-1
+	ST,0,1,COLOR,1,COLOR,1,0,0,COLOR,3,0,COLOR,3,0,COLOR,2,0,COLOR,2
+	PP,0,980,8,0,0,FONT,2,"V1.01",36,FONT,2,"V1.01",36
+O,END

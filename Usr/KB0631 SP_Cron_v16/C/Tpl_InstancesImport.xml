@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Import type="Template">
+<Group customRef="Main">
+<Collection type="Variables" id="Cron_Mgt">
+<Item id="Bdct_Completed">
+<Property id="ServerListName">LS1</Property>
+<Property id="ClientListName">LCALL</Property>
+</Item>
+</Collection>
+<Collection type="Variables" id="Cron_Mgt.1">
+<Item id="Save_ReqFor">
+<Property id="ServerListName">LS1</Property>
+<Property id="ClientListName">LCALL</Property>
+</Item>
+<Item id="Bdct_InProgBy">
+<Property id="ServerListName">LS1</Property>
+<Property id="ClientListName">LCALL</Property>
+</Item>
+</Collection>
+<Collection type="Variables" id="Cron_Mgt.2">
+<Item id="Save_ReqFor">
+<Property id="ServerListName">LS2</Property>
+<Property id="ClientListName">LCALL</Property>
+</Item>
+<Item id="Bdct_InProgBy">
+<Property id="ServerListName">LS2</Property>
+<Property id="ClientListName">LCALL</Property>
+</Item>
+</Collection>
+<Collection type="Variables" id="Cron_Mgt.3">
+<Item id="Save_ReqFor">
+<Property id="ServerListName">LS3</Property>
+<Property id="ClientListName">LCALL</Property>
+</Item>
+<Item id="Bdct_InProgBy">
+<Property id="ServerListName">LS3</Property>
+<Property id="ClientListName">LCALL</Property>
+</Item>
+</Collection>
+<Collection type="Variables" id="Cron_Mgt">
+<Item id="CronLastModifDate">
+<Property id="ServerListName">LSALL</Property>
+<Property id="Type">3</Property>
+</Item>
+<Item id="BdctRef_Requested">
+<Property id="ServerListName">LS1</Property>
+<Property id="ClientListName">LCALL</Property>
+</Item>
+</Collection>
+</Group>
+</Import>

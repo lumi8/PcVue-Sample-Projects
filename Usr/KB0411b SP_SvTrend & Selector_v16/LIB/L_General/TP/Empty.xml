@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<configuration>
+  <realtime value="true" />
+  <start_time value="0" />
+  <period value="1.8000000000000000e+05n" />
+  <trend_id value="Trend1" />
+  <mimic value="Trends" />
+  <branch value="" />
+  <curves>
+    <curve index="0">
+      <variable value="" />
+      <active value="true" />
+      <label1 value="" />
+      <label2 value="" />
+      <color r="255" g="0" b="0" index="0" />
+      <color_ns r="255" g="0" b="0" index="0" />
+      <scale visible="true" min="0" max="0" autoscale="false" />
+      <drawing visible="true" type="0" markers="0" style="0" thick="1" style_ns="2" thick_ns="1" />
+    </curve>
+    <curve index="1">
+      <variable value="" />
+      <active value="true" />
+      <label1 value="" />
+      <label2 value="" />
+      <color r="0" g="255" b="0" index="0" />
+      <color_ns r="0" g="255" b="0" index="0" />
+      <scale visible="true" min="0" max="0" autoscale="false" />
+      <drawing visible="true" type="0" markers="0" style="0" thick="1" style_ns="2" thick_ns="1" />
+    </curve>
+    <curve index="2">
+      <variable value="" />
+      <active value="true" />
+      <label1 value="" />
+      <label2 value="" />
+      <color r="255" g="255" b="0" index="0" />
+      <color_ns r="255" g="255" b="0" index="0" />
+      <scale visible="true" min="0" max="0" autoscale="false" />
+      <drawing visible="true" type="0" markers="0" style="0" thick="1" style_ns="2" thick_ns="1" />
+    </curve>
+    <curve index="3">
+      <variable value="" />
+      <active value="true" />
+      <label1 value="" />
+      <label2 value="" />
+      <color r="0" g="255" b="255" index="0" />
+      <color_ns r="0" g="255" b="255" index="0" />
+      <scale visible="true" min="0" max="0" autoscale="false" />
+      <drawing visible="true" type="0" markers="0" style="0" thick="1" style_ns="2" thick_ns="1" />
+    </curve>
+    <curve index="4">
+      <variable value="" />
+      <active value="true" />
+      <label1 value="" />
+      <label2 value="" />
+      <color r="0" g="0" b="255" index="0" />
+      <color_ns r="0" g="0" b="255" index="0" />
+      <scale visible="true" min="0" max="0" autoscale="false" />
+      <drawing visible="true" type="0" markers="0" style="0" thick="1" style_ns="2" thick_ns="1" />
+    </curve>
+    <curve index="5">
+      <variable value="" />
+      <active value="true" />
+      <label1 value="" />
+      <label2 value="" />
+      <color r="255" g="0" b="255" index="0" />
+      <color_ns r="255" g="0" b="255" index="0" />
+      <scale visible="true" min="0" max="0" autoscale="false" />
+      <drawing visible="true" type="0" markers="0" style="0" thick="1" style_ns="2" thick_ns="1" />
+    </curve>
+    <curve index="6">
+      <variable value="" />
+      <active value="true" />
+      <label1 value="" />
+      <label2 value="" />
+      <color r="128" g="128" b="0" index="0" />
+      <color_ns r="128" g="128" b="0" index="0" />
+      <scale visible="true" min="0" max="0" autoscale="false" />
+      <drawing visible="true" type="0" markers="0" style="0" thick="1" style_ns="2" thick_ns="1" />
+    </curve>
+    <curve index="7">
+      <variable value="" />
+      <active value="true" />
+      <label1 value="" />
+      <label2 value="" />
+      <color r="160" g="160" b="160" index="0" />
+      <color_ns r="160" g="160" b="160" index="0" />
+      <scale visible="true" min="0" max="0" autoscale="false" />
+      <drawing visible="true" type="0" markers="0" style="0" thick="1" style_ns="2" thick_ns="1" />
+    </curve>
+  </curves>
+</configuration>

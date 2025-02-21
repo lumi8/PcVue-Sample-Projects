@@ -1,0 +1,35 @@
+[FILTER\DIAGNOSTIC]
+Description=DIAGNOSTIC
+Sql Cmde= [Attribute01]='DIAGNOSTIC'
+Label_0=DIAGNOSTIC
+Label_1=DIAGNOSTIC
+Mask_0=
+Mask_1=
+[FILTER\FLOOR_01]
+Description=FLOOR_01
+Sql Cmde= [Attribute01]='FLOOR_01'
+Label_0=FLOOR_01
+Label_1=FLOOR_01
+Mask_0=
+Mask_1=
+[FILTER\AIRCOND]
+Description=AIRCOND
+Sql Cmde= [Attribute02]='AIRCOND'
+Label_0=AIRCOND
+Label_1=AIRCOND
+Mask_0=
+Mask_1=
+[FILTER\LIGHTING]
+Description=LIGHTING
+Sql Cmde= [Attribute02]='LIGHTING'
+Label_0=LIGHTING
+Label_1=LIGHTING
+Mask_0=
+Mask_1=
+[FILTER\FLOOR_02]
+Description=FLOOR_02
+Sql Cmde= [Attribute01]='FLOOR_02'
+Label_0=FLOOR_02
+Label_1=FLOOR_02
+Mask_0=
+Mask_1=

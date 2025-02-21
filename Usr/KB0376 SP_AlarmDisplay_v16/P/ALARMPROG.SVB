@@ -1,0 +1,125 @@
+Dim AlarmValue As Integer;
+
+
+'-------- ALARMPROG.SVB
+
+'------- Just makes sure that only one alarm window is open at any one time
+'__________________________________________________________
+
+Sub OpenDisplay ()
+	'Dim WindowName As Str;
+	'WindowName = AddString("ALARM", GetArg("ARG1"));
+
+	'Window("CLOSE", "ALARM1", "");
+	'Window("CLOSE", "ALARM2", "");
+	'Window("CLOSE", "ALARM3", "");
+	'Window("CLOSE", "ALARM4", "");
+	'Window("CLOSE", "ALARM5", "");
+	'Window("CLOSE", "ALARM6", "");
+
+	'Window("OPEN", WindowName, "", "MENU");
+
+End Sub
+
+
+
+Sub MakeAlarms()
+	@PROGRAMLOCK	= 1;
+	If (AlarmValue == 0 ) Then
+		AlarmValue = 1;
+	Else
+		AlarmValue = 0;
+	End If
+
+	@ALARM_A = AlarmValue;
+	Delay (0.5);
+	@ALARM_B = AlarmValue;
+	Delay (0.5);
+	@ALARM_C = AlarmValue;
+	Delay (0.5);
+	@ALARM_D = AlarmValue;
+	Delay (0.5);
+	@ALARM_M = AlarmValue;
+	Delay (0.5);
+	@ALARM_N = AlarmValue;
+	Delay (0.5);
+	@ALARM_O = AlarmValue;
+	Delay (0.5);
+	@ALARM_P = AlarmValue;
+	Delay (0.5);
+	@PROGRAMLOCK	= 0;
+
+End Sub
+
+
+
+
+
+
+
+
+'-------- Checks alarm priority against user rights and applies action if allowed
+'-------- Available actions are ACK, MASK and UNMASK
+'___________________________________________________________
+
+Sub AlarmUserAction()
+	Dim AlarmID As Str, AlarmAction As Str,	ErrorMessage As Str;
+
+'-------- Close the popup
+	Window("POPUPCLOSE");
+
+'-------- Get alarm name and action to perfom
+	AlarmID = GetArg ("ARG1");
+	AlarmAction = Ucase (GetArg ("ARG2"));
+
+'--------	Do action on alarm if allowed else open message box
+	If (CheckRight (AlarmID) == 1) Then
+		If (CmpString (AlarmAction, "ACK") == 0) Then
+			Alarm("ACK",AlarmID, 1);
+		Else 
+			If (CmpString (AlarmAction, "MASK") == 0) Then
+				Alarm("MASK",AlarmID, 1);
+			Else
+				If (CmpString (AlarmAction, "UNMASK") ==0) Then
+					Alarm("UNMASK",AlarmID, 1);
+				Else
+					ErrorMessage = AddString("Unknown command - ", AlarmAction);
+					MessageBox ("Alarm Display", ErrorMessage, 2);
+				End If
+			End If
+		End If
+	Else
+	If (LANGUAGE("GET")==1) Then
+		ErrorMessage = AddString("Droits insuffisants - ", Variable( "LONGLABEL", AlarmID));
+	 		MessageBox ("Alarm Display", ErrorMessage, 2);
+	Else
+		ErrorMessage = AddString("Insufficient alarm access rights - ", Variable( "LONGLABEL", AlarmID));
+	 		MessageBox ("Alarm Display", ErrorMessage, 2);
+	End if
+	End if
+End Sub
+
+
+'-------- Checks if User has correct alarm rights
+'-------- With V7.10 it's only possible to check ack rights, NOT mask rights
+'________________________________________________________
+
+Sub CheckRight (AlarmID)
+	Dim AckRights As Integer;		' Acknowledge rights of User
+	Dim AlarmPri As Integer;		' Alarm priority
+	Dim TempLong As Long;
+	Dim AlarmAckAllowed As Integer;	' Calculated 1 if ack allowed else 0
+
+'-------- Get alarm priority and User rights
+	AckRights = System ("USER",	"RIGHTS4");
+	AlarmPri = Variable("GET_ALARM_PRIORITY", AlarmID); 
+
+'-------- Alarm rights are binary encoded - shift right by the alarm priority to find if User is allowed to accept alarm
+	TempLong = Logical ("SHIFT_RIGHT", AckRights, AlarmPri);
+	AlarmAckAllowed = Toi (Logical ("AND", TempLong, 1) );
+
+	Print("Alarm pri = ", AlarmPri, " User rights = ", AckRights, " alarm ack allowed =	", AlarmAckAllowed);
+
+	Return (AlarmAckAllowed);
+End Sub
+

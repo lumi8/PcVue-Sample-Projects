@@ -1,0 +1,61 @@
+Sub Main ()
+	
+End Sub
+
+'-------- Initialise check list with last known values
+Sub InitCheckList ()
+	Dim cWindow As Str, cBranch As Str, cCtrlName As Str;
+	Dim iCount As Integer, i As Integer, iType As Integer;
+	Dim lAllStates As Long, lState As Long;
+
+	cWindow = Getarg ("WINDOW");
+	cBranch = Getarg ("MAINBRANCH");
+	cCtrlName = "AICheckBoxList1";
+	iCount = Toi (CheckList ("COUNT", cWindow, cBranch, cCtrlName));
+	lAllStates = Tol (@CHECKBOXLIST1.ALLSTATES);
+
+	'-------- Get the state of each item from the binary weighted value 
+	For(i=0; i<icount;i++)
+	lState = Logical ("SHIFT_RIGHT", lAllStates, i); 
+	lState = Logical ("AND", lState, 1);
+	CheckList("SETSTATE", cWindow, cBranch, cCtrlName, i, lState, 1);
+	Next
+End Sub
+
+'-------- Fired when check box list is clicked
+Sub OnCheckListClick()
+	Dim iCount As Integer, i As Integer, iType As Integer, iState As Integer;
+	Dim cWindow As Str, cBranch As Str, cCtrlName As Str, cInfo As Str;
+	Dim lAllStates As Long;
+	
+	cWindow = Getarg ("WINDOW");
+	cBranch = Getarg ("MAINBRANCH");
+	cCtrlName = "AICheckBoxList1";
+	iCount = Toi (CheckList ("COUNT", cWindow, cBranch, cCtrlName));
+	lAllStates = 0;
+	@CHECKBOXLIST1.ALLSTATES = 0;
+	
+	For(i=0; i<icount;i++)
+		iState =Toi (CheckList ("GETSTATE", cWindow, cBranch, cCtrlName, i)); 
+		If (iState == 1) Then
+		lAllStates = lAllStates + Logical("SHIFT_LEFT", 1, i); ' Produces binary weighted value depending on which items are ticked
+		If (Len (cInfo) >0) Then
+			cInfo = AddString (cInfo, " & ");
+		End If
+		cInfo = AddString (cInfo, CheckList ("GETTEXT", cWindow, cBranch, cCtrlName, i)); 
+		End If
+	Next
+	@INFO = cInfo;
+	@CHECKBOXLIST1.ALLSTATES = Tos (lAllStates);
+
+End Sub
+
+
+
+
+
+
+
+
+
+

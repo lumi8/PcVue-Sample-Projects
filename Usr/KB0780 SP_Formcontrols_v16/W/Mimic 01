@@ -1,0 +1,320 @@
+ASCII32
+W,BEGIN,"Mimic 01","Mimic1",""
+	TEMPLATE,"TEMPLATE_DASHBOARD_DARK",1,1,1,0,1,1,1,1,0,1,0,0,1,1,1,0
+	POSITION,0,0
+	SIZE,1600,900,1600,900,0,0,0,1280,800,1600,900
+	BACKCOLOREX,240,240,240,0,0,0
+	TITLE,0,"Utiliser les listbox, checkbox et autres avec les variables.","Using listbox, checkbox and other with Variables."
+	STYLE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+	GRIDEX,1,0,8,8,100,100,100,0,0,0
+	LAYERS,65535
+	RIGHTS,0,1,0.000000,64.000000,1,65535,0,0
+	INCLUDED,0,0,0,0,0
+	LINK,1,"Mimic 01","","Avec les variables","With variables"
+	LINK,2,"Mimic 02","","Avec script","With script"
+	LINK,3,"Mimic 03","","Styles diff‚rents","Different styles"
+	LINK,4,"Mimic 04","","A partir d'un fichier","From a file"
+	LINK,5,"Mimic 05","","Tree view","Tree view"
+	LINK,6,"","","",""
+	LINK,7,"","","",""
+	LINK,8,"","","",""
+	LINK,9,"","","",""
+	LINK,10,"","","",""
+	TABS,0,3,0,0,500,500,0,0,-1,3,16,16,0,FONT,1,FONT,1
+	NAV,0,0,0,100,100,0,0
+	BACKBMP,"",0,0
+	BACKOBJECT,"",0,0
+	BEFORE_OPEN,"","","",""
+	BEFORE_CLOSE,"","","",""
+	EVENTS,1
+	BINOBJ,"Mimic 01.binary"
+W,END
+VBA_REFERENCES,BEGIN
+	"stdole", 2, 0, "{00020430-0000-0000-C000-000000000046}"
+	"MimicControls", 1, 0, "{C959A51F-AAFE-40D5-A4A7-3A00A7AF76B4}"
+VBA_REFERENCES,END
+FONTS,BEGIN
+	FONT,1,16,7,700,0,0,"System",0,0
+	FONT,2,-15,0,300,0,0,"Segoe UI Light",0,0
+	FONT,3,-15,0,400,0,0,"Segoe UI Light",0,0
+	FONT,4,-15,0,400,0,0,"Segoe UI",0,0
+	FONT,5,-15,0,700,0,0,"Segoe UI Semibold",0,0
+	FONT,6,-15,0,700,0,0,"Segoe UI",0,0
+FONTS,END
+COLORS,BEGIN
+	COLOREX,1,0,0,0,0,0,0
+	COLOREX,2,0,0,0,0,32,0
+	COLOREX,3,192,192,192,0,0,0
+	COLOREX,4,255,255,255,0,0,0
+	COLOREX,5,0,0,0,0,24,0
+	COLOREX,6,224,224,224,0,0,0
+	COLOREX,7,0,0,0,0,0,1
+COLORS,END
+O,BEGIN,R,"Shape4"
+	B,1287,642,883,396,1287,642,65535,0,6400,0,1,0,0,0,1,0,-1
+	ST,0,1,COLOR,1,COLOR,1,0,0,COLOR,2,0,COLOR,2,0,COLOR,1,0,COLOR,1
+O,END
+O,BEGIN,R,"Shape3"
+	B,801,642,397,396,801,642,65535,0,6400,0,1,0,0,0,1,0,-1
+	ST,0,1,COLOR,1,COLOR,1,0,0,COLOR,2,0,COLOR,2,0,COLOR,1,0,COLOR,1
+O,END
+O,BEGIN,R,"Shape2"
+	B,1287,368,883,122,1287,368,65535,0,6400,0,1,0,0,0,1,0,-1
+	ST,0,1,COLOR,1,COLOR,1,0,0,COLOR,2,0,COLOR,2,0,COLOR,1,0,COLOR,1
+O,END
+O,BEGIN,R,"Shape1"
+	B,801,368,397,122,801,368,65535,0,6400,0,1,0,0,0,1,0,-1
+	ST,0,1,COLOR,1,COLOR,1,0,0,COLOR,2,0,COLOR,2,0,COLOR,1,0,COLOR,1
+O,END
+O,BEGIN,LBCX,"AICheckBoxList1"
+	B,418,142,564,351,10,195,65535,0,6400,0,1,1,1,0,1,0,1
+	ST,0,1,COLOR,1,COLOR,1,1,0,COLOR,3,0,COLOR,3,0,COLOR,1,0,COLOR,1
+	PP,2,2,"",-1,1,FONT,2,0,COLOR,4,0,COLOR,1
+	CI,BEGIN,0,"Item 0","pomme","Apple","0","","","-1","-1","1","1","-1"
+	CI,END
+	CI,BEGIN,0,"Item 1","poire","Pear","0","","","-1","-1","1","1","-1"
+	CI,END
+	CI,BEGIN,0,"Item 2","ananas","Pineaple","0","","","-1","-1","1","1","-1"
+	CI,END
+	CI,BEGIN,0,"Item 3","pˆche","Peach","0","","","-1","-1","1","1","-1"
+	CI,END
+	CI,BEGIN,0,"Item 4","prune","Plumb","0","","","-1","-1","1","1","-1"
+	CI,END
+	CI,BEGIN,0,"Item 5","groseille","Gooseberry","0","","","-1","-1","1","1","-1"
+	CI,END
+	CI,BEGIN,0,"Item 6","m–re","Blackberry","0","","","-1","-1","1","1","-1"
+	CI,END
+	CI,BEGIN,0,"Item 7","fraise","Strawberry","0","","","-1","-1","1","1","-1"
+	CI,END
+	A,BEGIN,LBCXA,"Anim1",0,0,"",""
+		PP,"","@CHECKBOXLIST1.INDEX","@CHECKBOXLIST1.STATE","@CHECKBOXLIST1.USERDATA","","","","",0,0,0,0,987781048
+	A,END
+O,END
+O,BEGIN,LBOX,"AIOptionButtonList1"
+	B,904,142,1050,351,10,195,65535,0,6400,0,1,1,1,0,1,0,2
+	ST,0,1,COLOR,1,COLOR,1,1,0,COLOR,3,0,COLOR,3,0,COLOR,1,0,COLOR,1
+	PP,2,2,"",-1,1,FONT,2,0,COLOR,4,0,COLOR,1
+	CI,BEGIN,0,"Item 0","l'oignon","Onion","0","","","-1","-1","1","1","-1"
+	CI,END
+	CI,BEGIN,0,"Item 1","les pois","Pea","0","","","-1","-1","1","1","-1"
+	CI,END
+	CI,BEGIN,0,"Item 2","champignon","Mushroom","0","","","-1","-1","1","1","-1"
+	CI,END
+	CI,BEGIN,0,"Item 3","pomme de terre","Potato","0","","","-1","-1","1","1","-1"
+	CI,END
+	CI,BEGIN,0,"Item 4","chou-fleur","Cauilflower","0","","","-1","-1","1","1","-1"
+	CI,END
+	CI,BEGIN,0,"Item 5","chou","Cabbage","0","","","-1","-1","1","1","-1"
+	CI,END
+	CI,BEGIN,0,"Item 6","pousse","Sprout","0","","","-1","-1","1","1","-1"
+	CI,END
+	CI,BEGIN,0,"Item 7","panais","Parsnip","0","","","-1","-1","1","1","-1"
+	CI,END
+	A,BEGIN,LBOXA,"Anim1",0,0,"",""
+		PP,"","@OPTIONBUTTONLIST1.INDEX","@OPTIONBUTTONLIST1.USERDATA","","","","",0,1,0,0,0
+	A,END
+O,END
+O,BEGIN,LBX,"AIListBox1"
+	B,418,416,564,625,10,195,65535,0,6400,0,1,1,1,0,1,0,3
+	ST,0,1,COLOR,1,COLOR,1,1,0,COLOR,3,0,COLOR,3,0,COLOR,1,0,COLOR,1
+	PP,2,2,"",-1,1,FONT,2,0,COLOR,4,0,COLOR,1
+	CI,BEGIN,0,"Item 0","Renault","Renault","0","","","-1","-1","1","1","-1"
+	CI,END
+	CI,BEGIN,0,"Item 1","Citroen","Citroen","0","","","-1","-1","1","1","-1"
+	CI,END
+	CI,BEGIN,0,"Item 2","Peugeot","Peugeot","0","","","-1","-1","1","1","-1"
+	CI,END
+	CI,BEGIN,0,"Item 3","Ford","Ford","0","","","-1","-1","1","1","-1"
+	CI,END
+	CI,BEGIN,0,"Item 4","Opel","Opel","0","","","-1","-1","1","1","-1"
+	CI,END
+	CI,BEGIN,0,"Item 5","Toyota","Toyota","0","","","-1","-1","1","1","-1"
+	CI,END
+	CI,BEGIN,0,"Item 6","Mitsubishi","Mitsubishi","0","","","-1","-1","1","1","-1"
+	CI,END
+	CI,BEGIN,0,"Item 7","Land Rover","Land Rover","0","","","-1","-1","1","1","-1"
+	CI,END
+	A,BEGIN,LBXA,"Anim1",0,0,"",""
+		PP,"","@LISTBOX1.INDEX","@LISTBOX1.USERDATA","","","","",0,1,0,0
+	A,END
+O,END
+O,BEGIN,CBX,"AIComboBox1"
+	B,908,416,1048,442,10,195,65535,0,6400,0,1,1,1,0,1,0,4
+	ST,5,1,COLOR,1,COLOR,1,1,0,COLOR,3,0,COLOR,3,0,COLOR,1,0,COLOR,1
+	PP,2,2,"",-1,1,FONT,2,0,COLOR,4,0,COLOR,1
+	CI,BEGIN,0,"Item 0","Oeufs frits","Fried eggs","0","","","-1","-1","1","1","-1"
+	CI,END
+	CI,BEGIN,0,"Item 1","Bacon","Bacon","0","","","-1","-1","1","1","-1"
+	CI,END
+	CI,BEGIN,0,"Item 2","Saucisse","Sausage","0","","","-1","-1","1","1","-1"
+	CI,END
+	CI,BEGIN,0,"Item 3","Haricots","Beans","0","","","-1","-1","1","1","-1"
+	CI,END
+	CI,BEGIN,0,"Item 4","Pain grill‚","Toast","0","","","-1","-1","1","1","-1"
+	CI,END
+	CI,BEGIN,0,"Item 5","Champignons","Mushrooms","0","","","-1","-1","1","1","-1"
+	CI,END
+	CI,BEGIN,0,"Item 6","Hash brown","Hash brown","0","","","-1","-1","1","1","-1"
+	CI,END
+	CI,BEGIN,0,"Item 7","Tomate","Tomato","0","","","-1","-1","1","1","-1"
+	CI,END
+	A,BEGIN,CBXA,"Anim1",0,0,"",""
+		PP,"","@COMBOBOX1.INDEX","@COMBOBOX1.USERDATA","","","","",0,1,0,0
+	A,END
+O,END
+O,BEGIN,T,"Text1"
+	B,675,142,695,162,674,167,65535,0,6400,0,1,0,0,0,1,0,-1
+	ST,0,1,COLOR,1,COLOR,1,0,0,COLOR,3,0,COLOR,3,0,COLOR,1,0,COLOR,1
+	AST,5,1,COLOR,1,COLOR,3,0,COLOR,1,0,COLOR,1,0,COLOR,1,0,COLOR,1,0
+	PP,1,675,142,0,0,FONT,3,"#",37,FONT,4,"#",37
+	A,BEGIN,DR,"Anim1",0,0,"",""
+		PP,"@CHECKBOXLIST1.INDEX","",0
+	A,END
+O,END
+O,BEGIN,T,"Text3"
+	B,675,192,695,212,673,217,65535,0,6400,0,1,0,0,0,1,0,-1
+	ST,0,1,COLOR,1,COLOR,1,0,0,COLOR,3,0,COLOR,3,0,COLOR,1,0,COLOR,1
+	AST,5,1,COLOR,1,COLOR,3,0,COLOR,1,0,COLOR,1,0,COLOR,1,0,COLOR,1,0
+	PP,1,675,192,0,0,FONT,3,"#",37,FONT,4,"#",37
+	A,BEGIN,DR,"Anim1",0,0,"",""
+		PP,"@CHECKBOXLIST1.STATE","",0
+	A,END
+O,END
+O,BEGIN,T,"Text4"
+	B,675,166,785,186,662,191,65535,0,6400,0,1,0,0,0,1,0,-1
+	ST,0,1,COLOR,1,COLOR,1,0,0,COLOR,3,0,COLOR,3,0,COLOR,1,0,COLOR,1
+	AST,5,1,COLOR,1,COLOR,3,0,COLOR,1,0,COLOR,1,0,COLOR,1,0,COLOR,1,0
+	PP,1,675,166,0,0,FONT,3,"qwerty",37,FONT,4,"qwerty",37
+	A,BEGIN,DT,"Anim1",0,0,"",""
+		PP,"@CHECKBOXLIST1.USERDATA"
+	A,END
+O,END
+O,BEGIN,T,"Text5"
+	B,589,142,666,162,580,167,65535,0,6400,0,1,0,0,0,1,0,-1
+	ST,0,1,COLOR,1,COLOR,1,0,0,COLOR,2,0,COLOR,2,0,COLOR,1,0,COLOR,1
+	PP,1,589,142,0,0,FONT,3,"Index",38,FONT,4,"Index",38
+O,END
+O,BEGIN,T,"Text6"
+	B,589,192,666,212,580,217,65535,0,6400,0,1,0,0,0,1,0,-1
+	ST,0,1,COLOR,1,COLOR,1,0,0,COLOR,2,0,COLOR,2,0,COLOR,1,0,COLOR,1
+	PP,1,589,192,0,0,FONT,3,"Etat",38,FONT,4,"State",38
+O,END
+O,BEGIN,T,"Text7"
+	B,591,166,668,186,582,191,65535,0,6400,0,1,0,0,0,1,0,-1
+	ST,0,1,COLOR,1,COLOR,1,0,0,COLOR,2,0,COLOR,2,0,COLOR,1,0,COLOR,1
+	PP,1,591,166,0,0,FONT,3,"Donn‚es",38,FONT,4,"User data",38
+O,END
+O,BEGIN,T,"Text8"
+	B,1161,166,1271,186,1148,191,65535,0,6400,0,1,0,0,0,1,0,-1
+	ST,0,1,COLOR,1,COLOR,1,0,0,COLOR,3,0,COLOR,3,0,COLOR,1,0,COLOR,1
+	AST,5,1,COLOR,1,COLOR,3,0,COLOR,1,0,COLOR,1,0,COLOR,1,0,COLOR,1,0
+	PP,1,1161,166,0,0,FONT,3,"qwerty",37,FONT,4,"qwerty",37
+	A,BEGIN,DT,"Anim1",0,0,"",""
+		PP,"@OPTIONBUTTONLIST1.USERDATA"
+	A,END
+O,END
+O,BEGIN,T,"Text9"
+	B,1161,142,1181,162,1160,167,65535,0,6400,0,1,0,0,0,1,0,-1
+	ST,0,1,COLOR,1,COLOR,1,0,0,COLOR,5,0,COLOR,5,0,COLOR,1,0,COLOR,1
+	AST,5,1,COLOR,1,COLOR,5,0,COLOR,1,0,COLOR,1,0,COLOR,1,0,COLOR,1,0
+	PP,1,1161,142,0,0,FONT,3,"#",37,FONT,4,"#",37
+	A,BEGIN,SR,"Anim1",0,0,"",""
+		PP,"@OPTIONBUTTONLIST1.INDEX",1,"",0,0,0,1,0,0,1.000000,0,0,1
+	A,END
+O,END
+O,BEGIN,T,"Text2"
+	B,1077,166,1154,186,1069,191,65535,0,6400,0,1,0,0,0,1,0,-1
+	ST,0,1,COLOR,1,COLOR,1,0,0,COLOR,2,0,COLOR,2,0,COLOR,1,0,COLOR,1
+	PP,1,1077,166,0,0,FONT,3,"Donn‚es",38,FONT,4,"User data",38
+O,END
+O,BEGIN,T,"Text10"
+	B,1074,142,1151,162,1065,167,65535,0,6400,0,1,0,0,0,1,0,-1
+	ST,0,1,COLOR,1,COLOR,1,0,0,COLOR,2,0,COLOR,2,0,COLOR,1,0,COLOR,1
+	PP,1,1074,142,0,0,FONT,3,"Index",38,FONT,4,"Index",38
+O,END
+O,BEGIN,T,"Text11"
+	B,675,444,785,464,662,469,65535,0,6400,0,1,0,0,0,1,0,-1
+	ST,0,1,COLOR,1,COLOR,1,0,0,COLOR,3,0,COLOR,3,0,COLOR,1,0,COLOR,1
+	AST,5,1,COLOR,1,COLOR,3,0,COLOR,1,0,COLOR,1,0,COLOR,1,0,COLOR,1,0
+	PP,1,675,444,0,0,FONT,3,"qwerty",37,FONT,4,"qwerty",37
+	A,BEGIN,DT,"Anim1",0,0,"",""
+		PP,"@LISTBOX1.USERDATA"
+	A,END
+O,END
+O,BEGIN,T,"Text12"
+	B,675,420,695,440,674,445,65535,0,6400,0,1,0,0,0,1,0,-1
+	ST,0,1,COLOR,1,COLOR,1,0,0,COLOR,5,0,COLOR,5,0,COLOR,1,0,COLOR,1
+	AST,5,1,COLOR,1,COLOR,5,0,COLOR,1,0,COLOR,1,0,COLOR,1,0,COLOR,1,0
+	PP,1,675,420,0,0,FONT,3,"#",37,FONT,4,"#",37
+	A,BEGIN,SR,"Anim1",0,0,"",""
+		PP,"@LISTBOX1.INDEX",1,"",0,0,0,1,0,0,1.000000,0,0,1
+	A,END
+O,END
+O,BEGIN,T,"Text13"
+	B,592,444,669,464,583,469,65535,0,6400,0,1,0,0,0,1,0,-1
+	ST,0,1,COLOR,1,COLOR,1,0,0,COLOR,2,0,COLOR,2,0,COLOR,1,0,COLOR,1
+	PP,1,592,444,0,0,FONT,3,"Donn‚es",38,FONT,4,"User data",38
+O,END
+O,BEGIN,T,"Text14"
+	B,592,420,669,440,583,445,65535,0,6400,0,1,0,0,0,1,0,-1
+	ST,0,1,COLOR,1,COLOR,1,0,0,COLOR,2,0,COLOR,2,0,COLOR,1,0,COLOR,1
+	PP,1,592,420,0,0,FONT,3,"Index",38,FONT,4,"Index",38
+O,END
+O,BEGIN,T,"Text15"
+	B,1161,446,1271,466,1148,471,65535,0,6400,0,1,0,0,0,1,0,-1
+	ST,0,1,COLOR,1,COLOR,1,0,0,COLOR,3,0,COLOR,3,0,COLOR,1,0,COLOR,1
+	AST,5,1,COLOR,1,COLOR,3,0,COLOR,1,0,COLOR,1,0,COLOR,1,0,COLOR,1,0
+	PP,1,1161,446,0,0,FONT,3,"qwerty",37,FONT,4,"qwerty",37
+	A,BEGIN,DT,"Anim1",0,0,"",""
+		PP,"@COMBOBOX1.USERDATA"
+	A,END
+O,END
+O,BEGIN,T,"Text16"
+	B,1161,422,1181,442,1160,447,65535,0,6400,0,1,0,0,0,1,0,-1
+	ST,0,1,COLOR,1,COLOR,1,0,0,COLOR,5,0,COLOR,5,0,COLOR,1,0,COLOR,1
+	AST,5,1,COLOR,1,COLOR,5,0,COLOR,1,0,COLOR,1,0,COLOR,1,0,COLOR,1,0
+	PP,1,1161,422,0,0,FONT,3,"#",37,FONT,4,"#",37
+	A,BEGIN,SR,"Anim1",0,0,"",""
+		PP,"@COMBOBOX1.INDEX",1,"",0,0,0,1,0,0,1.000000,0,0,1
+	A,END
+O,END
+O,BEGIN,T,"Text17"
+	B,1073,444,1150,464,1064,469,65535,0,6400,0,1,0,0,0,1,0,-1
+	ST,0,1,COLOR,1,COLOR,1,0,0,COLOR,2,0,COLOR,2,0,COLOR,1,0,COLOR,1
+	PP,1,1073,444,0,0,FONT,3,"Donn‚es",38,FONT,4,"User data",38
+O,END
+O,BEGIN,T,"Text18"
+	B,1073,420,1150,440,1064,445,65535,0,6400,0,1,0,0,0,1,0,-1
+	ST,0,1,COLOR,1,COLOR,1,0,0,COLOR,2,0,COLOR,2,0,COLOR,1,0,COLOR,1
+	PP,1,1073,420,0,0,FONT,3,"Index",38,FONT,4,"Index",38
+O,END
+O,BEGIN,T,"Text19"
+	B,418,111,517,131,411,136,65535,0,6400,0,1,0,0,0,1,0,-1
+	ST,0,1,COLOR,1,COLOR,1,0,0,COLOR,2,0,COLOR,2,0,COLOR,1,0,COLOR,1
+	PP,0,418,111,0,0,FONT,5," Checkbox list ",38,FONT,6," Checkbox list ",38
+O,END
+O,BEGIN,T,"Text20"
+	B,904,110,1029,130,897,135,65535,0,6400,0,1,0,0,0,1,0,-1
+	ST,0,1,COLOR,1,COLOR,1,0,0,COLOR,2,0,COLOR,2,0,COLOR,1,0,COLOR,1
+	PP,0,904,110,0,0,FONT,5," Optionbutton list ",38,FONT,6," Optionbutton list ",38
+O,END
+O,BEGIN,T,"Text21"
+	B,418,384,475,404,411,409,65535,0,6400,0,1,0,0,0,1,0,-1
+	ST,0,1,COLOR,1,COLOR,1,0,0,COLOR,2,0,COLOR,2,0,COLOR,1,0,COLOR,1
+	PP,0,418,384,0,0,FONT,5," Listbox ",38,FONT,6," Listbox ",38
+O,END
+O,BEGIN,T,"Text22"
+	B,908,385,992,405,901,410,65535,0,6400,0,1,0,0,0,1,0,-1
+	ST,0,1,COLOR,1,COLOR,1,0,0,COLOR,2,0,COLOR,2,0,COLOR,1,0,COLOR,1
+	PP,0,908,385,0,0,FONT,5," Combobox ",38,FONT,6," Combobox ",38
+O,END
+O,BEGIN,T,"Text23"
+	B,401,663,1330,695,285,703,65535,0,6400,0,1,0,0,0,1,0,-1
+	ST,0,1,COLOR,6,COLOR,6,0,0,COLOR,7,0,COLOR,7,0,COLOR,1,0,COLOR,1
+	PP,1,401,663,0,0,FONT,3,"La liste OptionButton, ListBox et ComboBox peuvent toutes ˆtre utilis‚es avec l'Arbre de Variables et aucun script.",84,FONT,4,"The Optionbutton list, Listbox and Combobox can all be used with the Variables Tree and no script.",84
+O,END
+O,BEGIN,T,"Text24"
+	B,404,696,1342,743,287,753,65535,0,6400,0,1,0,0,0,1,0,-1
+	ST,0,1,COLOR,6,COLOR,6,0,0,COLOR,7,0,COLOR,7,0,COLOR,1,0,COLOR,1
+	PP,1,404,696,0,0,FONT,3,"La Checkbox list est moins utile lorsqu'elle est utilis‚e seulement avec l'Arbre de variables que vous ˆtes seulement en mesure de r‚cup‚rer l'‚l‚ment qui a ‚t‚ modifi‚ en dernier.",84,FONT,4,"The Checkbox list is less useful when used just with the Variables Tree as you are only able to retrieve the item that was changed last.",84
+O,END

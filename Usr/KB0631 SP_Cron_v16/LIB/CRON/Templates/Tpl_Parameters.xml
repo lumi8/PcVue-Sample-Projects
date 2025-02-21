@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<ParametersRoot Name="" SchemaVersion="10.0.0">
+<Parameter Name="pClientList">
+<Description/>
+<nDataType>0</nDataType>
+<nType>0</nType>
+<DefaultValue/>
+</Parameter>
+<Parameter Name="PServerList">
+<Description/>
+<nDataType>0</nDataType>
+<nType>0</nType>
+<DefaultValue/>
+</Parameter>
+</ParametersRoot>
+</root>

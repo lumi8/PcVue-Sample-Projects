@@ -1,0 +1,48 @@
+ASCII32
+W,BEGIN,"Menu","Mimic1",""
+	TEMPLATE,"TEMPLATE_DASHBOARD_DARK",1,1,1,0,1,1,1,1,1,1,0,1,1,0,0,0
+	POSITION,0,0
+	SIZE,1600,900,1600,900,0,0,0,1024,768,1600,900
+	BACKCOLOREX,240,240,240,0,0,0
+	TITLE,0,"Mimic1",""
+	STYLE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+	GRIDEX,1,0,8,8,100,100,100,0,0,0
+	LAYERS,65535
+	RIGHTS,0,1,0.000000,64.000000,1,65535,0,0
+	INCLUDED,0,0,0,0,0
+	LINK,1,"Lozenge","","Bouton","Button"
+	LINK,2,"Navbars","","Barre de navigation","Navigation Bars"
+	LINK,3,"Icons","","Icones de ancien style XP","Old XP style icons"
+	LINK,4,"","","",""
+	LINK,5,"","","",""
+	LINK,6,"","","",""
+	LINK,7,"","","",""
+	LINK,8,"","","",""
+	LINK,9,"","","",""
+	LINK,10,"","","",""
+	TABS,0,3,0,0,500,500,0,0,-1,3,16,16,0,FONT,1,FONT,1
+	NAV,0,0,0,100,100,0,0
+	BACKBMP,"",0,0
+	BACKOBJECT,"",0,0
+	BEFORE_OPEN,"","","",""
+	BEFORE_CLOSE,"","","",""
+	EVENTS,1
+	BINOBJ,"Menu.binary"
+W,END
+VBA_REFERENCES,BEGIN
+	"stdole", 2, 0, "{00020430-0000-0000-C000-000000000046}"
+VBA_REFERENCES,END
+FONTS,BEGIN
+	FONT,1,16,7,700,0,0,"System",0,0
+	FONT,2,-27,0,700,0,0,"Arial",0,0
+FONTS,END
+COLORS,BEGIN
+	COLOREX,1,0,0,0,0,24,0
+	COLOREX,2,0,0,0,0,0,0
+	COLOREX,3,0,0,0,0,0,1
+COLORS,END
+O,BEGIN,T,"Text1"
+	B,287,17,495,49,254,59,65535,0,6400,0,1,0,0,0,1,0,-1
+	ST,0,1,COLOR,1,COLOR,1,0,0,COLOR,3,0,COLOR,3,0,COLOR,2,0,COLOR,2
+	PP,1,287,17,0,0,FONT,2,"Boutons Crystal",37,FONT,2,"Crystal Buttons",37
+O,END

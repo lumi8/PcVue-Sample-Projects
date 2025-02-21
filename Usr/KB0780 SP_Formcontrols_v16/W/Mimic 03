@@ -1,0 +1,176 @@
+ASCII32
+W,BEGIN,"Mimic 03","Mimic1",""
+	TEMPLATE,"TEMPLATE_DASHBOARD_DARK",1,1,0,0,0,0,0,0,0,1,0,0,1,0,0,0
+	POSITION,0,0
+	SIZE,1600,900,1600,900,0,0,0,1280,800,1600,900
+	BACKCOLOREX,192,192,192,0,24,0
+	TITLE,0,"Avect diff‚rents styles","Different styles"
+	STYLE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+	GRIDEX,1,1,4,4,0,0,0,0,0,0
+	LAYERS,65535
+	RIGHTS,0,1,0.000000,64.000000,1,65535,0,0
+	INCLUDED,0,0,0,0,0
+	LINK,1,"Mimic 01","","Avec les variables","With variables"
+	LINK,2,"Mimic 02","","Avec script","With script"
+	LINK,3,"Mimic 03","","Styles diff‚rents","Different styles"
+	LINK,4,"Mimic 04","","A partir d'un fichier","From a file"
+	LINK,5,"Mimic 05","","Tree view","Tree view"
+	LINK,6,"","","",""
+	LINK,7,"","","",""
+	LINK,8,"","","",""
+	LINK,9,"","","",""
+	LINK,10,"","","",""
+	TABS,0,3,0,0,100,100,0,0,-1,0,16,16,0,FONT,1,FONT,1
+	NAV,0,0,0,100,100,0,0
+	BACKBMP,"",0,0
+	BACKOBJECT,"",0,0
+	BEFORE_OPEN,"","","",""
+	BEFORE_CLOSE,"","","",""
+	EVENTS,1
+	BINOBJ,"Mimic 03.binary"
+W,END
+VBA_REFERENCES,BEGIN
+	"stdole", 2, 0, "{00020430-0000-0000-C000-000000000046}"
+	"MimicControls", 1, 0, "{C959A51F-AAFE-40D5-A4A7-3A00A7AF76B4}"
+VBA_REFERENCES,END
+FONTS,BEGIN
+	FONT,1,16,7,700,0,0,"System",0,0
+	FONT,2,-16,7,700,0,0,"System",0,0
+	FONT,3,-16,0,700,0,0,"Arial",0,0
+FONTS,END
+COLORS,BEGIN
+	COLOREX,1,0,0,0,0,0,0
+	COLOREX,2,0,0,0,0,32,0
+	COLOREX,3,192,192,192,0,0,0
+	COLOREX,4,210,210,240,0,0,0
+	COLOREX,5,255,255,255,0,0,0
+	COLOREX,6,0,128,0,0,0,0
+	COLOREX,7,128,255,128,0,0,0
+	COLOREX,8,113,111,100,0,0,0
+	COLOREX,9,255,255,128,0,0,0
+COLORS,END
+O,BEGIN,R,"Shape5"
+	B,1476,755,376,119,1476,755,65535,0,6400,0,1,0,0,0,1,0,-1
+	ST,0,1,COLOR,1,COLOR,1,0,0,COLOR,2,0,COLOR,2,0,COLOR,1,0,COLOR,1
+O,END
+O,BEGIN,LBCX,"AICheckBoxList3"
+	B,457,180,612,380,10,195,65535,0,6400,0,1,1,1,0,1,0,1
+	ST,0,1,COLOR,1,COLOR,1,1,0,COLOR,3,0,COLOR,3,0,COLOR,1,0,COLOR,1
+	PP,2,2,"",-1,1,FONT,2,1,COLOR,4,1,COLOR,1
+	CI,BEGIN,0,"Item 0","pomme","Apple","0","","","-1","-1","1","1","-1"
+	CI,END
+	CI,BEGIN,0,"Item 1","poire","Pear","0","","","-1","-1","1","1","-1"
+	CI,END
+	CI,BEGIN,0,"Item 2","ananas","Pineaple","0","","","-1","-1","1","1","-1"
+	CI,END
+	CI,BEGIN,0,"Item 3","pˆche","Peach","0","","","-1","-1","1","1","-1"
+	CI,END
+	CI,BEGIN,0,"Item 4","prune","Plumb","0","","","-1","-1","1","1","-1"
+	CI,END
+	CI,BEGIN,0,"Item 5","groseille","Gooseberry","0","","","-1","-1","1","1","-1"
+	CI,END
+	CI,BEGIN,0,"Item 6","m–re","Blackberry","0","","","-1","-1","1","1","-1"
+	CI,END
+	CI,BEGIN,0,"Item 7","fraise","Strawberry","0","","","-1","-1","1","1","-1"
+	CI,END
+	A,BEGIN,LBCXA,"Anim1",0,0,"",""
+		PP,"","@CHECKBOXLIST1.INDEX","@CHECKBOXLIST1.STATE","@CHECKBOXLIST1.USERDATA","","","","",0,0,0,0,-184517590
+	A,END
+O,END
+O,BEGIN,LBCX,"AICheckBoxList4"
+	B,1089,180,1237,252,10,195,65535,0,6400,0,1,1,1,0,1,0,2
+	ST,0,1,COLOR,1,COLOR,1,1,0,COLOR,3,0,COLOR,3,0,COLOR,1,0,COLOR,1
+	PP,2,2,"",-1,0,FONT,1,0,COLOR,5,0,COLOR,1
+	CI,BEGIN,0,"Item 0","pomme","Apple","0","","","-1","-1","1","1","-1"
+	CI,END
+	CI,BEGIN,0,"Item 1","poire","Pear","0","","","-1","-1","1","1","-1"
+	CI,END
+	CI,BEGIN,0,"Item 2","ananas","Pineaple","0","","","-1","-1","1","1","-1"
+	CI,END
+	CI,BEGIN,0,"Item 3","pˆche","Peach","0","","","-1","-1","1","1","-1"
+	CI,END
+	CI,BEGIN,0,"Item 4","prune","Plumb","0","","","-1","-1","1","1","-1"
+	CI,END
+	CI,BEGIN,0,"Item 5","groseille","Gooseberry","0","","","-1","-1","1","1","-1"
+	CI,END
+	CI,BEGIN,0,"Item 6","m–re","Blackberry","0","","","-1","-1","1","1","-1"
+	CI,END
+	CI,BEGIN,0,"Item 7","fraise","Strawberry","0","","","-1","-1","1","1","-1"
+	CI,END
+	A,BEGIN,LBCXA,"Anim1",0,0,"",""
+		PP,"","@CHECKBOXLIST1.INDEX","@CHECKBOXLIST1.STATE","@CHECKBOXLIST1.USERDATA","","","","",0,0,0,0,-184517590
+	A,END
+O,END
+O,BEGIN,CBX,"AIComboBox1"
+	B,750,432,934,453,10,195,65535,0,6400,0,1,1,1,0,1,0,3
+	ST,5,1,COLOR,1,COLOR,1,1,0,COLOR,3,0,COLOR,3,0,COLOR,1,0,COLOR,1
+	PP,2,2,"",-1,0,FONT,1,1,COLOR,7,1,COLOR,6
+	CI,BEGIN,0,"Item 0","Oeufs frits","Fried eggs","0","","","-1","-1","1","1","-1"
+	CI,END
+	CI,BEGIN,0,"Item 1","Bacon","Bacon","0","","","-1","-1","1","1","-1"
+	CI,END
+	CI,BEGIN,0,"Item 2","Saucisse","Sausage","0","","","-1","-1","1","1","-1"
+	CI,END
+	CI,BEGIN,0,"Item 3","Haricots","Beans","0","","","-1","-1","1","1","-1"
+	CI,END
+	CI,BEGIN,0,"Item 4","Pain grill‚","Toast","0","","","-1","-1","1","1","-1"
+	CI,END
+	CI,BEGIN,0,"Item 5","Champignons","Mushrooms","0","","","-1","-1","1","1","-1"
+	CI,END
+	CI,BEGIN,0,"Item 6","Hash brown","Hash brown","0","","","-1","-1","1","1","-1"
+	CI,END
+	CI,BEGIN,0,"Item 7","Tomate","Tomato","0","","","-1","-1","1","1","-1"
+	CI,END
+	A,BEGIN,CBXA,"Anim1",0,0,"",""
+		PP,"","@COMBOBOX1.INDEX","@COMBOBOX1.USERDATA","","","","",0,1,0,0
+	A,END
+O,END
+O,BEGIN,LBOX,"AIOptionButtonList1"
+	B,456,428,612,620,10,195,65535,0,6400,0,1,1,1,0,1,0,4
+	ST,0,1,COLOR,1,COLOR,1,1,0,COLOR,3,0,COLOR,3,0,COLOR,1,0,COLOR,1
+	PP,2,2,"",-1,1,FONT,3,0,COLOR,5,0,COLOR,1
+	CI,BEGIN,0,"Item 0","l'oignon","Onion","0","","","-1","-1","1","1","-1"
+	CI,END
+	CI,BEGIN,0,"Item 1","les pois","Pea","0","","","-1","-1","1","1","-1"
+	CI,END
+	CI,BEGIN,0,"Item 2","champignon","Mushroom","0","","","-1","-1","1","1","-1"
+	CI,END
+	CI,BEGIN,0,"Item 3","pomme de terre","Potato","0","","","-1","-1","1","1","-1"
+	CI,END
+	CI,BEGIN,0,"Item 4","chou-fleur","Cauilflower","0","","","-1","-1","1","1","-1"
+	CI,END
+	CI,BEGIN,0,"Item 5","chou","Cabbage","0","","","-1","-1","1","1","-1"
+	CI,END
+	CI,BEGIN,0,"Item 6","pousse","Sprout","0","","","-1","-1","1","1","-1"
+	CI,END
+	CI,BEGIN,0,"Item 7","panais","Parsnip","0","","","-1","-1","1","1","-1"
+	CI,END
+	A,BEGIN,LBOXA,"Anim1",0,0,"",""
+		PP,"","@OPTIONBUTTONLIST1.INDEX","@OPTIONBUTTONLIST1.USERDATA","","","","",0,1,0,0,0
+	A,END
+O,END
+O,BEGIN,LBCX,"AICheckBoxList5"
+	B,750,180,934,364,10,195,65535,0,6400,0,1,1,1,0,1,0,5
+	ST,5,1,COLOR,1,COLOR,1,1,0,COLOR,3,0,COLOR,3,0,COLOR,1,0,COLOR,1
+	AST,5,4,COLOR,1,COLOR,2,0,COLOR,5,0,COLOR,5,0,COLOR,8,0,COLOR,8,0
+	PP,2,2,"",-1,0,FONT,1,1,COLOR,9,1,COLOR,1
+	CI,BEGIN,0,"Item 0","pomme","Apple","0","","","-1","-1","1","1","-1"
+	CI,END
+	CI,BEGIN,0,"Item 1","poire","Pear","0","","","-1","-1","1","1","-1"
+	CI,END
+	CI,BEGIN,0,"Item 2","ananas","Pineaple","0","","","-1","-1","1","1","-1"
+	CI,END
+	CI,BEGIN,0,"Item 3","pˆche","Peach","0","","","-1","-1","1","1","-1"
+	CI,END
+	CI,BEGIN,0,"Item 4","prune","Plumb","0","","","-1","-1","1","1","-1"
+	CI,END
+	CI,BEGIN,0,"Item 5","groseille","Gooseberry","0","","","-1","-1","1","1","-1"
+	CI,END
+	CI,BEGIN,0,"Item 6","m–re","Blackberry","0","","","-1","-1","1","1","-1"
+	CI,END
+	CI,BEGIN,0,"Item 7","fraise","Strawberry","0","","","-1","-1","1","1","-1"
+	CI,END
+	A,BEGIN,LBCXA,"Anim1",0,0,"",""
+		PP,"","@CHECKBOXLIST1.INDEX","@CHECKBOXLIST1.STATE","@CHECKBOXLIST1.USERDATA","","","","",0,0,0,0,-184517590
+	A,END
+O,END

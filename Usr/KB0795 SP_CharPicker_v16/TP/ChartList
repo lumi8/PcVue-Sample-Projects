@@ -1,0 +1,55 @@
+ASCII32
+FONTS,BEGIN
+FONTS,END
+COLORS,BEGIN
+COLORS,END
+CI,BEGIN,0,"","Menu","Menu","0","","","-1","-1","1","1","0"
+	A,BEGIN,LO,"",0,0,"",""
+		PP,"Menu","",1,0,1,0,"","",1,0,,1,0,
+	A,END
+	CI,BEGIN,0,"","Arabic","Arabic","0","","","-1","-1","1","1","1"
+		A,BEGIN,LO,"",0,0,"",""
+			PP,"arabic","",1,0,1,0,"","",1,0,,1,0,
+		A,END
+	CI,END
+	CI,BEGIN,0,"","Baltic","Baltic","0","","","-1","-1","1","1","1"
+		A,BEGIN,LO,"",0,0,"",""
+			PP,"baltic","",1,0,1,0,"","",1,0,,1,0,
+		A,END
+	CI,END
+	CI,BEGIN,0,"","Central","Central","0","","","-1","-1","1","1","1"
+		A,BEGIN,LO,"",0,0,"",""
+			PP,"central","",1,0,1,0,"","",1,0,,1,0,
+		A,END
+	CI,END
+	CI,BEGIN,0,"","Cyrillic","Cyrillic","0","","","-1","-1","1","1","1"
+		A,BEGIN,LO,"",0,0,"",""
+			PP,"cyrillic","",1,0,1,0,"","",1,0,,1,0,
+		A,END
+	CI,END
+	CI,BEGIN,0,"","Greek","Greek","0","","","-1","-1","1","1","1"
+		A,BEGIN,LO,"",0,0,"",""
+			PP,"greek","",1,0,1,0,"","",1,0,,1,0,
+		A,END
+	CI,END
+	CI,BEGIN,0,"","Hebrew","Hebrew","0","","","-1","-1","1","1","1"
+		A,BEGIN,LO,"",0,0,"",""
+			PP,"hebrew","",1,0,1,0,"","",1,0,,1,0,
+		A,END
+	CI,END
+	CI,BEGIN,0,"","Turkish","Turkish","0","","","-1","-1","1","1","1"
+		A,BEGIN,LO,"",0,0,"",""
+			PP,"turkish","",1,0,1,0,"","",1,0,,1,0,
+		A,END
+	CI,END
+	CI,BEGIN,0,"","Vietnamese","Vietnamese","0","","","-1","-1","1","1","1"
+		A,BEGIN,LO,"",0,0,"",""
+			PP,"vietnamese","",1,0,1,0,"","",1,0,,1,0,
+		A,END
+	CI,END
+	CI,BEGIN,0,"","Western","Western","0","","","-1","-1","1","1","1"
+		A,BEGIN,LO,"",0,0,"",""
+			PP,"western","",1,0,1,0,"","",1,0,,1,0,
+		A,END
+	CI,END
+CI,END

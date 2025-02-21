@@ -1,0 +1,11 @@
+Sub Main ()
+	 @TANK1.PUMP1.RUNNING = Irand(0,1);
+	 @TANK1.PUMP1.FAULT = Irand(0,1);
+	 @TANK1.VALVE1.OPEN = Irand(0,1);
+	 @TANK1.VALVE2.OPEN = Irand(0,1);
+
+	 @TANK2.PUMP1.RUNNING = Irand(0,1);
+	 @TANK2.PUMP1.FAULT = Irand(0,1);
+	 @TANK2.VALVE1.OPEN = Irand(0,1);
+	 @TANK2.VALVE2.OPEN = Irand(0,1);
+End Sub

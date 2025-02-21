@@ -1,0 +1,517 @@
+'- MAIN --------------------------------------------------------------------
+Sub Main()
+	 'Initialize Variable
+End Sub
+
+
+'- DisplayDetail --------------------------------------------------------------------
+Sub DisplayDetail()
+	Dim StrTree As Str;
+	Dim iPrint As Integer;
+	iPrint = 0;
+	
+	'PRINT("FUNCTION : DisplayDetail");
+	
+	StrTree = GetTree();
+	
+	'RÇcupäre le mois courant si la variable SelectedMonth est NS
+	If ((Variable("STATUS", ADDSTRING(StrTree,".SelectedMonth"), "VALID" ))&& (Variable("STATUS", ADDSTRING(StrTree,".SelectedYear"), "VALID" ))) Then
+		CalculateMonth(SelectedDay,SelectedMonth,SelectedYear);
+	Else
+		CalculateMonth(DateTime("DAY"),DateTime("MONTH"),DateTime("YEAR"));
+		SelectedDay = TOD(DateTime("DAY"));
+		SelectedMonth = TOD(DateTime("MONTH"));
+		SelectedYear = TOD(DateTime("YEAR"));
+		SelectedHour = TOD(DateTime("HOUR"));
+		SelectedMinute = TOD(DateTime("MINUTE"));
+		SelectedSecond = TOD(DateTime("SECOND"));
+	End If
+	BuildStringDateTime();
+	
+	CalculateYear();
+
+End Sub
+
+
+'- Calculate Month --------------------------------------------------------------------
+Sub CalculateMonth(dDay,dMonth,dYear)
+	Dim iFirstWeekDayOfMonth As Integer;
+	Dim dDateTimeValue As Double;
+	Dim i as Integer, j as Integer;
+	Dim dOneDay As Double, dInitialDate As Double;
+	Dim iIntermediateCalc As Integer;
+	Dim sBranch As Str;
+	Dim sDay As Str, sMonth As Str, sYear As Str;
+	Dim sSelected As Str;
+	Dim sIsInCurrentMonth As Str;
+	Dim iDay As Integer, iMonth As Integer, iYear As Integer;
+	Dim sTxt As Str;
+	Dim iPrint As Integer;
+	iPrint = 0;
+	
+	'PRINT("FUNCTION : CalculateMonth");
+	FctPrint(AddString("dDay : ",TOC(dDay)),iPrint);
+	FctPrint(AddString("dMonth : ",TOC(dMonth)),iPrint);
+	FctPrint(AddString("dYear : ",TOC(dYear)),iPrint);
+	
+	'Find the first week day of the month 
+	dDateTimeValue = DateTimeValue(AddString("01/",TOC(dMonth),"/",TOC(dYear)),"00:00:00");
+	iFirstWeekDayOfMonth = DateTime("WEEKDAY", dDateTimeValue);
+	FctPrint(AddString("iFirstWeekDayOfMonth : ",TOC(iFirstWeekDayOfMonth)),iPrint);
+	
+	'Calculate date of first monday of the week
+	dOneDay = 60*60*24*1000;
+	
+	If (iFirstWeekDayOfMonth==0) Then
+		dInitialDate = dDateTimeValue - (dOneDay*TOD(iFirstWeekDayOfMonth+6));
+	Else
+		dInitialDate = dDateTimeValue - (dOneDay*TOD(iFirstWeekDayOfMonth-1));
+	End If
+	
+	
+	FctPrint(AddString("dInitialDate :",TOC(dInitialDate)),iPrint);
+	
+	For(i=0;i<6;i++)
+		For(j=0;j<7;j++)
+			'Print ("i : ",i, " j : ",j);
+			'Build Branch
+			sBranch = AddString(GetArg("WBRANCH"), ".WEEK",Right(Addstring("0",TOC(i+1)), 2));
+			'FctPrint(AddString("sBranch : ",sBranch),iPrint);
+			If (j == 0) Then
+				sBranch = AddString(sBranch,".Monday");
+			End If			
+			If (j == 1) Then
+				sBranch = AddString(sBranch,".Tuesday");
+			End If			
+			If (j == 2) Then
+				sBranch = AddString(sBranch,".Wednesday");
+			End If			
+			If (j == 3) Then
+				sBranch = AddString(sBranch,".Thursday");
+			End If			
+			If (j == 4) Then
+				sBranch = AddString(sBranch,".Friday");
+			End If			
+			If (j == 5) Then
+				sBranch = AddString(sBranch,".Saturday");
+			End If			
+			If (j == 6) Then
+				sBranch = AddString(sBranch,".Sunday");
+			End If			
+			'FctPrint(AddString("sBranch : ",sBranch),iPrint);
+			iIntermediateCalc=i*7+j;
+			
+			sDay = AddString(sBranch,".Day");
+			sMonth = AddString(sBranch,".Month");
+			sYear = AddString(sBranch,".Year");
+			sSelected = AddString(sBranch,".Selected");
+			sIsInCurrentMonth = AddString(sBranch,".IsInCurrentMonth");
+
+			iDay = DateTime("DAY" ,dInitialDate + (TOD(iIntermediateCalc)* dOneDay));
+			iMonth = DateTime("MONTH" ,dInitialDate + (TOD(iIntermediateCalc)* dOneDay));
+			iYear = DateTime("YEAR" ,dInitialDate + (TOD(iIntermediateCalc)* dOneDay));
+			
+			sTxt = AddsTring("iDay : ",TOC(iDay)," - iMonth : ",TOC(iMonth)," - iYear : ",TOC(iYear));
+			sTxt = AddString(sTxt," - sDay : ",sDay," - sMonth : ",sMonth," - sYear : ",sYear);
+			FctPrint(sTxt,iPrint);
+
+			?sDay = TOD(iDay);
+			?sMonth = TOD(iMonth);
+			?sYear = TOD(iYear);
+			If((?sDay == TOS(dDay)) && (?sMonth == TOS(dMonth))&& (?sYear == TOS(dYear))) Then
+				?sSelected = 1;
+			else
+				?sSelected = 0;
+			End if
+			If (?sMonth == TOS(dMonth)) Then
+				'FctPrint("Is in Current Month",iPrint);
+				?sIsInCurrentMonth =1;
+			Else
+				'FctPrint("Is NOT in Current Month",iPrint);
+				?sIsInCurrentMonth =0;		
+			End If
+			'Print(DateTime("DAY" ,dInitialDate + (TOD(iIntermediateCalc)* dOneDay)));
+			'Print(DateTime("MONTH" ,dInitialDate + (TOD(iIntermediateCalc)* dOneDay)));
+			'Print(DateTime("YEAR" ,dInitialDate + (TOD(iIntermediateCalc)* dOneDay)));
+		Next
+	Next
+	
+End Sub
+
+
+'- SelectDate --------------------------------------------------------------------
+Sub SelectDate()
+	Dim sBranch As Str;
+	Dim sSelectedDay As Str;
+	Dim sSelectedMonth As Str;
+	DIM sSelectedYear As Str;
+	DIM sSelectedHour As Str;
+	DIM sSelectedMinute As Str;
+	DIM sSelectedSecond As Str;
+	Dim iPrint As Integer;
+	iPrint = 0;
+
+	'Print("FUNCTION : SelectDate");
+	
+	sBranch = GetArg("WBRANCH");
+	FctPrint(AddString("sBranch : ",sBranch),iPrint);
+	ResetSelected();
+	Selected = 1;
+	
+	sSelectedDay = AddString(sBranch,".SelectedDay");
+	sSelectedMonth = AddString(sBranch,".SelectedMonth");
+	sSelectedYear = AddString(sBranch,".SelectedYear");
+	sSelectedHour = AddString(sBranch,".SelectedHour");
+	sSelectedMinute = AddString(sBranch,".SelectedMinute");
+	sSelectedSecond = AddString(sBranch,".SelectedSecond");
+
+	?sSelectedDay = Day;
+	?sSelectedMonth = Month;
+	?sSelectedYear = Year;
+'	?sSelectedHour = 
+'	?sSelectedMinute = 
+'	?sSelectedSecond = 
+
+	CalculateMonth(Day,Month,Year);
+
+	BuildStringDateTime();
+	
+End Sub
+
+
+'- BuildStringDateTime --------------------------------------------------------------------
+Sub BuildStringDateTime()
+	Dim sSelectedDate As Str, sSelectedTime As Str, sSelectedDay As Str, sSelectedMonth As Str, sSelectedYear As Str;
+	Dim sSelectedHour As Str, sSelectedMinute As Str, sSelectedSecond As Str;
+	Dim sBranch As Str;
+	Dim iPrint As Integer;
+	iPrint = 0;
+	
+	'Print("FUNCTION : BuildStringDateTime");
+	
+	sBranch =GetArg("WBRANCH");
+	FctPrint (AddString("sBranch : ",sBranch),iPrint);
+	
+	sSelectedDate = AddString(sBranch,".SelectedDate");
+	sSelectedTime = AddString(sBranch,".SelectedTime");
+	FctPrint(AddString("sSelectedDate : ",sSelectedDate),iPrint);
+	FctPrint(AddString("sSelectedTime : ",sSelectedTime),iPrint);
+
+	sSelectedDay = AddString(sBranch,".SelectedDay");
+	sSelectedMonth = AddString(sBranch,".SelectedMonth");
+	sSelectedYear = AddString(sBranch,".SelectedYear");
+	sSelectedHour = AddString(sBranch,".SelectedHour");
+	sSelectedMinute = AddString(sBranch,".SelectedMinute");
+	sSelectedSecond = AddString(sBranch,".SelectedSecond");
+	
+	?sSelectedDate = AddString(FormatNum(?sSelectedDay),"/",FormatNum(?sSelectedMonth),"/",FormatYear(?sSelectedYear));
+	?sSelectedTime  = AddString(FormatNum(?sSelectedHour),":",FormatNum(?sSelectedMinute),":",FormatNum(?sSelectedSecond));
+End Sub
+
+
+'- FormatNum --------------------------------------------------------------------
+Sub FormatNum(iNumber)
+	Dim StrResult As Str;
+	Dim iPrint As Integer;
+	iPrint = 0;
+	
+	'Print("FUNCTION : FormatNum");
+	
+	StrResult = RIGHT(AddString("0",TOC(iNumber)),2);
+	RETURN (StrResult);
+End Sub
+
+
+'- FormatYear --------------------------------------------------------------------
+Sub FormatYear(iNumber)
+	Dim StrResult As Str;
+	Dim iPrint As Integer;
+	iPrint = 0;
+	
+	'Print("FUNCTION : FormatYear");
+	
+	StrResult = RIGHT(AddString("0000",TOC(iNumber)),4);
+	RETURN (StrResult);
+End Sub
+
+
+'- ResetSelected --------------------------------------------------------------------
+Sub ResetSelected()
+	Dim i as Integer;
+	Dim j as Integer;
+	Dim sBranch As Str;
+	Dim sSelected As Str;
+	Dim iPrint As Integer;
+	iPrint = 0;
+	
+	'Print("FUNCTION : ResetSelected");
+	
+	'PRINT(GETTREE());
+	For(i=0;i<6;i++)
+		For(j=0;j<7;j++)
+			'Build Branch
+			sBranch = AddString(GetArg("WBRANCH"), ".WEEK",Right(Addstring("0",TOC(i+1)), 2));
+			'Print("sBranch ",sBranch );
+			If (j == 0) Then
+				sBranch = AddString(sBranch,".Monday");
+			End If			
+			If (j == 1) Then
+				sBranch = AddString(sBranch,".Tuesday");
+			End If			
+			If (j == 2) Then
+				sBranch = AddString(sBranch,".Wednesday");
+			End If			
+			If (j == 3) Then
+				sBranch = AddString(sBranch,".Thursday");
+			End If			
+			If (j == 4) Then
+				sBranch = AddString(sBranch,".Friday");
+			End If			
+			If (j == 5) Then
+				sBranch = AddString(sBranch,".Saturday");
+			End If			
+			If (j == 6) Then
+				sBranch = AddString(sBranch,".Sunday");
+			End If			
+			'Print("sBranch : ",sBranch);
+			sSelected = AddString(sBranch,".Selected");
+			'PRINT("sSelected : ",sSelected);
+			?sSelected = 0;
+		Next
+	Next
+End Sub
+
+
+'- Validate --------------------------------------------------------------------
+Sub Validate()
+	Dim iPrint As Integer;
+	iPrint = 0;
+	'Print("FUNCTION : Validate");
+
+	BuildStringDateTime();
+	Window("CLOSE", GetArg("WINDOW"),GetArg("WBRANCH") );
+End Sub
+
+
+'- IncrementMonth --------------------------------------------------------------------
+Sub IncrementMonth()
+	Dim dCurrentDay As Double, dCurrentMonth As Double, dCurrentYear As Double;
+	Dim iPrint As Integer;
+	iPrint = 0;
+
+	'Print("FUNCTION : IncrementMonth");
+
+	'Get the current display date
+	dCurrentDay  = SelectedDay;
+	dCurrentMonth  = SelectedMonth;
+	dCurrentYear  = SelectedYear;
+	
+	If (dCurrentMonth == 12) Then
+		CalculateMonth(dCurrentDay ,01,dCurrentYear+1);
+		SelectedMonth = 01;
+		SelectedYear = SelectedYear +1;
+	Else
+		CalculateMonth(dCurrentDay ,dCurrentMonth+1,dCurrentYear);
+		SelectedMonth = SelectedMonth +1;
+	End If
+End Sub
+
+
+'- DecrementMonth --------------------------------------------------------------------
+Sub DecrementMonth()
+	Dim dCurrentDay As Double, dCurrentMonth As Double, dCurrentYear As Double;
+	Dim iPrint As Integer;
+	iPrint = 0;
+
+	'Print("FUNCTION : DecrementMonth");
+	
+	'Get the current display date
+	dCurrentDay  = SelectedDay;
+	dCurrentMonth  = SelectedMonth;
+	dCurrentYear  = SelectedYear;
+	
+	If (dCurrentMonth == 1) Then
+		CalculateMonth(dCurrentDay ,12,dCurrentYear-1);
+		SelectedMonth = 12;
+		SelectedYear = SelectedYear -1;
+	Else
+		CalculateMonth(dCurrentDay ,dCurrentMonth-1,dCurrentYear);
+		SelectedMonth = SelectedMonth -1;
+	End If
+End Sub
+
+
+'- Today --------------------------------------------------------------------
+Sub Today()
+	Dim iPrint As Integer;
+	iPrint = 0;
+	'Print("FUNCTION : Today");
+
+	CalculateMonth(DateTime("DAY"),DateTime("MONTH"),DateTime("YEAR"));
+	SelectedDay = TOD(DateTime("DAY"));
+	SelectedMonth = TOD(DateTime("MONTH"));
+	SelectedYear = TOD(DateTime("YEAR"));
+	SelectedHour = TOD(DateTime("HOUR"));
+	SelectedMinute = TOD(DateTime("MINUTE"));
+	SelectedSecond = TOD(DateTime("SECOND"));
+
+End Sub
+
+
+'- SetMonth --------------------------------------------------------------------
+Sub SetMonth()
+	Dim dCurrentDay As Double;
+	Dim dCurrentMonth As Double;
+	Dim dCurrentYear As Double;
+	Dim iPrint As Integer;
+	iPrint = 0;
+
+	'Print("FUNCTION : SetMonth");
+	
+	'Get the current display date
+	dCurrentDay  = SelectedDay;
+	dCurrentMonth  = DVAL(GetArg("ARG1"));
+	dCurrentYear  = SelectedYear;
+
+	CalculateMonth(dCurrentDay ,dCurrentMonth,dCurrentYear);
+	SelectedMonth = dCurrentMonth;
+
+	MonthIsDisplay = 0;
+End Sub
+
+
+'- CalculateYear --------------------------------------------------------------------
+Sub CalculateYear()
+	Dim dCurrentYear As Double;
+	Dim i As Integer;
+	Dim sBranch As Str;
+	Dim sVar As Str, sVar1 As Str, sNum As Str;
+	Dim iPrint As Integer;
+	iPrint = 0;
+
+	'Print("FUNCTION : CalculateYear");
+	
+	'Get the current display date
+	dCurrentYear  = SelectedYear;
+	
+	'Print(GetTree());
+	sBranch = GetTree();
+	sBranch = AddString(sBranch, ".Year");
+	FctPRINT(AddString("sBranch : ",sBranch),iPrint);
+	
+	For(i=0;i<12;i++)
+		sNum = RIGHT(AddString("00",TOC(i+1)),2);
+		sVar = AddString(sBranch, sNum,".Year");
+		sVar1 = AddString(sBranch, sNum,".Selected");
+		?sVar = SelectedYear + TOD(i);
+		If (SelectedYear == ?sVar) Then
+			FctPrint("Is selected year",iPrint);
+			?sVar1 = 1;
+		Else
+			FctPrint("Is NOT selected year",iPrint);
+			?sVar1 = 0;				
+		End If
+	Next
+	
+End If
+
+
+'- SetYear --------------------------------------------------------------------
+Sub SetYear()
+	Dim sCurrentDay As Str;
+	Dim sCurrentMonth As Str;
+	Dim sCurrentYear As Str;
+	Dim sYearIsDisplay As Str;
+	Dim dCurrentYear As Double;
+	Dim sBranch As Str;
+	Dim sVar As Str;
+	Dim iPrint As Integer;
+	iPrint = 0;
+	
+	'Print("FUNCTION : SetYear");
+
+	sBranch = GetArg("WBRANCH");
+	
+	FctPrint(AddString("sBranch : ",sBranch),iPrint);
+	
+	'Get the current display date
+	sCurrentDay  = AddString(sBranch, ".SelectedDay");
+	sCurrentMonth  = AddString(sBranch, ".SelectedMonth");
+	sCurrentYear  = AddString(sBranch, ".SelectedYear");
+
+	dCurrentYear  = Year;
+	ResetSelectedYear();
+	Selected=1;
+	CalculateMonth(?sCurrentDay ,?sCurrentMonth,dCurrentYear);
+	?sCurrentYear = dCurrentYear;
+	sYearIsDisplay = AddString(sBranch, ".YearIsDisplay");
+	?sYearIsDisplay = 0;
+End Sub
+
+
+'- ResetSelectedYear --------------------------------------------------------------------
+Sub ResetSelectedYear()
+	Dim dCurrentYear As Double;
+	Dim i As Integer;
+	Dim sBranch As Str;
+	Dim sVar1 As Str;
+	Dim sNum As Str;
+	Dim iPrint As Integer;
+	iPrint = 0;
+
+	'Print("FUNCTION : ResetSelectedYear");
+	
+	
+	sBranch = GetArg("WBRANCH");
+	sBranch = AddString(sBranch, ".Year");
+	FctPRINT(AddString("sBranch : ",sBranch),iPrint);
+	
+	For(i=0;i<12;i++)
+		sNum = RIGHT(AddString("00",TOC(i+1)),2);
+		sVar1 = AddString(sBranch, sNum,".Selected");
+		?sVar1 = 0;				
+	Next	
+End Sub
+
+
+'- OffsetYear --------------------------------------------------------------------
+Sub OffsetYear()
+	Dim dOffset As Double;
+	Dim dCurrentYear As Double;
+	Dim i As Integer;
+	Dim sBranch As Str;
+	Dim sVar As Str;
+	Dim sVar1 As Str;
+	Dim sNum As Str;
+	Dim iPrint As Integer;
+	iPrint = 0;
+
+	'Print("FUNCTION : OffsetYear");
+
+	dOffset = DVAL(GetArg("ARG1"));
+	
+	sBranch = GetTree();
+	sBranch = AddString(sBranch, ".Year");
+	For(i=0;i<12;i++)
+		sNum = RIGHT(AddString("00",TOC(i+1)),2);
+		sVar = AddString(sBranch, sNum,".Year");
+		sVar1 = AddString(sBranch, sNum,".Selected");
+		?sVar = ?sVar+ dOffset;
+		If (SelectedYear == ?sVar) Then
+			FctPrint("Is selected year",iPrint);
+			?sVar1 = 1;
+		Else
+			FctPrint("Is NOT selected year",iPrint);
+			?sVar1 = 0;				
+		End If
+	Next
+
+End Sub
+
+
+'- Comment --------------------------------------------------------------------
+Sub FctPrint(sTxt,iOutput)
+	If (iOutput==1) Then
+		Print(sTxt);
+	End If
+End Sub

@@ -1,0 +1,161 @@
+'-------- SEQ_BUFFER.SVB
+'-------- Does a search and replace using SEQ_BUFFER
+
+Sub Main ()
+
+  Dim lFileBuffer As Long, lStatBuffer As Long;
+  Dim cFileName As Str, cOutputFile As Str;
+  Dim cSepa As Str, cField As Str, cSearch As Str, cReplace As Str;
+  Dim iPreCheck As Integer;
+
+'-------- Initialise variables
+  cSearch = @SEQ.FIND;
+  cReplace = @SEQ.REPLACE;
+  cFileName = @SEQ.FILENAME;
+  cOutPutFile = @SEQ.OUTPUTFILENAME;
+  iPreCheck = 1;
+
+  If (@SEQ.FILETYPE == 0 ) Then
+    cSepa = Chr(32);
+  Else 
+    If  (@SEQ.FILETYPE == 1) Then
+      cSepa = ",";
+    Else
+      cSepa = @SEQ.SEPA;
+    End If
+  End If
+
+'-------- Pre-checks
+  If (Len(cSearch) == 0) Then
+    @SEQ.COMMENT = "Null search string, operation aborted";
+    iPreCheck = 0;
+  End If
+  If (Len(cReplace) == 0) Then
+    @SEQ.COMMENT = "Null replace string, operation aborted";
+    iPreCheck = 0;
+  End If
+  If (Len(cSepa) == 0) Then
+    @SEQ.COMMENT = "Null separator character, operation aborted";
+    iPreCheck = 0;
+  End If
+  lStatBuffer = Alloc_Buffer(32);
+  If (Fstat(cFileName, lStatBuffer) == 0) Then
+    @SEQ.COMMENT = "Search file does not exist, operation aborted";
+    iPreCheck = 0;
+  End If
+
+'-------- Process search and replace if pre check is OK
+  If (iPreCheck == 1) Then
+    lFileBuffer = LoadFile (cFileName);
+    Unlink (cOutputFile);
+    ProcessBuffer (lFileBuffer);
+  End If
+
+'-------- Release memory
+  Free_Buffer (lStatBuffer);
+  
+End Sub
+
+'--------- Load input file and place in buffer
+Sub LoadFile(cFileName)
+  Dim lFileBuffer As Long;
+  Dim lBufferSize As Long;
+
+  lFileBuffer = FileToBuf(cFileName);
+  Seq_Buffer("CRLFTOCR", lFileBuffer);
+  lBufferSize = Seq_Buffer ("LEN", lFileBuffer);
+  Print ("File buffer size = ", Toc(lBufferSize));
+
+  Return (lFileBuffer);
+End Sub
+
+'--------- Process buffer one line at a time
+Sub ProcessBuffer(lHandle)
+  Dim cSepa As Str, cOutputFile As Str;
+  Dim lLineBuffer As Long, lAppend As Long;
+  Dim iEOB As Integer, iCount As Integer;
+
+'-------- Initialise variables
+  cSepa = Chr(10);
+  iEOB = 0;
+  iCount = 0;
+  lLineBuffer = Alloc_Buffer(1024);
+  lAppend = Alloc_Buffer (16);
+  cOutputFile = @SEQ.OUTPUTFILENAME;
+
+'-------- Put CR LF into buffer
+  Put_Buffer (lAppend, 0, Chr (13));
+  Put_Buffer (lAppend, 1, Chr (10));
+
+'-------- Process one line at a time
+  While(iEOB == 0)
+    Seq_Buffer("NEXTFIELD", lHandle, cSepa, lLineBuffer);			' Next line
+    iCount = iCount + SRbuffer (lLineBuffer);				' Do search and replace in line
+    If ( Seq_Buffer ("LEN" , lLineBuffer) == 0) Then				' Check if end of buffer reached
+      iEOB = 1;
+    Else
+      BufToFile(lLineBuffer, cOutputFile, "USEFULL_PART", "APPEND");	' Append each line to file
+      BufToFile(lAppend, cOutputFile, "USEFULL_PART", "APPEND");		' Followed by CR LF
+    End If
+  Wend
+  @SEQ.COMMENT = Addstring (Toc(icount), " occurrence(s) replaced");
+
+'-------- Release memory
+  Free_Buffer(lLineBuffer);
+  Free_Buffer(lAppend);
+  Free_Buffer(lHandle);
+
+End Sub
+
+
+'-------- Perform search and replace in buffer
+Sub SRBuffer (lHandle)
+  Dim cSepa As Str, cField As Str, cSearch As Str, cReplace As Str;
+  Dim iField As Integer, iEOB As Integer, iCount As Integer, iCaseSensitive As Integer;
+
+'-------- Initialise variables 
+  iEOB = 0;
+  iCount = 0;
+  iField = 0;
+  cSearch = @SEQ.FIND;
+  cReplace = @SEQ.REPLACE;
+  iCaseSensitive = @SEQ.CASESENSITIVE;
+
+  If (@SEQ.FILETYPE == 0 ) Then
+    cSepa = Chr(32);
+  Else 
+    If  (@SEQ.FILETYPE == 1) Then
+      cSepa = ",";
+    Else
+      cSepa = @SEQ.SEPA;
+    End If
+  End If
+
+'--------- Loop through each field in line
+  Seq_Buffer("BEGIN", lHandle);
+  While (iEOB== 0)
+    iField ++;
+    cField = Seq_Buffer("NEXTFIELD", lHandle, cSepa, "STR");
+
+   If (iCaseSensitive == 0) Then
+      cField = Lcase (cField);
+      cSearch = Lcase(cSearch);
+  End If
+
+'-------- Check for match and replace if found
+    If (CmpString (cField, cSearch) == 0) Then
+      Seq_Buffer("BEGIN", lHandle);
+      Seq_Buffer("REPLACEFIELD", iField, lHandle, cSepa, cReplace);
+      Seq_Buffer("SEEKFIELD", iField, lHandle, cSepa);
+      iCount ++;
+    Else
+      If (Len(cField) == 0) Then
+        iEOB = 1;
+      End If
+    End If
+  Wend
+
+'--------- Return number of replaces  
+  Return (iCount);
+
+End Sub

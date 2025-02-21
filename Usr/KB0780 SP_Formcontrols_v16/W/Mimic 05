@@ -1,0 +1,134 @@
+ASCII32
+W,BEGIN,"Mimic 05","Mimic1",""
+	TEMPLATE,"TEMPLATE_DASHBOARD_DARK",1,1,0,0,0,0,0,0,0,1,0,0,1,0,0,0
+	POSITION,0,0
+	SIZE,1600,900,1600,900,0,0,0,1280,800,1600,900
+	BACKCOLOREX,192,192,192,0,24,0
+	TITLE,0,"Arborescence","Tree view"
+	STYLE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+	GRIDEX,1,1,4,4,0,0,0,0,0,0
+	LAYERS,65535
+	RIGHTS,0,1,0.000000,64.000000,1,65535,0,0
+	INCLUDED,0,0,0,0,0
+	LINK,1,"Mimic 01","","Avec les variables","With variables"
+	LINK,2,"Mimic 02","","Avec script","With script"
+	LINK,3,"Mimic 03","","Styles diff‚rents","Different styles"
+	LINK,4,"Mimic 04","","A partir d'un fichier","From a file"
+	LINK,5,"Mimic 05","","Tree view","Tree view"
+	LINK,6,"","","",""
+	LINK,7,"","","",""
+	LINK,8,"","","",""
+	LINK,9,"","","",""
+	LINK,10,"","","",""
+	TABS,0,3,0,0,100,100,0,0,-1,0,16,16,0,FONT,1,FONT,1
+	NAV,0,0,0,100,100,0,0
+	BACKBMP,"",0,0
+	BACKOBJECT,"",0,0
+	BEFORE_OPEN,"","","",""
+	BEFORE_CLOSE,"","","",""
+	EVENTS,1
+	BINOBJ,"Mimic 05.binary"
+W,END
+VBA_REFERENCES,BEGIN
+	"stdole", 2, 0, "{00020430-0000-0000-C000-000000000046}"
+	"MimicControls", 1, 0, "{C959A51F-AAFE-40D5-A4A7-3A00A7AF76B4}"
+VBA_REFERENCES,END
+FONTS,BEGIN
+	FONT,1,16,7,700,0,0,"System",0,0
+	FONT,2,-15,0,400,0,0,"Segoe UI Light",0,0
+	FONT,3,-15,0,700,0,0,"Segoe UI",0,0
+FONTS,END
+COLORS,BEGIN
+	COLOREX,1,0,0,0,0,0,0
+	COLOREX,2,0,0,0,0,32,0
+	COLOREX,3,0,0,0,0,24,0
+	COLOREX,4,224,224,224,0,0,0
+	COLOREX,5,0,0,0,0,0,1
+	COLOREX,6,236,233,216,0,0,0
+	COLOREX,7,210,210,240,0,0,0
+COLORS,END
+O,BEGIN,T,"Text1"
+	B,811,314,904,334,522,278,65535,0,6400,0,1,0,0,0,1,0,-1
+	ST,0,1,COLOR,1,COLOR,1,0,0,COLOR,2,0,COLOR,2,0,COLOR,1,0,COLOR,1
+	AST,5,1,COLOR,1,COLOR,2,0,COLOR,1,0,COLOR,1,0,COLOR,1,0,COLOR,1,0
+	PP,1,811,314,0,0,FONT,2,"qwerty",37,FONT,2,"qwerty",37
+	A,BEGIN,DT,"Anim1",0,0,"",""
+		PP,"@TREEVIEW1.USERDATA"
+	A,END
+O,END
+O,BEGIN,T,"Text2"
+	B,811,290,831,310,587,278,65535,0,6400,0,1,0,0,0,1,0,-1
+	ST,0,1,COLOR,1,COLOR,1,0,0,COLOR,3,0,COLOR,3,0,COLOR,1,0,COLOR,1
+	AST,5,1,COLOR,1,COLOR,3,0,COLOR,1,0,COLOR,1,0,COLOR,1,0,COLOR,1,0
+	PP,1,811,290,0,0,FONT,2,"#",37,FONT,2,"#",37
+	A,BEGIN,SR,"Anim1",0,0,"",""
+		PP,"@TREEVIEW1.INDEX",1,"",0,0,0,1,0,0,1.000000,0,0,1
+	A,END
+O,END
+O,BEGIN,T,"Text3"
+	B,731,314,804,334,518,278,65535,0,6400,0,1,0,0,0,1,0,-1
+	ST,0,1,COLOR,4,COLOR,4,0,0,COLOR,5,0,COLOR,5,0,COLOR,1,0,COLOR,1
+	PP,1,731,314,0,0,FONT,2,"Donn‚es",38,FONT,2,"User data",38
+O,END
+O,BEGIN,T,"Text10"
+	B,748,290,804,310,748,290,65535,0,6400,0,1,0,0,0,1,0,-1
+	ST,0,1,COLOR,4,COLOR,4,0,0,COLOR,5,0,COLOR,5,0,COLOR,1,0,COLOR,1
+	PP,1,748,290,0,0,FONT,2,"Index",38,FONT,2,"Index",38
+O,END
+O,BEGIN,T,"Text23"
+	B,478,171,1126,207,462,-1,65535,0,6400,0,1,0,0,0,1,0,-1
+	ST,0,1,COLOR,4,COLOR,4,0,0,COLOR,5,0,COLOR,5,0,COLOR,1,0,COLOR,1
+	PP,1,478,171,0,0,FONT,2,"Le Tree View est diff‚rent des autres contr“les. \\nChaque noeud que vous configurez est li‚ … une animation.",84,FONT,2,"The Tree View is unlike the other controls. Each node that you configure is linked to a Send, Run or Link animation to provide the action.",84
+O,END
+O,BEGIN,TVX,"AITreeView1"
+	B,484,287,704,583,10,195,65535,0,6400,0,1,1,1,0,1,0,1
+	ST,5,1,COLOR,1,COLOR,1,1,0,COLOR,6,0,COLOR,6,0,COLOR,1,0,COLOR,1
+	PP,2,2,"",-1,1,FONT,3,1,COLOR,7,1,COLOR,1,199,110,110,110,-1,-1
+	CI,BEGIN,0,"Item 0","Synoptiques","Mimics","0","","","-1","-1","1","1","0"
+		CI,BEGIN,0,"Item 1","Avec les variables","With variables","0","","","-1","-1","1","1","1"
+			A,BEGIN,LO,"Anim1",0,0,"",""
+				PP,"form1","",1,0,1,0,"Menu","",0,0,,1,1,
+			A,END
+		CI,END
+		CI,BEGIN,0,"Item 2","Avec script","With script","0","","","-1","-1","1","1","1"
+			A,BEGIN,LO,"Anim1",0,0,"",""
+				PP,"form2","",1,0,1,0,"Menu","",0,0,,1,1,
+			A,END
+		CI,END
+		CI,BEGIN,0,"Item 3","Styles differents","Different styles","0","","","-1","-1","1","1","1"
+			A,BEGIN,LO,"Anim1",0,0,"",""
+				PP,"form3","",1,0,1,0,"Menu","",0,0,,1,1,
+			A,END
+		CI,END
+		CI,BEGIN,0,"Item 4","Partir d'un fichier","From a file","0","","","-1","-1","1","1","1"
+			A,BEGIN,LO,"Anim1",0,0,"",""
+				PP,"form4","",1,0,1,0,"Menu","",0,0,,1,1,
+			A,END
+		CI,END
+	CI,END
+	CI,BEGIN,0,"Item 5","Systeme","System","0","","","-1","-1","1","1","0"
+		CI,BEGIN,0,"Item 6","Anglais","English","0","","","-1","-1","1","1","1"
+			A,BEGIN,RP,"Anim1",0,0,"",""
+				PP,"LANGUAGE.SVB","","SETLANGUAGE","2","",0,0
+			A,END
+		CI,END
+		CI,BEGIN,0,"Item 7","Francais","French","0","","","-1","-1","1","1","1"
+			A,BEGIN,RP,"Anim1",0,0,"",""
+				PP,"LANGUAGE.SVB","","SETLANGUAGE","1","",0,0
+			A,END
+		CI,END
+		CI,BEGIN,0,"Item 8","Quitter","Exit","0","","","-1","-1","1","1","1"
+			A,BEGIN,RS,"Anim1",0,0,"",""
+				PP,"STANDARDACTION,10","","","","",0,0
+			A,END
+		CI,END
+	CI,END
+	A,BEGIN,TVXA,"Anim1",0,0,"",""
+		PP,"","@TREEVIEW1.INDEX","@TREEVIEW1.USERDATA","","","","",0,1,0,0,0
+	A,END
+O,END
+O,BEGIN,T,"Text4"
+	B,478,231,1094,267,463,23,65535,0,6400,0,1,0,0,0,1,0,-1
+	ST,0,1,COLOR,4,COLOR,4,0,0,COLOR,5,0,COLOR,5,0,COLOR,1,0,COLOR,1
+	PP,1,478,231,0,0,FONT,2,"Il peut ‚galement ˆtre li‚ … des variables de l'Arbre de variables et / ou ex‚cuter un script.",84,FONT,2,"It can also be linked to variables from the Variables Tree and/or run a script should this be required.",84
+O,END

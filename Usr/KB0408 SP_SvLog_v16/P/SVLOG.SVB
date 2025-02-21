@@ -1,0 +1,102 @@
+'-------- Constants defining the various event types
+const VALTRANSEV = 1; 'Bit transition
+const ALARMACQEV = 2; 'Alarm acknowledge
+const WRITECMDEEV = 4; 'Send a command
+const WRITECTRLEV = 8; 'Send a control value
+const WRITETEXTEV = 16; 'Send text
+const WRITERECIPESEV = 32; 'Send a recipe
+const STARTEXP = 128; 'Log on
+const STOPEXP = 256; 'Log off
+const TRANSETAT_0 = 64; 'Bit transition to 0
+const TRANSETAT_1 = 512; 'Bit transition to 1
+const TRANSETAT_NS = 1024; ' Bit transition to NS
+const TRANSETAT_ALLALL = 1600; 'All bit transitions
+const TRANSALA_PRSACQ = 2048; 'Alarm On Ack
+const TRANSALA_PRSNOACQ = 4096; 'Alarm On Nack
+const TRANSALA_ABSACQ = 8192; 'Alarm Off
+const TRANSALA_ABSNOACQ = 16384; 'Alarm Off Nack
+const TRANSALA_NS = 32768; 'Alarm NS.
+const TRANSALA_ACQOPERATOR = 65536; 'Operator ack
+const TRANSALA_ALLALL = 63488; 'All alm transitions
+const FORCAGEPROG = 131072; 'Run program
+const TRANSALA_OFF = 262144; 'Alarm on
+const TRANSALA_ON = 524288; 'Alarm off
+
+'-------- Global variable
+DIM HandleDest As long; 'Buffer handle
+
+SUB Main()
+	DIM Ret as long;
+	DIM HandleParam as long;
+	DIM Hd1 as double;
+	DIM Hd2 as double;
+	DIM Mask as long;
+	DIM ChParam as Str;
+	Dim DomFltr As Str;
+
+'-------- Set up the event that is triggered when SVLOG ends
+	EVENT ("ADDPROG", "SVLOG.END", 1, "SVLOG.SVB", "", "EndExtract");
+ 
+'-------- Create the filter parameters buffer and populate
+	HandleParam = alloc_buffer(1000);
+	Mask=0;
+	Mask = LOGICAL("OR",Mask, TRANSETAT_0);
+	Mask = LOGICAL("OR",Mask, TRANSETAT_1);
+	Hd1 = DateTimeValue();
+	Hd2 = Hd1 - 3600000;
+	chParam = addstring(chParam,"EVENTS");
+	chParam = addstring(chParam,",");
+	chParam = addstring(chParam, format("%.0f",Hd2));
+	chParam = addstring(chParam,",");
+	chParam = addstring(chParam, format("%.0f",Hd1));
+	chParam = addstring(chParam,",");
+	chParam = addstring(chParam, "0"); ' Max lines
+	chParam = addstring(chParam,",");
+	chParam = addstring(chParam, "0"); ' Direction
+	chParam = addstring(chParam,",");
+	chParam = addstring(chParam, TOC(Mask)); ' Mask
+	chParam = addstring(chParam,",");
+	chParam = addstring(chParam, "0"); ' Min priority
+	chParam = addstring(chParam,",");
+	chParam = addstring(chParam, "15"); ' Max priority
+	chParam = addstring(chParam,",");
+' --------Selection filter
+	chParam = addstring(chParam, "[AND]#@A1=TANK1||TANK2");
+	chParam = addstring(chParam,",");
+'-------- Output format
+	chParam = addstring(chParam, "#D/#M/#Y #h:#m:#s #d #T #E");
+	put_buffer(HandleParam,0,chParam);
+ 
+'-------- Create the output buffer
+	HandleDest = alloc_buffer(128000);
+
+' --------Execute the extract function
+	Ret = SvLog("Extract", HandleDest, HandleParam, "SVLOG.END","SVLOG.STATUS","SVLOG.LINES");
+	If (Ret == 0) then
+		PRINT ("Error in extract function");
+		Event ("DELPROG", "EndExtract", 1);
+	End if
+ 
+'-------- Free buffers
+	Free_Buffer(HandleParam);
+
+END SUB
+
+'-------- Function to be executed when extraction is complete
+
+SUB EndExtract()
+	DIM NomApp as STR;
+	DIM Ret as INTEGER;
+	PRINT ("Extract complete");
+	If (SVLOG.STATUS == 0) then
+		PRINT ("All lines extracted");
+	Else
+		PRINT ("Buffer full - some data may be missing");
+	End if
+
+ '-------- Convert the buffer to a file
+	BUFTOFILE (HandleDest,"Extract.txt");
+	FREE_BUFFER (HandleDest);
+
+END SUB
+

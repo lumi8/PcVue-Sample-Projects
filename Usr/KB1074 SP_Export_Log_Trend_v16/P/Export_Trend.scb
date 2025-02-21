@@ -1,0 +1,130 @@
+
+Const MIN = 1, MAX = 2, AVE = 4, SUM = 8; 
+Const DEVIATION = 16, FIRST = 32, LAST = 64, COUNTER = 128; 
+Const MINDATE = 256, MAXDATE = 512, FIRSTDATE = 1024, LASTDATE = 2048; 
+Const WEIGHTED = 4096; 
+ 
+Sub Main () 
+'-------- Set up event that is triggered when Export_trend is complete 
+  Event("ADDPROG", "Export_Trend.Status_Export_Trend", "S>S", "Export_Trend.scb", "", "OnChangeOfStatus"); 
+End Sub 
+ 
+'-------- Export_Trend of raw values 
+Sub Export_Trend_EX1() 
+  Dim dStartTime As Double, dEndTime As Double; 
+  Dim iResult As Integer; 
+
+  Unlink("export_trend.xlsx");
+ 
+  dEndTime = DateTimeValue(); 
+ dStartTime = DateTimeValue("21/09/20", "18:00:00");
+'  dStartTime = dEndtime - 3600000; ' Current time less 1 hour 
+  iResult = Export_Trend("GETRAW", "@BUILDING.FLOOR_01.ROOM_001.AC.TEMP", "", "", dStartTime, dEndTime, "Export_Trend.Status_Export_Trend", "\n", "'", 0); 
+
+'-------- Check return and, if a previous request is still running, cancel it and clear buffer 
+ If(iResult != 0) Then 
+    Print("Result != 0, historic request not sent"); 
+    If(iResult == -30) Then 
+      EXPORT_TREND("CANCEL"); 
+      EXPORT_TREND("DISPOSE"); 
+   End If 
+ End If 
+End Sub 
+
+
+'-------- Export_Trend of sampled values 
+Sub Export_Trend_EX2() 
+  Dim dStartTime As Double, dEndTime As Double; 
+  Dim iResult As Integer; 
+  Unlink("export_trend.xlsx");
+
+  dEndTime = DateTimeValue(); 
+  dStartTime = dEndtime - 3600000; ' Current time less 1 hour 
+  iResult = Export_Trend("GETSAMPLE", "BUILDING.FLOOR_02.ROOM_001.AC.TEMP,BUILDING.FLOOR_02.ROOM_002.AC.TEMP", "", "", dStartTime, dEndTime, "Export_Trend.Status_Export_Trend", "\n", "'", 0, 0, 1, 1); 
+
+'-------- Check return and, if a previous request is still running, cancel it and clear buffer 
+  If(iResult != 0) Then 
+    Print("Result != 0, historic request not sent"); 
+    If(iResult == -30) Then 
+      Export_Trend("CANCEL"); 
+      Export_Trend("DISPOSE"); 
+    End If 
+  End If 
+End Sub 
+ 
+'-------- Export_Trend of statistical values 
+Sub Export_Trend_EX3() 
+  Dim dStartTime As Double, dEndTime As Double, dStatFlag As Double; 
+  Dim iResult As Integer; 
+  Unlink("export_trend.xlsx");
+
+  dStatFlag = MIN + MAX + AVE + SUM + DEVIATION + FIRST + LAST + COUNTER + WEIGHTED; ' Add/delete stats as required 
+  dEndTime = DateTimeValue(); 
+  dStartTime = dEndtime - 3600000; ' Current time less 1 hour 
+  iResult = Export_Trend("GETSTATISTIC", "@BUILDING.FLOOR_02.ROOM_001.AC.TEMP,@BUILDING.FLOOR_02.ROOM_002.AC.TEMP", "", "", dStartTime, dEndTime, "Export_Trend.Status_Export_Trend", "\n", "'", 0, dStatFlag ); 
+
+'-------- Check return and, if a previous request is still running, cancel it and clear buffer 
+  If(iResult != 0) Then 
+    Print("Result != 0, historic request not sent"); 
+    If(iResult == -30) Then 
+      Export_Trend("CANCEL"); 
+      Export_Trend("DISPOSE"); 
+    End If 
+  End If 
+End Sub 
+
+
+'-------- Export_Trend of aggregated values 
+Sub Export_Trend_EX4() 
+  Dim dStartTime As Double, dEndTime As Double, dStatFlag As Double; 
+  Dim iResult As Integer; 
+  Unlink("export_trend.xlsx");
+ 
+  dStatFlag = MIN + MAX + AVE + SUM; ' Add/delete stats as required 
+  dEndTime = DateTimeValue(); 
+  dStartTime = dEndtime - 3600000; ' Current time less 1 hour 
+  iResult = Export_Trend("GETAGGREGATED", "@BUILDING.FLOOR_02.ROOM_001.AC.TEMP,@BUILDING.FLOOR_02.ROOM_002.AC.TEMP", "", "", dStartTime, dEndTime, "Export_Trend.Status_Export_Trend", "\n", "'", 0, 0, dStatFlag, 1, 1); 
+'-------- Check return and, if a previous request is still running, cancel it and clear buffer 
+  If(iResult != 0) Then 
+    Print("Result != 0, historic request not sent"); 
+    If(iResult == -30) Then 
+     Export_Trend("CANCEL"); 
+      Export_Trend("DISPOSE"); 
+    End If 
+  End If 
+End Sub 
+ 
+'-------- On change of status variable process if complete else clean up 
+Sub OnChangeOfStatus() 
+  Dim sStatus As Single; 
+  Dim lBufferHandle As Long; 
+  Dim iResult As Integer, iLineNumber As Integer; 
+
+  sStatus = @Export_Trend.Status_Export_Trend; 
+  Print("Export_Log status is ", sStatus); 
+  If(sStatus==0 || sStatus==4 || sStatus ==5) Then ' Export complete or reached limits 
+    Print("Trend_Export complete - status is ", sStatus); 
+    lBufferHandle = Alloc_Buffer(32000); 
+    iResult = 1; 
+    iLineNumber = 1; 
+    While(iResult > 0) 
+      iResult = Export_Trend("READBUFFER", lBufferHandle); 
+      If (iResult> 0) Then 
+        BufToExcel(lBufferHandle, "\n", "'", "export_trend.xlsx", "ex1", "APPEND"); 
+        iLineNumber = iLineNumber + iResult; 
+        Print("Exported ",iResult, " lines to Excel"); 
+      End If 
+    Wend 
+    Print("Total lines = ",iLineNumber); 
+    Export_Trend("DISPOSE"); 
+    Free_Buffer(lBufferHandle); 
+  Else 
+   If(sStatus==1) Then ' Export running - do nothing 
+      Print("Trend_Export running"); 
+    Else ' Export failed - cancel and clean up 
+      Print("Trend_Export failed - status is ", sStatus); 
+      Export_Trend("CANCEL"); 
+      Export_Trend("DISPOSE"); 
+    End If 
+  End If 
+End Sub 

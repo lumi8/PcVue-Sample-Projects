@@ -1,0 +1,82 @@
+'-------- Language.svb
+
+'-------- Get current languages when program starts
+Sub Main()
+	GetLanguages();
+End Sub
+
+
+'-------- Gets the installed languages from the project's configuration file
+'
+Sub GetLanguages()
+	Dim ProjectFolder As Str, ParamFile As Str, InString As Str, strString As Str;
+	Dim Rtn As Integer, iResult as Integer;
+	Dim Handle As Long;
+
+'-------- Get the project directory and open the config file 
+	ProjectFolder = GetProjectDir();
+	ParamFile = AddString(ProjectFolder, "\\C\\PARAM.DAT");
+	Rtn = 0;
+	Handle = Alloc_buffer (300);
+	iResult = Fopen (ParamFile, "r");
+	'Print("Open ",iResult,"-",Rtn);
+	
+'--------	Find the LANGUAGE key and get the two languages
+	While (Rtn == 0) 
+		InString = Fgets (ParamFile, 255 );
+		InString = Addstring (Instring, "\n"); ' AsciiField requires the string to be terminated with \n
+		Put_buffer (Handle, 0, InString);
+		strString = AsciiField ("STR", Handle, 1 , ",") ;
+		
+		If (CmpString (strString, "LANGUAGE1") == 0) Then
+			print(strString);
+			@GENERAL.LANGUAGE1 = AsciiField ("STR", Handle, 2 , ",");
+			Rtn = 1;
+		End If
+		If (CmpString (strString, "LANGUAGE2") == 0) Then
+			print(strString);
+			@GENERAL.LANGUAGE2 = AsciiField ("STR", Handle, 2 , ",");
+			Rtn = 1;
+		End If
+
+		Rtn = Feof (ParamFile);
+	Wend
+	Fclose (ParamFile);
+	Free_buffer (Handle);
+
+	GetLangNum();
+End Sub
+
+
+'-------- Set the language - The language number is passed to the subroutine as an argument
+'old
+Sub SetLanguage()
+	Dim LanguageID As Integer;
+
+	LanguageID = Ival(Getarg("ARG1"));
+
+	If (LanguageID == 2) Then
+		Language("SET_L2", 1);
+	end if
+	If(LanguageID == 1) Then
+		Language("SET_L1", 1);
+	End If
+	delay(0.01); 'due to asynchronous
+	GetLangNum();
+	
+End Sub
+
+
+'-------- Get the language number
+Sub GetLangNum()
+	If( Language("GET") == 1) Then
+		@GENERAL.LANGUAGE = 0;
+	End if
+	If( Language("GET") ==2) Then
+		' Alternate Lg
+		@GENERAL.LANGUAGE = 1;
+	End If
+End Sub
+
+
+

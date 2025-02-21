@@ -1,0 +1,2 @@
+EVTPROG,Event01,"",0,0,"","","SV_Quit",2,1,"","NS>1","GENERAL.SVB","","SVRestartCheck","0"
+EVTPROG,Event01,"",0,0,"","","SV_Restart",2,1,"","NS>1","GENERAL.SVB","","SVRestartCheck","0"

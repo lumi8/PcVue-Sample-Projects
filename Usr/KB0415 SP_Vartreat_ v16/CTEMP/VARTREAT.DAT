@@ -1,0 +1,7 @@
+TREATMENT,WATCHDOGEQT,WATCHDOG_NODE1_10,0,,,10 second watchdog for node 1,,,,1,EQT.WORD0,EQT.WORD0.WD10,10,1
+TREATMENT,WATCHDOGSV,WATCHDOG_NODE1,0,,,10 second watchdog for SV,,,,1,EQT.WORD1,0,10
+TREATMENT,GROUPALARM,Synthese_BAT1,0,,0,Synthese bat1,1,,,10,0,#F=(#A1==Bat1),Bat1.PrioOnAck,Bat1.PrioOnNoAck,Bat1.ePrioOnAck,Bat1.ePrioOnNoAck,Bat1.ePrioOn,Bat1,OnNoAck,OnAck,On,OffNoAck,OffAck,Invalid,Disable,DisableOp,DisablePrg,DisableDepVar,DisableExpr,OnMaintenance,OffMaintenance,Inhibited
+TREATMENT,ACKALARMBYVAR,Ack by area,0,,,,,,,1,10,#F=(#A2==LEVEL),#B1.TANK.LEVEL.ACK,1
+TREATMENT,ACKALARMBYVAR,Ack by level 1,0,,,,,,,1,1,#F=(#A2==LEVEL),ACK.LEVEL1,1
+TREATMENT,ACKALARMBYVAR,Ack by level 10,0,,,,,,,10,10,#F=(#A2==LEVEL),ACK.LEVEL10,1
+TREATMENT,ACKALARMBYVAR,Ack by tank,0,,,,,,,1,10,#F=(#A2==LEVEL),#B1.#B2.LEVEL.ACK,1

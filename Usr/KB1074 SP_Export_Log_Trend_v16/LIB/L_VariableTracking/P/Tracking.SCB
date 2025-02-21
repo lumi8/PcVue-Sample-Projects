@@ -1,0 +1,162 @@
+'#####################################
+'Variable tracking filter
+'Filter the variabbles displayed on the grid
+'#####################################
+
+Dim CheckBoxVarTypeBit as integer;
+Dim CheckBoxVarTypeAlarm as integer;
+Dim CheckBoxVarTypeRegister as integer;
+Dim CheckBoxVarTypeText as integer;
+dim strFilter as str;
+Dim strMimic as str;
+Dim strBranch as str;
+
+Sub Main()	'At project startup we can initialize to display only alarms
+	CheckBoxVarTypeBit = 0;
+	CheckBoxVarTypeAlarm = 1;
+	CheckBoxVarTypeRegister = 0;
+	CheckBoxVarTypeText = 0;
+	@VariableTracking.FilterGenerated = "Name unlike \"SYSTEM.*\"";
+	@VariableTracking.OptionOperatorIndex = 6; 'Operator Like
+	@VariableTracking.TextValueFilter = "SYSTEM"; 'Textual value for filter
+	@VariableTracking.RegValueFilter = 0; 'Register value for filter
+	@VariableTracking.BitValueFilter = 0;	'Boolean value for filter
+End Sub
+
+
+sub ApplyFilter()
+'This function is executed:
+'- when the mimic is opened
+'- when the user is clicking on Apply button
+dim VarType as integer;
+
+@VariableTracking.Apply = 0;
+strMimic = GetArg("WINDOW");
+strBranch = GetArg("BRANCH");
+'Update the CheckBoxVarType selection
+CHECKLIST("SETSTATE", strMimic, strBranch, "AICheckBoxVarTypes", 0, CheckBoxVarTypeBit, 0);
+CHECKLIST("SETSTATE", strMimic, strBranch, "AICheckBoxVarTypes", 1, CheckBoxVarTypeAlarm, 0);
+CHECKLIST("SETSTATE", strMimic, strBranch, "AICheckBoxVarTypes", 2, CheckBoxVarTypeRegister, 0);
+CHECKLIST("SETSTATE", strMimic, strBranch, "AICheckBoxVarTypes", 3, CheckBoxVarTypeText, 0);
+
+'Get the filter
+strFilter = @VariableTracking.FilterGenerated;
+
+'Get the type
+VarType=TOI(CHECKLIST("GETSTATE", strMimic, strBranch, "AICheckBoxVarTypes", 0));
+VarType=VarType + TOI(CHECKLIST("GETSTATE", strMimic, strBranch, "AICheckBoxVarTypes", 1)) * 2;
+VarType=VarType + TOI(CHECKLIST("GETSTATE", strMimic, strBranch, "AICheckBoxVarTypes", 2)) * 4;
+VarType=VarType + TOI(CHECKLIST("GETSTATE", strMimic, strBranch, "AICheckBoxVarTypes", 3)) * 8;
+'print("filter ",strFilter);
+'print("Type ",VarType);
+
+Selector("PUTCELL", strMimic, strBranch, "AIGridVar", -1, 0, "Name");
+Selector("PUTCELL", strMimic, strBranch, "AIGridVar", -1, 1, "Description");
+Selector("PUTCELL", strMimic, strBranch, "AIGridVar", -1, 2, "Value");
+Selector("VARIABLE", strMimic, strBranch, "AIGridVar", strFilter, VarType);
+
+end sub
+
+Sub SaveCheckBoxVarTypes()
+'This function is executed each time one change the checkbox variable type options
+
+	strMimic = GetArg("WINDOW");
+	strBranch = GetArg("BRANCH");
+
+	CheckBoxVarTypeBit = TOI(CHECKLIST("GETSTATE", strMimic, strBranch, "AICheckBoxVarTypes", 0));
+	CheckBoxVarTypeAlarm = TOI(CHECKLIST("GETSTATE", strMimic, strBranch, "AICheckBoxVarTypes", 1));
+	CheckBoxVarTypeRegister = TOI(CHECKLIST("GETSTATE", strMimic, strBranch, "AICheckBoxVarTypes", 2));
+	CheckBoxVarTypeText = TOI(CHECKLIST("GETSTATE", strMimic, strBranch, "AICheckBoxVarTypes", 3));
+	@VariableTracking.Apply = 1; 'Filter has changed, this warn the user
+End Sub
+
+Sub ChangeCriteria()
+'This function is executed each time one change the combobox criteria
+Dim IndexCriteria as integer;
+IndexCriteria = TOI(@VariableTracking.ComboBoxCriteriaIndex);
+'print("index = ", IndexCriteria);
+
+If (IndexCriteria==0) Then	'ALL
+	strFilter = "Name like \"*\"";
+Else If (IndexCriteria == 1) Then	'SYSTEM
+		strFilter = "Name like \"SYSTEM.*\"";
+	Else If (IndexCriteria == 2) Then	'ALL BUT SYSTEM
+			strFilter = "Name unlike \"SYSTEM.*\"";
+		Else
+		'we do nothing, the user must continue to build his filter
+			strFilter = "";
+		End If
+	End If
+	
+End If
+'print("filter ",strFilter);
+
+If (CmpString(strFilter, "")!=0) Then
+	@VariableTracking.FilterGenerated = strFilter;
+Else
+	
+End If	
+@VariableTracking.Apply = 1; 'Filter has changed, this warn the user
+End Sub
+
+Sub LogicalRelation()
+'This function is executed each time one select the logical relation AND or OR
+Dim strLogicalrelation as str;
+Dim strCriteria as str;
+Dim strOperator as str;
+Dim strValue as str;
+Dim iTypeOfCriteria as integer;
+
+
+strMimic = GetArg("WINDOW");
+strBranch = GetArg("BRANCH");
+strLogicalrelation = GetArg("ARG1");
+strCriteria = ComboBox("GETUSERDATA", strMimic, strBranch, "AIComboBoxCriteria", @VariableTracking.ComboBoxCriteriaIndex);
+strOperator = Optionlist("GETUSERDATA", strMimic, strBranch, "AIOptionListOperator", @VariableTracking.OptionOperatorIndex);
+If ((CmpString(strCriteria, "BinAttrbNN")==0)||(CmpString(strCriteria, "Simulated")==0)) Then	'Type boolean
+	iTypeOfCriteria = 1;
+Else If ((CmpString(strCriteria, "AlarmLevel")==0)||(CmpString(strCriteria, "BinAttr")==0)||(CmpString(strCriteria, "Threshold")==0)||(CmpString(strCriteria, "LoValueLimit")==0)||(CmpString(strCriteria, "HiValueLimit")==0)) Then 'Type register
+		iTypeOfCriteria = 2;
+	Else 'Type boolean
+		iTypeOfCriteria = 3;
+	End If
+End If
+If (iTypeOfCriteria == 1) Then	'Type boolean
+	strValue = TOC(@VariableTracking.BitValueFilter);	
+Else If (iTypeOfCriteria == 2) Then	'Type register
+	strValue = TOC(@VariableTracking.RegValueFilter);
+	Else 'Type text
+		strValue = AddString("\"", @VariableTracking.TextValueFilter, "\"");
+	End If
+End If
+
+If (CmpString(strCriteria, "TextAttrNN")==0) Then	'Type text attributes, we must say which one
+	strCriteria = AddString("TextAttr", ComboBox("GETUSERDATA", strMimic, strBranch, "AIComboBoxTxtAttNumber", @VariableTracking.ComboBoxTxtAttNumberIndex));
+End If
+If (CmpString(strCriteria, "TextIndAttrNN")==0) Then	'Type text attributes, we must say which one
+	strCriteria = AddString("TextIndAttr", ComboBox("GETUSERDATA", strMimic, strBranch, "AIComboBoxTxtAttNumber", @VariableTracking.ComboBoxTxtAttNumberIndex));
+End If
+If (CmpString(strCriteria, "BinAttrbNN")==0) Then	'Type binary attributes, we must say which one
+	strCriteria = AddString("BinAttrb", ComboBox("GETUSERDATA", strMimic, strBranch, "AIComboBoxBinAttNumber", @VariableTracking.ComboBoxBinAttNumberIndex));
+	strOperator = "=";	'always =
+End If
+If (CmpString(strCriteria, "Simulated")==0) Then	'Type Simulated, we must force the operator
+	strOperator = "=";	'always =
+End If
+		
+'print("Relation : ",strLogicalrelation, ". Criteria = ", strCriteria, ". Operator = ", strOperator, ". Value = ", strValue);
+
+If (CmpString(@VariableTracking.FilterGenerated, "")==0) Then	'If empty filter we don't add logical relation before
+	@VariableTracking.FilterGenerated = AddString(strCriteria, " ", strOperator, " ", strValue);	
+Else	'We must add the logical relation
+	@VariableTracking.FilterGenerated = AddString(@VariableTracking.FilterGenerated, " ", strLogicalrelation, " ", strCriteria, " ", strOperator, " ", strValue);
+End If
+@VariableTracking.Apply = 1; 'Filter has changed, this warn the user
+
+End Sub
+
+'This function is here to open the popup using a button in HMI or a function key for instance
+Sub OpenVarTrackingPopup()
+	Window("OPEN", "L_VariableTracking/VariableTrackingPopup.syn", "" );
+End Sub
+

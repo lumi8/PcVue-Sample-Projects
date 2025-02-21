@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TemplatesSettings>
+<GeneralSettings>
+<ShowGenerationOptionBox>true</ShowGenerationOptionBox>
+<AllowBlankBranch>true</AllowBlankBranch>
+<AllowDuplicateBranch>false</AllowDuplicateBranch>
+<CheckBeforeGenerate>false</CheckBeforeGenerate>
+<AllowRecursiveProperty>true</AllowRecursiveProperty>
+<GenerateGraphical>true</GenerateGraphical>
+<FastSynchro>true</FastSynchro>
+<CheckConsistencyAtStartup>false</CheckConsistencyAtStartup>
+<WarningsAsErrors>false</WarningsAsErrors>
+<MaxFileItems>10000</MaxFileItems>
+<Ref_Skip_Visualization>false</Ref_Skip_Visualization>
+<Ref_Skip_Generation>false</Ref_Skip_Generation>
+<TemplateCompositionOneLevel>false</TemplateCompositionOneLevel>
+<InstanceOnlyCurrentParameters>false</InstanceOnlyCurrentParameters>
+</GeneralSettings>
+</TemplatesSettings>

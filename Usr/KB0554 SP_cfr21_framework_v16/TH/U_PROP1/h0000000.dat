@@ -1,0 +1,253 @@
+KEY,97503eb8568a72027ce33c3964f9d85f
+LB,00310,0,L,Commands,20240122T123737.286Z,20240122T123737.286Z
+LC
+20240122T123737.286Z,1,64, ,,TANK1.PUMP1.RUN.CMD,"Pompe 1 RÇservoir 1",,0,20240122T123737.286Z,0,"                                        ","#@A1,#@A2,#@*A3,#@*A4","Process","",System ADMINISTRATOR,???
+KEY,a093597f9f3710130d74c3217866d980
+LB,00369,0,L,USERLOG,20240122T122406.835Z,20240122T122455.410Z
+LC
+20240122T122406.835Z,1,128,Administrator1,,,"",,0,20240122T122406.835Z,0,"                                        ","#@A1,#@A2","",""
+20240122T122455.410Z,1,128,System1,,,"",,0,20240122T122455.410Z,0,"                                        ","#@A1,#@A2","",""
+KEY,789550d48a5928dba1ec019cba35ae70
+LB,00621,0,L,RuntimeEvent,20240122T122320.988Z,20240122T131247.801Z
+LC
+20240122T122320.988Z,1,16384, ,,SV_Quit,"SV was Quitted",,1309,20240122T122320.988Z,0,"                                        ","#@A1,#@A2","System","RunTime_Started"
+20240122T122321.400Z,1,16384, ,,SV_Restart,"SV was restarted",,1309,20240122T122321.400Z,0,"                                        ","#@A1,#@A2","System","RunTime_Started"
+20240122T131247.801Z,1,4096, ,,SV_Quit,"SV was Quitted",,797,20240122T131247.801Z,0,"                                        ","#@A1,#@A2","System","RunTime_Started"
+KEY,d9f2d2f3590eb52b34c2cd7ae671a1a5
+LB,00375,0,L,SendRegister,20240122T122413.256Z,20240122T122413.256Z
+LC
+20240122T122413.256Z,1,8,Administrator1,,TANK1.PUMP1.SPEED.SP,"Consigne vitesse Pompe 1 RÇservoir 1",10.00,0,20240122T122413.255Z,0,"                                        ","#@A1,#@A2,#@*A3,#@A5,#@*A6","RegisterSend","",User ADMINISTRATOR," 0.00",Administrator
+KEY,9e3fcea297ebea8ce2ac652f4fbc6d59
+LB,00621,0,L,RuntimeEvent,20240122T131743.036Z,20240122T132009.645Z
+LC
+20240122T131743.036Z,1,16384, ,,SV_Quit,"SV was Quitted",,1309,20240122T131743.036Z,0,"                                        ","#@A1,#@A2","System","RunTime_Started"
+20240122T131743.419Z,1,16384, ,,SV_Restart,"SV was restarted",,1309,20240122T131743.419Z,0,"                                        ","#@A1,#@A2","System","RunTime_Started"
+20240122T132009.645Z,1,4096, ,,SV_Quit,"SV was Quitted",,797,20240122T132009.645Z,0,"                                        ","#@A1,#@A2","System","RunTime_Started"
+KEY,fe6e71b1645da7e6b3dd79203ac0a822
+LB,00234,0,L,USERLOG,20240122T132437.333Z,20240122T132437.333Z
+LC
+20240122T132437.333Z,1,128,System1,,,"",,0,20240122T132437.333Z,0,"                                        ","#@A1,#@A2","",""
+KEY,46e1c1d7292b2d3597d4f1f021243a6a
+LB,00621,0,L,RuntimeEvent,20240122T132351.037Z,20240122T133559.723Z
+LC
+20240122T132351.037Z,1,16384, ,,SV_Quit,"SV was Quitted",,1309,20240122T132351.037Z,0,"                                        ","#@A1,#@A2","System","RunTime_Started"
+20240122T132351.416Z,1,16384, ,,SV_Restart,"SV was restarted",,1309,20240122T132351.416Z,0,"                                        ","#@A1,#@A2","System","RunTime_Started"
+20240122T133559.723Z,1,4096, ,,SV_Quit,"SV was Quitted",,797,20240122T133559.723Z,0,"                                        ","#@A1,#@A2","System","RunTime_Started"
+KEY,ae2e6b9059a0a388702588db729937a5
+LB,00234,0,L,USERLOG,20240122T133855.396Z,20240122T133855.396Z
+LC
+20240122T133855.396Z,1,128,System1,,,"",,0,20240122T133855.396Z,0,"                                        ","#@A1,#@A2","",""
+KEY,250adb3c3f4056cc1780c4b018719528
+LB,00621,0,L,RuntimeEvent,20240122T133812.568Z,20240122T134242.161Z
+LC
+20240122T133812.568Z,1,16384, ,,SV_Quit,"SV was Quitted",,1309,20240122T133812.568Z,0,"                                        ","#@A1,#@A2","System","RunTime_Started"
+20240122T133812.966Z,1,16384, ,,SV_Restart,"SV was restarted",,1309,20240122T133812.966Z,0,"                                        ","#@A1,#@A2","System","RunTime_Started"
+20240122T134242.161Z,1,4096, ,,SV_Quit,"SV was Quitted",,797,20240122T134242.161Z,0,"                                        ","#@A1,#@A2","System","RunTime_Started"
+KEY,23a57322bc88a02ea408461ef902e932
+LB,00234,0,L,USERLOG,20240122T134453.035Z,20240122T134453.035Z
+LC
+20240122T134453.035Z,1,128,System1,,,"",,0,20240122T134453.035Z,0,"                                        ","#@A1,#@A2","",""
+KEY,6d587a60fae4a0d944789356caeef7f3
+LB,00621,0,L,RuntimeEvent,20240122T134401.520Z,20240122T135845.348Z
+LC
+20240122T134401.520Z,1,16384, ,,SV_Quit,"SV was Quitted",,1309,20240122T134401.520Z,0,"                                        ","#@A1,#@A2","System","RunTime_Started"
+20240122T134401.921Z,1,16384, ,,SV_Restart,"SV was restarted",,1309,20240122T134401.921Z,0,"                                        ","#@A1,#@A2","System","RunTime_Started"
+20240122T135845.348Z,1,4096, ,,SV_Quit,"SV was Quitted",,797,20240122T135845.348Z,0,"                                        ","#@A1,#@A2","System","RunTime_Started"
+KEY,ce8596fdfd56d0729efaed784bb2c617
+LB,00621,0,L,RuntimeEvent,20240122T135859.739Z,20240122T140038.864Z
+LC
+20240122T135859.739Z,1,16384, ,,SV_Quit,"SV was Quitted",,1309,20240122T135859.739Z,0,"                                        ","#@A1,#@A2","System","RunTime_Started"
+20240122T135900.145Z,1,16384, ,,SV_Restart,"SV was restarted",,1309,20240122T135900.145Z,0,"                                        ","#@A1,#@A2","System","RunTime_Started"
+20240122T140038.864Z,1,4096, ,,SV_Quit,"SV was Quitted",,797,20240122T140038.864Z,0,"                                        ","#@A1,#@A2","System","RunTime_Started"
+KEY,50a18752a66bcc2a44703e20bc4c4b6d
+LB,00621,0,L,RuntimeEvent,20240122T140213.098Z,20240122T140313.505Z
+LC
+20240122T140213.098Z,1,16384, ,,SV_Quit,"SV was Quitted",,1309,20240122T140213.098Z,0,"                                        ","#@A1,#@A2","System","RunTime_Started"
+20240122T140213.509Z,1,16384, ,,SV_Restart,"SV was restarted",,1309,20240122T140213.509Z,0,"                                        ","#@A1,#@A2","System","RunTime_Started"
+20240122T140313.505Z,1,4096, ,,SV_Quit,"SV was Quitted",,797,20240122T140313.489Z,0,"                                        ","#@A1,#@A2","System","RunTime_Started"
+KEY,4da64c05f74e0463c7d519ce314a5b64
+LB,00621,0,L,RuntimeEvent,20240122T140333.037Z,20240122T140359.255Z
+LC
+20240122T140333.037Z,1,16384, ,,SV_Quit,"SV was Quitted",,1309,20240122T140333.037Z,0,"                                        ","#@A1,#@A2","System","RunTime_Started"
+20240122T140333.433Z,1,16384, ,,SV_Restart,"SV was restarted",,1309,20240122T140333.433Z,0,"                                        ","#@A1,#@A2","System","RunTime_Started"
+20240122T140359.255Z,1,4096, ,,SV_Quit,"SV was Quitted",,797,20240122T140359.255Z,0,"                                        ","#@A1,#@A2","System","RunTime_Started"
+KEY,eefbb4e4a62dd60de76e2aa8ce605338
+LB,00319,0,L,Commands,20240122T140733.489Z,20240122T140733.489Z
+LC
+20240122T140733.489Z,1,64, ,,TANK2.PUMP1.RUN.CMD,"Pompe 1 RÇservoir 2",,0,20240122T140733.489Z,0,"                                        ","#@A1,#@A2,#@*A3,#@*A4","Process","",System ADMINISTRATOR,Robin MARTIN
+KEY,d3f7e195019260d142dfeff1689a9c31
+LB,00234,0,L,USERLOG,20240122T140538.099Z,20240122T140538.099Z
+LC
+20240122T140538.099Z,1,128,System1,,,"",,0,20240122T140538.099Z,0,"                                        ","#@A1,#@A2","",""
+KEY,d06a69b6e562b889c07e93a61895dbd7
+LB,00962,0,L,RuntimeEvent,20240122T140506.849Z,20240122T143551.770Z
+LC
+20240122T140506.849Z,1,16384, ,,SV_Quit,"SV was Quitted",,1309,20240122T140506.849Z,0,"                                        ","#@A1,#@A2","System","RunTime_Started"
+20240122T140507.273Z,1,16384, ,,SV_Restart,"SV was restarted",,1309,20240122T140507.273Z,0,"                                        ","#@A1,#@A2","System","RunTime_Started"
+20240122T141440.614Z,1,8192, ,,SV_Quit,"SV was Quitted",,1053,20240122T141440.614Z,0,"                                        ","#@A1,#@A2","System","RunTime_Started"
+20240122T141440.614Z,1,8192, ,,SV_Restart,"SV was restarted",,1053,20240122T141440.614Z,0,"                                        ","#@A1,#@A2","System","RunTime_Started"
+20240122T143551.770Z,1,4096, ,,SV_Quit,"SV was Quitted",,797,20240122T143551.770Z,0,"                                        ","#@A1,#@A2","System","RunTime_Started"
+KEY,343ed804c361f8405325b1fba93ef76b
+LB,01417,0,L,USERLOG,20240122T154334.491Z,20240122T155653.034Z
+LC
+20240122T154334.491Z,1,1073741824,System1,,,"",,0,20240122T154334.491Z,0,"                                        ","#@A1,#@A2","",""
+20240122T154414.674Z,1,128,System1,,,"",,0,20240122T154414.674Z,0,"                                        ","#@A1,#@A2","",""
+20240122T154649.565Z,1,1073741824,Operator1,,,"",,0,20240122T154649.550Z,0,"                                        ","#@A1,#@A2","",""
+20240122T154700.143Z,1,1073741824,System1,,,"",,0,20240122T154700.143Z,0,"                                        ","#@A1,#@A2","",""
+20240122T154738.378Z,1,128,System1,,,"",,0,20240122T154738.378Z,0,"                                        ","#@A1,#@A2","",""
+20240122T154747.134Z,1,1073741824,oprator1,,,"",,0,20240122T154747.134Z,0,"                                        ","#@A1,#@A2","",""
+20240122T154756.924Z,1,128,System1,,,"",,0,20240122T154756.924Z,0,"                                        ","#@A1,#@A2","",""
+20240122T155615.440Z,1,128,System1,,,"",,0,20240122T155615.440Z,0,"                                        ","#@A1,#@A2","",""
+20240122T155619.503Z,1,256,System1,,,"",,0,20240122T155619.503Z,0,"                                        ","#@A1,#@A2","",""
+20240122T155653.034Z,1,128,System1,,,"",,0,20240122T155653.034Z,0,"                                        ","#@A1,#@A2","",""
+KEY,950dac8124488227610c25832b8ffd4e
+LB,00962,0,L,RuntimeEvent,20240122T154126.363Z,20240122T161421.425Z
+LC
+20240122T154126.363Z,1,16384, ,,SV_Quit,"SV was Quitted",,1309,20240122T154126.363Z,0,"                                        ","#@A1,#@A2","System","RunTime_Started"
+20240122T154126.762Z,1,16384, ,,SV_Restart,"SV was restarted",,1309,20240122T154126.762Z,0,"                                        ","#@A1,#@A2","System","RunTime_Started"
+20240122T154224.799Z,1,8192, ,,SV_Quit,"SV was Quitted",,1053,20240122T154224.799Z,0,"                                        ","#@A1,#@A2","System","RunTime_Started"
+20240122T154224.799Z,1,8192, ,,SV_Restart,"SV was restarted",,1053,20240122T154224.799Z,0,"                                        ","#@A1,#@A2","System","RunTime_Started"
+20240122T161421.425Z,1,4096, ,,SV_Quit,"SV was Quitted",,797,20240122T161421.425Z,0,"                                        ","#@A1,#@A2","System","RunTime_Started"
+KEY,c4edbc1c7b13049ffec8e94fcef68176
+LB,00506,0,L,USERLOG,20240122T161558.658Z,20240122T161755.502Z
+LC
+20240122T161558.658Z,1,128,System1,,,"",,0,20240122T161558.658Z,0,"                                        ","#@A1,#@A2","",""
+20240122T161703.096Z,1,1073741824,Operator1,,,"",,0,20240122T161703.096Z,0,"                                        ","#@A1,#@A2","",""
+20240122T161755.502Z,1,1073741824,JBloggs,,,"",,0,20240122T161755.502Z,0,"                                        ","#@A1,#@A2","",""
+KEY,ef61064bcfe2b8e1233cb61a10883c50
+LB,00621,0,L,RuntimeEvent,20240122T161539.581Z,20240122T161811.862Z
+LC
+20240122T161539.581Z,1,16384, ,,SV_Quit,"SV was Quitted",,1309,20240122T161539.581Z,0,"                                        ","#@A1,#@A2","System","RunTime_Started"
+20240122T161539.977Z,1,16384, ,,SV_Restart,"SV was restarted",,1309,20240122T161539.977Z,0,"                                        ","#@A1,#@A2","System","RunTime_Started"
+20240122T161811.862Z,1,4096, ,,SV_Quit,"SV was Quitted",,797,20240122T161811.862Z,0,"                                        ","#@A1,#@A2","System","RunTime_Started"
+KEY,8509377611127127917ee966133083ca
+LB,00308,0,L,Commands,20240122T164808.050Z,20240122T164808.050Z
+LC
+20240122T164808.050Z,1,64, ,,TANK3.PUMP1.RUN.CMD,"Pompe 1 RÇservoir 3",,0,20240122T164808.050Z,0,"                                        ","#@A1,#@A2,#@*A3,#@*A4","Process","",John WEBB,Robin MARTIN
+KEY,952e26db32255f7a87b191951d444770
+LB,02725,0,L,USERLOG,20240122T162015.846Z,20240122T170648.175Z
+LC
+20240122T162015.846Z,1,128,System1,,,"",,0,20240122T162015.846Z,0,"                                        ","#@A1,#@A2","",""
+20240122T162048.346Z,1,1073741824,JBloggs,,,"",,0,20240122T162048.346Z,0,"                                        ","#@A1,#@A2","",""
+20240122T162103.020Z,1,128,System1,,,"",,0,20240122T162103.020Z,0,"                                        ","#@A1,#@A2","",""
+20240122T162228.799Z,1,128,JBloggs,,,"",,0,20240122T162228.784Z,0,"                                        ","#@A1,#@A2","",""
+20240122T162257.955Z,1,1073741824,JBloggs,,,"",,0,20240122T162257.955Z,0,"                                        ","#@A1,#@A2","",""
+20240122T162300.643Z,1,1073741824,JBloggs,,,"",,0,20240122T162300.643Z,0,"                                        ","#@A1,#@A2","",""
+20240122T162302.114Z,1,1073741824,JBloggs,,,"",,0,20240122T162302.114Z,0,"                                        ","#@A1,#@A2","",""
+20240122T162303.455Z,1,1073741824,JBloggs,,,"",,0,20240122T162303.455Z,0,"                                        ","#@A1,#@A2","",""
+20240122T162332.690Z,1,128,System1,,,"",,0,20240122T162332.690Z,0,"                                        ","#@A1,#@A2","",""
+20240122T162749.315Z,1,128,Operator1,,,"",,0,20240122T162749.315Z,0,"                                        ","#@A1,#@A2","",""
+20240122T163024.924Z,1,128,System1,,,"",,0,20240122T163024.924Z,0,"                                        ","#@A1,#@A2","",""
+20240122T164530.534Z,1,256,System1,,,"",,0,20240122T164530.534Z,0,"                                        ","#@A1,#@A2","",""
+20240122T164652.565Z,1,128,Operator1,,,"",,0,20240122T164652.565Z,0,"                                        ","#@A1,#@A2","",""
+20240122T165003.971Z,1,128,System1,,,"",,0,20240122T165003.971Z,0,"                                        ","#@A1,#@A2","",""
+20240122T165422.456Z,1,1073741824,Opeartor1,,,"",,0,20240122T165422.445Z,0,"                                        ","#@A1,#@A2","",""
+20240122T165430.784Z,1,128,Operator1,,,"",,0,20240122T165430.784Z,0,"                                        ","#@A1,#@A2","",""
+20240122T165514.533Z,1,128,System1,,,"",,0,20240122T165514.533Z,0,"                                        ","#@A1,#@A2","",""
+20240122T165841.330Z,1,128,Operator1,,,"",,0,20240122T165841.330Z,0,"                                        ","#@A1,#@A2","",""
+20240122T170116.800Z,1,128,Administrator1,,,"",,0,20240122T170116.800Z,0,"                                        ","#@A1,#@A2","",""
+20240122T170648.175Z,1,128,System1,,,"",,0,20240122T170648.175Z,0,"                                        ","#@A1,#@A2","",""
+KEY,ce8d917b4764493e0ffe4258f480465c
+LB,00621,0,L,RuntimeEvent,20240122T161949.878Z,20240122T170732.300Z
+LC
+20240122T161949.878Z,1,16384, ,,SV_Quit,"SV was Quitted",,1309,20240122T161949.878Z,0,"                                        ","#@A1,#@A2","System","RunTime_Started"
+20240122T161950.221Z,1,16384, ,,SV_Restart,"SV was restarted",,1309,20240122T161950.221Z,0,"                                        ","#@A1,#@A2","System","RunTime_Started"
+20240122T170732.300Z,1,4096, ,,SV_Quit,"SV was Quitted",,797,20240122T170732.300Z,0,"                                        ","#@A1,#@A2","System","RunTime_Started"
+KEY,86e0159228603541f50f92107554f35b
+LB,00234,0,L,USERLOG,20240122T171210.112Z,20240122T171210.112Z
+LC
+20240122T171210.112Z,1,128,System1,,,"",,0,20240122T171210.112Z,0,"                                        ","#@A1,#@A2","",""
+KEY,790fec01f91529ed572914cb94daebdc
+LB,00621,0,L,RuntimeEvent,20240122T171142.629Z,20240122T172220.018Z
+LC
+20240122T171142.629Z,1,16384, ,,SV_Quit,"SV was Quitted",,1309,20240122T171142.629Z,0,"                                        ","#@A1,#@A2","System","RunTime_Started"
+20240122T171143.027Z,1,16384, ,,SV_Restart,"SV was restarted",,1309,20240122T171143.027Z,0,"                                        ","#@A1,#@A2","System","RunTime_Started"
+20240122T172220.018Z,1,4096, ,,SV_Quit,"SV was Quitted",,797,20240122T172220.018Z,0,"                                        ","#@A1,#@A2","System","RunTime_Started"
+KEY,a2c6b93bad57fe55feb611f81b40fa43
+LB,00213,0,T,TANK1.PUMP1.SPEED.SP,20240123T081011.413Z,20240123T090504.835Z
+TR,TANK1.PUMP1.SPEED.SP,0,100,1,1,,0,0,2
+20240123T081011.413Z,21,192
+20240123T090504.835Z,0,64
+KEY,7aa23736b9d22a77bc4294b7d1bc728d
+LB,00213,0,T,TANK1.PUMP1.SPEED.SP,20240123T081011.413Z,20240123T090737.679Z
+TR,TANK1.PUMP1.SPEED.SP,0,100,1,1,,0,0,2
+20240123T081011.413Z,21,192
+20240123T090737.679Z,0,64
+KEY,bb8a2c0f93249db66c384a74a9ce8dca
+LB,00211,0,T,TANK1.PUMP1.SPEED.SP,20240123T081011.413Z,20240123T102000.226Z
+TR,TANK1.PUMP1.SPEED.SP,0,100,0,1,,0,0,2
+P∏1ñ”M⁄      5@¿ –êÅﬁM⁄      7@¿  D∞∏ÂM⁄        @ KEY,6bf07ee0ae9f2e6dbb2fc84a55b56e25
+LB,00748,0,L,USERLOG,20240123T075459.371Z,20240123T084705.678Z
+LC
+20240123T075459.371Z,1,128,System1,,,"",,0,20240123T075459.371Z,0,"                                        ","#@A1,#@A2","",""
+20240123T081006.397Z,1,128,Operator1,,,"",,0,20240123T081006.397Z,0,"                                        ","#@A1,#@A2","",""
+20240123T081339.897Z,1,128,System1,,,"",,0,20240123T081339.897Z,0,"                                        ","#@A1,#@A2","",""
+20240123T083422.631Z,1,256,System1,,,"",,0,20240123T083422.623Z,0,"                                        ","#@A1,#@A2","",""
+20240123T084705.678Z,1,128,System1,,,"",,0,20240123T084705.678Z,0,"                                        ","#@A1,#@A2","",""
+KEY,7d0f14e1f7a851d8940c9693c8abb4fc
+LB,00621,0,L,RuntimeEvent,20240123T075429.794Z,20240123T101958.272Z
+LC
+20240123T075429.794Z,1,16384, ,,SV_Quit,"SV was Quitted",,1309,20240123T075429.794Z,0,"                                        ","#@A1,#@A2","System","RunTime_Started"
+20240123T075430.209Z,1,16384, ,,SV_Restart,"SV was restarted",,1309,20240123T075430.209Z,0,"                                        ","#@A1,#@A2","System","RunTime_Started"
+20240123T101958.272Z,1,4096, ,,SV_Quit,"SV was Quitted",,797,20240123T101958.272Z,0,"                                        ","#@A1,#@A2","System","RunTime_Started"
+KEY,f6666456756b1473f7529d798cc64c18
+LB,00608,0,L,SendRegister,20240123T081011.413Z,20240123T092503.197Z
+LC
+20240123T081011.413Z,1,8,Operator1,,TANK1.PUMP1.SPEED.SP,"Consigne vitesse Pompe 1 RÇservoir 1",21.00,0,20240123T081011.412Z,0,"                                        ","#@A1,#@A2,#@*A3,#@A5,#@*A6","RegisterSend","",John WEBB," 0.00",Operator
+20240123T092503.197Z,1,8,System1,,TANK1.PUMP1.SPEED.SP,"Consigne vitesse Pompe 1 RÇservoir 1",23.00,0,20240123T092503.196Z,0,"                                        ","#@A1,#@A2,#@*A3,#@A5,#@*A6","RegisterSend","",System ADMINISTRATOR,"21.00",System
+KEY,ccb471762426c9114e277545ba9c1328
+LB,00193,0,T,TANK1.PUMP1.SPEED.SP,20240123T102130.381Z,20240123T103423.147Z
+TR,TANK1.PUMP1.SPEED.SP,0,100,0,1,,0,0,2
+–”lÓÂM⁄          ∞èªÁM⁄        @ KEY,61452a04015ca764a223a8a524788a59
+LB,00234,0,L,USERLOG,20240123T102149.287Z,20240123T102149.287Z
+LC
+20240123T102149.287Z,1,128,System1,,,"",,0,20240123T102149.287Z,0,"                                        ","#@A1,#@A2","",""
+KEY,310379033cd019c0a38617bf69c85eee
+LB,00621,0,L,RuntimeEvent,20240123T102133.648Z,20240123T103421.603Z
+LC
+20240123T102133.648Z,1,16384, ,,SV_Quit,"SV was Quitted",,1309,20240123T102133.648Z,0,"                                        ","#@A1,#@A2","System","RunTime_Started"
+20240123T102134.057Z,1,16384, ,,SV_Restart,"SV was restarted",,1309,20240123T102134.057Z,0,"                                        ","#@A1,#@A2","System","RunTime_Started"
+20240123T103421.603Z,1,4096, ,,SV_Quit,"SV was Quitted",,797,20240123T103421.603Z,0,"                                        ","#@A1,#@A2","System","RunTime_Started"
+KEY,24ce9dd78444061a00ed798703ade9f6
+LB,00193,0,T,TANK1.PUMP1.SPEED.SP,20240628T120014.966Z,20240628T130522.856Z
+TR,TANK1.PUMP1.SPEED.SP,0,100,0,1,,0,0,2
+`ÅõºR…⁄          Ä2‰’[…⁄        @ KEY,5bcc8bc7a730a034299fde7aece2de6d
+LB,05194,0,L,Commands,20240628T120204.809Z,20240628T130458.809Z
+LC
+20240628T120204.809Z,1,64, ,,TANK1.PUMP1.RUN.CMD,"Pompe 1 RÇservoir 1",,0,20240628T120204.809Z,0,"                                        ","#@A1,#@A2,#@*A3,#@*A4","Process","",System ADMINISTRATOR,???
+20240628T120700.529Z,1,512, ,,TANK1.PUMP1.RUN.CMD,"Pompe 1 RÇservoir 1",,0,20240628T120700.529Z,0,"                                        ","#@A1,#@A2,#@*A3,#@*A4","Process","",System ADMINISTRATOR,???
+20240628T120829.325Z,1,64, ,,TANK1.PUMP1.RUN.CMD,"Pompe 1 RÇservoir 1",,0,20240628T120829.325Z,0,"                                        ","#@A1,#@A2,#@*A3,#@*A4","Process","",System ADMINISTRATOR,???
+20240628T120830.654Z,1,512, ,,TANK1.PUMP1.RUN.CMD,"Pompe 1 RÇservoir 1",,0,20240628T120830.654Z,0,"                                        ","#@A1,#@A2,#@*A3,#@*A4","Process","",System ADMINISTRATOR,???
+20240628T120834.216Z,1,64, ,,TANK1.PUMP1.RUN.CMD,"Pompe 1 RÇservoir 1",,0,20240628T120834.216Z,0,"                                        ","#@A1,#@A2,#@*A3,#@*A4","Process","",System ADMINISTRATOR,???
+20240628T120836.669Z,1,512, ,,TANK1.PUMP1.RUN.CMD,"Pompe 1 RÇservoir 1",,0,20240628T120836.669Z,0,"                                        ","#@A1,#@A2,#@*A3,#@*A4","Process","",System ADMINISTRATOR,???
+20240628T120838.264Z,1,64, ,,TANK1.PUMP1.RUN.CMD,"Pompe 1 RÇservoir 1",,0,20240628T120838.264Z,0,"                                        ","#@A1,#@A2,#@*A3,#@*A4","Process","",System ADMINISTRATOR,???
+20240628T121207.966Z,1,512, ,,TANK1.PUMP1.RUN.CMD,"Pompe 1 RÇservoir 1",,0,20240628T121207.966Z,0,"                                        ","#@A1,#@A2,#@*A3,#@*A4","Process","",System ADMINISTRATOR,???
+20240628T121831.685Z,1,64, ,,TANK1.PUMP1.RUN.CMD,"Pompe 1 RÇservoir 1",,0,20240628T121831.685Z,0,"                                        ","#@A1,#@A2,#@*A3,#@*A4","Process","",System ADMINISTRATOR,???
+20240628T122027.607Z,1,512, ,,TANK1.PUMP1.RUN.CMD,"Pompe 1 RÇservoir 1",,0,20240628T122027.607Z,0,"                                        ","#@A1,#@A2,#@*A3,#@*A4","Process","",System ADMINISTRATOR,???
+20240628T122032.778Z,1,512, ,,TANK2.PUMP1.RUN.CMD,"Pompe 1 RÇservoir 2",,0,20240628T122032.778Z,0,"                                        ","#@A1,#@A2,#@*A3,#@*A4","Process","",System ADMINISTRATOR,???
+20240628T122035.356Z,1,64, ,,TANK2.PUMP1.RUN.CMD,"Pompe 1 RÇservoir 2",,0,20240628T122035.356Z,0,"                                        ","#@A1,#@A2,#@*A3,#@*A4","Process","",System ADMINISTRATOR,???
+20240628T122036.856Z,1,512, ,,TANK2.PUMP1.RUN.CMD,"Pompe 1 RÇservoir 2",,0,20240628T122036.856Z,0,"                                        ","#@A1,#@A2,#@*A3,#@*A4","Process","",System ADMINISTRATOR,???
+20240628T122037.669Z,1,64, ,,TANK2.PUMP1.RUN.CMD,"Pompe 1 RÇservoir 2",,0,20240628T122037.669Z,0,"                                        ","#@A1,#@A2,#@*A3,#@*A4","Process","",System ADMINISTRATOR,???
+20240628T122153.357Z,1,64, ,,TANK1.PUMP1.RUN.CMD,"Pompe 1 RÇservoir 1",,0,20240628T122153.357Z,0,"                                        ","#@A1,#@A2,#@*A3,#@*A4","Process","",System ADMINISTRATOR,???
+20240628T122236.466Z,1,512, ,,TANK1.PUMP1.RUN.CMD,"Pompe 1 RÇservoir 1",,0,20240628T122236.466Z,0,"                                        ","#@A1,#@A2,#@*A3,#@*A4","Process","",System ADMINISTRATOR,???
+20240628T122237.451Z,1,64, ,,TANK1.PUMP1.RUN.CMD,"Pompe 1 RÇservoir 1",,0,20240628T122237.451Z,0,"                                        ","#@A1,#@A2,#@*A3,#@*A4","Process","",System ADMINISTRATOR,???
+20240628T124245.012Z,1,512, ,,TANK1.PUMP1.RUN.CMD,"Pompe 1 RÇservoir 1",,0,20240628T124245.012Z,0,"                                        ","#@A1,#@A2,#@*A3,#@*A4","Process","",System ADMINISTRATOR,???
+20240628T124247.372Z,1,64, ,,TANK1.PUMP1.RUN.CMD,"Pompe 1 RÇservoir 1",,0,20240628T124247.372Z,0,"                                        ","#@A1,#@A2,#@*A3,#@*A4","Process","",System ADMINISTRATOR,???
+20240628T124249.029Z,1,512, ,,TANK1.PUMP1.RUN.CMD,"Pompe 1 RÇservoir 1",,0,20240628T124249.029Z,0,"                                        ","#@A1,#@A2,#@*A3,#@*A4","Process","",System ADMINISTRATOR,???
+20240628T124249.810Z,1,64, ,,TANK1.PUMP1.RUN.CMD,"Pompe 1 RÇservoir 1",,0,20240628T124249.810Z,0,"                                        ","#@A1,#@A2,#@*A3,#@*A4","Process","",System ADMINISTRATOR,???
+20240628T124254.563Z,1,512, ,,TANK1.PUMP1.RUN.CMD,"Pompe 1 RÇservoir 1",,0,20240628T124254.563Z,0,"                                        ","#@A1,#@A2,#@*A3,#@*A4","Process","",System ADMINISTRATOR,???
+20240628T124255.856Z,1,64, ,,TANK1.PUMP1.RUN.CMD,"Pompe 1 RÇservoir 1",,0,20240628T124255.856Z,0,"                                        ","#@A1,#@A2,#@*A3,#@*A4","Process","",System ADMINISTRATOR,???
+20240628T124323.575Z,1,512, ,,TANK1.PUMP1.RUN.CMD,"Pompe 1 RÇservoir 1",,0,20240628T124323.575Z,0,"                                        ","#@A1,#@A2,#@*A3,#@*A4","Process","",System ADMINISTRATOR,???
+20240628T130458.809Z,1,64, ,,TANK1.PUMP1.RUN.CMD,"Pompe 1 RÇservoir 1",,0,20240628T130458.809Z,0,"                                        ","#@A1,#@A2,#@*A3,#@*A4","Process","",System ADMINISTRATOR,???
+KEY,ff4c5361a131839b7166bc4c66fb4b4c
+LB,00497,0,L,USERLOG,20240628T120112.778Z,20240628T130522.263Z
+LC
+20240628T120112.778Z,1,128,System1,,,"",,0,20240628T120112.778Z,0,"                                        ","#@A1,#@A2","",""
+20240628T120432.684Z,1,1073741824,System1,,,"",,0,20240628T120432.684Z,0,"                                        ","#@A1,#@A2","",""
+20240628T130522.263Z,1,256,System1,,,"",,0,20240628T130522.263Z,0,"                                        ","#@A1,#@A2","",""
+KEY,4a942fc0f044ab862b8b688645b32d87
+LB,00621,0,L,RuntimeEvent,20240628T120018.887Z,20240628T130522.231Z
+LC
+20240628T120018.887Z,1,16384, ,,SV_Quit,"SV was Quitted",,1309,20240628T120018.887Z,0,"                                        ","#@A1,#@A2","System","RunTime_Started"
+20240628T120019.279Z,1,16384, ,,SV_Restart,"SV was restarted",,1309,20240628T120019.279Z,0,"                                        ","#@A1,#@A2","System","RunTime_Started"
+20240628T130522.231Z,1,4096, ,,SV_Quit,"SV was Quitted",,797,20240628T130522.231Z,0,"                                        ","#@A1,#@A2","System","RunTime_Started"

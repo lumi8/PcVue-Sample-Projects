@@ -1,0 +1,28 @@
+'-------- EXLOGDISPLAY.SVB
+'-------- Example of LODDISPLAY mode FILTER
+
+Sub Main ()
+
+End Sub
+
+
+'-------- Apply a filter to a Log Display
+'-------- If filter string is null then the Log Display is reset
+
+Sub ApplyFilter()
+  Dim FilterString As Str, WinName As Str, LogName As Str;
+
+  WinName = GetArg("WINDOW");
+  LogName = GetArg("ARG1");			'The name of the Log Display is passed as an argument
+  FilterString = @FILTERSTRING;
+  
+  If (CmpString (FilterString, "") == 0) Then
+    LogDisplay("FILTER", WinName, "", LogName, "");
+  Else
+    FilterString = AddString ("=(#A4==\"", FilterString);	'Note the use of \" to enter a " in the string
+    FilterString = AddString (FilterString, "\")");
+    Print("Filter string is ",FilterString);
+    LogDisplay("FILTER", WinName, "", LogName, FilterString);
+  End If
+
+End Sub

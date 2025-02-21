@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<ParametersRoot Name="" SchemaVersion="12.0.0">
+<Parameter Name="p_TrendPeriod">
+<nDataType>2</nDataType>
+<nType>0</nType>
+<DefaultValue>0</DefaultValue>
+<Empty>0</Empty>
+</Parameter>
+<Parameter Name="pg_ClientList">
+<nPType>1</nPType>
+<nDataType>0</nDataType>
+<nType>0</nType>
+<DefaultValue>LCCLIENTS</DefaultValue>
+<GblOverwriteMode>0</GblOverwriteMode>
+<GblObjectType>1</GblObjectType>
+<GblPropertyName>ClientListName</GblPropertyName>
+<GblPropertyDefaultValue/>
+<GblFilters/>
+</Parameter>
+<Parameter Name="pg_Domain">
+<nPType>1</nPType>
+<nDataType>0</nDataType>
+<nType>1</nType>
+<DefaultValue>=Inst.Name</DefaultValue>
+<GblOverwriteMode>0</GblOverwriteMode>
+<GblEvaluationMode>1</GblEvaluationMode>
+<GblObjectType>1</GblObjectType>
+<GblPropertyName>Domain</GblPropertyName>
+<GblPropertyDefaultValue/>
+<GblFilters/>
+</Parameter>
+<Parameter Name="pg_Nature">
+<nPType>1</nPType>
+<nDataType>0</nDataType>
+<nType>0</nType>
+<DefaultValue/>
+<GblOverwriteMode>0</GblOverwriteMode>
+<GblObjectType>1</GblObjectType>
+<GblPropertyName>Nature</GblPropertyName>
+<GblPropertyDefaultValue/>
+<GblFilters/>
+</Parameter>
+<Parameter Name="pg_ServerList">
+<nPType>1</nPType>
+<nDataType>0</nDataType>
+<nType>0</nType>
+<DefaultValue>LSDAS_ASSOC1</DefaultValue>
+<GblOverwriteMode>0</GblOverwriteMode>
+<GblObjectType>1</GblObjectType>
+<GblPropertyName>ServerListName</GblPropertyName>
+<GblPropertyDefaultValue/>
+<GblFilters/>
+</Parameter>
+</ParametersRoot>
+</root>
