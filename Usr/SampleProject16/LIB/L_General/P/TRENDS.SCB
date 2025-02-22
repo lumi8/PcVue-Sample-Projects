@@ -1,0 +1,293 @@
+Sub Main()
+	
+End Sub
+
+'Reading trends in the HISTO.dat and HDSTrend.dat files to fill a table with variable names (max 10000)
+'Then we apply a sorting algorithm. 
+'The result is sent to the combobox.
+'To go faster, sort through the site https://textfixerfr.com/outils/ordre-alphabetique.php
+Sub FillTrendCombobox()
+	Dim sWindow as str, sBranch as str, sBranchSym as str;
+	Dim iret as integer;
+
+	sWindow = GetArg("WINDOW");
+	sBranch = GetArg("WBRANCH");
+	sBranchSym = GetArg("BRANCH");
+	TimeToUpdateTrends = DateTimeValue();
+	Cancel = 0;
+	ProgressBar = 0;
+	
+	Program("PRELOAD", "L_General/TRENDS_Sorting.SCB", "");
+	While (iret == 0)
+		iret = Program("IS_LOADED", "L_General/TRENDS_Sorting.SCB", "");
+		delay(0.1);
+	Wend
+	iret = Program("FUNCTION", "L_General/TRENDS_Sorting.SCB", "", "FillTrendCombobox", AddString(sWindow, ",", sBranch, ",", sBranchSym));
+		
+End Sub
+
+
+Sub SaveConfig()
+Dim sConfigName as str,sConfigFileName as str, sWindow as str, sBranch as str, Identity as str;
+Dim iret as integer, Exist as integer;
+Dim lret as long, NbConfig as long, i as long;
+
+	sConfigFileName = AddString(GetArg("BRANCH"), "\\", ConfigName, ".xml");
+	sWindow = GetArg("WINDOW");
+	sBranch = GetArg("WBRANCH");
+	'iret = Trend("GETCONFIG", sWindow, sBranch, TrendIdentity, sConfigFileName);	'Create the config file or update it if it already exist
+	iret = Trend("GETCONFIG_ASYNC", sWindow, sBranch, TrendIdentity, sConfigFileName , "L_General/TRENDS.SCB", GetArg("BRANCH"), "onTrend_GetConfig" , AddString(sWindow, ",", sBranch));
+	
+	
+End Sub
+
+
+Sub onTrend_GetConfig()	'callback function for GETCONFIG_ASYNC mode of TREND instruction.
+Dim sConfigName as str,sConfigFileName as str, sWindow as str, sBranch as str, Identity as str;
+Dim iret as integer, Exist as integer;
+Dim lret as long, NbConfig as long, i as long;
+
+	sConfigFileName = AddString(GetArg("BRANCH"), "\\", ConfigName, ".xml");
+	sWindow = GetArg("ARG1");
+	sBranch = GetArg("ARG2");	
+	Identity = "AICB_ConfigName";	
+	NbConfig = ComboBox("COUNT", sWindow, sBranch, Identity);
+	Print("Add File = ",sConfigFileName, " Window = ", sWindow, " Branch = ", sBranch);
+	For(i=0;i<=NbConfig;i++)	'Browse the ComboBox items to see if the config already exist
+		sConfigName = ComboBox("GETTEXT", sWindow, sBranch, Identity, i);
+		If (CmpString(sConfigName, ConfigName)==0) Then
+			Exist = 1;
+			Break;	'Stop to browse
+		End If
+	Next
+	
+	If (Exist==0) Then	'If it does not exist, add a new entry into the ComboBox
+		lret = ComboBox("INSERT", sWindow, sBranch, Identity, ConfigName, ConfigName);
+		lret = ComboBox("SETSELECTEDINDEX", sWindow, sBranch, Identity, NbConfig);
+		lret = ComboBox("SAVE", sWindow, sBranch, Identity, ConfigFileName);
+		Print("Add File = ",sConfigFileName, " Window = ", sWindow, " Branch = ", sBranch, " ComboBox return = ", lret);
+	End If
+End Sub
+
+Sub DeleteConfig()
+Dim sConfigName as str,sConfigFileName as str, sWindow as str, sBranch as str, Identity as str;
+Dim lret as long, NbConfig as long, i as long;
+
+	sWindow = GetArg("WINDOW");
+	sBranch = GetArg("WBRANCH");
+	Identity = "AICB_ConfigName";	
+	sConfigFileName = AddString(GetArg("BRANCH"), "\\", ConfigName, ".xml");
+	sConfigName = "";
+	
+	Unlink(sConfigFileName);
+
+	NbConfig = ComboBox("COUNT", sWindow, sBranch, Identity);
+	For(i=0;i<=NbConfig;i++)	'Browse the ComboBox items to look for the entry to delete
+		sConfigName = ComboBox("GETTEXT", sWindow, sBranch, Identity, i);
+		If (CmpString(sConfigName, ConfigName)==0) Then
+			lret = ComboBox("REMOVE", sWindow, sBranch, Identity, i);
+			lret = ComboBox("SAVE", sWindow, sBranch, Identity, ConfigFileName);
+			'Print("Delete File = ",sConfigFileName, " Window = ", sWindow, " Branch = ", sBranch, " ComboBox return = ", lret);
+			If (i==NbConfig) Then	'If it was the latest entry
+				ComboBox("SETSELECTEDINDEX", sWindow, sBranch, Identity, 0);	'Select the first entry
+'				sConfigName = ComboBox("GETTEXT", sWindow, sBranch, Identity, 0);		
+			Else
+				ComboBox("SETSELECTEDINDEX", sWindow, sBranch, Identity, i);	'Select the next entry
+'				sConfigName = ComboBox("GETTEXT", sWindow, sBranch, Identity, i);
+			End If
+		End If
+	Next
+
+LoadConfig();	'In order to update ConfigName
+End Sub
+
+
+Sub LoadConfig()
+Dim sConfigName as str,sConfigFileName as str, sWindow as str, sBranch as str, Identity as str;
+Dim iret as integer;
+Dim XMLNameSpace as long;
+
+	sWindow = GetArg("WINDOW");
+	sBranch = GetArg("WBRANCH");
+	Identity = "AICB_ConfigName";	
+	
+	sConfigName = ComboBox("GETTEXT", sWindow, sBranch, Identity, ComboBox("GETSELECTEDINDEX", sWindow, sBranch, Identity));
+	
+	If (CmpString(sConfigName, "")!=0) Then	'ComboBox selected item is not NULL
+		ConfigName = sConfigName;
+		
+		sConfigFileName = AddString(GetArg("BRANCH"), "\\", sConfigName, ".xml");
+		XMLNameSpace = FileToBuf(sConfigFileName);
+			
+		iret = Trend("SETCONFIG", sWindow, sBranch, TrendIdentity, XMLNameSpace);	'Update the TrendViewer according to the config file
+		Print("Load File 1 = ",sConfigFileName, " Window = ", sWindow, " Branch = ", sBranch, " return = ", iret);
+		
+	Else	'ComboBox selected item is NULL
+		sConfigName = ComboBox("GETTEXT", sWindow, sBranch, Identity, 0);	'Try to load the first item
+		If (CmpString(sConfigName, "")!=0) Then	'First ComboBox item is not NULL
+			ConfigName = sConfigName;
+			
+			sConfigFileName = AddString(GetArg("BRANCH"), "\\", sConfigName, ".xml");
+			XMLNameSpace = FileToBuf(sConfigFileName);
+			ComboBox("SETSELECTEDINDEX", sWindow, sBranch, Identity, 0);
+			
+			iret = Trend("SETCONFIG", sWindow, sBranch, TrendIdentity, XMLNameSpace);
+			Print("Load File 2 = ",sConfigFileName, " Window = ", sWindow, " Branch = ", sBranch, " return = ", iret);
+			
+		Else
+			Print("Impossible to load an item");
+		End If
+	End If
+
+	If (XMLNameSpace!=0) Then
+		Free_Buffer(XMLNameSpace);		
+	End If
+		
+End Sub
+
+
+Sub TranslateCbFiles()	'Translate Combobox files to be compatible in both languages (1 and 2)
+	Dim Text as str, Line as str, File as str, sWindow as str, sBranch as str;
+	Dim lFileBuf as long, lLineBuf as long, lFieldBuf as long;
+	Dim i as integer;
+	CONST MaxLine = 512;
+	CONST MaxField = 128;
+	
+	File = ConfigFileName;	'PcVue text variable
+	lFileBuf = FileToBuf(File);	'Save the current file into a buffer
+	Unlink(File);	'Delete the current file
+	Fopen(File, "w");	'Create a new empty file
+	
+	i=1;
+	
+	While(i!=0)	'Until the end of file, we read each line
+		lLineBuf = Alloc_Buffer(MaxLine);
+		i = Seq_Buffer("NEXTFIELD", lFileBuf, "\n", lLineBuf);	'Read the line
+		Line = Cget_Buffer(lLineBuf, 0, MaxLine, 1);	'Get the ASCII characters of the line
+
+		If (CmpString(Left(Line, 4), "CI,B")==0) Then	'This line contains a text to translate
+			lFieldBuf = Alloc_Buffer(MaxField);
+			Seq_Buffer("SEEKFIELD", 1, lLineBuf, Chr(34));	'Move the pointer to the second position
+			Text = Seq_Buffer("NEXTFIELD", lLineBuf, Chr(34), "STR");	'Get the text to translate
+			Seq_Buffer("REPLACEFIELD", 2, lLineBuf, Chr(34), Text);	'Replace for second language
+			Seq_Buffer("REPLACEFIELD", 4, lLineBuf, Chr(34), Text);	'Replace for User Data
+			Line = Cget_Buffer(lLineBuf, 0, MaxLine, 1);	'Get the ASCII characters of the line
+
+			Free_Buffer(lFieldBuf);
+		End If
+		If (CmpString(Line, "")!=0) Then 	'if the line is not empty
+			Fputs(File, Line);	'Add the new line into the new file
+			Fputs(File, Chr(10));	'Add a line feed
+		End If
+		
+		Free_Buffer(lLineBuf);
+	Wend
+	Free_Buffer(lFileBuf);
+	Fclose(File);
+	
+	
+	File = TrendsFileName;	'PcVue text variable
+	lFileBuf = FileToBuf(File);	'Save the current file into a buffer
+	Unlink(File);	'Delete the current file
+	Fopen(File, "w");	'Create a new empty file
+	
+	i=1;
+	
+	While(i!=0)	'Until the end of file, we read each line
+		lLineBuf = Alloc_Buffer(MaxLine);
+		i = Seq_Buffer("NEXTFIELD", lFileBuf, "\n", lLineBuf);	'Read the line
+		Line = Cget_Buffer(lLineBuf, 0, MaxLine, 1);	'Get the ASCII characters of the line
+
+		If (CmpString(Left(Line, 4), "CI,B")==0) Then	'This line contains a text to translate
+			lFieldBuf = Alloc_Buffer(MaxField);
+			Seq_Buffer("SEEKFIELD", 1, lLineBuf, Chr(34));	'Move the pointer to the second position
+			Text = Seq_Buffer("NEXTFIELD", lLineBuf, Chr(34), "STR");	'Get the text to translate
+			Seq_Buffer("REPLACEFIELD", 2, lLineBuf, Chr(34), Text);	'Replace for second language
+			Seq_Buffer("REPLACEFIELD", 4, lLineBuf, Chr(34), Text);	'Replace for User Data
+			Line = Cget_Buffer(lLineBuf, 0, MaxLine, 1);	'Get the ASCII characters of the line
+
+			Free_Buffer(lFieldBuf);
+		End If
+		If (CmpString(Line, "")!=0) Then 	'if the line is not empty
+			Fputs(File, Line);	'Add the new line into the new file
+			Fputs(File, Chr(10));	'Add a line feed
+		End If
+		
+		Free_Buffer(lLineBuf);
+	Wend
+	Free_Buffer(lFileBuf);
+	Fclose(File);
+
+	sWindow = GetArg("WINDOW");	
+	sBranch = GetArg("WBRANCH");
+	Window("CLOSE", sWindow, sBranch);	'Refresh the window
+	Window("OPEN", sWindow, sBranch);
+End Sub
+
+'********************************************
+'Procedure : AddVarToTrend
+'=>Description: Add a var to the trendviewer
+'INPUT : 
+'Executed : From the trend mimic
+'Branch : -
+'********************************************
+sub AddVarToTrend()
+Dim traceID as integer, ret as integer;
+Dim index as long;
+Dim sWindow as str, sBranch as str, SymBranch as str, Identity as str, var as str;
+
+	SymBranch = GetArg("BRANCH");
+	traceID = ival(GetLastBranch(SymBranch));
+	SymBranch = Left(SymBranch, Len(Symbranch) - Len(GetLastBranch(SymBranch)) - 1);	
+	Tree(SymBranch);
+	sWindow=window("CURRENTNAME");
+	sBranch=WINDOW("CURRENTBRANCH");
+	Identity = "AICB_TrendsList";
+	index 	= ComboBox("GETSELECTEDINDEX", sWindow, sBranch, Identity);
+	var		= ComboBox("GETUSERDATA", sWindow, sBranch, Identity, index);	
+	ret = Trend("SETVAR", sWindow, sBranch, TrendIdentity, 1, traceID, AddString("@", var));	
+	Print("Add Trend = ",SymBranch, " Window = ", sWindow, " Branch = ", sBranch, " index = ", index, " var = ", var, " Trend return = ", ret);
+
+end sub
+
+'********************************************
+'Procedure : DelVarToTrend
+'=>Description: Delete a var to the trendviewer
+'INPUT : 
+'Executed : From the trend mimic
+'Branch : -
+'********************************************
+sub DelVarToTrend()
+Dim traceID as integer;
+Dim sWindow as str, sBranch as str, SymBranch as str, Identity as str;
+
+	SymBranch = GetArg("BRANCH");
+	traceID = ival(GetLastBranch(SymBranch));
+	SymBranch = Left(SymBranch, Len(Symbranch) - Len(GetLastBranch(SymBranch)) - 1);	
+	Tree(SymBranch);
+	sWindow=window("CURRENTNAME");
+	sBranch=WINDOW("CURRENTBRANCH");
+	Trend("CLEARVAR", sWindow, sBranch, TrendIdentity, traceID);	
+end sub
+
+Sub GetLastBranch(SymBranch)
+	Dim lLineBuf as long, lFieldBuf as long;
+	Dim i as integer, intLengh as integer;
+	Dim LastBranch as str;
+	CONST MaxLine = 255;
+	CONST MaxField = 255;
+	
+	lLineBuf = Alloc_Buffer(MaxLine);
+	lFieldBuf = Alloc_Buffer(MaxField);
+	Put_Buffer(lLineBuf, 0, SymBranch);
+	
+	i=1;
+
+	While (i!=0)
+		i = Seq_Buffer("NEXTFIELD", lLineBuf, ".", lFieldBuf);
+		If (CmpString(Cget_Buffer(lFieldBuf, 0, MaxField), "")!=0) Then
+			LastBranch = Cget_Buffer(lFieldBuf, 0, MaxField);
+		End If
+	Wend
+	Return(LastBranch);
+End Sub

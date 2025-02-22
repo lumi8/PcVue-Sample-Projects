@@ -1,0 +1,595 @@
+ASCII32
+W,BEGIN,"Settings","Settings",""
+	TEMPLATE,"TEMPLATE_DASHBOARD_DARK",1,1,1,0,1,0,0,0,0,1,0,0,1,0,0,0
+	POSITION,0,0
+	SIZE,1600,900,1600,900,0,0,0,1920,1080,1600,900
+	BACKCOLOREX,240,240,240,0,0,0
+	TITLE,0,"SETTINGS","SETTINGS"
+	STYLE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+	GRIDEX,1,1,4,4,100,100,100,0,0,0
+	LAYERS,1
+	RIGHTS,0,1,0.000000,64.000000,1,65535,0,0
+	INCLUDED,0,0,0,0,0
+	LINK,1,"Mimic 01","","Vue 01","Mimic 01 Title"
+	LINK,2,"Mimic 02","","Vue 02","Mimic 02 Title"
+	LINK,3,"Mimic 03","","Vue 03","Mimic 03 Title"
+	LINK,4,"Mimic 04","","Vue 04","Mimic 04 Title"
+	LINK,5,"Mimic 05","","Vue 05","Mimic 05 Title"
+	LINK,6,"BUILDING_FLOOR_01_Mim","BUILDING.FLOOR_01","ETAGE 01","FLOOR 01"
+	LINK,7,"BUILDING_FLOOR_02_Mim","BUILDING.FLOOR_02","ETAGE 02","FLOOR 02"
+	LINK,8,"Mimic08","","Vue 08","Mimic 08"
+	LINK,9,"Mimic09","","Vue 09","Mimic 09"
+	LINK,10,"Mimic10","","Vue 10","Mimic 10"
+	TABS,0,3,0,0,100,100,0,0,-1,0,16,16,0,FONT,1,FONT,1
+	NAV,0,0,0,100,100,0,0
+	BACKBMP,"",0,0
+	BACKOBJECT,"",0,0
+	BEFORE_OPEN,"L_VariableTracking/TRACKING.SCB","","Main",""
+	BEFORE_CLOSE,"","","",""
+	EVENTS,1
+	BINOBJ,"Settings.binary"
+W,END
+VBA_HOSTPROJECT,BEGIN
+	Option Explicit
+VBA_HOSTPROJECT,END
+VBA_REFERENCES,BEGIN
+	"stdole", 2, 0, "{00020430-0000-0000-C000-000000000046}"
+	"AIGridLib", 1, 0, "{083ECA0B-A506-432E-9090-7C1DC03813B3}"
+	"MimicControls", 1, 0, "{C959A51F-AAFE-40D5-A4A7-3A00A7AF76B4}"
+VBA_REFERENCES,END
+FONTS,BEGIN
+	FONT,1,16,7,700,0,0,"System",0,0
+	FONT,2,-16,0,400,0,0,"Arial",0,0
+	FONT,3,-21,0,400,0,0,"Arial",0,1
+	FONT,4,-13,0,400,0,0,"Arial",0,0
+	FONT,5,-19,0,700,0,0,"System",0,0
+FONTS,END
+COLORS,BEGIN
+	COLOREX,1,0,0,0,0,193,0
+	COLOREX,2,0,0,0,0,0,0
+	COLOREX,3,0,0,0,0,185,0
+	COLOREX,4,0,0,0,0,0,1
+	COLOREX,5,0,0,0,0,168,0
+	COLOREX,6,240,240,240,0,0,0
+	COLOREX,7,0,192,0,0,0,0
+	COLOREX,8,192,192,192,0,0,0
+	COLOREX,9,0,0,0,0,166,0
+	COLOREX,10,0,0,0,0,167,0
+	COLOREX,11,50,50,50,0,0,0
+	COLOREX,12,250,250,250,0,0,0
+	COLOREX,13,92,92,92,0,0,0
+	COLOREX,14,0,0,0,0,165,0
+	COLOREX,15,160,160,160,0,0,0
+	COLOREX,16,255,255,255,0,0,0
+COLORS,END
+O,BEGIN,RR,"Background"
+	B,1452,724,338,129,1452,724,1,0,6400,1,1,0,0,0,1,0
+	ST,0,1,COLOR,1,COLOR,1,0,0,COLOR,3,0,COLOR,3,0,COLOR,2,0,COLOR,2
+	PP,16,16
+O,END
+O,BEGIN,GRP,"GrpVariableTracking"
+	B,351,131,1439,721,351,721,1,0,6400,0,1,0,0,0,1,0
+	O,BEGIN,T,"TextRowsNumber"
+		B,356,691,488,709,356,691,1,0,6400,0,2,0,0,0,1,0
+		ST,0,1,COLOR,2,COLOR,2,0,0,COLOR,4,0,COLOR,4,0,COLOR,2,0,COLOR,2
+		PP,0,356,691,0,0,FONT,2,"Nombre de lignes :",84,FONT,2,"Number of rows:",86
+	O,END
+	O,BEGIN,GRP,"GrpFilterGenerated"
+		B,568,486,1439,721,568,721,1,0,6400,0,2,0,0,0,1,0
+		O,BEGIN,R,"ShapeFilterGenerated"
+			B,1142,486,1436,671,1142,486,1,0,6400,0,2,0,0,0,1,0
+			ST,5,1,COLOR,2,COLOR,2,0,0,COLOR,5,0,COLOR,5,0,COLOR,2,0,COLOR,2
+		O,END
+		O,BEGIN,R,"ShapeApplyFilter"
+			B,1119,721,886,675,1119,721,1,0,6400,0,2,0,0,0,1,0
+			ST,0,1,COLOR,2,COLOR,2,0,0,COLOR,6,0,COLOR,6,0,COLOR,2,0,COLOR,2
+			A,BEGIN,CB,"Anim1",0,0,"",""
+				PP,"VariableTracking.Apply"
+				COL,1,COLOR,4,COLOR,4
+				COL,1,COLOR,7,COLOR,7
+				COL,1,COLOR,4,COLOR,4
+				COL,1,COLOR,4,COLOR,4
+				COL,1,COLOR,4,COLOR,4
+				COL,1,COLOR,4,COLOR,4
+			A,END
+		O,END
+		O,BEGIN,T,"ApplyFilter"
+			B,890,680,1114,716,890,680,1,0,6400,0,2,0,0,0,1,0
+			ST,0,1,COLOR,2,COLOR,2,0,0,COLOR,6,0,COLOR,6,0,COLOR,2,0,COLOR,2
+			AST,4,2,COLOR,2,COLOR,8,0,COLOR,4,0,COLOR,4,0,COLOR,4,0,COLOR,4,1
+			PP,1,890,680,0,0,FONT,3,"Appliquer",37,FONT,3,"Apply",37
+			A,BEGIN,RP,"Anim1",0,0,"@Appliquez votre filtre","@Apply filter"
+				PP,"L_VariableTracking/TRACKING.SCB","","ApplyFilter","","",0,0
+			A,END
+		O,END
+		O,BEGIN,T,"TextFilterGenerated"
+			B,1142,489,1439,513,1142,489,1,0,6400,0,2,0,0,0,1,0
+			ST,0,1,COLOR,2,COLOR,2,0,0,COLOR,4,0,COLOR,4,0,COLOR,2,0,COLOR,2
+			PP,1,1142,489,0,0,FONT,3,"Filtre g‚n‚r‚",37,FONT,3,"Filter generated",37
+		O,END
+		O,BEGIN,T,"FilterGenerated"
+			B,1144,522,1434,669,1144,522,1,0,6400,0,2,0,0,0,1,0
+			ST,0,1,COLOR,2,COLOR,2,0,0,COLOR,6,0,COLOR,6,0,COLOR,2,0,COLOR,2
+			AST,4,2,COLOR,2,COLOR,8,0,COLOR,4,0,COLOR,4,0,COLOR,4,0,COLOR,4,1
+			PP,1,1144,522,0,0,FONT,3,"Filtre g‚n‚r‚",84,FONT,3,"Filter generated",84
+			A,BEGIN,ST,"Anim2",0,0,"@Saisissez votre filtre ici, ex : Name like \'*resource*\' And Name unlike \'*_high\'","@Enter your filter here, ex : Name like \'*resource*\' And Name unlike \'*_high\'"
+				PP,"VariableTracking.FilterGenerated",1,0,1,0,0,1
+			A,END
+		O,END
+		O,BEGIN,R,"ShapeResetFilter"
+			B,1436,721,1203,675,1436,721,1,0,6400,0,2,0,0,0,1,0
+			ST,5,1,COLOR,2,COLOR,2,0,0,COLOR,7,0,COLOR,7,0,COLOR,2,0,COLOR,2
+			A,BEGIN,VT,"Anim1",0,0,"",""
+				PP,4,"VariableTracking.FilterGenerated","",1,2,0,1,1,0,1,2,0
+			A,END
+		O,END
+		O,BEGIN,T,"ResetFilter"
+			B,1207,680,1431,716,1207,680,1,0,6400,0,2,0,0,0,1,0
+			ST,0,1,COLOR,2,COLOR,2,0,0,COLOR,6,0,COLOR,6,0,COLOR,2,0,COLOR,2
+			AST,4,2,COLOR,2,COLOR,8,0,COLOR,4,0,COLOR,4,0,COLOR,4,0,COLOR,4,1
+			PP,1,1207,680,0,0,FONT,3,"R‚initialiser",37,FONT,3,"Reinitialize",37
+			A,BEGIN,RP,"Anim1",0,0,"@Revient … l'‚tape 1 et affiche toutes les variables","@Reinitialize the filter and display all variables"
+				PP,"L_VariableTracking/TRACKING.SCB","","Reinitialize","","",0,0
+			A,END
+		O,END
+		O,BEGIN,R,"ShapeCompleteFilter"
+			B,801,721,568,675,801,721,1,0,6400,0,2,0,0,0,1,0
+			ST,0,1,COLOR,2,COLOR,2,0,0,COLOR,6,0,COLOR,6,0,COLOR,2,0,COLOR,2
+			A,BEGIN,CB,"Anim1",0,0,"",""
+				PP,"VariableTracking.Apply"
+				COL,1,COLOR,4,COLOR,4
+				COL,1,COLOR,7,COLOR,7
+				COL,1,COLOR,4,COLOR,4
+				COL,1,COLOR,4,COLOR,4
+				COL,1,COLOR,4,COLOR,4
+				COL,1,COLOR,4,COLOR,4
+			A,END
+		O,END
+		O,BEGIN,T,"CompleteFilter"
+			B,572,680,796,716,572,680,1,0,6400,0,2,0,0,0,1,0
+			ST,0,1,COLOR,2,COLOR,2,0,0,COLOR,6,0,COLOR,6,0,COLOR,2,0,COLOR,2
+			AST,4,2,COLOR,2,COLOR,8,0,COLOR,4,0,COLOR,4,0,COLOR,4,0,COLOR,4,1
+			PP,1,572,680,0,0,FONT,3,"Compl‚ter",37,FONT,3,"Complete",37
+			A,BEGIN,RP,"Anim1",0,0,"@Compl‚ter le filtre","@Complete the filter"
+				PP,"L_VariableTracking/TRACKING.SCB","","Complete","","",0,0
+			A,END
+		O,END
+		A,BEGIN,VT,"Anim1",0,0,"",""
+			PP,4,"VariableTracking.FilterGenerated","",1,2,0,1,1,0,1,2,0
+		A,END
+	O,END
+	O,BEGIN,GRP,"GrpValue"
+		B,568,486,987,671,568,671,1,0,6400,0,2,0,0,0,1,0
+		O,BEGIN,R,"ShapeValue"
+			B,568,486,987,671,568,486,1,0,6400,0,2,0,0,0,1,0
+			ST,5,1,COLOR,2,COLOR,2,0,0,COLOR,9,0,COLOR,9,0,COLOR,2,0,COLOR,2
+		O,END
+		O,BEGIN,T,"TextValue"
+			B,579,489,973,513,579,489,1,0,6400,0,2,0,0,0,1,0
+			ST,0,1,COLOR,2,COLOR,2,0,0,COLOR,4,0,COLOR,4,0,COLOR,2,0,COLOR,2
+			PP,1,579,489,0,0,FONT,3,"2/ Valeur",37,FONT,3,"2/ Value",37
+			A,BEGIN,VRL,"Anim1",0,0,"",""
+				PP,"@VariableTracking.ComboBoxCriteriaIndex",1,2,0,4.000000,0,1,0,10.000000,0,1,0,18.000000,0,1,0,19.000000,0,1,0,0.000000,0,1,0,0.000000,0,1,0,0.000000,0,1,0,0.000000,0,1,0,0.000000,1,1,0,0.000000
+			A,END
+		O,END
+		A,BEGIN,VB,"Anim2",0,0,"",""
+			PP,"@VariableTracking.Step2",1,2,0,1,1,0,1,2,0
+		A,END
+	O,END
+	O,BEGIN,GRP,"GrpCombination"
+		B,987,486,1142,671,987,671,1,0,6400,0,2,0,0,0,1,0
+		O,BEGIN,R,"ShapeCombination"
+			B,987,486,1142,671,987,486,1,0,6400,0,2,0,0,0,1,0
+			ST,5,1,COLOR,2,COLOR,2,0,0,COLOR,10,0,COLOR,10,0,COLOR,2,0,COLOR,2
+		O,END
+		O,BEGIN,T,"TextLogicRelation"
+			B,987,489,1141,513,987,489,1,0,6400,0,2,0,0,0,1,0
+			ST,0,1,COLOR,2,COLOR,2,0,0,COLOR,4,0,COLOR,4,0,COLOR,2,0,COLOR,2
+			PP,1,987,489,0,0,FONT,3,"3/ Combinaison",37,FONT,3,"3/ Combination",37
+		O,END
+		O,BEGIN,T,"ADD"
+			B,1011,547,1117,583,1011,547,1,0,6400,0,2,0,0,0,1,0
+			ST,0,1,COLOR,2,COLOR,2,0,0,COLOR,6,0,COLOR,6,0,COLOR,2,0,COLOR,2
+			AST,4,2,COLOR,2,COLOR,8,0,COLOR,4,0,COLOR,4,0,COLOR,4,0,COLOR,4,1
+			PP,1,1011,547,0,0,FONT,3,"AJOUTER",37,FONT,3,"ADD",37
+			A,BEGIN,RP,"Anim1",0,0,"@Cr‚er le filtre","@Create the filter"
+				PP,"L_VariableTracking/TRACKING.SCB","","LogicalRelation","ADD","",0,0
+			A,END
+			A,BEGIN,VT,"Anim2",0,0,"",""
+				PP,4,"VariableTracking.FilterGenerated","",1,1,0,1,2,0,1,2,0
+			A,END
+		O,END
+		O,BEGIN,T,"AND"
+			B,1033,547,1095,583,1033,547,1,0,6400,0,2,0,0,0,1,0
+			ST,0,1,COLOR,2,COLOR,2,0,0,COLOR,6,0,COLOR,6,0,COLOR,2,0,COLOR,2
+			AST,4,2,COLOR,2,COLOR,8,0,COLOR,4,0,COLOR,4,0,COLOR,4,0,COLOR,4,1
+			PP,1,1033,547,0,0,FONT,3,"ET",37,FONT,3,"AND",37
+			A,BEGIN,RP,"Anim1",0,0,"@Combine deux expressions o— les deux expressions doivent ˆtre vraies pour que le r‚sultat soit vrai.","@Combines two expressions where both expressions must be true for the result to be true"
+				PP,"L_VariableTracking/TRACKING.SCB","","LogicalRelation","AND","",0,0
+			A,END
+			A,BEGIN,VT,"Anim2",0,0,"",""
+				PP,4,"VariableTracking.FilterGenerated","",1,2,0,1,1,0,1,2,0
+			A,END
+		O,END
+		O,BEGIN,P,"CombinationArrow"
+			B,988,579,1142,623,1029,601,1,0,6400,0,2,0,0,0,1,0
+			ST,0,1,COLOR,2,COLOR,2,0,0,COLOR,7,0,COLOR,7,0,COLOR,2,0,COLOR,2
+			PP,988,613,1120,613,1120,623,1142,601,1120,579
+			PP,1120,589,988,589
+		O,END
+		O,BEGIN,T,"OR"
+			B,1033,619,1095,655,1033,619,1,0,6400,0,2,0,0,0,1,0
+			ST,0,1,COLOR,2,COLOR,2,0,0,COLOR,6,0,COLOR,6,0,COLOR,2,0,COLOR,2
+			AST,4,2,COLOR,2,COLOR,8,0,COLOR,4,0,COLOR,4,0,COLOR,4,0,COLOR,4,1
+			PP,1,1033,619,0,0,FONT,3,"OU",37,FONT,3,"OR",37
+			A,BEGIN,RP,"Anim1",0,0,"@Combine deux expressions o— l'une ou l'autre des deux expressions doit ˆtre vraie pour que le r‚sultat soit vrai.","@Combines two expressions where either or both expressions must be true for the result to be true"
+				PP,"L_VariableTracking/TRACKING.SCB","","LogicalRelation","OR","",0,0
+			A,END
+			A,BEGIN,VT,"Anim2",0,0,"",""
+				PP,4,"VariableTracking.FilterGenerated","",1,2,0,1,1,0,1,2,0
+			A,END
+		O,END
+		A,BEGIN,VB,"Anim1",0,0,"",""
+			PP,"@VariableTracking.Step3",1,2,0,1,1,0,1,2,0
+		A,END
+	O,END
+	O,BEGIN,T,"TextAIGridVarTitle"
+		B,351,136,621,160,351,136,1,0,6400,0,2,0,0,0,1,0
+		ST,0,1,COLOR,2,COLOR,2,0,0,COLOR,4,0,COLOR,4,0,COLOR,2,0,COLOR,2
+		PP,0,351,136,0,0,FONT,3,"Suivi de variables temps r‚el",37,FONT,3,"Real time variable tracking",37
+	O,END
+	O,BEGIN,GRDNEW,"AIGridVar"
+		B,351,168,1439,488,10,210,1,0,6400,0,2,1,1,0,1,0
+		ST,5,1,COLOR,2,COLOR,2,1,0,COLOR,8,0,COLOR,8,0,COLOR,2,0,COLOR,2
+		AST,5,2,COLOR,2,COLOR,8,0,COLOR,3,0,COLOR,3,0,COLOR,3,0,COLOR,3,0
+		PP,309,3,1,0,FONT,4,COLOR,13,COLOR,12,COLOR,11,4,0,1,1,1,0,0,0,0
+		RH,23,24,24,24,24,24,24,24,24,24
+		RH,24,24,24,24,24,24,24,24,24,24
+		RH,24,24,24,24,24,24,24,24,24,24
+		RH,24,24,24,24,24,24,24,24,24,24
+		RH,24,24,24,24,24,24,24,24,24,24
+		RH,24,24,24,24,24,24,24,24,24,24
+		RH,24,24,24,24,24,24,24,24,24,24
+		RH,24,24,24,24,24,24,24,24,24,24
+		RH,24,24,24,24,24,24,24,24,24,24
+		RH,24,24,24,24,24,24,24,24,24,24
+		RH,24,24,24,24,24,24,24,24,24,24
+		RH,24,24,24,24,24,24,24,24,24,24
+		RH,24,24,24,24,24,24,24,24,24,24
+		RH,24,24,24,24,24,24,24,24,24,24
+		RH,24,24,24,24,24,24,24,24,24,24
+		RH,24,24,24,24,24,24,24,24,24,24
+		RH,24,24,24,24,24,24,24,24,24,24
+		RH,24,24,24,24,24,24,24,24,24,24
+		RH,24,24,24,24,24,24,24,24,24,24
+		RH,24,24,24,24,24,24,24,24,24,24
+		RH,24,24,24,24,24,24,24,24,24,24
+		RH,24,24,24,24,24,24,24,24,24,24
+		RH,24,24,24,24,24,24,24,24,24,24
+		RH,24,24,24,24,24,24,24,24,24,24
+		RH,24,24,24,24,24,24,24,24,24,24
+		RH,24,24,24,24,24,24,24,24,24,24
+		RH,24,24,24,24,24,24,24,24,24,24
+		RH,24,24,24,24,24,24,24,24,24,24
+		RH,24,24,24,24,24,24,24,24,24,24
+		RH,24,24,24,24,24,24,24,24,24,24
+		RH,24,24,24,24,24,24,24,24,24
+		CW,371,532,164
+		HIS_GEN,1,0,1,1,1,2,10,0,1,1,1,0,0,0,"","","",1,0,0,1,8191,8191
+		ALLOW,1,0,0,0,-1,0
+		TOOLBAR,4096,G_REQUEST,G_REFRESH,G_REFRESH_RUNTIME,G_CANCEL_REQUEST,SEPARATOR,G_EXPORT
+		A,BEGIN,VAR,"Anim1",0,0,"",""
+			PP,1,"",15,2,1,1,1,1,1,0,1,0,0,1,2,1
+		A,END
+	O,END
+	O,BEGIN,T,"TextValueFilter"
+		B,682,575,962,611,682,575,1,0,6400,0,2,0,0,0,1,0
+		ST,0,1,COLOR,2,COLOR,2,0,0,COLOR,6,0,COLOR,6,0,COLOR,2,0,COLOR,2
+		AST,4,2,COLOR,2,COLOR,8,0,COLOR,4,0,COLOR,4,0,COLOR,4,0,COLOR,4,1
+		PP,1,682,575,0,0,FONT,3,"Valeur d‚finie par l'utilisateur",36,FONT,3,"Free filtering",36
+		A,BEGIN,ST,"Anim2",0,0,"@Saisissez votre valeur ici","@Enter the value here"
+			PP,"VariableTracking.TextValueFilter",1,0,1,0,0,1
+		A,END
+		A,BEGIN,VRL,"Anim1",0,0,"",""
+			PP,"@VariableTracking.ComboBoxCriteriaIndex",1,2,0,4.000000,1,1,0,8.000000,1,2,0,11.000000,1,1,0,16.000000,0,1,0,0.000000,0,1,0,0.000000,0,1,0,0.000000,0,1,0,0.000000,0,1,0,0.000000,1,2,0,0.000000
+		A,END
+	O,END
+	O,BEGIN,GRP,"GrpCriteria"
+		B,354,488,568,671,354,671,1,0,6400,0,2,0,0,0,1,0
+		O,BEGIN,R,"ShapeCriteria"
+			B,354,488,568,671,354,488,1,0,6400,0,2,0,0,0,1,0
+			ST,5,1,COLOR,2,COLOR,2,0,0,COLOR,14,0,COLOR,14,0,COLOR,2,0,COLOR,2
+		O,END
+		O,BEGIN,LBCX,"AICheckBoxVarTypes"
+			B,361,520,561,592,10,195,1,0,6400,0,2,1,1,0,1,0
+			ST,5,1,COLOR,2,COLOR,2,1,0,COLOR,8,0,COLOR,8,0,COLOR,2,0,COLOR,2
+			AST,5,2,COLOR,2,COLOR,8,0,COLOR,16,0,COLOR,16,0,COLOR,15,0,COLOR,15,0
+			PP,2,2,"",0,0,FONT,1,0,COLOR,16,0,COLOR,2
+			CI,BEGIN,0,"1","ETAT","BIT",-1
+			CI,END
+			CI,BEGIN,0,"2","ALARME","ALARM",1
+			CI,END
+			CI,BEGIN,0,"4","MESURE","REGISTER",-1
+			CI,END
+			CI,BEGIN,0,"8","TEXTE","TEXT",-1
+			CI,END
+			A,BEGIN,LBCXA,"Anim1",0,0,"",""
+				PP,"","","","","L_VariableTracking/TRACKING.SCB","","SaveCheckBoxVarTypes","",0,0,0,0,-447538429
+			A,END
+		O,END
+		O,BEGIN,CBX,"AIComboBoxCriteria"
+			B,361,620,561,645,10,195,1,0,6400,0,2,1,1,0,1,0
+			ST,5,1,COLOR,2,COLOR,2,1,0,COLOR,8,0,COLOR,8,0,COLOR,2,0,COLOR,2
+			AST,5,2,COLOR,2,COLOR,8,0,COLOR,16,0,COLOR,16,0,COLOR,15,0,COLOR,15,0
+			PP,2,2,"",1,0,FONT,1,0,COLOR,16,0,COLOR,2
+			CI,BEGIN,0,""," ","",0
+			CI,END
+			CI,BEGIN,0,"Name like \'*\'","TOUT","ALL",1
+			CI,END
+			CI,BEGIN,0,"Name like \'SYSTEM.*\'","SYSTEM","SYSTEM",0
+			CI,END
+			CI,BEGIN,0,"Name unlike \\\'SYSTEM.*\\\'","TOUT SAUF SYSTEM","NOT SYSTEM",0
+			CI,END
+			CI,BEGIN,0,"Name","Nom","Name",0
+			CI,END
+			CI,BEGIN,0,"Domain","Domaine","Domain",0
+			CI,END
+			CI,BEGIN,0,"Nature","Nature","Nature",0
+			CI,END
+			CI,BEGIN,0,"AssocLabel","Libell‚ associ‚","Associated Label name",0
+			CI,END
+			CI,BEGIN,0,"AlarmLevel","Niveau d'alarme","Alarm level value",0
+			CI,END
+			CI,BEGIN,0,"BinAttr","Attributs binaires","Binary attributes",0
+			CI,END
+			CI,BEGIN,0,"BinAttrbNN","Attribut binaire individuel","Individual binary attribute",0
+			CI,END
+			CI,BEGIN,0,"TextAttrNN","Attribut texte","Text attribute",0
+			CI,END
+			CI,BEGIN,0,"TextIndAttrNN","Valeur indirecte de l'attribut texte","Indirect value of the text attribute",0
+			CI,END
+			CI,BEGIN,0,"Description","Description","Description",0
+			CI,END
+			CI,BEGIN,0,"Unit","Unit‚","Unit",0
+			CI,END
+			CI,BEGIN,0,"Format","Format","Format",0
+			CI,END
+			CI,BEGIN,0,"Threshold","Seuil","Threshold",0
+			CI,END
+			CI,BEGIN,0,"LoValueLimit","Valeur minimum","Minimum value",0
+			CI,END
+			CI,BEGIN,0,"HiValueLimit","Valeur maximum","Maximum value",0
+			CI,END
+			CI,BEGIN,0,"Simulated","Etat de simulation","Simulated",0
+			CI,END
+			A,BEGIN,CBXA,"Anim1",0,0,"",""
+				PP,"","@VariableTracking.ComboBoxCriteriaIndex","","L_VariableTracking/TRACKING.SCB","","ChangeCriteria","",1,0,0,0
+			A,END
+		O,END
+		O,BEGIN,T,"TextCriteria"
+			B,361,489,561,513,361,489,1,0,6400,0,2,0,0,0,1,0
+			ST,0,1,COLOR,2,COLOR,2,0,0,COLOR,4,0,COLOR,4,0,COLOR,2,0,COLOR,2
+			PP,1,361,489,0,0,FONT,3,"1/Choix des critŠres",37,FONT,3,"1/ Choice of criteria",37
+		O,END
+		A,BEGIN,PT,"Anim1",0,0,"",""
+			PP,"=@VariableTracking.Step1==0","",0,0,4280,0,0,0,0,0,""
+			ADVSCALE,2,0,2,1
+		A,END
+	O,END
+	O,BEGIN,GRP,"GrpOperator"
+		B,591,522,653,664,591,664,1,0,6400,0,2,0,0,0,1,0
+		O,BEGIN,LBOX,"AIOptionListOperator"
+			B,591,522,653,664,10,195,1,0,6400,0,2,1,1,0,1,0
+			ST,5,1,COLOR,2,COLOR,2,1,0,COLOR,8,0,COLOR,8,0,COLOR,2,0,COLOR,2
+			AST,5,2,COLOR,2,COLOR,8,0,COLOR,16,0,COLOR,16,0,COLOR,15,0,COLOR,15,0
+			PP,2,2,"",6,0,FONT,1,0,COLOR,16,0,COLOR,2
+			CI,BEGIN,0,"<","<","<",0
+			CI,END
+			CI,BEGIN,0,">",">",">",0
+			CI,END
+			CI,BEGIN,0,"<=","<=","<=",0
+			CI,END
+			CI,BEGIN,0,">=",">=",">=",0
+			CI,END
+			CI,BEGIN,0,"<>","<>","<>",0
+			CI,END
+			CI,BEGIN,0,"=","=","=",0
+			CI,END
+			CI,BEGIN,0,"Like","Like","Like",1
+			CI,END
+			CI,BEGIN,0,"Unlike","Unlike","Unlike",0
+			CI,END
+			A,BEGIN,LBOXA,"Anim1",0,0,"",""
+				PP,"","VariableTracking.OptionOperatorIndex","","","","","",0,1,0,0,0
+			A,END
+		O,END
+		A,BEGIN,PT,"Anim1",0,0,"","@Select the operators for the construction of the expression that compares the value of a criteria to a user-defined value."
+			PP,"=(@VariableTracking.ComboBoxCriteriaIndex<4)||(@VariableTracking.ComboBoxCriteriaIndex==10)||(@VariableTracking.ComboBoxCriteriaIndex==19)","",0,0,2000,0,0,0,0,0,""
+			ADVSCALE,2,0,2,1
+		A,END
+	O,END
+	O,BEGIN,T,"RegValueFilter"
+		B,682,575,962,611,682,575,1,0,6400,0,2,0,0,0,1,0
+		ST,0,1,COLOR,2,COLOR,2,0,0,COLOR,6,0,COLOR,6,0,COLOR,2,0,COLOR,2
+		AST,4,2,COLOR,2,COLOR,8,0,COLOR,4,0,COLOR,4,0,COLOR,4,0,COLOR,4,1
+		PP,1,682,575,0,0,FONT,3,"Valeur d‚finie par l'utilisateur",37,FONT,3,"Free filtering",36
+		A,BEGIN,VRL,"Anim1",0,0,"",""
+			PP,"@VariableTracking.ComboBoxCriteriaIndex",1,2,0,8.000000,1,1,0,10.000000,1,2,0,16.000000,1,1,0,19.000000,0,1,0,0.000000,0,1,0,0.000000,0,1,0,0.000000,0,1,0,0.000000,0,1,0,0.000000,1,2,0,0.000000
+		A,END
+		A,BEGIN,SR,"Anim2",0,0,"@Saisissez votre valeur ici","@Enter the value here"
+			PP,"@VariableTracking.RegValueFilter",1,"",0,0,0,1,0,0,1.000000,0,0,1
+		A,END
+	O,END
+	O,BEGIN,T,"BitValueFilter"
+		B,682,575,962,611,682,575,1,0,6400,0,2,0,0,0,1,0
+		ST,0,1,COLOR,2,COLOR,2,0,0,COLOR,6,0,COLOR,6,0,COLOR,2,0,COLOR,2
+		AST,4,2,COLOR,2,COLOR,8,0,COLOR,4,0,COLOR,4,0,COLOR,4,0,COLOR,4,1
+		PP,1,682,575,0,0,FONT,3,"Valeur d‚finie par l'utilisateur",37,FONT,3,"True False",37
+		A,BEGIN,VRL,"Anim1",0,0,"",""
+			PP,"@VariableTracking.ComboBoxCriteriaIndex",1,2,0,10.000000,1,1,0,11.000000,1,2,0,19.000000,1,1,0,20.000000,0,1,0,0.000000,0,1,0,0.000000,0,1,0,0.000000,0,1,0,0.000000,0,1,0,0.000000,1,2,0,0.000000
+		A,END
+		A,BEGIN,SB,"Anim2",0,0,"@S‚lectionner True(1) ou False(0)","@Select True(1) or False(0)"
+			PP,"@VariableTracking.BitValueFilter",0,0,0,0,0.000000
+		A,END
+		A,BEGIN,TB,"Anim3",0,0,"",""
+			PP,"@VariableTracking.BitValueFilter",1,1,1
+			PPT,0,"False","False"
+			PPT,1,"True","True"
+			PPT,2,"?",""
+		A,END
+	O,END
+	O,BEGIN,GRP,"GrpTxtAttNumber"
+		B,724,531,963,567,724,567,1,0,6400,0,2,0,0,0,1,0
+		O,BEGIN,CBX,"AIComboBoxTxtAttNumber"
+			B,897,531,963,567,10,195,1,0,6400,0,2,1,1,0,1,0
+			ST,0,3,COLOR,2,COLOR,2,1,0,COLOR,8,0,COLOR,8,0,COLOR,2,0,COLOR,2
+			PP,2,2,"",0,1,FONT,5,0,COLOR,16,0,COLOR,2
+			CI,BEGIN,0,"03","03","03",1
+			CI,END
+			CI,BEGIN,0,"04","04","04",0
+			CI,END
+			CI,BEGIN,0,"05","05","05",0
+			CI,END
+			CI,BEGIN,0,"06","06","06",0
+			CI,END
+			CI,BEGIN,0,"07","07","07",0
+			CI,END
+			CI,BEGIN,0,"08","08","08",0
+			CI,END
+			CI,BEGIN,0,"09","09","09",0
+			CI,END
+			CI,BEGIN,0,"10","10","10",0
+			CI,END
+			CI,BEGIN,0,"11","11","11",0
+			CI,END
+			CI,BEGIN,0,"12","12","12",0
+			CI,END
+			CI,BEGIN,0,"13","13","13",0
+			CI,END
+			CI,BEGIN,0,"14","14","14",0
+			CI,END
+			CI,BEGIN,0,"15","15","15",0
+			CI,END
+			CI,BEGIN,0,"16","16","16",0
+			CI,END
+			A,BEGIN,CBXA,"Anim1",0,0,"",""
+				PP,"","@VariableTracking.ComboBoxTxtAttNumberIndex","","","","","",1,1,0,0
+			A,END
+		O,END
+		O,BEGIN,T,"TextTxtAttribute"
+			B,724,537,893,561,724,537,1,0,6400,0,2,0,0,0,1,0
+			ST,0,1,COLOR,2,COLOR,2,0,0,COLOR,4,0,COLOR,4,0,COLOR,2,0,COLOR,2
+			PP,1,724,537,0,0,FONT,3,"Attribut texte",37,FONT,3,"Text attribute",37
+		O,END
+		A,BEGIN,PT,"Anim1",0,0,"",""
+			PP,"=(@VariableTracking.ComboBoxCriteriaIndex<11)||(@VariableTracking.ComboBoxCriteriaIndex>12)","",0,0,2000,0,0,0,0,0,""
+			ADVSCALE,2,0,2,1
+		A,END
+	O,END
+	O,BEGIN,GRP,"GrpBinAttNumber"
+		B,724,531,963,567,724,567,1,0,6400,0,2,0,0,0,1,0
+		O,BEGIN,CBX,"AIComboBoxBinAttNumber"
+			B,897,531,963,567,10,195,1,0,6400,0,2,1,1,0,1,0
+			ST,0,3,COLOR,2,COLOR,2,1,0,COLOR,8,0,COLOR,8,0,COLOR,2,0,COLOR,2
+			PP,2,2,"",0,1,FONT,5,0,COLOR,16,0,COLOR,2
+			CI,BEGIN,0,"01","01","01",1
+			CI,END
+			CI,BEGIN,0,"02","02","02",0
+			CI,END
+			CI,BEGIN,0,"03","03","03",0
+			CI,END
+			CI,BEGIN,0,"04","04","04",0
+			CI,END
+			CI,BEGIN,0,"05","05","05",0
+			CI,END
+			CI,BEGIN,0,"06","06","06",0
+			CI,END
+			CI,BEGIN,0,"07","07","07",0
+			CI,END
+			CI,BEGIN,0,"08","08","08",0
+			CI,END
+			CI,BEGIN,0,"09","09","09",0
+			CI,END
+			CI,BEGIN,0,"10","10","10",0
+			CI,END
+			CI,BEGIN,0,"11","11","11",0
+			CI,END
+			CI,BEGIN,0,"12","12","12",0
+			CI,END
+			CI,BEGIN,0,"13","13","13",0
+			CI,END
+			CI,BEGIN,0,"14","14","14",0
+			CI,END
+			CI,BEGIN,0,"15","15","15",0
+			CI,END
+			CI,BEGIN,0,"16","16","16",0
+			CI,END
+			CI,BEGIN,0,"17","17","17",0
+			CI,END
+			CI,BEGIN,0,"18","18","18",0
+			CI,END
+			CI,BEGIN,0,"19","19","19",0
+			CI,END
+			CI,BEGIN,0,"20","20","20",0
+			CI,END
+			CI,BEGIN,0,"21","21","21",0
+			CI,END
+			CI,BEGIN,0,"22","22","22",0
+			CI,END
+			CI,BEGIN,0,"23","23","23",0
+			CI,END
+			CI,BEGIN,0,"24","24","24",0
+			CI,END
+			CI,BEGIN,0,"25","25","25",0
+			CI,END
+			CI,BEGIN,0,"26","26","26",0
+			CI,END
+			CI,BEGIN,0,"27","27","27",0
+			CI,END
+			CI,BEGIN,0,"28","28","28",0
+			CI,END
+			CI,BEGIN,0,"29","29","29",0
+			CI,END
+			CI,BEGIN,0,"30","30","30",0
+			CI,END
+			CI,BEGIN,0,"31","31","31",0
+			CI,END
+			CI,BEGIN,0,"32","32","32",0
+			CI,END
+			A,BEGIN,CBXA,"Anim1",0,0,"",""
+				PP,"","@VariableTracking.ComboBoxBinAttNumberIndex","","","","","",1,1,0,0
+			A,END
+		O,END
+		O,BEGIN,T,"TextBinAttribute"
+			B,724,537,893,561,724,537,1,0,6400,0,2,0,0,0,1,0
+			ST,0,1,COLOR,2,COLOR,2,0,0,COLOR,4,0,COLOR,4,0,COLOR,2,0,COLOR,2
+			PP,1,724,537,0,0,FONT,3,"Attribut binaire",37,FONT,3,"Binary attribute",37
+		O,END
+		A,BEGIN,PT,"Anim1",0,0,"",""
+			PP,"=@VariableTracking.ComboBoxCriteriaIndex!=10","",0,0,2000,0,0,0,0,0,""
+			ADVSCALE,2,0,2,1
+		A,END
+	O,END
+	O,BEGIN,T,"TextWarningWebVue"
+		B,632,316,1158,340,632,316,1,0,6400,0,2,0,0,0,1,0
+		ST,0,1,COLOR,2,COLOR,2,0,0,COLOR,4,0,COLOR,4,0,COLOR,2,0,COLOR,2
+		PP,0,632,316,0,0,FONT,3,"Fonction non compatible avec WebVue pour le moment !",37,FONT,3,"Function not yet compatible with WebVue !",37
+	O,END
+	O,BEGIN,T,"TextContextualHelp"
+		B,728,131,1434,168,728,131,1,0,6400,0,2,0,0,0,1,0
+		ST,0,1,COLOR,2,COLOR,2,0,0,COLOR,4,0,COLOR,4,0,COLOR,2,0,COLOR,2
+		PP,1,728,131,0,0,FONT,2,"Suivi de variables temps r‚el",86,FONT,2,"Real time variable tracking",86
+		A,BEGIN,DT,"Anim1",0,0,"",""
+			PP,"@System.CommentDisplay"
+		A,END
+	O,END
+	O,BEGIN,T,"RowsNumber"
+		B,490,691,532,709,490,691,1,0,6400,0,2,0,0,0,1,0
+		ST,0,1,COLOR,2,COLOR,2,0,0,COLOR,4,0,COLOR,4,0,COLOR,2,0,COLOR,2
+		PP,0,490,691,0,0,FONT,2,"lignes",84,FONT,2,"rows",86
+		A,BEGIN,DR,"Anim1",0,0,"",""
+			PP,"@VariableTracking.NbRows","",0
+			ADVFORMAT2,2,"0"
+		A,END
+	O,END
+O,END

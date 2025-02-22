@@ -1,0 +1,3 @@
+Bit,GENERAL.TRENDS.Cancel,2,"Pour annuler un rafraichissement des tendances","To cancel a trends refresh",,1,0,"",,,
+Register,GENERAL.TRENDS.ProgressBar,2,"","",,1,0,"",,,0,100,"","","",""
+Register,GENERAL.TRENDS.TimeToUpdateTrends,2,"","",,1,0,"",,,0,99999999999999,"","","",""

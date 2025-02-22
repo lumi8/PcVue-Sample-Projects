@@ -1,0 +1,159 @@
+Sub Main()
+
+end sub
+
+Sub Pyramid()
+	 
+	 dim sTier1 as str;
+	 dim sTier2 as str;
+	 dim sTier3 as str;
+	 
+	 dim sBranch as str;
+	 
+	 dim iVal1 as double;
+	 dim iVal2 as double;
+	 dim iVal3 as double;
+	 
+	 dim iSum as double;
+	 	 
+	 sTier1 = getarg("ARG1");
+	 sTier2 = getarg("ARG2");
+	 sTier3 = getarg("ARG3");
+	 sBranch = getarg("BRANCH");	 
+	 
+	 iVal1 = ?sTier1;
+	 iVal2 = ?sTier2;
+	 iVal3 = ?sTier3;
+	 
+	 Tree(sBranch);
+	 
+	 iSum = iVal1 + iVal2 + iVal3;
+	 
+	 if (iSum == 0) then
+	 	VAR_1 = 0;
+	 	VAR_2 = 0;
+	 	VAR_3 = 0;
+	 else
+	 	DIV_1 = (iVal1/iSum)*100;
+	 	DIV_2 = (iVal2/iSum)*100;
+	 	DIV_3 = (iVal3/iSum)*100;
+	 end if
+	 	 	 
+	 if (iSum == 0) then
+	 	VAR_1 = 0;
+	 	VAR_2 = 0;
+	 	VAR_3 = 0;
+	 else
+	 	if (iVal1 > iVal2) then
+		 	if (iVal1 > iVal3) then 'at this point, iVal1 is the highest value
+		 		VAR_3 = ((iVal1 + iVal2 + iVal3)/iSum)*100;
+			 	COL_3 = 1;				
+			 	if (iVal2 > iVal3) then 'at this point, iVal1 > iVal2 > iVal3
+			 		VAR_2 = ((iVal2 + iVal3)/iSum)*100;
+			 		COL_2 = 3;
+			 		VAR_1 = (iVal3/iSum)*100;
+			 		COL_1 = 5;
+			 	else
+			 		if (iVal2 == iVal3) then'at this point, iVal1 > iVal2 = iVal3
+			 			VAR_2 = ((iVal2 + iVal3)/iSum)*100;
+			 			COL_2 = 3;
+			 			VAR_1 = (iVal3/iSum)*100;
+			 			COL_1 = 5;
+			 		else 'at this point, iVal1 > iVal3 > iVal2
+			 			VAR_2 = ((iVal2 + iVal3)/iSum)*100;
+			 			COL_2 = 5;
+			 			VAR_1 = (iVal2/iSum)*100;
+			 			COL_1 = 3;
+			 		end if
+			 	end if
+	 		else
+		 		if (iVal1 == iVal3) then 'at this point iVal1 = iVal3 > iVal2
+		 			VAR_3 = ((iVal1 + iVal2 + iVal3)/iSum)*100;
+		 			COL_3 = 5;
+		 			VAR_2 = ((iVal2 + iVal3)/iSum)*100;
+		 			COL_2 = 1;
+		 			VAR_1 = (iVal2/iSum)*100;
+		 			COL_1 = 3;
+		  		else 'at this point iVal3 > iVal1 > iVal2
+			 		VAR_3 = ((iVal1 + iVal2 + iVal3)/iSum)*100;
+			 		COL_3 = 5;
+			 		VAR_2 = ((iVal1 + iVal2)/iSum)*100;
+			 		COL_2 = 1;
+			 		VAR_1 = (iVal2/iSum)*100;
+			 		COL_1 = 3;
+			 	end if
+		 	end if
+	 	else
+	 		if (iVal1 == iVal2) then 'At this point, iVal1 = iVal2	
+		 		if (iVal1 == iVal3) then 'At this point, iVal1 = iVal2 = iVal3
+		 			VAR_3 = ((iVal1 + iVal2 + iVal3)/iSum)*100;
+		 			COL_3 = 5;
+		  			VAR_2 = ((iVal1 + iVal2)/iSum)*100;
+			 		COL_2 = 3;
+			 		VAR_1 = (iVal1/iSum)*100;
+			 		COL_1 = 1;
+		 		else
+		 			if (iVal1 > iVal3) then 'At this point iVal1 = iVal2 > iVal3
+		 				VAR_3 = ((iVal1 + iVal2 + iVal3)/iSum)*100;
+			 			COL_3 = 1;
+			 			VAR_2 = ((iVal2 + iVal3)/iSum)*100;
+			 			COL_2 = 3;
+			 			VAR_1 = (iVal3/iSum)*100; 
+			 			COL_1 = 5;
+			 		else 'At this point iVal3 > iVal1 = iVal2
+			 			VAR_3 = ((iVal1 + iVal2 + iVal3)/iSum)*100;
+			 			COL_3 = 5;
+			 			VAR_2 = ((iVal1 + iVal2)/iSum)*100;
+			 			COL_2 = 3;
+			 			VAR_1 = (iVal1/iSum)*100; 
+						COL_1 = 1;				
+			 		end if
+		 		end if
+		 	else 'At this point, iVal2 > iVal1 
+		 		if (iVal2 > iVal3) then 'At this point, iVal2 > iVal3
+		 			if (iVal3 > iVal1) then 'At this point, iVal2 > iVal3 > iVal1
+		 				VAR_3 = ((iVal1 + iVal2 + iVal3)/iSum)*100;
+		 				COL_3 = 3;
+		 				VAR_2 = ((iVal1 + iVal3)/iSum)*100;
+		 				COL_2 = 5;
+		 				VAR_1 = (iVal1/iSum)*100;
+		 				COL_1 = 1;
+		 			else
+		 				if (iVal3 == iVal1) then 'At this point, iVal2 > iVal3 = iVal1;
+		 					VAR_3 = ((iVal1 + iVal2 + iVal3)/iSum)*100;
+		 					COL_3 = 3;
+		 					VAR_2 = ((iVal1 + iVal3)/iSum)*100;
+		 					COL_2 = 5;
+		 					VAR_1 = (iVal1/iSum)*100;
+		 					COL_1 = 1;
+				 		else 'At this point, iVal2 > iVal1 > iVal3
+				 			VAR_3 = ((iVal1 + iVal2 + iVal3)/iSum)*100;
+			 				COL_3 = 3;
+			 				VAR_2 = ((iVal1 + iVal3)/iSum)*100;
+			 				COL_2 = 1;
+			 	 			VAR_1 = (iVal3/iSum)*100;
+							COL_1 = 5;						
+			 			end if
+					end if
+		 		else 
+				if (iVal2 == iVal3) then 'At this point, iVal2 = iVal3 > iVal1
+						VAR_3 = ((iVal1 + iVal2 + iVal3)/iSum)*100;
+						COL_3 = 5;
+						VAR_2 = ((iVal1 + iVal2)/iSum)*100;
+						COL_2 = 3;
+						VAR_1 = (iVal1/iSum)*100;
+						COL_1 = 1;
+					else  'At this point, iVal3 > iVal2 > iVal1
+						VAR_3 = ((iVal1 + iVal2 + iVal3)/iSum)*100;
+						COL_3 = 5;
+						VAR_2 = ((iVal1 + iVal2)/iSum)*100;
+						COL_2 = 3;
+						VAR_1 = (iVal1/iSum)*100;
+						COL_1 = 1;
+					end if
+				end if
+			end if
+		end if
+	end if
+	 
+End Sub

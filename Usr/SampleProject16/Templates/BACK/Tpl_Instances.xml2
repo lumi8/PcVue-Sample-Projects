@@ -1,0 +1,699 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<InstancesRoot SchemaVersion="12.1.0">
+<TopologyTree Name="_Root">
+<ObjectInstancesList/>
+<TemplatesList>
+<TemplateInstance Name="Sample">
+<Branch/>
+<OriginTemplateName/>
+<ObjectInstancesList>
+<ObjectInstance Name="Sample">
+<ObjectInstanceType>2</ObjectInstanceType>
+<ParametersList>
+<ParameterInstance Name="pg_ClientList">
+<Value/>
+<Scope>0</Scope>
+<IsOverwritten>true</IsOverwritten>
+<Unitary>true</Unitary>
+</ParameterInstance>
+<ParameterInstance Name="pg_HistoServerList">
+<Value/>
+<Scope>0</Scope>
+<IsOverwritten>true</IsOverwritten>
+<Unitary>true</Unitary>
+</ParameterInstance>
+<ParameterInstance Name="pg_ServerList">
+<Value/>
+<Scope>0</Scope>
+<IsOverwritten>true</IsOverwritten>
+<Unitary>true</Unitary>
+</ParameterInstance>
+</ParametersList>
+</ObjectInstance>
+</ObjectInstancesList>
+<TemplatesList>
+<TemplateInstance Name="BUILDING">
+<Branch>BUILDING</Branch>
+<OriginTemplateName>BUILDING</OriginTemplateName>
+<ObjectInstancesList/>
+<TemplatesList>
+<TemplateInstance Name="FLOOR_01">
+<Branch>FLOOR_01</Branch>
+<OriginTemplateName>FLOOR</OriginTemplateName>
+<ObjectInstancesList>
+<ObjectInstance Name="FLOOR_01">
+<ObjectInstanceType>2</ObjectInstanceType>
+<ParametersList>
+<ParameterInstance Name="pg_Domain">
+<DescriptionLang1>pg_Domain</DescriptionLang1>
+<DescriptionLang2>pg_Domain</DescriptionLang2>
+<Value/>
+<Scope>0</Scope>
+</ParameterInstance>
+</ParametersList>
+</ObjectInstance>
+</ObjectInstancesList>
+<TemplatesList>
+<TemplateInstance Name="ROOM_001">
+<Branch>ROOM_001</Branch>
+<OriginTemplateName>ROOM</OriginTemplateName>
+<ObjectInstancesList/>
+<TemplatesList>
+<TemplateInstance Name="AC">
+<Branch>AC</Branch>
+<OriginTemplateName>AC</OriginTemplateName>
+<ObjectInstancesList>
+<ObjectInstance Name="AC">
+<ObjectInstanceType>2</ObjectInstanceType>
+<ParametersList>
+<ParameterInstance Name="pg_Nature">
+<DescriptionLang1>pg_Nature</DescriptionLang1>
+<DescriptionLang2>pg_Nature</DescriptionLang2>
+<Value/>
+<Scope>1</Scope>
+</ParameterInstance>
+</ParametersList>
+</ObjectInstance>
+</ObjectInstancesList>
+<TemplatesList/>
+</TemplateInstance>
+<TemplateInstance Name="LT">
+<Branch>LT</Branch>
+<OriginTemplateName>LT</OriginTemplateName>
+<ObjectInstancesList>
+<ObjectInstance Name="LT">
+<ObjectInstanceType>2</ObjectInstanceType>
+<ParametersList>
+<ParameterInstance Name="pg_Nature">
+<DescriptionLang1>pg_Nature</DescriptionLang1>
+<DescriptionLang2>pg_Nature</DescriptionLang2>
+<Value/>
+<Scope>1</Scope>
+</ParameterInstance>
+</ParametersList>
+</ObjectInstance>
+</ObjectInstancesList>
+<TemplatesList/>
+</TemplateInstance>
+</TemplatesList>
+</TemplateInstance>
+<TemplateInstance Name="ROOM_002">
+<Branch>ROOM_002</Branch>
+<OriginTemplateName>ROOM</OriginTemplateName>
+<ObjectInstancesList/>
+<TemplatesList>
+<TemplateInstance Name="AC">
+<Branch>AC</Branch>
+<OriginTemplateName>AC</OriginTemplateName>
+<ObjectInstancesList>
+<ObjectInstance Name="AC">
+<ObjectInstanceType>2</ObjectInstanceType>
+<ParametersList>
+<ParameterInstance Name="pg_Nature">
+<DescriptionLang1>pg_Nature</DescriptionLang1>
+<DescriptionLang2>pg_Nature</DescriptionLang2>
+<Value/>
+<Scope>1</Scope>
+</ParameterInstance>
+</ParametersList>
+</ObjectInstance>
+</ObjectInstancesList>
+<TemplatesList/>
+</TemplateInstance>
+<TemplateInstance Name="LT">
+<Branch>LT</Branch>
+<OriginTemplateName>LT</OriginTemplateName>
+<ObjectInstancesList>
+<ObjectInstance Name="LT">
+<ObjectInstanceType>2</ObjectInstanceType>
+<ParametersList>
+<ParameterInstance Name="pg_Nature">
+<DescriptionLang1>pg_Nature</DescriptionLang1>
+<DescriptionLang2>pg_Nature</DescriptionLang2>
+<Value/>
+<Scope>1</Scope>
+</ParameterInstance>
+</ParametersList>
+</ObjectInstance>
+</ObjectInstancesList>
+<TemplatesList/>
+</TemplateInstance>
+</TemplatesList>
+</TemplateInstance>
+</TemplatesList>
+</TemplateInstance>
+<TemplateInstance Name="FLOOR_02">
+<Branch>FLOOR_02</Branch>
+<OriginTemplateName>FLOOR</OriginTemplateName>
+<ObjectInstancesList>
+<ObjectInstance Name="FLOOR_02">
+<ObjectInstanceType>2</ObjectInstanceType>
+<ParametersList>
+<ParameterInstance Name="pg_Domain">
+<DescriptionLang1>pg_Domain</DescriptionLang1>
+<DescriptionLang2>pg_Domain</DescriptionLang2>
+<Value/>
+<Scope>0</Scope>
+</ParameterInstance>
+</ParametersList>
+</ObjectInstance>
+</ObjectInstancesList>
+<TemplatesList>
+<TemplateInstance Name="ROOM_001">
+<Branch>ROOM_001</Branch>
+<OriginTemplateName>ROOM</OriginTemplateName>
+<ObjectInstancesList/>
+<TemplatesList>
+<TemplateInstance Name="AC">
+<Branch>AC</Branch>
+<OriginTemplateName>AC</OriginTemplateName>
+<ObjectInstancesList>
+<ObjectInstance Name="AC">
+<ObjectInstanceType>2</ObjectInstanceType>
+<ParametersList>
+<ParameterInstance Name="pg_Nature">
+<DescriptionLang1>pg_Nature</DescriptionLang1>
+<DescriptionLang2>pg_Nature</DescriptionLang2>
+<Value/>
+<Scope>1</Scope>
+</ParameterInstance>
+</ParametersList>
+</ObjectInstance>
+</ObjectInstancesList>
+<TemplatesList/>
+</TemplateInstance>
+<TemplateInstance Name="LT">
+<Branch>LT</Branch>
+<OriginTemplateName>LT</OriginTemplateName>
+<ObjectInstancesList>
+<ObjectInstance Name="LT">
+<ObjectInstanceType>2</ObjectInstanceType>
+<ParametersList>
+<ParameterInstance Name="pg_Nature">
+<DescriptionLang1>pg_Nature</DescriptionLang1>
+<DescriptionLang2>pg_Nature</DescriptionLang2>
+<Value/>
+<Scope>1</Scope>
+</ParameterInstance>
+</ParametersList>
+</ObjectInstance>
+</ObjectInstancesList>
+<TemplatesList/>
+</TemplateInstance>
+</TemplatesList>
+</TemplateInstance>
+<TemplateInstance Name="ROOM_002">
+<Branch>ROOM_002</Branch>
+<OriginTemplateName>ROOM</OriginTemplateName>
+<ObjectInstancesList/>
+<TemplatesList>
+<TemplateInstance Name="AC">
+<Branch>AC</Branch>
+<OriginTemplateName>AC</OriginTemplateName>
+<ObjectInstancesList>
+<ObjectInstance Name="AC">
+<ObjectInstanceType>2</ObjectInstanceType>
+<ParametersList>
+<ParameterInstance Name="p_TrendPeriod">
+<Value>5</Value>
+</ParameterInstance>
+<ParameterInstance Name="pg_Nature">
+<DescriptionLang1>pg_Nature</DescriptionLang1>
+<DescriptionLang2>pg_Nature</DescriptionLang2>
+<Value/>
+<Scope>1</Scope>
+</ParameterInstance>
+</ParametersList>
+</ObjectInstance>
+</ObjectInstancesList>
+<TemplatesList/>
+</TemplateInstance>
+<TemplateInstance Name="LT">
+<Branch>LT</Branch>
+<OriginTemplateName>LT</OriginTemplateName>
+<ObjectInstancesList>
+<ObjectInstance Name="LT">
+<ObjectInstanceType>2</ObjectInstanceType>
+<ParametersList>
+<ParameterInstance Name="pg_Nature">
+<DescriptionLang1>pg_Nature</DescriptionLang1>
+<DescriptionLang2>pg_Nature</DescriptionLang2>
+<Value/>
+<Scope>1</Scope>
+</ParameterInstance>
+</ParametersList>
+</ObjectInstance>
+</ObjectInstancesList>
+<TemplatesList/>
+</TemplateInstance>
+</TemplatesList>
+</TemplateInstance>
+</TemplatesList>
+</TemplateInstance>
+</TemplatesList>
+</TemplateInstance>
+<TemplateInstance Name="DASHBOARD">
+<Branch>DASHBOARD</Branch>
+<OriginTemplateName/>
+<ObjectInstancesList/>
+<TemplatesList>
+<TemplateInstance Name="DISPLAY01">
+<Branch>DISPLAY01</Branch>
+<OriginTemplateName>L_DASHBOARD/DISPLAY</OriginTemplateName>
+<ObjectInstancesList>
+<ObjectInstance Name="DISPLAY01.Cyan">
+<Selected>false</Selected>
+<ObjectInstanceType>1</ObjectInstanceType>
+</ObjectInstance>
+<ObjectInstance Name="DISPLAY01.Cyclic01">
+<ObjectInstanceType>1</ObjectInstanceType>
+<FreeParametersList>
+<FreeParameter Name="ProgramArgs">
+<Value>BUILDING.FLOOR_01.ROOM_001.AC.TEMP</Value>
+</FreeParameter>
+</FreeParametersList>
+</ObjectInstance>
+<ObjectInstance Name="DISPLAY01.Green">
+<Selected>false</Selected>
+<ObjectInstanceType>1</ObjectInstanceType>
+</ObjectInstance>
+<ObjectInstance Name="DISPLAY01.LIM">
+<ObjectInstanceType>1</ObjectInstanceType>
+<FreeParametersList>
+<FreeParameter Name="InitialValue">
+<Value>100</Value>
+</FreeParameter>
+</FreeParametersList>
+</ObjectInstance>
+<ObjectInstance Name="DISPLAY01.VAR">
+<ObjectInstanceType>1</ObjectInstanceType>
+<FreeParametersList>
+<FreeParameter Name="ExtText3">
+<Value>F1 R1</Value>
+</FreeParameter>
+<FreeParameter Name="ExtText4">
+<Value>0 - 40</Value>
+</FreeParameter>
+<FreeParameter Name="MaximumValue">
+<Value>40</Value>
+</FreeParameter>
+</FreeParametersList>
+</ObjectInstance>
+</ObjectInstancesList>
+<TemplatesList/>
+</TemplateInstance>
+<TemplateInstance Name="DISPLAY02">
+<Branch>DISPLAY02</Branch>
+<OriginTemplateName>L_DASHBOARD/DISPLAY</OriginTemplateName>
+<ObjectInstancesList>
+<ObjectInstance Name="DISPLAY02.Cyan">
+<Selected>false</Selected>
+<ObjectInstanceType>1</ObjectInstanceType>
+</ObjectInstance>
+<ObjectInstance Name="DISPLAY02.Cyclic01">
+<ObjectInstanceType>1</ObjectInstanceType>
+<FreeParametersList>
+<FreeParameter Name="ProgramArgs">
+<Value>BUILDING.FLOOR_01.ROOM_002.AC.TEMP</Value>
+</FreeParameter>
+</FreeParametersList>
+</ObjectInstance>
+<ObjectInstance Name="DISPLAY02.Green">
+<Selected>false</Selected>
+<ObjectInstanceType>1</ObjectInstanceType>
+</ObjectInstance>
+<ObjectInstance Name="DISPLAY02.LIM">
+<ObjectInstanceType>1</ObjectInstanceType>
+<FreeParametersList>
+<FreeParameter Name="InitialValue">
+<Value>100</Value>
+</FreeParameter>
+</FreeParametersList>
+</ObjectInstance>
+<ObjectInstance Name="DISPLAY02.VAR">
+<ObjectInstanceType>1</ObjectInstanceType>
+<FreeParametersList>
+<FreeParameter Name="ExtText3">
+<Value>F1 R2</Value>
+</FreeParameter>
+<FreeParameter Name="ExtText4">
+<Value>0 - 40</Value>
+</FreeParameter>
+<FreeParameter Name="MaximumValue">
+<Value>40</Value>
+</FreeParameter>
+</FreeParametersList>
+</ObjectInstance>
+</ObjectInstancesList>
+<TemplatesList/>
+</TemplateInstance>
+<TemplateInstance Name="DISPLAY03">
+<Branch>DISPLAY03</Branch>
+<OriginTemplateName>L_DASHBOARD/DISPLAY</OriginTemplateName>
+<ObjectInstancesList>
+<ObjectInstance Name="DISPLAY03.Cyan">
+<Selected>false</Selected>
+<ObjectInstanceType>1</ObjectInstanceType>
+</ObjectInstance>
+<ObjectInstance Name="DISPLAY03.Cyclic01">
+<ObjectInstanceType>1</ObjectInstanceType>
+<FreeParametersList>
+<FreeParameter Name="ProgramArgs">
+<Value>BUILDING.FLOOR_02.ROOM_001.AC.TEMP</Value>
+</FreeParameter>
+</FreeParametersList>
+</ObjectInstance>
+<ObjectInstance Name="DISPLAY03.Green">
+<Selected>false</Selected>
+<ObjectInstanceType>1</ObjectInstanceType>
+</ObjectInstance>
+<ObjectInstance Name="DISPLAY03.LIM">
+<ObjectInstanceType>1</ObjectInstanceType>
+<FreeParametersList>
+<FreeParameter Name="InitialValue">
+<Value>100</Value>
+</FreeParameter>
+</FreeParametersList>
+</ObjectInstance>
+<ObjectInstance Name="DISPLAY03.VAR">
+<ObjectInstanceType>1</ObjectInstanceType>
+<FreeParametersList>
+<FreeParameter Name="ExtText3">
+<Value>F2 R1</Value>
+</FreeParameter>
+<FreeParameter Name="ExtText4">
+<Value>0 - 40</Value>
+</FreeParameter>
+<FreeParameter Name="MaximumValue">
+<Value>40</Value>
+</FreeParameter>
+</FreeParametersList>
+</ObjectInstance>
+</ObjectInstancesList>
+<TemplatesList/>
+</TemplateInstance>
+<TemplateInstance Name="DISPLAY04">
+<Branch>DISPLAY04</Branch>
+<OriginTemplateName>L_DASHBOARD/DISPLAY</OriginTemplateName>
+<ObjectInstancesList>
+<ObjectInstance Name="DISPLAY04.Cyan">
+<Selected>false</Selected>
+<ObjectInstanceType>1</ObjectInstanceType>
+</ObjectInstance>
+<ObjectInstance Name="DISPLAY04.Cyclic01">
+<ObjectInstanceType>1</ObjectInstanceType>
+<FreeParametersList>
+<FreeParameter Name="ProgramArgs">
+<Value>BUILDING.FLOOR_02.ROOM_002.AC.TEMP</Value>
+</FreeParameter>
+</FreeParametersList>
+</ObjectInstance>
+<ObjectInstance Name="DISPLAY04.Green">
+<Selected>false</Selected>
+<ObjectInstanceType>1</ObjectInstanceType>
+</ObjectInstance>
+<ObjectInstance Name="DISPLAY04.LIM">
+<ObjectInstanceType>1</ObjectInstanceType>
+<FreeParametersList>
+<FreeParameter Name="InitialValue">
+<Value>100</Value>
+</FreeParameter>
+</FreeParametersList>
+</ObjectInstance>
+<ObjectInstance Name="DISPLAY04.VAR">
+<ObjectInstanceType>1</ObjectInstanceType>
+<FreeParametersList>
+<FreeParameter Name="ExtText3">
+<Value>F2 R2</Value>
+</FreeParameter>
+<FreeParameter Name="ExtText4">
+<Value>0 - 40</Value>
+</FreeParameter>
+<FreeParameter Name="MaximumValue">
+<Value>40</Value>
+</FreeParameter>
+</FreeParametersList>
+</ObjectInstance>
+</ObjectInstancesList>
+<TemplatesList/>
+</TemplateInstance>
+<TemplateInstance Name="DISPLAY05">
+<Branch>DISPLAY05</Branch>
+<OriginTemplateName>L_DASHBOARD/DISPLAY</OriginTemplateName>
+<ObjectInstancesList>
+<ObjectInstance Name="DISPLAY05.Cyan">
+<Selected>false</Selected>
+<ObjectInstanceType>1</ObjectInstanceType>
+</ObjectInstance>
+<ObjectInstance Name="DISPLAY05.Cyclic01">
+<ObjectInstanceType>1</ObjectInstanceType>
+<FreeParametersList>
+<FreeParameter Name="ProgramArgs">
+<Value>BUILDING.FLOOR_01.ROOM_001.AC.TEMP</Value>
+</FreeParameter>
+</FreeParametersList>
+</ObjectInstance>
+<ObjectInstance Name="DISPLAY05.Green">
+<Selected>false</Selected>
+<ObjectInstanceType>1</ObjectInstanceType>
+</ObjectInstance>
+<ObjectInstance Name="DISPLAY05.LIM">
+<ObjectInstanceType>1</ObjectInstanceType>
+<FreeParametersList>
+<FreeParameter Name="InitialValue">
+<Value>40</Value>
+</FreeParameter>
+</FreeParametersList>
+</ObjectInstance>
+<ObjectInstance Name="DISPLAY05.VAR">
+<ObjectInstanceType>1</ObjectInstanceType>
+<FreeParametersList>
+<FreeParameter Name="ExtText3">
+<Value>F1 R1</Value>
+</FreeParameter>
+<FreeParameter Name="ExtText4">
+<Value>%</Value>
+</FreeParameter>
+<FreeParameter Name="MaximumValue">
+<Value>100</Value>
+</FreeParameter>
+</FreeParametersList>
+</ObjectInstance>
+</ObjectInstancesList>
+<TemplatesList/>
+</TemplateInstance>
+<TemplateInstance Name="DISPLAY06">
+<Branch>DISPLAY06</Branch>
+<OriginTemplateName>L_DASHBOARD/DISPLAY</OriginTemplateName>
+<ObjectInstancesList>
+<ObjectInstance Name="DISPLAY06.Cyan">
+<Selected>false</Selected>
+<ObjectInstanceType>1</ObjectInstanceType>
+</ObjectInstance>
+<ObjectInstance Name="DISPLAY06.Cyclic01">
+<ObjectInstanceType>1</ObjectInstanceType>
+<FreeParametersList>
+<FreeParameter Name="ProgramArgs">
+<Value>BUILDING.FLOOR_01.ROOM_002.AC.TEMP</Value>
+</FreeParameter>
+</FreeParametersList>
+</ObjectInstance>
+<ObjectInstance Name="DISPLAY06.Green">
+<Selected>false</Selected>
+<ObjectInstanceType>1</ObjectInstanceType>
+</ObjectInstance>
+<ObjectInstance Name="DISPLAY06.LIM">
+<ObjectInstanceType>1</ObjectInstanceType>
+<FreeParametersList>
+<FreeParameter Name="InitialValue">
+<Value>40</Value>
+</FreeParameter>
+</FreeParametersList>
+</ObjectInstance>
+<ObjectInstance Name="DISPLAY06.VAR">
+<ObjectInstanceType>1</ObjectInstanceType>
+<FreeParametersList>
+<FreeParameter Name="ExtText3">
+<Value>F1 R2</Value>
+</FreeParameter>
+<FreeParameter Name="ExtText4">
+<Value>%</Value>
+</FreeParameter>
+<FreeParameter Name="MaximumValue">
+<Value>100</Value>
+</FreeParameter>
+</FreeParametersList>
+</ObjectInstance>
+</ObjectInstancesList>
+<TemplatesList/>
+</TemplateInstance>
+<TemplateInstance Name="DISPLAY07">
+<Branch>DISPLAY07</Branch>
+<OriginTemplateName>L_DASHBOARD/DISPLAY</OriginTemplateName>
+<ObjectInstancesList>
+<ObjectInstance Name="DISPLAY07.Cyan">
+<Selected>false</Selected>
+<ObjectInstanceType>1</ObjectInstanceType>
+</ObjectInstance>
+<ObjectInstance Name="DISPLAY07.Cyclic01">
+<ObjectInstanceType>1</ObjectInstanceType>
+<FreeParametersList>
+<FreeParameter Name="ProgramArgs">
+<Value>BUILDING.FLOOR_02.ROOM_001.AC.TEMP</Value>
+</FreeParameter>
+</FreeParametersList>
+</ObjectInstance>
+<ObjectInstance Name="DISPLAY07.Green">
+<Selected>false</Selected>
+<ObjectInstanceType>1</ObjectInstanceType>
+</ObjectInstance>
+<ObjectInstance Name="DISPLAY07.LIM">
+<ObjectInstanceType>1</ObjectInstanceType>
+<FreeParametersList>
+<FreeParameter Name="InitialValue">
+<Value>40</Value>
+</FreeParameter>
+</FreeParametersList>
+</ObjectInstance>
+<ObjectInstance Name="DISPLAY07.VAR">
+<ObjectInstanceType>1</ObjectInstanceType>
+<FreeParametersList>
+<FreeParameter Name="ExtText3">
+<Value>F2 R1</Value>
+</FreeParameter>
+<FreeParameter Name="ExtText4">
+<Value>%</Value>
+</FreeParameter>
+<FreeParameter Name="MaximumValue">
+<Value>100</Value>
+</FreeParameter>
+</FreeParametersList>
+</ObjectInstance>
+</ObjectInstancesList>
+<TemplatesList/>
+</TemplateInstance>
+<TemplateInstance Name="DISPLAY08">
+<Branch>DISPLAY08</Branch>
+<OriginTemplateName>L_DASHBOARD/DISPLAY</OriginTemplateName>
+<ObjectInstancesList>
+<ObjectInstance Name="DISPLAY08.Cyan">
+<Selected>false</Selected>
+<ObjectInstanceType>1</ObjectInstanceType>
+</ObjectInstance>
+<ObjectInstance Name="DISPLAY08.Cyclic01">
+<ObjectInstanceType>1</ObjectInstanceType>
+<FreeParametersList>
+<FreeParameter Name="ProgramArgs">
+<Value>BUILDING.FLOOR_02.ROOM_002.AC.TEMP</Value>
+</FreeParameter>
+</FreeParametersList>
+</ObjectInstance>
+<ObjectInstance Name="DISPLAY08.Green">
+<Selected>false</Selected>
+<ObjectInstanceType>1</ObjectInstanceType>
+</ObjectInstance>
+<ObjectInstance Name="DISPLAY08.LIM">
+<ObjectInstanceType>1</ObjectInstanceType>
+<FreeParametersList>
+<FreeParameter Name="InitialValue">
+<Value>40</Value>
+</FreeParameter>
+</FreeParametersList>
+</ObjectInstance>
+<ObjectInstance Name="DISPLAY08.VAR">
+<ObjectInstanceType>1</ObjectInstanceType>
+<FreeParametersList>
+<FreeParameter Name="ExtText3">
+<Value>F2 R2</Value>
+</FreeParameter>
+<FreeParameter Name="ExtText4">
+<Value>%</Value>
+</FreeParameter>
+<FreeParameter Name="MaximumValue">
+<Value>100</Value>
+</FreeParameter>
+</FreeParametersList>
+</ObjectInstance>
+</ObjectInstancesList>
+<TemplatesList/>
+</TemplateInstance>
+<TemplateInstance Name="PIE01">
+<Branch>PIE01</Branch>
+<OriginTemplateName>L_DASHBOARD/PIE</OriginTemplateName>
+<ObjectInstancesList>
+<ObjectInstance Name="PIE01.Cyclic01">
+<ObjectInstanceType>1</ObjectInstanceType>
+<FreeParametersList>
+<FreeParameter Name="ProgramArgs">
+<Value>BUILDING.FLOOR_01.ROOM_001.AC.TEMP,BUILDING.FLOOR_01.ROOM_002.AC.TEMP,BUILDING.FLOOR_02.ROOM_001.AC.TEMP,BUILDING.FLOOR_02.ROOM_002.AC.TEMP</Value>
+</FreeParameter>
+</FreeParametersList>
+</ObjectInstance>
+<ObjectInstance Name="PIE01.Symbol01">
+<Selected>false</Selected>
+<ObjectInstanceType>1</ObjectInstanceType>
+</ObjectInstance>
+</ObjectInstancesList>
+<TemplatesList/>
+</TemplateInstance>
+<TemplateInstance Name="PYRAMID01">
+<Branch>PYRAMID01</Branch>
+<OriginTemplateName>L_DASHBOARD/PYRAMID</OriginTemplateName>
+<ObjectInstancesList>
+<ObjectInstance Name="PYRAMID01.Cyclic01">
+<ObjectInstanceType>1</ObjectInstanceType>
+<FreeParametersList>
+<FreeParameter Name="ProgramArgs">
+<Value>BUILDING.FLOOR_01.ROOM_001.AC.TEMP,BUILDING.FLOOR_01.ROOM_002.AC.TEMP,BUILDING.FLOOR_02.ROOM_001.AC.TEMP</Value>
+</FreeParameter>
+</FreeParametersList>
+</ObjectInstance>
+<ObjectInstance Name="PYRAMID01.VAR_1">
+<ObjectInstanceType>1</ObjectInstanceType>
+<FreeParametersList>
+<FreeParameter Name="ExtText3">
+<Value>Floor1 Room1</Value>
+</FreeParameter>
+</FreeParametersList>
+</ObjectInstance>
+<ObjectInstance Name="PYRAMID01.VAR_2">
+<ObjectInstanceType>1</ObjectInstanceType>
+<FreeParametersList>
+<FreeParameter Name="ExtText3">
+<Value>Floor1 Room2</Value>
+</FreeParameter>
+</FreeParametersList>
+</ObjectInstance>
+<ObjectInstance Name="PYRAMID01.VAR_3">
+<ObjectInstanceType>1</ObjectInstanceType>
+<FreeParametersList>
+<FreeParameter Name="ExtText3">
+<Value>Floor2 Room1</Value>
+</FreeParameter>
+</FreeParametersList>
+</ObjectInstance>
+</ObjectInstancesList>
+<TemplatesList/>
+</TemplateInstance>
+</TemplatesList>
+</TemplateInstance>
+<TemplateInstance Name="GENERAL">
+<Branch>GENERAL</Branch>
+<OriginTemplateName>GENERAL</OriginTemplateName>
+<ObjectInstancesList/>
+<TemplatesList>
+<TemplateInstance Name="TRENDS">
+<Branch>TRENDS</Branch>
+<OriginTemplateName>L_General/TRENDS</OriginTemplateName>
+<ObjectInstancesList/>
+<TemplatesList/>
+</TemplateInstance>
+</TemplatesList>
+</TemplateInstance>
+</TemplatesList>
+</TemplateInstance>
+</TemplatesList>
+</TopologyTree>
+</InstancesRoot>
+</root>

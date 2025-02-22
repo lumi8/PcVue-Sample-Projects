@@ -1,0 +1,31 @@
+'#########################################
+'PROGRAM : INIT_TRACKING.scb
+'Must be Executed at start-up
+'Create HMI? variables and execute Tracking program at start up
+'#########################################
+'#################################################
+'PROGRAM : INIT_TRACKING.scb
+'Doit ˆtre execut‚ au d‚marrage
+'Cr‚er les variables HMI et ex‚cute le programme Tracking au d‚marrage
+'##################################################
+
+Sub Main()
+
+	Print("INFORMATION: You can add a function key (eg CTRL + SHIFT + Space) to open the popup available in VariableTracking library");
+	Variable("ADD_HMIBIT", "VariableTracking.Apply", 0,"Le filtre a chang‚", "The filter changed");
+	Variable("ADD_HMIREG", "VariableTracking.ComboBoxCriteriaIndex", 0, "Index selectionn‚ par le combobox", "Index of selected item of combobox");
+	Variable("ADD_HMIREG", "VariableTracking.ComboBoxBinAttNumberIndex", 0, "Index selectionn‚ par le combobox", "Index of selected item of combobox");
+	Variable("ADD_HMIREG", "VariableTracking.ComboBoxTxtAttNumberIndex", 0, "Index selectionn‚ par le combobox", "Index of selected item of combobox");
+	Variable("ADD_HMIREG", "VariableTracking.OptionOperatorIndex", 0, "Index selectionn‚ par le control option list", "Index of selected item of option list control");
+	Variable("ADD_HMIBIT", "VariableTracking.BitValueFilter", 0,"Valeur du filtre bool‚en", "Value filter of type boolean");
+	Variable("ADD_HMIREG", "VariableTracking.RegValueFilter", 0, "Valeur de filtre num‚rique", "Value filter of type register","",-65535,65535);
+	Variable("ADD_HMITXT", "VariableTracking.TextValueFilter", 0, "Valeur de filtre textuel", "Value filter of type text");	'132 characters
+	Variable("ADD_HMITXT", "VariableTracking.FilterGenerated", 0, "Filtre g‚n‚r‚", "Generated filter","",512);	'512 characters
+	Variable("ADD_HMIBIT", "VariableTracking.Step1", 0,"PremiŠre ‚tape", "Step 1");
+	Variable("ADD_HMIBIT", "VariableTracking.Step2", 0,"DeuxiŠme ‚tape", "Step 2");
+	Variable("ADD_HMIBIT", "VariableTracking.Step3", 0,"TroisiŠme ‚tape", "Step 3");
+	Variable("ADD_HMIREG", "VariableTracking.NbRows", 0, "Nombre de lignes affich‚es", "Number of rows displayed","",0,655350);
+		
+	PROGRAM("START","L_VariableTracking/Tracking.SCB","");
+
+End Sub

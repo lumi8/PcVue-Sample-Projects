@@ -1,0 +1,29 @@
+'PROGRAM : PROGEXECUTED.scb
+'Loaded and executed at start-up fron the program 'INIT.scb'
+'Display a text message in the program logviewer
+
+sub main()
+
+FUNCTION01();
+Cyclic("ADDPROG", 10, "PROGEXECUTED.SCB", "", "CheckHDS" ); 'Check if HDS is ok in 10 seconds
+
+end sub
+
+sub FUNCTION01()
+
+G_Trace("PROGEXECUTED.scb","FUNCTION01","Test");
+
+
+end sub
+
+Sub CheckHDS()
+
+Cyclic("DEL", 10, "PROGEXECUTED.SCB", "", "CheckHDS" ); 'Delete the cyclic
+
+	If (Variable("STATUS", "@System.HDS.DB1.Disconn", 1)==0) Then 'Variable does not exist?
+		Window("OPEN", "HdsWarning", "@System.HDS.DB1.Disconn" ); 'Open the warning mimic with system variable name as branch
+	End If
+	If (Variable("STATUS", "@System.HDS.DB1.Disconn", 2)==0) Then 'Variable is invalid?
+		Window("OPEN", "HdsWarning", "@System.HDS.DB1.Disconn" ); 'Open the warning mimic with system variable name as branch
+	End If
+End Sub

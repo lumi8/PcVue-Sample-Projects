@@ -1,0 +1,32 @@
+Sub Main()
+
+End Sub
+
+Sub Display()
+
+	dim sVar as str;
+	dim sLim as str;
+	
+	dim sBranch as str;
+	
+	dim iVal1 as double;
+	dim iLim as double;
+	
+	sBranch = getarg("BRANCH");
+		
+	sVar = getarg("ARG1");	'- Real variable you want to display in percentage (must be full name)
+	
+	sLim = AddString(sBranch, ".LIM");	'- LIM variable in which you configure the maximum of Real variable
+	
+	iVal1 = ?sVar;
+	iLim = ?sLim;
+
+	Tree(sBranch);
+	
+	if (iVal1 == 0 || iLim == 0) then
+		VAR = 0;
+	else
+		VAR = (iVal1/iLim)*100;
+	end if
+
+End Sub

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<ParametersRoot Name="" SchemaVersion="12.1.0">
+<Library Name="L_General">
+<CategoriesList/>
+<ParametersList>
+<Parameter Name="TrendViewerID">
+<nDataType>0</nDataType>
+<nType>0</nType>
+<DefaultValue>Trend1</DefaultValue>
+<Empty>0</Empty>
+</Parameter>
+</ParametersList>
+</Library>
+</ParametersRoot>
+</root>

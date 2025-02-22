@@ -1,0 +1,199 @@
+CONST MaxLines = 20000;
+Dim A[20000] as str, B[20000] as str;
+
+Sub FillTrendCombobox()
+	Dim Line as str, File as str, TrendName as str, Field as str, sWindow as str, sBranch as str, Identity as str;
+	Dim i as integer, j as integer, k as integer, NbTrends as double;
+	Dim lFileBuf as long, lLineBuf as long, lFieldBuf as long;
+	CONST MaxLine = 512;
+	CONST MaxField = 255;	'We look for variables names
+
+	sWindow = GetArg("ARG1");
+	sBranch = GetArg("ARG2");
+	Tree(GetArg("ARG3"));
+	
+	File = AddString(GetProjectDir(), "\\C\\Histo.dat");	'PcVue text variable
+	lFileBuf = FileToBuf(File);	'Save the current file into a buffer
+	i=1;
+	
+	While(i!=0)	'Until the end of file, we read each line
+		lLineBuf = Alloc_Buffer(MaxLine);
+		i = Seq_Buffer("NEXTFIELD", lFileBuf, "\n", lLineBuf);	'Read the line
+		Line = Cget_Buffer(lLineBuf, 0, MaxLine);
+
+		If (CmpString(Left(Line, 3), "TRD")==0 || CmpString(Left(Line, 3), "TD,")==0) Then	'This line contains a trend
+			lFieldBuf = Alloc_Buffer(MaxField);
+			Seq_Buffer("SEEKFIELD", 23, lLineBuf, ",");	'Move the pointer to the 24th position (primary or not)
+			Field = Seq_Buffer("NEXTFIELD", lLineBuf, ",", "STR");	'Get the text 
+			If (CmpString(Field, "1")==0) Then 	'if it is a primary trend
+				Seq_Buffer("SEEKFIELD", -23, lLineBuf, ",");	'Move the pointer to the second position
+				TrendName = Seq_Buffer("NEXTFIELD", lLineBuf, ",", "STR");	'Get the text to translate
+				A[j] = TrendName;	'Add the variable name into the array of string
+				j++;
+			End If
+			Free_Buffer(lFieldBuf);
+		End If
+		Free_Buffer(lLineBuf);
+	Wend
+	Free_Buffer(lFileBuf);
+
+	File = AddString(GetProjectDir(), "\\C\\HDSTrend.dat");	'PcVue text variable
+	lFileBuf = FileToBuf(File);	'Save the current file into a buffer
+	i=1;
+	
+	While(i!=0)	'Until the end of file, we read each line
+		lLineBuf = Alloc_Buffer(MaxLine);
+		i = Seq_Buffer("NEXTFIELD", lFileBuf, "\n", lLineBuf);	'Read the line
+		Line = Cget_Buffer(lLineBuf, 0, MaxLine);
+
+		If (CmpString(Left(Line, 3), "TRD")==0) Then	'This line contains a trend
+			lFieldBuf = Alloc_Buffer(MaxField);
+			Seq_Buffer("SEEKFIELD", 11, lLineBuf, ",");	'Move the pointer to the 11th position (primary or not)
+			Field = Seq_Buffer("NEXTFIELD", lLineBuf, ",", "STR");	'Get the text 
+			If (CmpString(Field, "1")==0) Then 	'if it is a primary trend
+				Seq_Buffer("SEEKFIELD", -11, lLineBuf, ",");	'Move the pointer to the second position
+				TrendName = Seq_Buffer("NEXTFIELD", lLineBuf, ",", "STR");	'Get the text to translate
+				A[j] = TrendName;	'Add the variable name into the array of string
+				j++;
+			End If
+			Free_Buffer(lFieldBuf);
+		End If
+		Free_Buffer(lLineBuf);
+	Wend
+	Free_Buffer(lFileBuf);
+
+	For(k=0;k<MaxLines;k++)
+		If (CmpString(A[k], "")==0) Then
+			Break;
+		End If
+	Next
+	NbTrends = TOD(k);
+	ProgressBar = 2;	
+	delay(0.1);	'This delay is useful to draw the Progress bar in the HMI
+
+	'Start the Merge sort Bottom-up implementation algorithm to order the table (https://en.wikipedia.org/wiki/Merge_sort)
+	BottomUpMergeSort(TOI(NbTrends));
+
+	Identity = "AICB_TrendsList";
+	ComboBox("CLEAR", sWindow, sBranch, Identity);
+	
+	For(k=0;k<TOI(NbTrends);k++)
+		ComboBox("INSERT", sWindow, sBranch, Identity, A[k], A[k]);
+	Next
+
+	ComboBox("SAVE", sWindow, sBranch, Identity, TrendsFileName );
+	ProgressBar = 100;
+	TimeToUpdateTrends = DateTimeValue() - TimeToUpdateTrends;
+	delay(0.1);
+	
+	ProgressBar = 0;
+	Cancel = 1;
+	Print("TimeToUpdateTrends = ", TimeToUpdateTrends, " ms.");
+	
+	Program("UNLOAD", "L_General/TRENDS_Sorting.SCB", "");
+	
+End Sub
+
+'array A[] has the items to sort; array B[] is a work array
+Sub BottomUpMergeSort(n)
+	Dim width as integer, i as integer, j as integer, k as integer;
+
+	'Each 1-element run in A is already "sorted"
+	'Make successively longer sorted runs of length 2, 4, 8, 16... until the whole array is sorted
+	For(width = 1; width < n; width = 2 * width)
+		'Array A is full of runs of length width
+		ProgressBar = max((TOD(width) / TOD(n)) * 100, 2+TOD(k));	'At least 2%	
+		k++;
+		delay(0.1);	'This delay is useful to draw the Progress bar in the HMI (24s to sort 10000 trends, 20s without this delay)
+		If (Even(j)==1) Then	'Case even
+			For(i = 0; i < n; i = i + 2 * width)
+				'Merge two runs: A[i:i+width-1] and A[i+width:i+2*width-1] to B[]
+				'or copy A[i:n-1] to B[] ( if (i+width >= n) )
+				BottomUpMerge(i, min(i+width, n), min(i+2*width, n));
+				'delay(0.1);	'If we remove this delay the sort is faster but freeze the HMI
+				If (Cancel == 1) Then
+					width=n;	'Stop width loop
+					Break;	'Exit i loop
+				End If
+			Next
+		Else	'Case Odd, swap the role of A and B
+			For(i = 0; i < n; i = i + 2 * width)
+				'Merge two runs: A[i:i+width-1] and A[i+width:i+2*width-1] to B[]
+				'or copy A[i:n-1] to B[] ( if (i+width >= n) )
+				BottomUpMergeB(i, min(i+width, n), min(i+2*width, n));
+				'delay(0.1);	'If we remove this delay the sort is faster but freeze the HMI
+				If (Cancel == 1) Then
+					width=n;	'Stop width loop
+					Break;	'Exit i loop
+				End If
+			Next
+		End If
+		j++;
+	Next
+End Sub
+
+
+' Left run is 	A[iLeft 	:iRight-1]
+' Right run is 	A[iRight	:iEnd-1]
+Sub BottomUpMerge(iLeft, iRight, iEnd)
+	Dim i as integer, j as integer, k as integer;
+	i = iLeft;
+	j = iRight;
+	
+	'While there are elements in the left or right runs...
+	For(k = iLeft; k < iEnd; k++)
+		'If left run head exists and is <= existing right run head.
+		If (i < iRight && (j >= iEnd || CmpString(A[i], A[j]) <= 0)) Then
+			B[k] = A[i];
+			i++;
+		Else
+			B[k] = A[j];
+			j++;
+		End If
+	Next
+End Sub
+
+' Left run is 	A[iLeft 	:iRight-1]
+' Right run is 	A[iRight	:iEnd-1]
+Sub BottomUpMergeB(iLeft, iRight, iEnd)
+	Dim i as integer, j as integer, k as integer;
+	i = iLeft;
+	j = iRight;
+	
+	'While there are elements in the left or right runs...
+	For(k = iLeft; k < iEnd; k++)
+		'If left run head exists and is <= existing right run head.
+		If (i < iRight && (j >= iEnd || CmpString(B[i], B[j]) <= 0)) Then
+			A[k] = B[i];
+			i++;
+		Else
+			A[k] = B[j];
+			j++;
+		End If
+	Next
+End Sub
+
+Sub min(a, b)	'Return the minimum of a and b
+	If (a<=b) Then
+		return(a);
+	Else
+		return(b);
+	End If
+End Sub
+
+Sub max(a, b)	'Return the maximum of a and b
+	If (a>=b) Then
+		return(a);
+	Else
+		return(b);
+	End If
+End Sub
+
+Sub Even(a)	'Return 1 if Even, 0 if Odd
+	If (Logical("AND", a, 1)==0) Then
+		Return(1);
+	Else
+		Return(0);
+	End If
+End Sub
+

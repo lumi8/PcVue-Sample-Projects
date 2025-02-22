@@ -1,0 +1,13 @@
+ASCII32
+FONTS,BEGIN
+FONTS,END
+COLORS,BEGIN
+COLORS,END
+CI,BEGIN,0,"Try","Try","Try","0","","","-1","-1","1","1","-1"
+CI,END
+CI,BEGIN,0,"Room 1","Room 1","Room 1","0","","","-1","-1","1","1","-1"
+CI,END
+CI,BEGIN,0,"Room 2","Room 2","Room 2","0","","","-1","-1","1","1","-1"
+CI,END
+CI,BEGIN,0,"Mix","Mix","Mix","0","","","-1","-1","1","1","-1"
+CI,END

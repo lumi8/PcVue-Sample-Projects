@@ -1,0 +1,65 @@
+'- Please restart the project if you change this program --------------------------------------------------------------------
+Const MAX_FLOOR = 2;
+Const MAX_ROOM = 2;
+Const SIMU_LIGHTS_DELAY = 5;
+Const SIMU_TEMPERATURES_DELAY = 3;
+
+Sub Main()
+	DIM strServerList as str;
+'	strServerList = "LSDAS_ASSOC1";	'If you want a multi station project uncomment this line and use STATION_ok.dat instead of STATION.dat file
+	InitTemperatures();
+
+	Cyclic("ADDPROGBYID", "SimuTemperatures", "Launched by SIMU.SCB program", strServerList, SIMU_TEMPERATURES_DELAY, "SIMU.SCB", "", "SimuTemperatures", "", "@GENERAL.SimuTemperatures");
+	Cyclic("ADDPROGBYID", "SimuLights", "Launched by SIMU.SCB program", strServerList, SIMU_LIGHTS_DELAY, "SIMU.SCB", "", "SimuLights", "", "@GENERAL.SimuLights");
+End Sub
+
+Sub SimuTemperatures()
+	DIM iFloor as integer, iRoom as integer;
+	DIM strBranch as str, strVar as str;
+	
+	For(iFloor = 1;iFloor <= MAX_FLOOR;iFloor++)'Browse the floors
+		For(iRoom = 1;iRoom <= MAX_ROOM;iRoom++)	'Browse the rooms
+			strBranch = AddString(Format("@BUILDING.FLOOR_%.2d",iFloor),Format(".ROOM_%.3d",iRoom));
+			strVar = AddString(strBranch,".AC.TEMP");
+			If (Variable("STATUS", strVar, 1)==1) Then	'The variable exist
+				If (?strVar<40) Then
+					?strVar = ?strVar + 1;
+				Else
+					?strVar = 0;
+				End If
+			End If
+		Next iRoom;
+	Next iFloor;	
+End Sub
+
+Sub SimuLights()
+	DIM iFloor as integer, iRoom as integer;
+	DIM strBranch as str, strVar as str;
+	
+	For(iFloor = 1;iFloor <= MAX_FLOOR;iFloor++)'Browse the floors
+		For(iRoom = 1;iRoom <= MAX_ROOM;iRoom++)	'Browse the rooms
+			strBranch = AddString(Format("@BUILDING.FLOOR_%.2d",iFloor),Format(".ROOM_%.3d",iRoom));
+			strVar = AddString(strBranch,".LT.CMD");
+			If (Variable("STATUS", strVar, 1)==1) Then	'The variable exist
+				?strVar = !?strVar;
+			End If
+		Next iRoom;
+	Next iFloor;	
+End Sub
+
+Sub InitTemperatures()
+	DIM iFloor as integer, iRoom as integer, iRandom as integer;
+	DIM strBranch as str, strVar as str;
+	
+	For(iFloor = 1;iFloor <= MAX_FLOOR;iFloor++)'Browse the floors
+		For(iRoom = 1;iRoom <= MAX_ROOM;iRoom++)	'Browse the rooms
+			strBranch = AddString(Format("@BUILDING.FLOOR_%.2d",iFloor),Format(".ROOM_%.3d",iRoom));
+			strVar = AddString(strBranch,".AC.TEMP");
+			If (Variable("STATUS", strVar, 1)==1) Then	'The variable exist
+				iRandom = Irand(0, 40);	'get a random value
+				?StrVar = TOD(iRandom);
+			End If
+		Next iRoom;
+	Next iFloor;	
+	
+End Sub
