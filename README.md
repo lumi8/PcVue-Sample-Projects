@@ -20,25 +20,25 @@ Exemple de diffusion d'un son lorsqu'une alarme apparaît. Le son est répété 
 
 ### English:  
 Shows the flexibility of the Alarm Display in a number of different configurations and with different features enabled.
-·	On-line mode,
-·	List mode,
-·	Advanced colour mode with line selection,
-·	Advanced colour mode with no line selection,
-·	Using colour to represent alarm level and blinking for alarm status,
-·	Using an Alarm Display with a context window to acknowledge, mask and un-mask alarms,
-·	Alarm sorting according to time (most recent at top and most recent at bottom),
-⦁	Alarm sorting according to priority.
+* On-line mode,
+*	List mode,
+*	Advanced colour mode with line selection,
+*	Advanced colour mode with no line selection,
+*	Using colour to represent alarm level and blinking for alarm status,
+*	Using an Alarm Display with a context window to acknowledge, mask and un-mask alarms,
+*	Alarm sorting according to time (most recent at top and most recent at bottom),
+*	Alarm sorting according to priority.
 
 
 ### Français :  
 Montre la flexibilité de l'écran d'alarme dans un certain nombre de configurations différentes et avec différentes fonctions activées.
-⦁	Mode en ligne,
-⦁	Mode liste,
-⦁	Mode couleur avancé avec sélection de ligne,
-⦁	Mode couleur avancé sans sélection de ligne,
-⦁	Utilisation de la couleur pour représenter le niveau d'alarme et du clignotement pour l'état de l'alarme.
-⦁	Utilisation d'un affichage d'alarme avec une fenêtre contextuelle pour acquitter, masquer et démasquer les alarmes,
-⦁	Tri des alarmes en fonction du temps (les plus récentes en haut et les plus récentes en bas),
-⦁	Tri des alarmes en fonction de leur priorité.
+*	Mode en ligne,
+*	Mode liste,
+*	Mode couleur avancé avec sélection de ligne,
+*	Mode couleur avancé sans sélection de ligne,
+*	Utilisation de la couleur pour représenter le niveau d'alarme et du clignotement pour l'état de l'alarme.
+*	Utilisation d'un affichage d'alarme avec une fenêtre contextuelle pour acquitter, masquer et démasquer les alarmes,
+*	Tri des alarmes en fonction du temps (les plus récentes en haut et les plus récentes en bas),
+*	Tri des alarmes en fonction de leur priorité.
 
 
