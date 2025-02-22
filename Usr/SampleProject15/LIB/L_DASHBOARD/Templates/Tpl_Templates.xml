@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<TemplatesRoot Name="" SchemaVersion="12.0.0">
+<Template Name="DISPLAY">
+<AutoNaming_Prefix/>
+<AutoNaming_StartValue>1</AutoNaming_StartValue>
+<AutoNaming_FixedDigits>2</AutoNaming_FixedDigits>
+<AutoNaming_Step>1</AutoNaming_Step>
+<Enable_Instance>true</Enable_Instance>
+<ParametersList/>
+<TemplatesList/>
+<ObjectsList>
+<Object Name="Cyan">
+<Selected>false</Selected>
+<DescriptionLang1>Desc Cyan</DescriptionLang1>
+<InternalType>4</InternalType>
+<SvType>5</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="SymbolTemplate_Name" Reset="false" Substitute="false">L_DASHBOARD/Display_Cyan</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="Cyclic01">
+<InternalType>2</InternalType>
+<SvType>20</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="ProgramArgs" Reset="false" Substitute="true"></Property>
+<Property id="ProgramBranch" Reset="false" Substitute="true">=Inst.FullBranch</Property>
+<Property id="ProgramFunction" Reset="false" Substitute="false">Display</Property>
+<Property id="ProgramName" Reset="false" Substitute="false">L_DASHBOARD/DASHBOARD.SCB</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="Green">
+<Selected>false</Selected>
+<DescriptionLang1>Desc Green</DescriptionLang1>
+<InternalType>4</InternalType>
+<SvType>5</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="SymbolTemplate_Name" Reset="false" Substitute="false">L_DASHBOARD/Display_Green</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="LIM">
+<InternalType>2</InternalType>
+<SvType>2</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="Description" Reset="false" Substitute="false">Maximum Limit</Property>
+<Property id="InitialValue" Reset="false" Substitute="true"></Property>
+<Property id="Type" Reset="false" Substitute="false">2</Property>
+<Property id="WithInitialValue" Reset="false" Substitute="false">-1</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="Red">
+<Selected>false</Selected>
+<DescriptionLang1>Desc Cyan</DescriptionLang1>
+<InternalType>4</InternalType>
+<SvType>5</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="SymbolTemplate_Name" Reset="false" Substitute="false">L_DASHBOARD/Display_Red</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="VAR">
+<InternalType>2</InternalType>
+<SvType>2</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="Command" Reset="false" Substitute="false">-1</Property>
+<Property id="ControlMaximumValue" Reset="false" Substitute="false">100</Property>
+<Property id="ExtText3" Reset="false" Substitute="true"></Property>
+<Property id="ExtText4" Reset="false" Substitute="true"></Property>
+<Property id="InitialValue" Reset="false" Substitute="false">0</Property>
+<Property id="MaximumValue" Reset="false" Substitute="true"></Property>
+<Property id="Type" Reset="false" Substitute="false">2</Property>
+<Property id="UseExtendedAttributes" Reset="false" Substitute="false">-1</Property>
+<Property id="WithInitialValue" Reset="false" Substitute="false">-1</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="Yellow">
+<Selected>false</Selected>
+<DescriptionLang1>Desc Cyan</DescriptionLang1>
+<InternalType>4</InternalType>
+<SvType>5</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="SymbolTemplate_Name" Reset="false" Substitute="false">L_DASHBOARD/Display_Yellow</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+</ObjectsList>
+<InheritedTemplatesList/>
+</Template>
+<Template Name="PIE">
+<AutoNaming_Prefix/>
+<AutoNaming_StartValue>1</AutoNaming_StartValue>
+<AutoNaming_FixedDigits>2</AutoNaming_FixedDigits>
+<AutoNaming_Step>1</AutoNaming_Step>
+<Enable_Instance>true</Enable_Instance>
+<ParametersList/>
+<TemplatesList/>
+<ObjectsList>
+<Object Name="Cyclic01">
+<InternalType>2</InternalType>
+<SvType>20</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="ProgramArgs" Reset="false" Substitute="true"></Property>
+<Property id="ProgramBranch" Reset="false" Substitute="true">=Inst.FullBranch</Property>
+<Property id="ProgramFunction" Reset="false" Substitute="false">PieCalc</Property>
+<Property id="ProgramName" Reset="false" Substitute="false">L_DASHBOARD/DASHBOARD.SCB</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="DIV_1">
+<InternalType>2</InternalType>
+<SvType>2</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="Command" Reset="false" Substitute="false">-1</Property>
+<Property id="ControlMaximumValue" Reset="false" Substitute="false">100</Property>
+<Property id="InitialValue" Reset="false" Substitute="false">0</Property>
+<Property id="MaximumValue" Reset="false" Substitute="false">100</Property>
+<Property id="Type" Reset="false" Substitute="false">2</Property>
+<Property id="WithInitialValue" Reset="false" Substitute="false">-1</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="DIV_2">
+<InternalType>2</InternalType>
+<SvType>2</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="Command" Reset="false" Substitute="false">-1</Property>
+<Property id="ControlMaximumValue" Reset="false" Substitute="false">100</Property>
+<Property id="InitialValue" Reset="false" Substitute="false">0</Property>
+<Property id="MaximumValue" Reset="false" Substitute="false">100</Property>
+<Property id="Type" Reset="false" Substitute="false">2</Property>
+<Property id="WithInitialValue" Reset="false" Substitute="false">-1</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="DIV_3">
+<InternalType>2</InternalType>
+<SvType>2</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="Command" Reset="false" Substitute="false">-1</Property>
+<Property id="ControlMaximumValue" Reset="false" Substitute="false">100</Property>
+<Property id="InitialValue" Reset="false" Substitute="false">0</Property>
+<Property id="MaximumValue" Reset="false" Substitute="false">100</Property>
+<Property id="Type" Reset="false" Substitute="false">2</Property>
+<Property id="WithInitialValue" Reset="false" Substitute="false">-1</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="DIV_4">
+<InternalType>2</InternalType>
+<SvType>2</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="Command" Reset="false" Substitute="false">-1</Property>
+<Property id="ControlMaximumValue" Reset="false" Substitute="false">100</Property>
+<Property id="InitialValue" Reset="false" Substitute="false">0</Property>
+<Property id="MaximumValue" Reset="false" Substitute="false">100</Property>
+<Property id="Type" Reset="false" Substitute="false">2</Property>
+<Property id="WithInitialValue" Reset="false" Substitute="false">-1</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="Symbol01">
+<Selected>false</Selected>
+<DescriptionLang1>Desc Symbol01</DescriptionLang1>
+<InternalType>4</InternalType>
+<SvType>5</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="SymbolTemplate_Name" Reset="false" Substitute="false">L_DASHBOARD/Pie4</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="VAR_1">
+<InternalType>2</InternalType>
+<SvType>2</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="Command" Reset="false" Substitute="false">-1</Property>
+<Property id="ControlMaximumValue" Reset="false" Substitute="false">100</Property>
+<Property id="InitialValue" Reset="false" Substitute="false">0</Property>
+<Property id="MaximumValue" Reset="false" Substitute="false">100</Property>
+<Property id="Type" Reset="false" Substitute="false">2</Property>
+<Property id="WithInitialValue" Reset="false" Substitute="false">-1</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="VAR_2">
+<InternalType>2</InternalType>
+<SvType>2</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="Command" Reset="false" Substitute="false">-1</Property>
+<Property id="ControlMaximumValue" Reset="false" Substitute="false">100</Property>
+<Property id="InitialValue" Reset="false" Substitute="false">0</Property>
+<Property id="MaximumValue" Reset="false" Substitute="false">100</Property>
+<Property id="Type" Reset="false" Substitute="false">2</Property>
+<Property id="WithInitialValue" Reset="false" Substitute="false">-1</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="VAR_3">
+<InternalType>2</InternalType>
+<SvType>2</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="Command" Reset="false" Substitute="false">-1</Property>
+<Property id="ControlMaximumValue" Reset="false" Substitute="false">100</Property>
+<Property id="InitialValue" Reset="false" Substitute="false">0</Property>
+<Property id="MaximumValue" Reset="false" Substitute="false">100</Property>
+<Property id="Type" Reset="false" Substitute="false">2</Property>
+<Property id="WithInitialValue" Reset="false" Substitute="false">-1</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="VAR_4">
+<InternalType>2</InternalType>
+<SvType>2</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="Command" Reset="false" Substitute="false">-1</Property>
+<Property id="ControlMaximumValue" Reset="false" Substitute="false">100</Property>
+<Property id="InitialValue" Reset="false" Substitute="false">0</Property>
+<Property id="MaximumValue" Reset="false" Substitute="false">100</Property>
+<Property id="Type" Reset="false" Substitute="false">2</Property>
+<Property id="WithInitialValue" Reset="false" Substitute="false">-1</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+</ObjectsList>
+<InheritedTemplatesList/>
+</Template>
+<Template Name="PYRAMID">
+<AutoNaming_Prefix/>
+<AutoNaming_StartValue>1</AutoNaming_StartValue>
+<AutoNaming_FixedDigits>2</AutoNaming_FixedDigits>
+<AutoNaming_Step>1</AutoNaming_Step>
+<Enable_Instance>true</Enable_Instance>
+<ParametersList/>
+<TemplatesList/>
+<ObjectsList>
+<Object Name="COL_1">
+<InternalType>2</InternalType>
+<SvType>2</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="Command" Reset="false" Substitute="false">-1</Property>
+<Property id="ControlMaximumValue" Reset="false" Substitute="false">100</Property>
+<Property id="InitialValue" Reset="false" Substitute="false">0</Property>
+<Property id="MaximumValue" Reset="false" Substitute="false">100</Property>
+<Property id="Type" Reset="false" Substitute="false">2</Property>
+<Property id="WithInitialValue" Reset="false" Substitute="false">-1</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="COL_2">
+<InternalType>2</InternalType>
+<SvType>2</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="Command" Reset="false" Substitute="false">-1</Property>
+<Property id="ControlMaximumValue" Reset="false" Substitute="false">100</Property>
+<Property id="InitialValue" Reset="false" Substitute="false">0</Property>
+<Property id="MaximumValue" Reset="false" Substitute="false">100</Property>
+<Property id="Type" Reset="false" Substitute="false">2</Property>
+<Property id="WithInitialValue" Reset="false" Substitute="false">-1</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="COL_3">
+<InternalType>2</InternalType>
+<SvType>2</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="Command" Reset="false" Substitute="false">-1</Property>
+<Property id="ControlMaximumValue" Reset="false" Substitute="false">100</Property>
+<Property id="InitialValue" Reset="false" Substitute="false">0</Property>
+<Property id="MaximumValue" Reset="false" Substitute="false">100</Property>
+<Property id="Type" Reset="false" Substitute="false">2</Property>
+<Property id="WithInitialValue" Reset="false" Substitute="false">-1</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="Cyclic01">
+<InternalType>2</InternalType>
+<SvType>20</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="ProgramArgs" Reset="false" Substitute="true"></Property>
+<Property id="ProgramBranch" Reset="false" Substitute="true">=Inst.FullBranch</Property>
+<Property id="ProgramFunction" Reset="false" Substitute="false">Pyramid</Property>
+<Property id="ProgramName" Reset="false" Substitute="false">L_DASHBOARD/DASHBOARD.SCB</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="DIV_1">
+<InternalType>2</InternalType>
+<SvType>2</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="Command" Reset="false" Substitute="false">-1</Property>
+<Property id="ControlMaximumValue" Reset="false" Substitute="false">100</Property>
+<Property id="InitialValue" Reset="false" Substitute="false">0</Property>
+<Property id="MaximumValue" Reset="false" Substitute="false">100</Property>
+<Property id="Type" Reset="false" Substitute="false">2</Property>
+<Property id="WithInitialValue" Reset="false" Substitute="false">-1</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="DIV_2">
+<InternalType>2</InternalType>
+<SvType>2</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="Command" Reset="false" Substitute="false">-1</Property>
+<Property id="ControlMaximumValue" Reset="false" Substitute="false">100</Property>
+<Property id="InitialValue" Reset="false" Substitute="false">0</Property>
+<Property id="MaximumValue" Reset="false" Substitute="false">100</Property>
+<Property id="Type" Reset="false" Substitute="false">2</Property>
+<Property id="WithInitialValue" Reset="false" Substitute="false">-1</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="DIV_3">
+<InternalType>2</InternalType>
+<SvType>2</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="Command" Reset="false" Substitute="false">-1</Property>
+<Property id="ControlMaximumValue" Reset="false" Substitute="false">100</Property>
+<Property id="InitialValue" Reset="false" Substitute="false">0</Property>
+<Property id="MaximumValue" Reset="false" Substitute="false">100</Property>
+<Property id="Type" Reset="false" Substitute="false">2</Property>
+<Property id="WithInitialValue" Reset="false" Substitute="false">-1</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="Symbol01">
+<DescriptionLang1>Desc Symbol01</DescriptionLang1>
+<InternalType>4</InternalType>
+<SvType>5</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="SymbolTemplate_Name" Reset="false" Substitute="false">L_DASHBOARD/Pyramid3</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="VAR_1">
+<InternalType>2</InternalType>
+<SvType>2</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="Command" Reset="false" Substitute="false">-1</Property>
+<Property id="ControlMaximumValue" Reset="false" Substitute="false">100</Property>
+<Property id="ExtText3" Reset="false" Substitute="true"></Property>
+<Property id="InitialValue" Reset="false" Substitute="false">0</Property>
+<Property id="MaximumValue" Reset="false" Substitute="false">100</Property>
+<Property id="Type" Reset="false" Substitute="false">2</Property>
+<Property id="UseExtendedAttributes" Reset="false" Substitute="false">-1</Property>
+<Property id="WithInitialValue" Reset="false" Substitute="false">-1</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="VAR_2">
+<InternalType>2</InternalType>
+<SvType>2</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="Command" Reset="false" Substitute="false">-1</Property>
+<Property id="ControlMaximumValue" Reset="false" Substitute="false">100</Property>
+<Property id="ExtText3" Reset="false" Substitute="true"></Property>
+<Property id="InitialValue" Reset="false" Substitute="false">0</Property>
+<Property id="MaximumValue" Reset="false" Substitute="false">100</Property>
+<Property id="Type" Reset="false" Substitute="false">2</Property>
+<Property id="UseExtendedAttributes" Reset="false" Substitute="false">-1</Property>
+<Property id="WithInitialValue" Reset="false" Substitute="false">-1</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="VAR_3">
+<InternalType>2</InternalType>
+<SvType>2</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="Command" Reset="false" Substitute="false">-1</Property>
+<Property id="ControlMaximumValue" Reset="false" Substitute="false">100</Property>
+<Property id="ExtText3" Reset="false" Substitute="true"></Property>
+<Property id="InitialValue" Reset="false" Substitute="false">0</Property>
+<Property id="MaximumValue" Reset="false" Substitute="false">100</Property>
+<Property id="Type" Reset="false" Substitute="false">2</Property>
+<Property id="UseExtendedAttributes" Reset="false" Substitute="false">-1</Property>
+<Property id="WithInitialValue" Reset="false" Substitute="false">-1</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+</ObjectsList>
+<InheritedTemplatesList/>
+</Template>
+</TemplatesRoot>
+</root>

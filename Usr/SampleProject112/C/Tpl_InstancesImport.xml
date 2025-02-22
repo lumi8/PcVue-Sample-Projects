@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Import type="Template">
+<Group customRef="Main">
+<Collection type="Branches">
+<Item id="BUILDING">
+<Property id="DescriptionLang0"></Property>
+<Property id="DescriptionLang1"></Property>
+</Item>
+</Collection>
+<Collection type="Branches" id="BUILDING">
+<Item id="FLOOR_01">
+<Property id="DescriptionLang0"></Property>
+<Property id="DescriptionLang1"></Property>
+</Item>
+</Collection>
+<Collection type="Branches" id="BUILDING.FLOOR_01">
+<Item id="ROOM_001">
+<Property id="DescriptionLang0"></Property>
+<Property id="DescriptionLang1"></Property>
+</Item>
+</Collection>
+<Collection type="Branches" id="BUILDING.FLOOR_01.ROOM_001">
+<Item id="AC">
+<Property id="DescriptionLang0"></Property>
+<Property id="DescriptionLang1"></Property>
+</Item>
+<Item id="LT">
+<Property id="DescriptionLang0"></Property>
+<Property id="DescriptionLang1"></Property>
+</Item>
+</Collection>
+<Collection type="Branches" id="BUILDING.FLOOR_01">
+<Item id="ROOM_002">
+<Property id="DescriptionLang0"></Property>
+<Property id="DescriptionLang1"></Property>
+</Item>
+</Collection>
+<Collection type="Branches" id="BUILDING.FLOOR_01.ROOM_002">
+<Item id="AC">
+<Property id="DescriptionLang0"></Property>
+<Property id="DescriptionLang1"></Property>
+</Item>
+<Item id="LT">
+<Property id="DescriptionLang0"></Property>
+<Property id="DescriptionLang1"></Property>
+</Item>
+</Collection>
+<Collection type="Branches" id="BUILDING">
+<Item id="FLOOR_02">
+<Property id="DescriptionLang0"></Property>
+<Property id="DescriptionLang1"></Property>
+</Item>
+</Collection>
+<Collection type="Branches" id="BUILDING.FLOOR_02">
+<Item id="ROOM_001">
+<Property id="DescriptionLang0"></Property>
+<Property id="DescriptionLang1"></Property>
+</Item>
+</Collection>
+<Collection type="Branches" id="BUILDING.FLOOR_02.ROOM_001">
+<Item id="AC">
+<Property id="DescriptionLang0"></Property>
+<Property id="DescriptionLang1"></Property>
+</Item>
+<Item id="LT">
+<Property id="DescriptionLang0"></Property>
+<Property id="DescriptionLang1"></Property>
+</Item>
+</Collection>
+<Collection type="Branches" id="BUILDING.FLOOR_02">
+<Item id="ROOM_002">
+<Property id="DescriptionLang0"></Property>
+<Property id="DescriptionLang1"></Property>
+</Item>
+</Collection>
+<Collection type="Branches" id="BUILDING.FLOOR_02.ROOM_002">
+<Item id="AC">
+<Property id="DescriptionLang0"></Property>
+<Property id="DescriptionLang1"></Property>
+</Item>
+<Item id="LT">
+<Property id="DescriptionLang0"></Property>
+<Property id="DescriptionLang1"></Property>
+</Item>
+</Collection>
+<Collection type="Variables" id="BUILDING.FLOOR_01.ROOM_001.AC">
+<Item id="CONSIGNE">
+<Property id="Command">-1</Property>
+<Property id="Type">2</Property>
+</Item>
+<Item id="INFO">
+<Property id="UseExtendedAttributes">-1</Property>
+<Property id="Type">3</Property>
+</Item>
+<Item id="ON"/>
+<Item id="TEMP">
+<Property id="Type">2</Property>
+</Item>
+<Item id="TEMP_bas">
+<Property id="ThresholdSource">BUILDING.FLOOR_01.ROOM_001.AC.TEMP</Property>
+<Property id="Alarm">-1</Property>
+<Property id="Threshold">-1</Property>
+<Property id="ThresholdHigh">0</Property>
+<Property id="Log0_1">-1</Property>
+<Property id="ThresholdTypeInSystem">2</Property>
+<Property id="ThresholdSystem">2</Property>
+<Property id="Log1_0">-1</Property>
+<Property id="ThresholdValue">15</Property>
+</Item>
+<Item id="TEMP_haut">
+<Property id="ThresholdSource">BUILDING.FLOOR_01.ROOM_001.AC.TEMP</Property>
+<Property id="Alarm">-1</Property>
+<Property id="Threshold">-1</Property>
+<Property id="ThresholdHigh">-1</Property>
+<Property id="Log0_1">-1</Property>
+<Property id="ThresholdTypeInSystem">1</Property>
+<Property id="ThresholdSystem">2</Property>
+<Property id="Log1_0">-1</Property>
+<Property id="ThresholdValue">25</Property>
+</Item>
+</Collection>
+<Collection type="Variables" id="BUILDING.FLOOR_01.ROOM_001.LT">
+<Item id="CMD">
+<Property id="Command">-1</Property>
+<Property id="InitialValue">1</Property>
+<Property id="WithInitialValue">-1</Property>
+<Property id="Log0_1">-1</Property>
+<Property id="Log1_0">-1</Property>
+</Item>
+<Item id="ON">
+<Property id="Log0_1">-1</Property>
+<Property id="Log1_0">-1</Property>
+</Item>
+</Collection>
+<Collection type="Variables" id="BUILDING.FLOOR_01.ROOM_002.AC">
+<Item id="CONSIGNE">
+<Property id="Command">-1</Property>
+<Property id="Type">2</Property>
+</Item>
+<Item id="INFO">
+<Property id="UseExtendedAttributes">-1</Property>
+<Property id="Type">3</Property>
+</Item>
+<Item id="ON"/>
+<Item id="TEMP">
+<Property id="Type">2</Property>
+</Item>
+<Item id="TEMP_bas">
+<Property id="ThresholdSource">BUILDING.FLOOR_01.ROOM_002.AC.TEMP</Property>
+<Property id="Alarm">-1</Property>
+<Property id="Threshold">-1</Property>
+<Property id="ThresholdHigh">0</Property>
+<Property id="Log0_1">-1</Property>
+<Property id="ThresholdTypeInSystem">2</Property>
+<Property id="ThresholdSystem">2</Property>
+<Property id="Log1_0">-1</Property>
+<Property id="ThresholdValue">15</Property>
+</Item>
+<Item id="TEMP_haut">
+<Property id="ThresholdSource">BUILDING.FLOOR_01.ROOM_002.AC.TEMP</Property>
+<Property id="Alarm">-1</Property>
+<Property id="Threshold">-1</Property>
+<Property id="ThresholdHigh">-1</Property>
+<Property id="Log0_1">-1</Property>
+<Property id="ThresholdTypeInSystem">1</Property>
+<Property id="ThresholdSystem">2</Property>
+<Property id="Log1_0">-1</Property>
+<Property id="ThresholdValue">25</Property>
+</Item>
+</Collection>
+<Collection type="Variables" id="BUILDING.FLOOR_01.ROOM_002.LT">
+<Item id="CMD">
+<Property id="Command">-1</Property>
+<Property id="InitialValue">1</Property>
+<Property id="WithInitialValue">-1</Property>
+<Property id="Log0_1">-1</Property>
+<Property id="Log1_0">-1</Property>
+</Item>
+<Item id="ON">
+<Property id="Log0_1">-1</Property>
+<Property id="Log1_0">-1</Property>
+</Item>
+</Collection>
+<Collection type="Variables" id="BUILDING.FLOOR_02.ROOM_001.AC">
+<Item id="CONSIGNE">
+<Property id="Command">-1</Property>
+<Property id="Type">2</Property>
+</Item>
+<Item id="INFO">
+<Property id="UseExtendedAttributes">-1</Property>
+<Property id="Type">3</Property>
+</Item>
+<Item id="ON"/>
+<Item id="TEMP">
+<Property id="Type">2</Property>
+</Item>
+<Item id="TEMP_bas">
+<Property id="ThresholdSource">BUILDING.FLOOR_02.ROOM_001.AC.TEMP</Property>
+<Property id="Alarm">-1</Property>
+<Property id="Threshold">-1</Property>
+<Property id="ThresholdHigh">0</Property>
+<Property id="Log0_1">-1</Property>
+<Property id="ThresholdTypeInSystem">2</Property>
+<Property id="ThresholdSystem">2</Property>
+<Property id="Log1_0">-1</Property>
+<Property id="ThresholdValue">15</Property>
+</Item>
+<Item id="TEMP_haut">
+<Property id="ThresholdSource">BUILDING.FLOOR_02.ROOM_001.AC.TEMP</Property>
+<Property id="Alarm">-1</Property>
+<Property id="Threshold">-1</Property>
+<Property id="ThresholdHigh">-1</Property>
+<Property id="Log0_1">-1</Property>
+<Property id="ThresholdTypeInSystem">1</Property>
+<Property id="ThresholdSystem">2</Property>
+<Property id="Log1_0">-1</Property>
+<Property id="ThresholdValue">25</Property>
+</Item>
+</Collection>
+<Collection type="Variables" id="BUILDING.FLOOR_02.ROOM_001.LT">
+<Item id="CMD">
+<Property id="Command">-1</Property>
+<Property id="InitialValue">1</Property>
+<Property id="WithInitialValue">-1</Property>
+<Property id="Log0_1">-1</Property>
+<Property id="Log1_0">-1</Property>
+</Item>
+<Item id="ON">
+<Property id="Log0_1">-1</Property>
+<Property id="Log1_0">-1</Property>
+</Item>
+</Collection>
+<Collection type="Variables" id="BUILDING.FLOOR_02.ROOM_002.AC">
+<Item id="CONSIGNE">
+<Property id="Command">-1</Property>
+<Property id="Type">2</Property>
+</Item>
+<Item id="INFO">
+<Property id="UseExtendedAttributes">-1</Property>
+<Property id="Type">3</Property>
+</Item>
+<Item id="ON"/>
+<Item id="TEMP">
+<Property id="Type">2</Property>
+</Item>
+<Item id="TEMP_bas">
+<Property id="ThresholdSource">BUILDING.FLOOR_02.ROOM_002.AC.TEMP</Property>
+<Property id="Alarm">-1</Property>
+<Property id="Threshold">-1</Property>
+<Property id="ThresholdHigh">0</Property>
+<Property id="Log0_1">-1</Property>
+<Property id="ThresholdTypeInSystem">2</Property>
+<Property id="ThresholdSystem">2</Property>
+<Property id="Log1_0">-1</Property>
+<Property id="ThresholdValue">15</Property>
+</Item>
+<Item id="TEMP_haut">
+<Property id="ThresholdSource">BUILDING.FLOOR_02.ROOM_002.AC.TEMP</Property>
+<Property id="Alarm">-1</Property>
+<Property id="Threshold">-1</Property>
+<Property id="ThresholdHigh">-1</Property>
+<Property id="Log0_1">-1</Property>
+<Property id="ThresholdTypeInSystem">1</Property>
+<Property id="ThresholdSystem">2</Property>
+<Property id="Log1_0">-1</Property>
+<Property id="ThresholdValue">25</Property>
+</Item>
+</Collection>
+<Collection type="Variables" id="BUILDING.FLOOR_02.ROOM_002.LT">
+<Item id="CMD">
+<Property id="Command">-1</Property>
+<Property id="InitialValue">1</Property>
+<Property id="WithInitialValue">-1</Property>
+<Property id="Log0_1">-1</Property>
+<Property id="Log1_0">-1</Property>
+</Item>
+<Item id="ON">
+<Property id="Log0_1">-1</Property>
+<Property id="Log1_0">-1</Property>
+</Item>
+</Collection>
+<Collection type="Trends_Proprietary" id="Unit01">
+<Item id="BUILDING.FLOOR_01.ROOM_001.AC.TEMP"/>
+<Item id="BUILDING.FLOOR_01.ROOM_001.LT.ON"/>
+<Item id="BUILDING.FLOOR_01.ROOM_002.AC.TEMP"/>
+<Item id="BUILDING.FLOOR_01.ROOM_002.LT.ON"/>
+<Item id="BUILDING.FLOOR_02.ROOM_001.AC.TEMP"/>
+<Item id="BUILDING.FLOOR_02.ROOM_001.LT.ON"/>
+<Item id="BUILDING.FLOOR_02.ROOM_002.AC.TEMP"/>
+<Item id="BUILDING.FLOOR_02.ROOM_002.LT.ON"/>
+</Collection>
+<Collection type="OnVariableExpressions">
+<Item id="BUILDING_FLOOR_01_ROOM_001_LT_ON_Expression01">
+<Property id="VariableResult">@BUILDING.FLOOR_01.ROOM_001.LT.ON</Property>
+<Property id="Branch">BUILDING.FLOOR_01.ROOM_001.LT</Property>
+<Property id="Expression">CMD</Property>
+</Item>
+<Item id="BUILDING_FLOOR_01_ROOM_002_LT_ON_Expression01">
+<Property id="VariableResult">@BUILDING.FLOOR_01.ROOM_002.LT.ON</Property>
+<Property id="Branch">BUILDING.FLOOR_01.ROOM_002.LT</Property>
+<Property id="Expression">CMD</Property>
+</Item>
+<Item id="BUILDING_FLOOR_02_ROOM_001_LT_ON_Expression01">
+<Property id="VariableResult">@BUILDING.FLOOR_02.ROOM_001.LT.ON</Property>
+<Property id="Branch">BUILDING.FLOOR_02.ROOM_001.LT</Property>
+<Property id="Expression">CMD</Property>
+</Item>
+<Item id="BUILDING_FLOOR_02_ROOM_002_LT_ON_Expression01">
+<Property id="VariableResult">@BUILDING.FLOOR_02.ROOM_002.LT.ON</Property>
+<Property id="Branch">BUILDING.FLOOR_02.ROOM_002.LT</Property>
+<Property id="Expression">CMD</Property>
+</Item>
+</Collection>
+<Collection type="Trends_Database" id="U_DB1">
+<Item id="BUILDING.FLOOR_01.ROOM_001.AC.TEMP">
+<Property id="Primary">0</Property>
+</Item>
+<Item id="BUILDING.FLOOR_01.ROOM_002.AC.TEMP">
+<Property id="Primary">0</Property>
+</Item>
+<Item id="BUILDING.FLOOR_02.ROOM_001.AC.TEMP">
+<Property id="Primary">0</Property>
+</Item>
+<Item id="BUILDING.FLOOR_02.ROOM_002.AC.TEMP">
+<Property id="Primary">0</Property>
+</Item>
+</Collection>
+</Group>
+</Import>

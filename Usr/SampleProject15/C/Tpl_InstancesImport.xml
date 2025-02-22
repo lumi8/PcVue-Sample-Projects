@@ -1,0 +1,1404 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Import type="Template">
+<Group customRef="Main">
+<Collection type="Branches">
+<Item id="BUILDING">
+<Property id="DescriptionLang1"></Property>
+</Item>
+</Collection>
+<Collection type="Branches" id="BUILDING">
+<Item id="FLOOR_01">
+<Property id="DescriptionLang1"></Property>
+</Item>
+</Collection>
+<Collection type="Branches" id="BUILDING.FLOOR_01">
+<Item id="ROOM_001">
+<Property id="DescriptionLang1"></Property>
+</Item>
+</Collection>
+<Collection type="Branches" id="BUILDING.FLOOR_01.ROOM_001">
+<Item id="AC">
+<Property id="DescriptionLang1"></Property>
+</Item>
+<Item id="LT">
+<Property id="DescriptionLang1"></Property>
+</Item>
+</Collection>
+<Collection type="Branches" id="BUILDING.FLOOR_01">
+<Item id="ROOM_002">
+<Property id="DescriptionLang1"></Property>
+</Item>
+</Collection>
+<Collection type="Branches" id="BUILDING.FLOOR_01.ROOM_002">
+<Item id="AC">
+<Property id="DescriptionLang1"></Property>
+</Item>
+<Item id="LT">
+<Property id="DescriptionLang1"></Property>
+</Item>
+</Collection>
+<Collection type="Branches" id="BUILDING">
+<Item id="FLOOR_02">
+<Property id="DescriptionLang1"></Property>
+</Item>
+</Collection>
+<Collection type="Branches" id="BUILDING.FLOOR_02">
+<Item id="ROOM_001">
+<Property id="DescriptionLang1"></Property>
+</Item>
+</Collection>
+<Collection type="Branches" id="BUILDING.FLOOR_02.ROOM_001">
+<Item id="AC">
+<Property id="DescriptionLang1"></Property>
+</Item>
+<Item id="LT">
+<Property id="DescriptionLang1"></Property>
+</Item>
+</Collection>
+<Collection type="Branches" id="BUILDING.FLOOR_02">
+<Item id="ROOM_002">
+<Property id="DescriptionLang1"></Property>
+</Item>
+</Collection>
+<Collection type="Branches" id="BUILDING.FLOOR_02.ROOM_002">
+<Item id="AC">
+<Property id="DescriptionLang1"></Property>
+</Item>
+<Item id="LT">
+<Property id="DescriptionLang1"></Property>
+</Item>
+</Collection>
+<Collection type="Branches">
+<Item id="DASHBOARD">
+<Property id="DescriptionLang1"></Property>
+</Item>
+</Collection>
+<Collection type="Branches" id="DASHBOARD">
+<Item id="DISPLAY01">
+<Property id="DescriptionLang1"></Property>
+</Item>
+<Item id="DISPLAY02">
+<Property id="DescriptionLang1"></Property>
+</Item>
+<Item id="DISPLAY03">
+<Property id="DescriptionLang1"></Property>
+</Item>
+<Item id="DISPLAY04">
+<Property id="DescriptionLang1"></Property>
+</Item>
+<Item id="DISPLAY05">
+<Property id="DescriptionLang1"></Property>
+</Item>
+<Item id="DISPLAY06">
+<Property id="DescriptionLang1"></Property>
+</Item>
+<Item id="DISPLAY07">
+<Property id="DescriptionLang1"></Property>
+</Item>
+<Item id="DISPLAY08">
+<Property id="DescriptionLang1"></Property>
+</Item>
+<Item id="PIE01">
+<Property id="DescriptionLang1"></Property>
+</Item>
+<Item id="PYRAMID01">
+<Property id="DescriptionLang1"></Property>
+</Item>
+</Collection>
+<Collection type="Branches">
+<Item id="GENERAL">
+<Property id="DescriptionLang1"></Property>
+</Item>
+</Collection>
+<Collection type="BitAssociatedLabels">
+<Item id="DOOR">
+<Property id="ChangeTo0Lang0">Door closing command</Property>
+<Property id="ChangeTo1Lang0">Door opening command</Property>
+<Property id="CommandTo0Lang0">Door closing</Property>
+<Property id="CommandTo1Lang0">Door closing command</Property>
+<Property id="Value0Lang0">Closed</Property>
+<Property id="Value1Lang0">Open</Property>
+</Item>
+<Item id="ON_OFF">
+<Property id="ChangeTo0Lang0">Switch off</Property>
+<Property id="ChangeTo1Lang0">Switch on</Property>
+<Property id="CommandTo0Lang0">Turning off</Property>
+<Property id="CommandTo1Lang0">Turning on</Property>
+<Property id="Value0Lang0">Off</Property>
+<Property id="Value1Lang0">On</Property>
+</Item>
+</Collection>
+<Collection type="Branches" id="GENERAL">
+<Item id="TRENDS">
+<Property id="DescriptionLang1"></Property>
+</Item>
+</Collection>
+<Collection type="Variables" id="BUILDING.FLOOR_01.ROOM_001.AC">
+<Item id="CMD">
+<Property id="BitCommandLevel">1</Property>
+<Property id="ClientListName"></Property>
+<Property id="Command">-1</Property>
+<Property id="Description">Command</Property>
+<Property id="Domain">FLOOR_01</Property>
+<Property id="InitialValue">1</Property>
+<Property id="Log0_1">-1</Property>
+<Property id="Log1_0">-1</Property>
+<Property id="Nature">AIRCOND</Property>
+<Property id="OPC_Group">Group01</Property>
+<Property id="OPC_ItemId">BUILDING.FLOOR_01.ROOM_001.AC.CMD</Property>
+<Property id="OPC_Server">Server01</Property>
+<Property id="ServerListName"></Property>
+<Property id="WithInitialValue">-1</Property>
+</Item>
+<Item id="INFO">
+<Property id="ClientListName"></Property>
+<Property id="Description">Information</Property>
+<Property id="Domain">FLOOR_01</Property>
+<Property id="ExtText10">V05-P02</Property>
+<Property id="ExtText11">V03-P02</Property>
+<Property id="ExtText12">V04-P02</Property>
+<Property id="ExtText13">4</Property>
+<Property id="ExtText14">6</Property>
+<Property id="ExtText3">MITSUBISHI</Property>
+<Property id="ExtText4">012345789</Property>
+<Property id="ExtText5">firstname@operator.com</Property>
+<Property id="ExtText6">V04-P01</Property>
+<Property id="ExtText7">NULL;Var01;V01-P01;V01-P02;V01-P03;V01-P04;V01-P05;V01-P06</Property>
+<Property id="ExtText8">Var01;Var02;Var03;Var04;Var05;Var06;Var07;Var08;Var09;Var10</Property>
+<Property id="ExtText9">'V01-P01':'V01-P02':'V01-P03'\'V02-P01':'V02-P02':'V02-P03'\'V03-P01':'V03-P02':'V03-P03'</Property>
+<Property id="Nature">AIRCOND</Property>
+<Property id="ServerListName"></Property>
+<Property id="Type">3</Property>
+<Property id="UseExtendedAttributes">-1</Property>
+</Item>
+<Item id="SETPOINT">
+<Property id="ClientListName"></Property>
+<Property id="Command">-1</Property>
+<Property id="ControlMaximumValue">40</Property>
+<Property id="Description">Temperature setpoint</Property>
+<Property id="Domain">FLOOR_01</Property>
+<Property id="Format">0.0#u</Property>
+<Property id="InitialValue">20</Property>
+<Property id="MaximumValue">40</Property>
+<Property id="Nature">AIRCOND</Property>
+<Property id="OPC_Group">Group01</Property>
+<Property id="OPC_ItemId">BUILDING.FLOOR_01.ROOM_001.AC.SETPOINT</Property>
+<Property id="OPC_Server">Server01</Property>
+<Property id="ServerListName"></Property>
+<Property id="Type">2</Property>
+<Property id="Unit">°C</Property>
+<Property id="WithInitialValue">-1</Property>
+</Item>
+<Item id="TEMP">
+<Property id="ClientListName"></Property>
+<Property id="Command">-1</Property>
+<Property id="ControlMaximumValue">40</Property>
+<Property id="Description">Température FLOOR_01 ROOM_001</Property>
+<Property id="DescriptionAlt">Temperature FLOOR_01 ROOM_001</Property>
+<Property id="Domain">FLOOR_01</Property>
+<Property id="Format">0.0#u</Property>
+<Property id="InitialValue">2</Property>
+<Property id="MaximumValue">40</Property>
+<Property id="Nature">AIRCOND</Property>
+<Property id="OPC_Group">Group01</Property>
+<Property id="OPC_ItemId">BUILDING.FLOOR_01.ROOM_001.AC.TEMP</Property>
+<Property id="OPC_Server">Server01</Property>
+<Property id="ServerListName"></Property>
+<Property id="Type">2</Property>
+<Property id="Unit">Celsius</Property>
+<Property id="WithInitialValue">-1</Property>
+</Item>
+<Item id="TEMP_high">
+<Property id="ThresholdSource">BUILDING.FLOOR_01.ROOM_001.AC.TEMP</Property>
+<Property id="Alarm">-1</Property>
+<Property id="ClientListName"></Property>
+<Property id="Description">Température FLOOR_01 ROOM_001 High</Property>
+<Property id="Domain">FLOOR_01</Property>
+<Property id="Log0_1">-1</Property>
+<Property id="Log1_0">-1</Property>
+<Property id="Nature">AIRCOND</Property>
+<Property id="ServerListName"></Property>
+<Property id="Threshold">-1</Property>
+<Property id="ThresholdHigh">-1</Property>
+<Property id="ThresholdSystem">2</Property>
+<Property id="ThresholdTypeInSystem">1</Property>
+<Property id="ThresholdValue">25</Property>
+</Item>
+<Item id="TEMP_low">
+<Property id="ThresholdSource">BUILDING.FLOOR_01.ROOM_001.AC.TEMP</Property>
+<Property id="Alarm">-1</Property>
+<Property id="ClientListName"></Property>
+<Property id="Description">Température FLOOR_01 ROOM_001 Low</Property>
+<Property id="Domain">FLOOR_01</Property>
+<Property id="Log0_1">-1</Property>
+<Property id="Log1_0">-1</Property>
+<Property id="Nature">AIRCOND</Property>
+<Property id="ServerListName"></Property>
+<Property id="Threshold">-1</Property>
+<Property id="ThresholdHigh">0</Property>
+<Property id="ThresholdSystem">2</Property>
+<Property id="ThresholdTypeInSystem">2</Property>
+<Property id="ThresholdValue">15</Property>
+</Item>
+<Item id="TEMP_F">
+<Property id="ClientListName"></Property>
+<Property id="Description">Temperature in Fahrenheit</Property>
+<Property id="Domain">FLOOR_01</Property>
+<Property id="Format">0.00#u</Property>
+<Property id="Nature">AIRCOND</Property>
+<Property id="ServerListName"></Property>
+<Property id="Type">2</Property>
+<Property id="Unit">F</Property>
+</Item>
+</Collection>
+<Collection type="Variables" id="BUILDING.FLOOR_01.ROOM_001.LT">
+<Item id="CMD">
+<Property id="AssociatedLabels">ON_OFF</Property>
+<Property id="BitCommandLevel">1</Property>
+<Property id="ClientListName"></Property>
+<Property id="Command">-1</Property>
+<Property id="Description">Command</Property>
+<Property id="Domain">FLOOR_01</Property>
+<Property id="Log0_1">-1</Property>
+<Property id="Log1_0">-1</Property>
+<Property id="Nature">LIGHTING</Property>
+<Property id="OPC_Group">Group01</Property>
+<Property id="OPC_ItemId">BUILDING.FLOOR_01.ROOM_001.LT.CMD</Property>
+<Property id="OPC_Server">Server01</Property>
+<Property id="ServerListName"></Property>
+</Item>
+<Item id="ON">
+<Property id="AssociatedLabels">ON_OFF</Property>
+<Property id="ClientListName"></Property>
+<Property id="Command">-1</Property>
+<Property id="Description">Light on</Property>
+<Property id="Domain">FLOOR_01</Property>
+<Property id="Log0_1">-1</Property>
+<Property id="Log1_0">-1</Property>
+<Property id="Nature">LIGHTING</Property>
+<Property id="OPC_Group">Group01</Property>
+<Property id="OPC_ItemId">BUILDING.FLOOR_01.ROOM_001.LT.ON</Property>
+<Property id="OPC_Server">Server01</Property>
+<Property id="ServerListName"></Property>
+</Item>
+</Collection>
+<Collection type="Variables" id="BUILDING.FLOOR_01.ROOM_002.AC">
+<Item id="CMD">
+<Property id="BitCommandLevel">1</Property>
+<Property id="ClientListName"></Property>
+<Property id="Command">-1</Property>
+<Property id="Description">Command</Property>
+<Property id="Domain">FLOOR_01</Property>
+<Property id="InitialValue">1</Property>
+<Property id="Log0_1">-1</Property>
+<Property id="Log1_0">-1</Property>
+<Property id="Nature">AIRCOND</Property>
+<Property id="OPC_Group">Group01</Property>
+<Property id="OPC_ItemId">BUILDING.FLOOR_01.ROOM_002.AC.CMD</Property>
+<Property id="OPC_Server">Server01</Property>
+<Property id="ServerListName"></Property>
+<Property id="WithInitialValue">-1</Property>
+</Item>
+<Item id="INFO">
+<Property id="ClientListName"></Property>
+<Property id="Description">Information</Property>
+<Property id="Domain">FLOOR_01</Property>
+<Property id="ExtText10">V05-P02</Property>
+<Property id="ExtText11">V03-P02</Property>
+<Property id="ExtText12">V04-P02</Property>
+<Property id="ExtText13">4</Property>
+<Property id="ExtText14">6</Property>
+<Property id="ExtText3">MITSUBISHI</Property>
+<Property id="ExtText4">012345789</Property>
+<Property id="ExtText5">firstname@operator.com</Property>
+<Property id="ExtText6">V04-P01</Property>
+<Property id="ExtText7">NULL;Var01;V01-P01;V01-P02;V01-P03;V01-P04;V01-P05;V01-P06</Property>
+<Property id="ExtText8">Var01;Var02;Var03;Var04;Var05;Var06;Var07;Var08;Var09;Var10</Property>
+<Property id="ExtText9">'V01-P01':'V01-P02':'V01-P03'\'V02-P01':'V02-P02':'V02-P03'\'V03-P01':'V03-P02':'V03-P03'</Property>
+<Property id="Nature">AIRCOND</Property>
+<Property id="ServerListName"></Property>
+<Property id="Type">3</Property>
+<Property id="UseExtendedAttributes">-1</Property>
+</Item>
+<Item id="SETPOINT">
+<Property id="ClientListName"></Property>
+<Property id="Command">-1</Property>
+<Property id="ControlMaximumValue">40</Property>
+<Property id="Description">Temperature setpoint</Property>
+<Property id="Domain">FLOOR_01</Property>
+<Property id="Format">0.0#u</Property>
+<Property id="InitialValue">20</Property>
+<Property id="MaximumValue">40</Property>
+<Property id="Nature">AIRCOND</Property>
+<Property id="OPC_Group">Group01</Property>
+<Property id="OPC_ItemId">BUILDING.FLOOR_01.ROOM_002.AC.SETPOINT</Property>
+<Property id="OPC_Server">Server01</Property>
+<Property id="ServerListName"></Property>
+<Property id="Type">2</Property>
+<Property id="Unit">°C</Property>
+<Property id="WithInitialValue">-1</Property>
+</Item>
+<Item id="TEMP">
+<Property id="ClientListName"></Property>
+<Property id="Command">-1</Property>
+<Property id="ControlMaximumValue">40</Property>
+<Property id="Description">Température FLOOR_01 ROOM_002</Property>
+<Property id="DescriptionAlt">Temperature FLOOR_01 ROOM_002</Property>
+<Property id="Domain">FLOOR_01</Property>
+<Property id="Format">0.0#u</Property>
+<Property id="InitialValue">3</Property>
+<Property id="MaximumValue">40</Property>
+<Property id="Nature">AIRCOND</Property>
+<Property id="OPC_Group">Group01</Property>
+<Property id="OPC_ItemId">BUILDING.FLOOR_01.ROOM_002.AC.TEMP</Property>
+<Property id="OPC_Server">Server01</Property>
+<Property id="ServerListName"></Property>
+<Property id="Type">2</Property>
+<Property id="Unit">Celsius</Property>
+<Property id="WithInitialValue">-1</Property>
+</Item>
+<Item id="TEMP_high">
+<Property id="ThresholdSource">BUILDING.FLOOR_01.ROOM_002.AC.TEMP</Property>
+<Property id="Alarm">-1</Property>
+<Property id="ClientListName"></Property>
+<Property id="Description">Température FLOOR_01 ROOM_002 High</Property>
+<Property id="Domain">FLOOR_01</Property>
+<Property id="Log0_1">-1</Property>
+<Property id="Log1_0">-1</Property>
+<Property id="Nature">AIRCOND</Property>
+<Property id="ServerListName"></Property>
+<Property id="Threshold">-1</Property>
+<Property id="ThresholdHigh">-1</Property>
+<Property id="ThresholdSystem">2</Property>
+<Property id="ThresholdTypeInSystem">1</Property>
+<Property id="ThresholdValue">25</Property>
+</Item>
+<Item id="TEMP_low">
+<Property id="ThresholdSource">BUILDING.FLOOR_01.ROOM_002.AC.TEMP</Property>
+<Property id="Alarm">-1</Property>
+<Property id="ClientListName"></Property>
+<Property id="Description">Température FLOOR_01 ROOM_002 Low</Property>
+<Property id="Domain">FLOOR_01</Property>
+<Property id="Log0_1">-1</Property>
+<Property id="Log1_0">-1</Property>
+<Property id="Nature">AIRCOND</Property>
+<Property id="ServerListName"></Property>
+<Property id="Threshold">-1</Property>
+<Property id="ThresholdHigh">0</Property>
+<Property id="ThresholdSystem">2</Property>
+<Property id="ThresholdTypeInSystem">2</Property>
+<Property id="ThresholdValue">15</Property>
+</Item>
+<Item id="TEMP_F">
+<Property id="ClientListName"></Property>
+<Property id="Description">Temperature in Fahrenheit</Property>
+<Property id="Domain">FLOOR_01</Property>
+<Property id="Format">0.00#u</Property>
+<Property id="Nature">AIRCOND</Property>
+<Property id="ServerListName"></Property>
+<Property id="Type">2</Property>
+<Property id="Unit">F</Property>
+</Item>
+</Collection>
+<Collection type="Variables" id="BUILDING.FLOOR_01.ROOM_002.LT">
+<Item id="CMD">
+<Property id="AssociatedLabels">ON_OFF</Property>
+<Property id="BitCommandLevel">1</Property>
+<Property id="ClientListName"></Property>
+<Property id="Command">-1</Property>
+<Property id="Description">Command</Property>
+<Property id="Domain">FLOOR_01</Property>
+<Property id="Log0_1">-1</Property>
+<Property id="Log1_0">-1</Property>
+<Property id="Nature">LIGHTING</Property>
+<Property id="OPC_Group">Group01</Property>
+<Property id="OPC_ItemId">BUILDING.FLOOR_01.ROOM_002.LT.CMD</Property>
+<Property id="OPC_Server">Server01</Property>
+<Property id="ServerListName"></Property>
+</Item>
+<Item id="ON">
+<Property id="AssociatedLabels">ON_OFF</Property>
+<Property id="ClientListName"></Property>
+<Property id="Command">-1</Property>
+<Property id="Description">Light on</Property>
+<Property id="Domain">FLOOR_01</Property>
+<Property id="Log0_1">-1</Property>
+<Property id="Log1_0">-1</Property>
+<Property id="Nature">LIGHTING</Property>
+<Property id="OPC_Group">Group01</Property>
+<Property id="OPC_ItemId">BUILDING.FLOOR_01.ROOM_002.LT.ON</Property>
+<Property id="OPC_Server">Server01</Property>
+<Property id="ServerListName"></Property>
+</Item>
+</Collection>
+<Collection type="Variables" id="BUILDING.FLOOR_02.ROOM_001.AC">
+<Item id="CMD">
+<Property id="BitCommandLevel">1</Property>
+<Property id="ClientListName"></Property>
+<Property id="Command">-1</Property>
+<Property id="Description">Command</Property>
+<Property id="Domain">FLOOR_02</Property>
+<Property id="InitialValue">1</Property>
+<Property id="Log0_1">-1</Property>
+<Property id="Log1_0">-1</Property>
+<Property id="Nature">AIRCOND</Property>
+<Property id="OPC_Group">Group01</Property>
+<Property id="OPC_ItemId">BUILDING.FLOOR_02.ROOM_001.AC.CMD</Property>
+<Property id="OPC_Server">Server01</Property>
+<Property id="ServerListName"></Property>
+<Property id="WithInitialValue">-1</Property>
+</Item>
+<Item id="INFO">
+<Property id="ClientListName"></Property>
+<Property id="Description">Information</Property>
+<Property id="Domain">FLOOR_02</Property>
+<Property id="ExtText10">V05-P02</Property>
+<Property id="ExtText11">V03-P02</Property>
+<Property id="ExtText12">V04-P02</Property>
+<Property id="ExtText13">4</Property>
+<Property id="ExtText14">6</Property>
+<Property id="ExtText3">MITSUBISHI</Property>
+<Property id="ExtText4">012345789</Property>
+<Property id="ExtText5">firstname@operator.com</Property>
+<Property id="ExtText6">V04-P01</Property>
+<Property id="ExtText7">NULL;Var01;V01-P01;V01-P02;V01-P03;V01-P04;V01-P05;V01-P06</Property>
+<Property id="ExtText8">Var01;Var02;Var03;Var04;Var05;Var06;Var07;Var08;Var09;Var10</Property>
+<Property id="ExtText9">'V01-P01':'V01-P02':'V01-P03'\'V02-P01':'V02-P02':'V02-P03'\'V03-P01':'V03-P02':'V03-P03'</Property>
+<Property id="Nature">AIRCOND</Property>
+<Property id="ServerListName"></Property>
+<Property id="Type">3</Property>
+<Property id="UseExtendedAttributes">-1</Property>
+</Item>
+<Item id="SETPOINT">
+<Property id="ClientListName"></Property>
+<Property id="Command">-1</Property>
+<Property id="ControlMaximumValue">40</Property>
+<Property id="Description">Temperature setpoint</Property>
+<Property id="Domain">FLOOR_02</Property>
+<Property id="Format">0.0#u</Property>
+<Property id="InitialValue">20</Property>
+<Property id="MaximumValue">40</Property>
+<Property id="Nature">AIRCOND</Property>
+<Property id="OPC_Group">Group01</Property>
+<Property id="OPC_ItemId">BUILDING.FLOOR_02.ROOM_001.AC.SETPOINT</Property>
+<Property id="OPC_Server">Server01</Property>
+<Property id="ServerListName"></Property>
+<Property id="Type">2</Property>
+<Property id="Unit">°C</Property>
+<Property id="WithInitialValue">-1</Property>
+</Item>
+<Item id="TEMP">
+<Property id="ClientListName"></Property>
+<Property id="Command">-1</Property>
+<Property id="ControlMaximumValue">40</Property>
+<Property id="Description">Température FLOOR_02 ROOM_001</Property>
+<Property id="DescriptionAlt">Temperature FLOOR_02 ROOM_001</Property>
+<Property id="Domain">FLOOR_02</Property>
+<Property id="Format">0.0#u</Property>
+<Property id="InitialValue">3</Property>
+<Property id="MaximumValue">40</Property>
+<Property id="Nature">AIRCOND</Property>
+<Property id="OPC_Group">Group01</Property>
+<Property id="OPC_ItemId">BUILDING.FLOOR_02.ROOM_001.AC.TEMP</Property>
+<Property id="OPC_Server">Server01</Property>
+<Property id="ServerListName"></Property>
+<Property id="Type">2</Property>
+<Property id="Unit">Celsius</Property>
+<Property id="WithInitialValue">-1</Property>
+</Item>
+<Item id="TEMP_high">
+<Property id="ThresholdSource">BUILDING.FLOOR_02.ROOM_001.AC.TEMP</Property>
+<Property id="Alarm">-1</Property>
+<Property id="ClientListName"></Property>
+<Property id="Description">Température FLOOR_02 ROOM_001 High</Property>
+<Property id="Domain">FLOOR_02</Property>
+<Property id="Log0_1">-1</Property>
+<Property id="Log1_0">-1</Property>
+<Property id="Nature">AIRCOND</Property>
+<Property id="ServerListName"></Property>
+<Property id="Threshold">-1</Property>
+<Property id="ThresholdHigh">-1</Property>
+<Property id="ThresholdSystem">2</Property>
+<Property id="ThresholdTypeInSystem">1</Property>
+<Property id="ThresholdValue">25</Property>
+</Item>
+<Item id="TEMP_low">
+<Property id="ThresholdSource">BUILDING.FLOOR_02.ROOM_001.AC.TEMP</Property>
+<Property id="Alarm">-1</Property>
+<Property id="ClientListName"></Property>
+<Property id="Description">Température FLOOR_02 ROOM_001 Low</Property>
+<Property id="Domain">FLOOR_02</Property>
+<Property id="Log0_1">-1</Property>
+<Property id="Log1_0">-1</Property>
+<Property id="Nature">AIRCOND</Property>
+<Property id="ServerListName"></Property>
+<Property id="Threshold">-1</Property>
+<Property id="ThresholdHigh">0</Property>
+<Property id="ThresholdSystem">2</Property>
+<Property id="ThresholdTypeInSystem">2</Property>
+<Property id="ThresholdValue">15</Property>
+</Item>
+<Item id="TEMP_F">
+<Property id="ClientListName"></Property>
+<Property id="Description">Temperature in Fahrenheit</Property>
+<Property id="Domain">FLOOR_02</Property>
+<Property id="Format">0.00#u</Property>
+<Property id="Nature">AIRCOND</Property>
+<Property id="ServerListName"></Property>
+<Property id="Type">2</Property>
+<Property id="Unit">F</Property>
+</Item>
+</Collection>
+<Collection type="Variables" id="BUILDING.FLOOR_02.ROOM_001.LT">
+<Item id="CMD">
+<Property id="AssociatedLabels">ON_OFF</Property>
+<Property id="BitCommandLevel">1</Property>
+<Property id="ClientListName"></Property>
+<Property id="Command">-1</Property>
+<Property id="Description">Command</Property>
+<Property id="Domain">FLOOR_02</Property>
+<Property id="Log0_1">-1</Property>
+<Property id="Log1_0">-1</Property>
+<Property id="Nature">LIGHTING</Property>
+<Property id="OPC_Group">Group01</Property>
+<Property id="OPC_ItemId">BUILDING.FLOOR_02.ROOM_001.LT.CMD</Property>
+<Property id="OPC_Server">Server01</Property>
+<Property id="ServerListName"></Property>
+</Item>
+<Item id="ON">
+<Property id="AssociatedLabels">ON_OFF</Property>
+<Property id="ClientListName"></Property>
+<Property id="Command">-1</Property>
+<Property id="Description">Light on</Property>
+<Property id="Domain">FLOOR_02</Property>
+<Property id="Log0_1">-1</Property>
+<Property id="Log1_0">-1</Property>
+<Property id="Nature">LIGHTING</Property>
+<Property id="OPC_Group">Group01</Property>
+<Property id="OPC_ItemId">BUILDING.FLOOR_02.ROOM_001.LT.ON</Property>
+<Property id="OPC_Server">Server01</Property>
+<Property id="ServerListName"></Property>
+</Item>
+</Collection>
+<Collection type="Variables" id="BUILDING.FLOOR_02.ROOM_002.AC">
+<Item id="CMD">
+<Property id="BitCommandLevel">1</Property>
+<Property id="ClientListName"></Property>
+<Property id="Command">-1</Property>
+<Property id="Description">Command</Property>
+<Property id="Domain">FLOOR_02</Property>
+<Property id="InitialValue">1</Property>
+<Property id="Log0_1">-1</Property>
+<Property id="Log1_0">-1</Property>
+<Property id="Nature">AIRCOND</Property>
+<Property id="OPC_Group">Group01</Property>
+<Property id="OPC_ItemId">BUILDING.FLOOR_02.ROOM_002.AC.CMD</Property>
+<Property id="OPC_Server">Server01</Property>
+<Property id="ServerListName"></Property>
+<Property id="WithInitialValue">-1</Property>
+</Item>
+<Item id="INFO">
+<Property id="ClientListName"></Property>
+<Property id="Description">Information</Property>
+<Property id="Domain">FLOOR_02</Property>
+<Property id="ExtText10">V05-P02</Property>
+<Property id="ExtText11">V03-P02</Property>
+<Property id="ExtText12">V04-P02</Property>
+<Property id="ExtText13">4</Property>
+<Property id="ExtText14">6</Property>
+<Property id="ExtText3">MITSUBISHI</Property>
+<Property id="ExtText4">012345789</Property>
+<Property id="ExtText5">firstname@operator.com</Property>
+<Property id="ExtText6">V04-P01</Property>
+<Property id="ExtText7">NULL;Var01;V01-P01;V01-P02;V01-P03;V01-P04;V01-P05;V01-P06</Property>
+<Property id="ExtText8">Var01;Var02;Var03;Var04;Var05;Var06;Var07;Var08;Var09;Var10</Property>
+<Property id="ExtText9">'V01-P01':'V01-P02':'V01-P03'\'V02-P01':'V02-P02':'V02-P03'\'V03-P01':'V03-P02':'V03-P03'</Property>
+<Property id="Nature">AIRCOND</Property>
+<Property id="ServerListName"></Property>
+<Property id="Type">3</Property>
+<Property id="UseExtendedAttributes">-1</Property>
+</Item>
+<Item id="SETPOINT">
+<Property id="ClientListName"></Property>
+<Property id="Command">-1</Property>
+<Property id="ControlMaximumValue">40</Property>
+<Property id="Description">Temperature setpoint</Property>
+<Property id="Domain">FLOOR_02</Property>
+<Property id="Format">0.0#u</Property>
+<Property id="InitialValue">20</Property>
+<Property id="MaximumValue">40</Property>
+<Property id="Nature">AIRCOND</Property>
+<Property id="OPC_Group">Group01</Property>
+<Property id="OPC_ItemId">BUILDING.FLOOR_02.ROOM_002.AC.SETPOINT</Property>
+<Property id="OPC_Server">Server01</Property>
+<Property id="ServerListName"></Property>
+<Property id="Type">2</Property>
+<Property id="Unit">°C</Property>
+<Property id="WithInitialValue">-1</Property>
+</Item>
+<Item id="TEMP">
+<Property id="ClientListName"></Property>
+<Property id="Command">-1</Property>
+<Property id="ControlMaximumValue">40</Property>
+<Property id="Description">Température FLOOR_02 ROOM_002</Property>
+<Property id="DescriptionAlt">Temperature FLOOR_02 ROOM_002</Property>
+<Property id="Domain">FLOOR_02</Property>
+<Property id="Format">0.0#u</Property>
+<Property id="InitialValue">4</Property>
+<Property id="MaximumValue">40</Property>
+<Property id="Nature">AIRCOND</Property>
+<Property id="OPC_Group">Group01</Property>
+<Property id="OPC_ItemId">BUILDING.FLOOR_02.ROOM_002.AC.TEMP</Property>
+<Property id="OPC_Server">Server01</Property>
+<Property id="ServerListName"></Property>
+<Property id="Type">2</Property>
+<Property id="Unit">Celsius</Property>
+<Property id="WithInitialValue">-1</Property>
+</Item>
+<Item id="TEMP_high">
+<Property id="ThresholdSource">BUILDING.FLOOR_02.ROOM_002.AC.TEMP</Property>
+<Property id="Alarm">-1</Property>
+<Property id="ClientListName"></Property>
+<Property id="Description">Température FLOOR_02 ROOM_002 High</Property>
+<Property id="Domain">FLOOR_02</Property>
+<Property id="Log0_1">-1</Property>
+<Property id="Log1_0">-1</Property>
+<Property id="Nature">AIRCOND</Property>
+<Property id="ServerListName"></Property>
+<Property id="Threshold">-1</Property>
+<Property id="ThresholdHigh">-1</Property>
+<Property id="ThresholdSystem">2</Property>
+<Property id="ThresholdTypeInSystem">1</Property>
+<Property id="ThresholdValue">25</Property>
+</Item>
+<Item id="TEMP_low">
+<Property id="ThresholdSource">BUILDING.FLOOR_02.ROOM_002.AC.TEMP</Property>
+<Property id="Alarm">-1</Property>
+<Property id="ClientListName"></Property>
+<Property id="Description">Température FLOOR_02 ROOM_002 Low</Property>
+<Property id="Domain">FLOOR_02</Property>
+<Property id="Log0_1">-1</Property>
+<Property id="Log1_0">-1</Property>
+<Property id="Nature">AIRCOND</Property>
+<Property id="ServerListName"></Property>
+<Property id="Threshold">-1</Property>
+<Property id="ThresholdHigh">0</Property>
+<Property id="ThresholdSystem">2</Property>
+<Property id="ThresholdTypeInSystem">2</Property>
+<Property id="ThresholdValue">15</Property>
+</Item>
+<Item id="TEMP_F">
+<Property id="ClientListName"></Property>
+<Property id="Description">Temperature in Fahrenheit</Property>
+<Property id="Domain">FLOOR_02</Property>
+<Property id="Format">0.00#u</Property>
+<Property id="Nature">AIRCOND</Property>
+<Property id="ServerListName"></Property>
+<Property id="Type">2</Property>
+<Property id="Unit">F</Property>
+</Item>
+</Collection>
+<Collection type="Variables" id="BUILDING.FLOOR_02.ROOM_002.LT">
+<Item id="CMD">
+<Property id="AssociatedLabels">ON_OFF</Property>
+<Property id="BitCommandLevel">1</Property>
+<Property id="ClientListName"></Property>
+<Property id="Command">-1</Property>
+<Property id="Description">Command</Property>
+<Property id="Domain">FLOOR_02</Property>
+<Property id="Log0_1">-1</Property>
+<Property id="Log1_0">-1</Property>
+<Property id="Nature">LIGHTING</Property>
+<Property id="OPC_Group">Group01</Property>
+<Property id="OPC_ItemId">BUILDING.FLOOR_02.ROOM_002.LT.CMD</Property>
+<Property id="OPC_Server">Server01</Property>
+<Property id="ServerListName"></Property>
+</Item>
+<Item id="ON">
+<Property id="AssociatedLabels">ON_OFF</Property>
+<Property id="ClientListName"></Property>
+<Property id="Command">-1</Property>
+<Property id="Description">Light on</Property>
+<Property id="Domain">FLOOR_02</Property>
+<Property id="Log0_1">-1</Property>
+<Property id="Log1_0">-1</Property>
+<Property id="Nature">LIGHTING</Property>
+<Property id="OPC_Group">Group01</Property>
+<Property id="OPC_ItemId">BUILDING.FLOOR_02.ROOM_002.LT.ON</Property>
+<Property id="OPC_Server">Server01</Property>
+<Property id="ServerListName"></Property>
+</Item>
+</Collection>
+<Collection type="Variables" id="DASHBOARD.DISPLAY01">
+<Item id="LIM">
+<Property id="ClientListName"></Property>
+<Property id="Description">Maximum Limit</Property>
+<Property id="InitialValue">100</Property>
+<Property id="ServerListName"></Property>
+<Property id="Type">2</Property>
+<Property id="WithInitialValue">-1</Property>
+</Item>
+<Item id="VAR">
+<Property id="ClientListName"></Property>
+<Property id="Command">-1</Property>
+<Property id="ControlMaximumValue">100</Property>
+<Property id="ExtText3">F1 R1</Property>
+<Property id="ExtText4">0 - 40</Property>
+<Property id="InitialValue">0</Property>
+<Property id="MaximumValue">40</Property>
+<Property id="ServerListName"></Property>
+<Property id="Type">2</Property>
+<Property id="UseExtendedAttributes">-1</Property>
+<Property id="WithInitialValue">-1</Property>
+</Item>
+</Collection>
+<Collection type="Variables" id="DASHBOARD.DISPLAY02">
+<Item id="LIM">
+<Property id="ClientListName"></Property>
+<Property id="Description">Maximum Limit</Property>
+<Property id="InitialValue">100</Property>
+<Property id="ServerListName"></Property>
+<Property id="Type">2</Property>
+<Property id="WithInitialValue">-1</Property>
+</Item>
+<Item id="VAR">
+<Property id="ClientListName"></Property>
+<Property id="Command">-1</Property>
+<Property id="ControlMaximumValue">100</Property>
+<Property id="ExtText3">F1 R2</Property>
+<Property id="ExtText4">0 - 40</Property>
+<Property id="InitialValue">0</Property>
+<Property id="MaximumValue">40</Property>
+<Property id="ServerListName"></Property>
+<Property id="Type">2</Property>
+<Property id="UseExtendedAttributes">-1</Property>
+<Property id="WithInitialValue">-1</Property>
+</Item>
+</Collection>
+<Collection type="Variables" id="DASHBOARD.DISPLAY03">
+<Item id="LIM">
+<Property id="ClientListName"></Property>
+<Property id="Description">Maximum Limit</Property>
+<Property id="InitialValue">100</Property>
+<Property id="ServerListName"></Property>
+<Property id="Type">2</Property>
+<Property id="WithInitialValue">-1</Property>
+</Item>
+<Item id="VAR">
+<Property id="ClientListName"></Property>
+<Property id="Command">-1</Property>
+<Property id="ControlMaximumValue">100</Property>
+<Property id="ExtText3">F2 R1</Property>
+<Property id="ExtText4">0 - 40</Property>
+<Property id="InitialValue">0</Property>
+<Property id="MaximumValue">40</Property>
+<Property id="ServerListName"></Property>
+<Property id="Type">2</Property>
+<Property id="UseExtendedAttributes">-1</Property>
+<Property id="WithInitialValue">-1</Property>
+</Item>
+</Collection>
+<Collection type="Variables" id="DASHBOARD.DISPLAY04">
+<Item id="LIM">
+<Property id="ClientListName"></Property>
+<Property id="Description">Maximum Limit</Property>
+<Property id="InitialValue">100</Property>
+<Property id="ServerListName"></Property>
+<Property id="Type">2</Property>
+<Property id="WithInitialValue">-1</Property>
+</Item>
+<Item id="VAR">
+<Property id="ClientListName"></Property>
+<Property id="Command">-1</Property>
+<Property id="ControlMaximumValue">100</Property>
+<Property id="ExtText3">F2 R2</Property>
+<Property id="ExtText4">0 - 40</Property>
+<Property id="InitialValue">0</Property>
+<Property id="MaximumValue">40</Property>
+<Property id="ServerListName"></Property>
+<Property id="Type">2</Property>
+<Property id="UseExtendedAttributes">-1</Property>
+<Property id="WithInitialValue">-1</Property>
+</Item>
+</Collection>
+<Collection type="Variables" id="DASHBOARD.DISPLAY05">
+<Item id="LIM">
+<Property id="ClientListName"></Property>
+<Property id="Description">Maximum Limit</Property>
+<Property id="InitialValue">40</Property>
+<Property id="ServerListName"></Property>
+<Property id="Type">2</Property>
+<Property id="WithInitialValue">-1</Property>
+</Item>
+<Item id="VAR">
+<Property id="ClientListName"></Property>
+<Property id="Command">-1</Property>
+<Property id="ControlMaximumValue">100</Property>
+<Property id="ExtText3">F1 R1</Property>
+<Property id="ExtText4">%</Property>
+<Property id="InitialValue">0</Property>
+<Property id="MaximumValue">100</Property>
+<Property id="ServerListName"></Property>
+<Property id="Type">2</Property>
+<Property id="UseExtendedAttributes">-1</Property>
+<Property id="WithInitialValue">-1</Property>
+</Item>
+</Collection>
+<Collection type="Variables" id="DASHBOARD.DISPLAY06">
+<Item id="LIM">
+<Property id="ClientListName"></Property>
+<Property id="Description">Maximum Limit</Property>
+<Property id="InitialValue">40</Property>
+<Property id="ServerListName"></Property>
+<Property id="Type">2</Property>
+<Property id="WithInitialValue">-1</Property>
+</Item>
+<Item id="VAR">
+<Property id="ClientListName"></Property>
+<Property id="Command">-1</Property>
+<Property id="ControlMaximumValue">100</Property>
+<Property id="ExtText3">F1 R2</Property>
+<Property id="ExtText4">%</Property>
+<Property id="InitialValue">0</Property>
+<Property id="MaximumValue">100</Property>
+<Property id="ServerListName"></Property>
+<Property id="Type">2</Property>
+<Property id="UseExtendedAttributes">-1</Property>
+<Property id="WithInitialValue">-1</Property>
+</Item>
+</Collection>
+<Collection type="Variables" id="DASHBOARD.DISPLAY07">
+<Item id="LIM">
+<Property id="ClientListName"></Property>
+<Property id="Description">Maximum Limit</Property>
+<Property id="InitialValue">40</Property>
+<Property id="ServerListName"></Property>
+<Property id="Type">2</Property>
+<Property id="WithInitialValue">-1</Property>
+</Item>
+<Item id="VAR">
+<Property id="ClientListName"></Property>
+<Property id="Command">-1</Property>
+<Property id="ControlMaximumValue">100</Property>
+<Property id="ExtText3">F2 R1</Property>
+<Property id="ExtText4">%</Property>
+<Property id="InitialValue">0</Property>
+<Property id="MaximumValue">100</Property>
+<Property id="ServerListName"></Property>
+<Property id="Type">2</Property>
+<Property id="UseExtendedAttributes">-1</Property>
+<Property id="WithInitialValue">-1</Property>
+</Item>
+</Collection>
+<Collection type="Variables" id="DASHBOARD.DISPLAY08">
+<Item id="LIM">
+<Property id="ClientListName"></Property>
+<Property id="Description">Maximum Limit</Property>
+<Property id="InitialValue">40</Property>
+<Property id="ServerListName"></Property>
+<Property id="Type">2</Property>
+<Property id="WithInitialValue">-1</Property>
+</Item>
+<Item id="VAR">
+<Property id="ClientListName"></Property>
+<Property id="Command">-1</Property>
+<Property id="ControlMaximumValue">100</Property>
+<Property id="ExtText3">F2 R2</Property>
+<Property id="ExtText4">%</Property>
+<Property id="InitialValue">0</Property>
+<Property id="MaximumValue">100</Property>
+<Property id="ServerListName"></Property>
+<Property id="Type">2</Property>
+<Property id="UseExtendedAttributes">-1</Property>
+<Property id="WithInitialValue">-1</Property>
+</Item>
+</Collection>
+<Collection type="Variables" id="DASHBOARD.PIE01">
+<Item id="DIV_1">
+<Property id="ClientListName"></Property>
+<Property id="Command">-1</Property>
+<Property id="ControlMaximumValue">100</Property>
+<Property id="InitialValue">0</Property>
+<Property id="MaximumValue">100</Property>
+<Property id="ServerListName"></Property>
+<Property id="Type">2</Property>
+<Property id="WithInitialValue">-1</Property>
+</Item>
+<Item id="DIV_2">
+<Property id="ClientListName"></Property>
+<Property id="Command">-1</Property>
+<Property id="ControlMaximumValue">100</Property>
+<Property id="InitialValue">0</Property>
+<Property id="MaximumValue">100</Property>
+<Property id="ServerListName"></Property>
+<Property id="Type">2</Property>
+<Property id="WithInitialValue">-1</Property>
+</Item>
+<Item id="DIV_3">
+<Property id="ClientListName"></Property>
+<Property id="Command">-1</Property>
+<Property id="ControlMaximumValue">100</Property>
+<Property id="InitialValue">0</Property>
+<Property id="MaximumValue">100</Property>
+<Property id="ServerListName"></Property>
+<Property id="Type">2</Property>
+<Property id="WithInitialValue">-1</Property>
+</Item>
+<Item id="DIV_4">
+<Property id="ClientListName"></Property>
+<Property id="Command">-1</Property>
+<Property id="ControlMaximumValue">100</Property>
+<Property id="InitialValue">0</Property>
+<Property id="MaximumValue">100</Property>
+<Property id="ServerListName"></Property>
+<Property id="Type">2</Property>
+<Property id="WithInitialValue">-1</Property>
+</Item>
+<Item id="VAR_1">
+<Property id="ClientListName"></Property>
+<Property id="Command">-1</Property>
+<Property id="ControlMaximumValue">100</Property>
+<Property id="InitialValue">0</Property>
+<Property id="MaximumValue">100</Property>
+<Property id="ServerListName"></Property>
+<Property id="Type">2</Property>
+<Property id="WithInitialValue">-1</Property>
+</Item>
+<Item id="VAR_2">
+<Property id="ClientListName"></Property>
+<Property id="Command">-1</Property>
+<Property id="ControlMaximumValue">100</Property>
+<Property id="InitialValue">0</Property>
+<Property id="MaximumValue">100</Property>
+<Property id="ServerListName"></Property>
+<Property id="Type">2</Property>
+<Property id="WithInitialValue">-1</Property>
+</Item>
+<Item id="VAR_3">
+<Property id="ClientListName"></Property>
+<Property id="Command">-1</Property>
+<Property id="ControlMaximumValue">100</Property>
+<Property id="InitialValue">0</Property>
+<Property id="MaximumValue">100</Property>
+<Property id="ServerListName"></Property>
+<Property id="Type">2</Property>
+<Property id="WithInitialValue">-1</Property>
+</Item>
+<Item id="VAR_4">
+<Property id="ClientListName"></Property>
+<Property id="Command">-1</Property>
+<Property id="ControlMaximumValue">100</Property>
+<Property id="InitialValue">0</Property>
+<Property id="MaximumValue">100</Property>
+<Property id="ServerListName"></Property>
+<Property id="Type">2</Property>
+<Property id="WithInitialValue">-1</Property>
+</Item>
+</Collection>
+<Collection type="Variables" id="DASHBOARD.PYRAMID01">
+<Item id="COL_1">
+<Property id="ClientListName"></Property>
+<Property id="Command">-1</Property>
+<Property id="ControlMaximumValue">100</Property>
+<Property id="InitialValue">0</Property>
+<Property id="MaximumValue">100</Property>
+<Property id="ServerListName"></Property>
+<Property id="Type">2</Property>
+<Property id="WithInitialValue">-1</Property>
+</Item>
+<Item id="COL_2">
+<Property id="ClientListName"></Property>
+<Property id="Command">-1</Property>
+<Property id="ControlMaximumValue">100</Property>
+<Property id="InitialValue">0</Property>
+<Property id="MaximumValue">100</Property>
+<Property id="ServerListName"></Property>
+<Property id="Type">2</Property>
+<Property id="WithInitialValue">-1</Property>
+</Item>
+<Item id="COL_3">
+<Property id="ClientListName"></Property>
+<Property id="Command">-1</Property>
+<Property id="ControlMaximumValue">100</Property>
+<Property id="InitialValue">0</Property>
+<Property id="MaximumValue">100</Property>
+<Property id="ServerListName"></Property>
+<Property id="Type">2</Property>
+<Property id="WithInitialValue">-1</Property>
+</Item>
+<Item id="DIV_1">
+<Property id="ClientListName"></Property>
+<Property id="Command">-1</Property>
+<Property id="ControlMaximumValue">100</Property>
+<Property id="InitialValue">0</Property>
+<Property id="MaximumValue">100</Property>
+<Property id="ServerListName"></Property>
+<Property id="Type">2</Property>
+<Property id="WithInitialValue">-1</Property>
+</Item>
+<Item id="DIV_2">
+<Property id="ClientListName"></Property>
+<Property id="Command">-1</Property>
+<Property id="ControlMaximumValue">100</Property>
+<Property id="InitialValue">0</Property>
+<Property id="MaximumValue">100</Property>
+<Property id="ServerListName"></Property>
+<Property id="Type">2</Property>
+<Property id="WithInitialValue">-1</Property>
+</Item>
+<Item id="DIV_3">
+<Property id="ClientListName"></Property>
+<Property id="Command">-1</Property>
+<Property id="ControlMaximumValue">100</Property>
+<Property id="InitialValue">0</Property>
+<Property id="MaximumValue">100</Property>
+<Property id="ServerListName"></Property>
+<Property id="Type">2</Property>
+<Property id="WithInitialValue">-1</Property>
+</Item>
+<Item id="VAR_1">
+<Property id="ClientListName"></Property>
+<Property id="Command">-1</Property>
+<Property id="ControlMaximumValue">100</Property>
+<Property id="ExtText3">Floor1 Room1</Property>
+<Property id="InitialValue">0</Property>
+<Property id="MaximumValue">100</Property>
+<Property id="ServerListName"></Property>
+<Property id="Type">2</Property>
+<Property id="UseExtendedAttributes">-1</Property>
+<Property id="WithInitialValue">-1</Property>
+</Item>
+<Item id="VAR_2">
+<Property id="ClientListName"></Property>
+<Property id="Command">-1</Property>
+<Property id="ControlMaximumValue">100</Property>
+<Property id="ExtText3">Floor1 Room2</Property>
+<Property id="InitialValue">0</Property>
+<Property id="MaximumValue">100</Property>
+<Property id="ServerListName"></Property>
+<Property id="Type">2</Property>
+<Property id="UseExtendedAttributes">-1</Property>
+<Property id="WithInitialValue">-1</Property>
+</Item>
+<Item id="VAR_3">
+<Property id="ClientListName"></Property>
+<Property id="Command">-1</Property>
+<Property id="ControlMaximumValue">100</Property>
+<Property id="ExtText3">Floor2 Room1</Property>
+<Property id="InitialValue">0</Property>
+<Property id="MaximumValue">100</Property>
+<Property id="ServerListName"></Property>
+<Property id="Type">2</Property>
+<Property id="UseExtendedAttributes">-1</Property>
+<Property id="WithInitialValue">-1</Property>
+</Item>
+</Collection>
+<Collection type="Variables" id="GENERAL.PROP_UNIT01">
+<Item id="BACKUP">
+<Property id="ClientListName"></Property>
+<Property id="Command">-1</Property>
+<Property id="InitialValue">0</Property>
+<Property id="ServerListName"></Property>
+<Property id="WithInitialValue">-1</Property>
+</Item>
+</Collection>
+<Collection type="Variables" id="GENERAL">
+<Item id="SimuLights">
+<Property id="ClientListName"></Property>
+<Property id="Command">-1</Property>
+<Property id="Description">Autorise la simulation ou non</Property>
+<Property id="DescriptionAlt">Start / Stop simulation</Property>
+<Property id="InitialValue">1</Property>
+<Property id="Log0_1">-1</Property>
+<Property id="Log1_0">-1</Property>
+<Property id="Saved">-1</Property>
+<Property id="ServerListName"></Property>
+<Property id="WithInitialValue">-1</Property>
+</Item>
+<Item id="SimuTemperatures">
+<Property id="ClientListName"></Property>
+<Property id="Command">-1</Property>
+<Property id="Description">Autorise la simulation ou non</Property>
+<Property id="DescriptionAlt">Start / Stop simulation</Property>
+<Property id="InitialValue">1</Property>
+<Property id="Log0_1">-1</Property>
+<Property id="Log1_0">-1</Property>
+<Property id="Saved">-1</Property>
+<Property id="ServerListName"></Property>
+<Property id="WithInitialValue">-1</Property>
+</Item>
+</Collection>
+<Collection type="HMIVariables" id="GENERAL.TRENDS">
+<Item id="Cancel">
+<Property id="DescriptionLang0">Pour annuler un rafraichissement des tendances</Property>
+<Property id="DescriptionLang1">To cancel a trends refresh</Property>
+</Item>
+</Collection>
+<Collection type="Variables" id="GENERAL.TRENDS">
+<Item id="ComboBoxIndex">
+<Property id="ClientListName"></Property>
+<Property id="Command">-1</Property>
+<Property id="Saved">-1</Property>
+<Property id="Scope">1</Property>
+<Property id="ServerListName"></Property>
+<Property id="Type">2</Property>
+</Item>
+<Item id="ConfigFileName">
+<Property id="ClientListName"></Property>
+<Property id="InitialValue">GENERAL.TRENDS.Config.txt</Property>
+<Property id="Saved">-1</Property>
+<Property id="Scope">1</Property>
+<Property id="ServerListName"></Property>
+<Property id="Type">3</Property>
+<Property id="WithInitialValue">-1</Property>
+</Item>
+<Item id="ConfigName">
+<Property id="ClientListName"></Property>
+<Property id="Command">-1</Property>
+<Property id="Saved">-1</Property>
+<Property id="Scope">1</Property>
+<Property id="ServerListName"></Property>
+<Property id="Type">3</Property>
+</Item>
+</Collection>
+<Collection type="HMIVariables" id="GENERAL.TRENDS">
+<Item id="ProgressBar">
+<Property id="Maximum">100</Property>
+<Property id="Type">2</Property>
+</Item>
+<Item id="TimeToUpdateTrends">
+<Property id="Maximum">99999999999999</Property>
+<Property id="Type">2</Property>
+</Item>
+</Collection>
+<Collection type="Variables" id="GENERAL.TRENDS">
+<Item id="TrendIdentity">
+<Property id="ClientListName"></Property>
+<Property id="InitialValue">Trend1</Property>
+<Property id="Saved">-1</Property>
+<Property id="Scope">1</Property>
+<Property id="ServerListName"></Property>
+<Property id="Type">3</Property>
+<Property id="WithInitialValue">-1</Property>
+</Item>
+<Item id="TrendsFileName">
+<Property id="ClientListName"></Property>
+<Property id="InitialValue">GENERAL.TRENDS.VarList.txt</Property>
+<Property id="Saved">-1</Property>
+<Property id="Scope">1</Property>
+<Property id="ServerListName"></Property>
+<Property id="Type">3</Property>
+<Property id="WithInitialValue">-1</Property>
+</Item>
+</Collection>
+<Collection type="OnVariableExpressions">
+<Item id="BUILDING_FLOOR_01_ROOM_001_AC_TEMP_F_Expression01">
+<Property id="VariableResult">@BUILDING.FLOOR_01.ROOM_001.AC.TEMP_F</Property>
+<Property id="Branch">BUILDING.FLOOR_01.ROOM_001.AC</Property>
+<Property id="Description">Celsius to Fahrenheit</Property>
+<Property id="Expression">(TEMP*1.8)+32</Property>
+</Item>
+<Item id="BUILDING_FLOOR_01_ROOM_001_LT_ON_Expression01">
+<Property id="VariableResult">@BUILDING.FLOOR_01.ROOM_001.LT.ON</Property>
+<Property id="Branch">BUILDING.FLOOR_01.ROOM_001.LT</Property>
+<Property id="Expression">CMD</Property>
+</Item>
+<Item id="BUILDING_FLOOR_01_ROOM_002_AC_TEMP_F_Expression01">
+<Property id="VariableResult">@BUILDING.FLOOR_01.ROOM_002.AC.TEMP_F</Property>
+<Property id="Branch">BUILDING.FLOOR_01.ROOM_002.AC</Property>
+<Property id="Description">Celsius to Fahrenheit</Property>
+<Property id="Expression">(TEMP*1.8)+32</Property>
+</Item>
+<Item id="BUILDING_FLOOR_01_ROOM_002_LT_ON_Expression01">
+<Property id="VariableResult">@BUILDING.FLOOR_01.ROOM_002.LT.ON</Property>
+<Property id="Branch">BUILDING.FLOOR_01.ROOM_002.LT</Property>
+<Property id="Expression">CMD</Property>
+</Item>
+<Item id="BUILDING_FLOOR_02_ROOM_001_AC_TEMP_F_Expression01">
+<Property id="VariableResult">@BUILDING.FLOOR_02.ROOM_001.AC.TEMP_F</Property>
+<Property id="Branch">BUILDING.FLOOR_02.ROOM_001.AC</Property>
+<Property id="Description">Celsius to Fahrenheit</Property>
+<Property id="Expression">(TEMP*1.8)+32</Property>
+</Item>
+<Item id="BUILDING_FLOOR_02_ROOM_001_LT_ON_Expression01">
+<Property id="VariableResult">@BUILDING.FLOOR_02.ROOM_001.LT.ON</Property>
+<Property id="Branch">BUILDING.FLOOR_02.ROOM_001.LT</Property>
+<Property id="Expression">CMD</Property>
+</Item>
+<Item id="BUILDING_FLOOR_02_ROOM_002_AC_TEMP_F_Expression01">
+<Property id="VariableResult">@BUILDING.FLOOR_02.ROOM_002.AC.TEMP_F</Property>
+<Property id="Branch">BUILDING.FLOOR_02.ROOM_002.AC</Property>
+<Property id="Description">Celsius to Fahrenheit</Property>
+<Property id="Expression">(TEMP*1.8)+32</Property>
+</Item>
+<Item id="BUILDING_FLOOR_02_ROOM_002_LT_ON_Expression01">
+<Property id="VariableResult">@BUILDING.FLOOR_02.ROOM_002.LT.ON</Property>
+<Property id="Branch">BUILDING.FLOOR_02.ROOM_002.LT</Property>
+<Property id="Expression">CMD</Property>
+</Item>
+</Collection>
+<Collection type="Cyclics">
+<Item id="DASHBOARD_DISPLAY01_Cyclic01">
+<Property id="ProgramArgs">BUILDING.FLOOR_01.ROOM_001.AC.TEMP</Property>
+<Property id="ProgramBranch">DASHBOARD.DISPLAY01</Property>
+<Property id="ProgramFunction">Display</Property>
+<Property id="ProgramName">L_DASHBOARD/DASHBOARD.SCB</Property>
+</Item>
+<Item id="DASHBOARD_DISPLAY02_Cyclic01">
+<Property id="ProgramArgs">BUILDING.FLOOR_01.ROOM_002.AC.TEMP</Property>
+<Property id="ProgramBranch">DASHBOARD.DISPLAY02</Property>
+<Property id="ProgramFunction">Display</Property>
+<Property id="ProgramName">L_DASHBOARD/DASHBOARD.SCB</Property>
+</Item>
+<Item id="DASHBOARD_DISPLAY03_Cyclic01">
+<Property id="ProgramArgs">BUILDING.FLOOR_02.ROOM_001.AC.TEMP</Property>
+<Property id="ProgramBranch">DASHBOARD.DISPLAY03</Property>
+<Property id="ProgramFunction">Display</Property>
+<Property id="ProgramName">L_DASHBOARD/DASHBOARD.SCB</Property>
+</Item>
+<Item id="DASHBOARD_DISPLAY04_Cyclic01">
+<Property id="ProgramArgs">BUILDING.FLOOR_02.ROOM_002.AC.TEMP</Property>
+<Property id="ProgramBranch">DASHBOARD.DISPLAY04</Property>
+<Property id="ProgramFunction">Display</Property>
+<Property id="ProgramName">L_DASHBOARD/DASHBOARD.SCB</Property>
+</Item>
+<Item id="DASHBOARD_DISPLAY05_Cyclic01">
+<Property id="ProgramArgs">BUILDING.FLOOR_01.ROOM_001.AC.TEMP</Property>
+<Property id="ProgramBranch">DASHBOARD.DISPLAY05</Property>
+<Property id="ProgramFunction">Display</Property>
+<Property id="ProgramName">L_DASHBOARD/DASHBOARD.SCB</Property>
+</Item>
+<Item id="DASHBOARD_DISPLAY06_Cyclic01">
+<Property id="ProgramArgs">BUILDING.FLOOR_01.ROOM_002.AC.TEMP</Property>
+<Property id="ProgramBranch">DASHBOARD.DISPLAY06</Property>
+<Property id="ProgramFunction">Display</Property>
+<Property id="ProgramName">L_DASHBOARD/DASHBOARD.SCB</Property>
+</Item>
+<Item id="DASHBOARD_DISPLAY07_Cyclic01">
+<Property id="ProgramArgs">BUILDING.FLOOR_02.ROOM_001.AC.TEMP</Property>
+<Property id="ProgramBranch">DASHBOARD.DISPLAY07</Property>
+<Property id="ProgramFunction">Display</Property>
+<Property id="ProgramName">L_DASHBOARD/DASHBOARD.SCB</Property>
+</Item>
+<Item id="DASHBOARD_DISPLAY08_Cyclic01">
+<Property id="ProgramArgs">BUILDING.FLOOR_02.ROOM_002.AC.TEMP</Property>
+<Property id="ProgramBranch">DASHBOARD.DISPLAY08</Property>
+<Property id="ProgramFunction">Display</Property>
+<Property id="ProgramName">L_DASHBOARD/DASHBOARD.SCB</Property>
+</Item>
+<Item id="DASHBOARD_PIE01_Cyclic01">
+<Property id="ProgramArgs">BUILDING.FLOOR_01.ROOM_001.AC.TEMP,BUILDING.FLOOR_01.ROOM_002.AC.TEMP,BUILDING.FLOOR_02.ROOM_001.AC.TEMP,BUILDING.FLOOR_02.ROOM_002.AC.TEMP</Property>
+<Property id="ProgramBranch">DASHBOARD.PIE01</Property>
+<Property id="ProgramFunction">PieCalc</Property>
+<Property id="ProgramName">L_DASHBOARD/DASHBOARD.SCB</Property>
+</Item>
+<Item id="DASHBOARD_PYRAMID01_Cyclic01">
+<Property id="ProgramArgs">BUILDING.FLOOR_01.ROOM_001.AC.TEMP,BUILDING.FLOOR_01.ROOM_002.AC.TEMP,BUILDING.FLOOR_02.ROOM_001.AC.TEMP</Property>
+<Property id="ProgramBranch">DASHBOARD.PYRAMID01</Property>
+<Property id="ProgramFunction">Pyramid</Property>
+<Property id="ProgramName">L_DASHBOARD/DASHBOARD.SCB</Property>
+</Item>
+</Collection>
+<Collection type="ArchiveUnits_Proprietary">
+<Item id="PROP_UNIT01">
+<Property id="Backup">-1</Property>
+<Property id="BackupBitName">GENERAL.PROP_UNIT01.BACKUP</Property>
+<Property id="BackupDir">C:\BACKUP\PROP_UNIT01\</Property>
+<Property id="ClientListName">#LC_AllStations</Property>
+<Property id="ServerListName"></Property>
+</Item>
+</Collection>
+<Collection type="Trends_Proprietary" id="PROP_UNIT01">
+<Item id="BUILDING.FLOOR_01.ROOM_001.AC.TEMP">
+<Property id="FilteringPeriod">0</Property>
+</Item>
+</Collection>
+<Collection type="Trends_Database" id="U_DB1">
+<Item id="BUILDING.FLOOR_01.ROOM_001.AC.TEMP">
+<Property id="Primary">0</Property>
+</Item>
+</Collection>
+<Collection type="Trends_Proprietary" id="PROP_UNIT01">
+<Item id="BUILDING.FLOOR_01.ROOM_001.LT.ON">
+<Property id="FilteringPeriod">0</Property>
+</Item>
+</Collection>
+<Collection type="Trends_Database" id="U_DB1">
+<Item id="BUILDING.FLOOR_01.ROOM_001.LT.ON">
+<Property id="Primary">0</Property>
+</Item>
+</Collection>
+<Collection type="Trends_Proprietary" id="PROP_UNIT01">
+<Item id="BUILDING.FLOOR_01.ROOM_002.AC.TEMP">
+<Property id="FilteringPeriod">0</Property>
+</Item>
+</Collection>
+<Collection type="Trends_Database" id="U_DB1">
+<Item id="BUILDING.FLOOR_01.ROOM_002.AC.TEMP">
+<Property id="Primary">0</Property>
+</Item>
+</Collection>
+<Collection type="Trends_Proprietary" id="PROP_UNIT01">
+<Item id="BUILDING.FLOOR_01.ROOM_002.LT.ON">
+<Property id="FilteringPeriod">0</Property>
+</Item>
+</Collection>
+<Collection type="Trends_Database" id="U_DB1">
+<Item id="BUILDING.FLOOR_01.ROOM_002.LT.ON">
+<Property id="Primary">0</Property>
+</Item>
+</Collection>
+<Collection type="Trends_Proprietary" id="PROP_UNIT01">
+<Item id="BUILDING.FLOOR_02.ROOM_001.AC.TEMP">
+<Property id="FilteringPeriod">0</Property>
+</Item>
+</Collection>
+<Collection type="Trends_Database" id="U_DB1">
+<Item id="BUILDING.FLOOR_02.ROOM_001.AC.TEMP">
+<Property id="Primary">0</Property>
+</Item>
+</Collection>
+<Collection type="Trends_Proprietary" id="PROP_UNIT01">
+<Item id="BUILDING.FLOOR_02.ROOM_001.LT.ON">
+<Property id="FilteringPeriod">0</Property>
+</Item>
+</Collection>
+<Collection type="Trends_Database" id="U_DB1">
+<Item id="BUILDING.FLOOR_02.ROOM_001.LT.ON">
+<Property id="Primary">0</Property>
+</Item>
+</Collection>
+<Collection type="Trends_Proprietary" id="PROP_UNIT01">
+<Item id="BUILDING.FLOOR_02.ROOM_002.AC.TEMP">
+<Property id="FilteringPeriod">5</Property>
+</Item>
+</Collection>
+<Collection type="Trends_Database" id="U_DB1">
+<Item id="BUILDING.FLOOR_02.ROOM_002.AC.TEMP">
+<Property id="Primary">0</Property>
+</Item>
+</Collection>
+<Collection type="Trends_Proprietary" id="PROP_UNIT01">
+<Item id="BUILDING.FLOOR_02.ROOM_002.LT.ON">
+<Property id="FilteringPeriod">0</Property>
+</Item>
+</Collection>
+<Collection type="Trends_Database" id="U_DB1">
+<Item id="BUILDING.FLOOR_02.ROOM_002.LT.ON">
+<Property id="Primary">0</Property>
+</Item>
+</Collection>
+<Collection type="LogFilters_Proprietary" id="PROP_UNIT01">
+<Item id="LogList01">
+<Property id="FilterEventMask_ExecuteProgram">-1</Property>
+<Property id="FilterEventMask_ExpMaskedAlarm">-1</Property>
+<Property id="FilterEventMask_InhibitedAlarm">-1</Property>
+<Property id="FilterEventMask_NonAccessAlarm">-1</Property>
+<Property id="FilterEventMask_ProgMaskedAlarm">-1</Property>
+<Property id="FilterEventMask_Unavailable">-1</Property>
+<Property id="FilterEventMask_UserMaskedAlarm">-1</Property>
+<Property id="FilterEventMask_VariableMaskedAlarm">-1</Property>
+</Item>
+</Collection>
+</Group>
+</Import>

@@ -1,0 +1,15 @@
+UNIT,Unit01,10000000,0,,,1,,,1000000,0,0,0,0,0,,"","",,,,0,0,"",1,0,0,0,"",,0,0,0,0,0,,0
+UNIT,DIAGNOSTIC,10000000,0,,,1,,,1000000,0,0,0,0,0,,"","",,,,0,0,"Archives for the system variables",1,0,0,0,"",,0,0,0,0,0,,0
+TRD,BATIMENT.ETAGE_01.PIECE_001.AC.TEMP,0,,0,32768,120,Unit01,1,1,1,0,0,0,0,0,0,0,,,0,0,"",1,1,0
+TRD,BATIMENT.ETAGE_02.PIECE_001.AC.TEMP,0,,0,32768,120,Unit01,1,1,1,0,0,0,0,0,0,0,,,0,0,"",1,1,0
+TRD,BATIMENT.ETAGE_02.PIECE_002.AC.TEMP,0,,0,32768,120,Unit01,1,1,1,0,0,0,0,0,0,0,,,0,0,"",1,1,0
+TRD,System.Localhost.Mimic.OpenCount,0,,60,32768,120,DIAGNOSTIC,1,1,1,0,0,0,0,0,0,0,,,0,0,"",1,1,0
+TRD,System.Localhost.resource.FreeVirtualMemory,0,,60,32768,120,DIAGNOSTIC,1,1,1,0,0,0,0,0,0,0,,,0,0,"",1,1,0
+TRD,System.Localhost.resource.GDI,0,,60,32768,120,DIAGNOSTIC,1,1,1,0,0,0,0,0,0,0,,,0,0,"",1,1,0
+TRD,System.Localhost.resource.Handles,0,,60,32768,120,DIAGNOSTIC,1,1,1,0,0,0,0,0,0,0,,,0,0,"",1,1,0
+TRD,System.Localhost.resource.MemoryUsage,0,,60,32768,120,DIAGNOSTIC,1,1,1,0,0,0,0,0,0,0,,,0,0,"",1,1,0
+TRD,System.Localhost.resource.RAM,0,,60,32768,120,DIAGNOSTIC,1,1,1,0,0,0,0,0,0,0,,,0,0,"",1,1,0
+TRD,System.Localhost.resource.Threads,0,,60,32768,120,DIAGNOSTIC,1,1,1,0,0,0,0,0,0,0,,,0,0,"",1,1,0
+TRD,System.Localhost.resource.User,0,,60,32768,120,DIAGNOSTIC,1,1,1,0,0,0,0,0,0,0,,,0,0,"",1,1,0
+LOG,LogList01,14,32350,5,1,0,0,32768,32768,120,Unit01,,#D/#M/#Y #h:#m:#s #E #T,,,0,0,""
+LOGFORMAT,LogList01,"#@A1,#@A2"

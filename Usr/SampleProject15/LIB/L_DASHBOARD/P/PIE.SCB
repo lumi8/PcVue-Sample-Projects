@@ -1,0 +1,64 @@
+Sub Main()
+	 
+End Sub
+
+Sub PieCalc()
+	
+	dim sRed as str;
+	dim sYellow as str;
+	dim sGreen as str;
+	dim sCyan as str;
+	
+	dim sBranch as str;
+	
+	dim iVal1 as double;
+	dim iVal2 as double;
+	dim iVal3 as double;
+	dim iVal4 as double;
+	
+	dim iSum as double;
+	
+	'print("In Pie Function");
+	
+	sRed = getarg("ARG1");
+	sYellow = getarg("ARG2");
+	sGreen = getarg("ARG3");
+	sCyan = getarg("ARG4");
+	
+	sBranch = getarg("BRANCH");
+	
+	iVal1 = ?sRed;
+	iVal2 = ?sYellow;
+	iVal3 = ?sGreen;
+	iVal4 = ?sCyan;
+	
+	Tree(sBranch);
+	
+	iSum = iVal1 + iVal2 + iVal3 + iVal4;
+	'print(iSum);
+	
+	if (iSum == 0) then
+		VAR_1 = 0;
+		VAR_2 = 0;
+		VAR_3 = 0;
+		VAR_4 = 0;
+	else
+		DIV_1 = (iVal1/iSum)*100;
+		DIV_2 = (iVal2/iSum)*100;
+		DIV_3 = (iVal3/iSum)*100;
+		DIV_4 = (iVal3/iSum)*100;
+	end if
+	
+	if (iSum == 0) then
+		VAR_1 = 0;
+		VAR_2 = 0;
+		VAR_3 = 0;
+		VAR_4 = 0;
+	else
+		VAR_1 = ((iVal1)/iSum)*100;
+		VAR_2 = ((iVal1 + iVal2)/iSum)*100;
+		VAR_3 = ((iVal1 + iVal2 + iVal3)/iSum)*100;
+		VAR_4 = ((iVal1 + iVal2 + iVal3 + iVal4)/iSum)*100;
+	end if
+
+End Sub

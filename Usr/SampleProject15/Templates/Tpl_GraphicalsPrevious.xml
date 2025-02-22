@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Import_Graphic type="Template">
+<Collection type="Mimics" id="BUILDING_FLOOR_01">
+<ObjectItem ObjectId="Mim">
+<Property id="FileName">BUILDING_FLOOR_01_Mim</Property>
+<Property id="Title1"/>
+<Property id="Title2"/>
+<Property id="MimicTemplate_Name">TEMPLATE_DASHBOARD_DARK</Property>
+<Property id="Context Branch">BUILDING.FLOOR_01</Property>
+<Property id="TypeLib"/>
+<Property id="Library"/>
+<Property id="ProgramName_BO"/>
+<Property id="ProgramBranch_BO"/>
+<Property id="ProgramFunction_BO"/>
+<Property id="ProgramArgs_BO"/>
+<Property id="ProgramName_BC"/>
+<Property id="ProgramBranch_BC"/>
+<Property id="ProgramFunction_BC"/>
+<Property id="ProgramArgs_BC"/>
+</ObjectItem>
+<Collection type="Symbols" id="BUILDING_FLOOR_01_ROOM_001">
+<ObjectItem ObjectId="Symbol01">
+<Property id="Name">BUILDING_FLOOR_01_ROOM_001_Symbol01</Property>
+<Property id="Local Branch">ROOM_001</Property>
+<Property id="SymbolTemplate_Name">Room</Property>
+</ObjectItem>
+</Collection>
+<Collection type="Symbols" id="BUILDING_FLOOR_01_ROOM_001_AC">
+<ObjectItem ObjectId="Symbol01">
+<Property id="Name">BUILDING_FLOOR_01_ROOM_001_AC_Symbol01</Property>
+<Property id="Local Branch">ROOM_001.AC</Property>
+<Property id="SymbolTemplate_Name">ac</Property>
+</ObjectItem>
+</Collection>
+<Collection type="Symbols" id="BUILDING_FLOOR_01_ROOM_001_LT">
+<ObjectItem ObjectId="Symbol01">
+<Property id="Name">BUILDING_FLOOR_01_ROOM_001_LT_Symbol01</Property>
+<Property id="Local Branch">ROOM_001.LT</Property>
+<Property id="SymbolTemplate_Name">light</Property>
+</ObjectItem>
+</Collection>
+</Collection>
+<Collection type="Mimics" id="BUILDING_FLOOR_02">
+<ObjectItem ObjectId="Mim">
+<Property id="FileName">BUILDING_FLOOR_02_Mim</Property>
+<Property id="Title1"/>
+<Property id="Title2"/>
+<Property id="MimicTemplate_Name">TEMPLATE_DASHBOARD_DARK</Property>
+<Property id="Context Branch">BUILDING.FLOOR_02</Property>
+<Property id="TypeLib"/>
+<Property id="Library"/>
+<Property id="ProgramName_BO"/>
+<Property id="ProgramBranch_BO"/>
+<Property id="ProgramFunction_BO"/>
+<Property id="ProgramArgs_BO"/>
+<Property id="ProgramName_BC"/>
+<Property id="ProgramBranch_BC"/>
+<Property id="ProgramFunction_BC"/>
+<Property id="ProgramArgs_BC"/>
+</ObjectItem>
+<Collection type="Symbols" id="BUILDING_FLOOR_02_ROOM_001">
+<ObjectItem ObjectId="Symbol01">
+<Property id="Name">BUILDING_FLOOR_02_ROOM_001_Symbol01</Property>
+<Property id="Local Branch">ROOM_001</Property>
+<Property id="SymbolTemplate_Name">Room</Property>
+</ObjectItem>
+</Collection>
+<Collection type="Symbols" id="BUILDING_FLOOR_02_ROOM_001_AC">
+<ObjectItem ObjectId="Symbol01">
+<Property id="Name">BUILDING_FLOOR_02_ROOM_001_AC_Symbol01</Property>
+<Property id="Local Branch">ROOM_001.AC</Property>
+<Property id="SymbolTemplate_Name">ac</Property>
+</ObjectItem>
+</Collection>
+<Collection type="Symbols" id="BUILDING_FLOOR_02_ROOM_001_LT">
+<ObjectItem ObjectId="Symbol01">
+<Property id="Name">BUILDING_FLOOR_02_ROOM_001_LT_Symbol01</Property>
+<Property id="Local Branch">ROOM_001.LT</Property>
+<Property id="SymbolTemplate_Name">light</Property>
+</ObjectItem>
+</Collection>
+<Collection type="Symbols" id="BUILDING_FLOOR_02_ROOM_002">
+<ObjectItem ObjectId="Symbol01">
+<Property id="Name">BUILDING_FLOOR_02_ROOM_002_Symbol01</Property>
+<Property id="Local Branch">ROOM_002</Property>
+<Property id="SymbolTemplate_Name">Room</Property>
+</ObjectItem>
+</Collection>
+<Collection type="Symbols" id="BUILDING_FLOOR_02_ROOM_002_AC">
+<ObjectItem ObjectId="Symbol01">
+<Property id="Name">BUILDING_FLOOR_02_ROOM_002_AC_Symbol01</Property>
+<Property id="Local Branch">ROOM_002.AC</Property>
+<Property id="SymbolTemplate_Name">ac</Property>
+</ObjectItem>
+</Collection>
+<Collection type="Symbols" id="BUILDING_FLOOR_02_ROOM_002_LT">
+<ObjectItem ObjectId="Symbol01">
+<Property id="Name">BUILDING_FLOOR_02_ROOM_002_LT_Symbol01</Property>
+<Property id="Local Branch">ROOM_002.LT</Property>
+<Property id="SymbolTemplate_Name">light</Property>
+</ObjectItem>
+</Collection>
+</Collection>
+<Collection type="Mimics" id="BUILDING_FLOOR_03">
+<ObjectItem ObjectId="Mim">
+<Property id="FileName">BUILDING_FLOOR_03_Mim</Property>
+<Property id="Title1"/>
+<Property id="Title2"/>
+<Property id="MimicTemplate_Name">TEMPLATE_DASHBOARD_DARK</Property>
+<Property id="Context Branch">BUILDING.FLOOR_03</Property>
+<Property id="TypeLib"/>
+<Property id="Library"/>
+<Property id="ProgramName_BO"/>
+<Property id="ProgramBranch_BO"/>
+<Property id="ProgramFunction_BO"/>
+<Property id="ProgramArgs_BO"/>
+<Property id="ProgramName_BC"/>
+<Property id="ProgramBranch_BC"/>
+<Property id="ProgramFunction_BC"/>
+<Property id="ProgramArgs_BC"/>
+</ObjectItem>
+</Collection>
+<Collection type="Mimics" id="BUILDING_FLOOR_04">
+<ObjectItem ObjectId="Mim">
+<Property id="FileName">BUILDING_FLOOR_04_Mim</Property>
+<Property id="Title1"/>
+<Property id="Title2"/>
+<Property id="MimicTemplate_Name">TEMPLATE_DASHBOARD_DARK</Property>
+<Property id="Context Branch">BUILDING.FLOOR_04</Property>
+<Property id="TypeLib"/>
+<Property id="Library"/>
+<Property id="ProgramName_BO"/>
+<Property id="ProgramBranch_BO"/>
+<Property id="ProgramFunction_BO"/>
+<Property id="ProgramArgs_BO"/>
+<Property id="ProgramName_BC"/>
+<Property id="ProgramBranch_BC"/>
+<Property id="ProgramFunction_BC"/>
+<Property id="ProgramArgs_BC"/>
+</ObjectItem>
+</Collection>
+</Import_Graphic>

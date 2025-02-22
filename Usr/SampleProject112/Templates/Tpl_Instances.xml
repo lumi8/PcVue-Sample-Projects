@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<InstancesRoot SchemaVersion="10.0.0">
+<TopologyTree Name="SampleProject112">
+<Branch/>
+<ObjectInstancesList/>
+<TemplatesList>
+<TemplateInstance Name="BUILDING">
+<Branch>BUILDING</Branch>
+<OriginTemplateName/>
+<ObjectInstancesList/>
+<TemplatesList>
+<TemplateInstance Name="FLOOR_02">
+<Branch>FLOOR_02</Branch>
+<OriginTemplateName>FLOOR</OriginTemplateName>
+<ObjectInstancesList/>
+<TemplatesList>
+<TemplateInstance Name="ROOM_002">
+<Branch>ROOM_002</Branch>
+<OriginTemplateName>ROOM</OriginTemplateName>
+<ObjectInstancesList/>
+<TemplatesList/>
+</TemplateInstance>
+<TemplateInstance Name="ROOM_001">
+<Branch>ROOM_001</Branch>
+<OriginTemplateName>ROOM</OriginTemplateName>
+<ObjectInstancesList/>
+<TemplatesList/>
+</TemplateInstance>
+</TemplatesList>
+</TemplateInstance>
+<TemplateInstance Name="FLOOR_01">
+<Branch>FLOOR_01</Branch>
+<OriginTemplateName>FLOOR</OriginTemplateName>
+<ObjectInstancesList/>
+<TemplatesList>
+<TemplateInstance Name="ROOM_001">
+<Branch>ROOM_001</Branch>
+<OriginTemplateName>ROOM</OriginTemplateName>
+<ObjectInstancesList/>
+<TemplatesList/>
+</TemplateInstance>
+<TemplateInstance Name="ROOM_002">
+<Branch>ROOM_002</Branch>
+<OriginTemplateName>ROOM</OriginTemplateName>
+<ObjectInstancesList/>
+<TemplatesList/>
+</TemplateInstance>
+</TemplatesList>
+</TemplateInstance>
+</TemplatesList>
+</TemplateInstance>
+</TemplatesList>
+</TopologyTree>
+</InstancesRoot>
+</root>

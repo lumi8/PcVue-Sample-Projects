@@ -1,0 +1,69 @@
+ASCII32
+W,BEGIN,"Help.syn","Mimic1",""
+	TEMPLATE,"",0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+	POSITION,-1,-1
+	SIZE,803,826,803,826,0,0,0,1849,1024,787,787
+	BACKCOLOREX,240,240,240,0,0,0
+	TITLE,1,"Aide","Help"
+	STYLE,1,0,0,1,0,0,0,1,0,1,0,1,0,0,0,0,0
+	GRIDEX,1,1,8,8,100,100,100,0,0,0
+	LAYERS,65535
+	RIGHTS,0,1,0.000000,64.000000,1,65535,0,0
+	INCLUDED,0,0,0,0,0
+	LINK,1,"","","",""
+	LINK,2,"","","",""
+	LINK,3,"","","",""
+	LINK,4,"","","",""
+	LINK,5,"","","",""
+	LINK,6,"","","",""
+	LINK,7,"","","",""
+	LINK,8,"","","",""
+	LINK,9,"","","",""
+	LINK,10,"","","",""
+	TABS,0,3,0,0,500,500,0,0,-1,3,16,16,0,FONT,1,FONT,1
+	NAV,0,0,0,100,100,0,0
+	BACKBMP,"",0,0
+	BACKOBJECT,"",0,0
+	BEFORE_OPEN,"","","",""
+	BEFORE_CLOSE,"","","",""
+	EVENTS,1
+	BINOBJ,"Help.syn.binary"
+W,END
+VBA_REFERENCES,BEGIN
+	"stdole", 2, 0, "{00020430-0000-0000-C000-000000000046}"
+VBA_REFERENCES,END
+FONTS,BEGIN
+	FONT,1,16,7,700,0,0,"System",0,0
+	FONT,2,-21,0,400,0,0,"Arial",0,1
+	FONT,3,-27,0,700,0,0,"Arial",0,0
+FONTS,END
+COLORS,BEGIN
+	COLOREX,1,0,0,0,0,0,0
+	COLOREX,2,0,0,0,0,0,1
+	COLOREX,3,255,0,255,0,0,0
+COLORS,END
+O,BEGIN,T,"Text1"
+	B,1,52,785,76,1,52,65535,0,6400,0,1,0,0,0,1,0,-1
+	ST,0,1,COLOR,1,COLOR,1,0,0,COLOR,2,0,COLOR,2,0,COLOR,1,0,COLOR,1
+	PP,1,1,52,0,0,FONT,2,"Version PcVue de dÇveloppement 15.2",84,FONT,2,"PcVue development version 15.2",36
+O,END
+O,BEGIN,T,"Text2"
+	B,1,84,785,136,1,84,65535,0,6400,0,1,0,0,0,1,0,-1
+	ST,0,1,COLOR,1,COLOR,1,0,0,COLOR,2,0,COLOR,2,0,COLOR,1,0,COLOR,1
+	PP,1,1,84,0,0,FONT,2,"Contient des symboles, des programmes, des modäles Application Architect, des images.",84,FONT,2,"Contains symbols, programs, Application Architect templates, images.",84
+O,END
+O,BEGIN,T,"Text3"
+	B,1,0,785,36,1,0,65535,0,6400,0,1,0,0,0,1,0,-1
+	ST,0,1,COLOR,1,COLOR,1,0,0,COLOR,2,0,COLOR,2,0,COLOR,1,0,COLOR,1
+	PP,1,1,0,0,0,FONT,3,"Librairie L_General",37,FONT,3,"L_General library",37
+O,END
+O,BEGIN,T,"Text4"
+	B,1,140,785,216,1,140,65535,0,6400,0,1,0,0,0,1,0,-1
+	ST,0,1,COLOR,1,COLOR,1,0,0,COLOR,2,0,COLOR,2,0,COLOR,1,0,COLOR,1
+	PP,1,1,140,0,0,FONT,2,"Vous trouverez de l'aide sur l'utilisation de cette bibliothäque dans la partie Documentation des modäles de l'Application Architect.",84,FONT,2,"Help on using this library can be found in the Template Documentation section of the Application Architect.",84
+O,END
+O,BEGIN,BM,"Bitmap2"
+	B,93,192,693,782,93,782,65535,0,6400,0,1,0,0,0,1,0,-1
+	ST,5,1,COLOR,1,COLOR,1,1,0,COLOR,2,0,COLOR,2,0,COLOR,1,0,COLOR,1
+	PP,"L_General/Help.png",0,COLOR,3,"","",1,1,0,255
+O,END

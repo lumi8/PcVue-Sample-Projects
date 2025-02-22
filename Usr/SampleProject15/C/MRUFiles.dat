@@ -1,0 +1,17 @@
+File,1,"L_VariableTracking/VariableTrackingPopup.syn","",1
+File,1,"POP_AC","BUILDING.FLOOR_01.ROOM_001.AC",1
+File,1,"BUILDING_FLOOR_01_Mim","BUILDING.FLOOR_01",1
+File,1,"Mimic 01","",1
+File,1,"Alarms","",1
+File,1,"BUILDING_FLOOR_02_Mim","BUILDING.FLOOR_02",1
+File,1,"Settings","",1
+File,1,"Dashboard","",1
+File,1,"Logs","",1
+File,1,"Trends","",1
+File,1,"Mimic 02","",1
+File,1,"L_General/Help.syn","",1
+File,1,"Mimic 03","",1
+File,1,"POP_AC","BUILDING.FLOOR_01.ROOM_002.AC",1
+File,1,"POP_AC","BUILDING.FLOOR_02.ROOM_002.AC",1
+File,1,"POP_AC","BUILDING.FLOOR_02.ROOM_001.AC",1
+

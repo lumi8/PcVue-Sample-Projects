@@ -1,0 +1,55 @@
+'PROGRAM : INIT.scb
+'Executed at start-up
+'Load and execute all programs at start up
+
+
+sub main()
+
+Dim ret as integer;
+'If G_TraceEnable=1, the global function G_Trace will display a message when used
+G_TraceEnable=1;
+G_LogTraceEnable=0;
+'The following instructions may be used to preload and execute any programs at start-up :
+
+
+'Example of a dummy program loaded
+ret=PROGRAM("PRELOAD","PROGLOADED.scb","");
+if (ret == 1) then
+	G_Trace("INIT","Main","Program PROGLOADED.scb successfully preloaded");
+else
+	G_Trace("INIT","Main","Program PROGLOADED.scb not preloaded");
+end if
+
+'Example of a dummy program loaded and executed
+ret=PROGRAM("START","PROGEXECUTED.SCB","");
+if (ret == 1) then
+	G_Trace("INIT","Main","Program PROGEXECUTED.scb successfully preloaded and executed");
+else
+	G_Trace("INIT","Main","Program PROGEXECUTED.scb not preloaded and not executed");
+end if
+
+'Program loaded and executed to initialise Variable Tracking library
+ret=PROGRAM("START","L_VariableTracking/INIT_Tracking.scb","");
+if (ret == 1) then
+	G_Trace("INIT","Main","Program L_VariableTracking/INIT_Tracking.scb successfully preloaded and executed");
+else
+	G_Trace("INIT","Main","Program L_VariableTracking/INIT_Tracking.scb not preloaded and not executed");
+end if
+
+'Program loaded and executed to initialise Variable simulation
+ret=PROGRAM("START","SIMU.SCB","");
+if (ret == 1) then
+	G_Trace("INIT","Main","Program SIMU.SCB successfully preloaded and executed");
+else
+	G_Trace("INIT","Main","Program SIMU.SCB not preloaded and not executed");
+end if
+
+'Program loaded and executed to initialise Variable simulation
+ret=PROGRAM("START","L_DASHBOARD/DASHBOARD.SCB","");
+if (ret == 1) then
+	G_Trace("INIT","Main","Program L_DASHBOARD/DASHBOARD.SCB successfully preloaded and executed");
+else
+	G_Trace("INIT","Main","Program L_DASHBOARD/DASHBOARD.SCB not preloaded and not executed");
+end if
+
+end sub

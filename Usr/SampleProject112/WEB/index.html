@@ -1,0 +1,86 @@
+<HTML>
+<HEAD>
+    <TITLE>WebVue</TITLE>
+    <script src="deployJava.js" type="text/javascript"></script>         
+</HEAD>
+
+<BODY>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+    
+    <div id="noplugin"></div>
+    <div id="debug"></div>
+
+    <SCRIPT>
+        
+        var no_plugin = "<h2>Welcome to WebVue !</h2>\n"
+	+ "\n"
+	+ "<p>\n"
+	+ "The WebVue Java applet cannot be launched. The Java platform has either not been registered with your web browser or it is not installed on your system.<BR />\n"
+	+ "This component is required to run WebVue.<br />\n"
+	+ "Before the first use of WebVue the Java Runtime Environment (JRE) needs to be installed.<br />\n"
+	+ "<br />\n"
+	+ "If the plugin is available on your platform but not activated you will see a message at the top or at the bottom of this page which allows you to activate the Java Runtime Plugin or the Java Deployment Toolkit right now.<br />\n"
+	+ "<br />\n"
+	+ "Otherwise, please proceed as explained in the following section...\n"
+	+ "</p>\n"
+	+ "\n"
+	+ "\n"
+	+ "<p>\n"
+	+ "Please install the Java Runtime Environment. It is available from the following sources:<br />\n"
+	+ "</p>\n"
+	+ "\n"
+	+ "<ul>\n"
+	+ "<li>On the Supervisor’s distribution media. (32-bit version only)</li>\n"
+	+ "<LI>As a download from the <A href=\"/classes/jre-8u91-windows-i586.exe\">WebVue Server</A> (32-bit version only)</LI>\n"
+	+ "<li>As a download from <A href=\"http://www.oracle.com/technetwork/java/javase/downloads/index.html\">Oracle's Web Site</A></li>\n"
+	+ "</ul>\n"
+	+ "\n"
+	+ "<p>\n"
+	+ "As soon as the Java Plug-in is installed and activated, please click on the <A href=\"javascript:location.reload()\">Refresh</A> button.\n"
+	+ "</p>\n"
+	+ "\n"
+	+ "<p>\n"
+	+ "If you are still experiencing problems please refer to the Supervisor’s help or contact your support agency.\n"
+	+ "</p>";
+        
+        var attributes = {
+            code: 'svfc/launcher/WebVueClient.class',
+            archive: 'AiWebVue.jar',
+            codebase: '/classes',
+            width: '100%',
+            height: '100%',
+            align: 'top',
+            vspace: '0px',
+            hspace: '0px'
+        };
+
+        var parameters = {
+            permissions: 'sandbox'
+        };
+
+        var version = '1.6';
+        var noPluginPanel = document.getElementById('noplugin');
+        var debugPanel = document.getElementById('debug');
+
+        if (deployJava.isPluginInstalled()) {
+            noPluginPanel.parentNode.removeChild(noPluginPanel);
+            debugPanel.parentNode.removeChild(debugPanel);
+            deployJava.runApplet(attributes, parameters, version);			
+        } else {
+            noPluginPanel.innerHTML = no_plugin;
+            debugPanel.innerHTML = 
+			'-- Information --<br />' + 
+			'Browser: ' + deployJava.getBrowser() + '<br />' +
+			'Installed JREs: ' + deployJava.getJREs() + '<br />' +
+			'Is Next-Gen plugin: ' + deployJava.isPlugin2();
+        }	
+        
+</SCRIPT>
+
+</BODY>
+</HTML>

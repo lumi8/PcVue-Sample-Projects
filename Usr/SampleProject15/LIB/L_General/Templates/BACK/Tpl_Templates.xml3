@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<TemplatesRoot Name="" SchemaVersion="12.1.0">
+<Library Name="L_General">
+<CategoriesList/>
+<TemplatesList>
+<Template Name="TRENDS">
+<AutoNaming_Prefix/>
+<AutoNaming_StartValue>1</AutoNaming_StartValue>
+<AutoNaming_FixedDigits>2</AutoNaming_FixedDigits>
+<AutoNaming_Step>1</AutoNaming_Step>
+<Enable_Instance>true</Enable_Instance>
+<ParametersList/>
+<TemplatesList/>
+<ObjectsList>
+<Object Name="Cancel">
+<InternalType>2</InternalType>
+<SvType>94</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="DescriptionLang0" Reset="false" Substitute="false">Pour annuler un rafraichissement des tendances</Property>
+<Property id="DescriptionLang1" Reset="false" Substitute="false">To cancel a trends refresh</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="ComboBoxIndex">
+<InternalType>2</InternalType>
+<SvType>2</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="Command" Reset="false" Substitute="false">-1</Property>
+<Property id="Saved" Reset="false" Substitute="false">-1</Property>
+<Property id="Type" Reset="false" Substitute="false">2</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="ConfigFileName">
+<InternalType>2</InternalType>
+<SvType>3</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="InitialValue" Reset="false" Substitute="true">=Inst.FullBranch + ".Config.txt"</Property>
+<Property id="Saved" Reset="false" Substitute="false">-1</Property>
+<Property id="Type" Reset="false" Substitute="false">3</Property>
+<Property id="WithInitialValue" Reset="false" Substitute="false">-1</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="ConfigName">
+<InternalType>2</InternalType>
+<SvType>3</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="Command" Reset="false" Substitute="false">-1</Property>
+<Property id="Saved" Reset="false" Substitute="false">-1</Property>
+<Property id="Type" Reset="false" Substitute="false">3</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="ProgressBar">
+<InternalType>2</InternalType>
+<SvType>95</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="Maximum" Reset="false" Substitute="false">100</Property>
+<Property id="Type" Reset="false" Substitute="false">2</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="TimeToUpdateTrends">
+<InternalType>2</InternalType>
+<SvType>95</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="Maximum" Reset="false" Substitute="false">99999999999999</Property>
+<Property id="Type" Reset="false" Substitute="false">2</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="TrendIdentity">
+<InternalType>2</InternalType>
+<SvType>3</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="InitialValue" Reset="false" Substitute="true">L_General/TrendViewerID</Property>
+<Property id="Saved" Reset="false" Substitute="false">-1</Property>
+<Property id="Type" Reset="false" Substitute="false">3</Property>
+<Property id="WithInitialValue" Reset="false" Substitute="false">-1</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="TrendListConfig">
+<DescriptionLang1>Desc Symbol01</DescriptionLang1>
+<InternalType>4</InternalType>
+<SvType>5</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="SymbolTemplate_Name" Reset="false" Substitute="false">L_General/TrendListConfig.sym</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="TrendsFileName">
+<InternalType>2</InternalType>
+<SvType>3</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="InitialValue" Reset="false" Substitute="true">=Inst.FullBranch + ".VarList.txt"</Property>
+<Property id="Saved" Reset="false" Substitute="false">-1</Property>
+<Property id="Type" Reset="false" Substitute="false">3</Property>
+<Property id="WithInitialValue" Reset="false" Substitute="false">-1</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+</ObjectsList>
+<InheritedTemplatesList/>
+</Template>
+</TemplatesList>
+</Library>
+</TemplatesRoot>
+</root>

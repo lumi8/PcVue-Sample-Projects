@@ -1,0 +1,12 @@
+UNIT,Unit01,10000000,0,,,1,,,1000000,0,0,0,0,0,,"","",,,,0,0,"",1,0,0,0,"",,0,0,0,0,0,,0
+UNIT,DIAGNOSTIC,10000000,0,,,1,,,1000000,0,0,0,0,0,,"","",,,,0,0,"Archives for the system variables",1,0,0,0,"",,0,0,0,0,0,,0
+TRD,System.Localhost.Mimic.OpenCount,1,,60,32768,120,DIAGNOSTIC,1,1,1,0,0,0,0,0,0,0,,,0,0,"",1,1,0
+TRD,System.Localhost.resource.FreeVirtualMemory,1,,60,32768,120,DIAGNOSTIC,1,1,1,0,0,0,0,0,0,0,,,0,0,"",1,1,0
+TRD,System.Localhost.resource.GDI,1,,60,32768,120,DIAGNOSTIC,1,1,1,0,0,0,0,0,0,0,,,0,0,"",1,1,0
+TRD,System.Localhost.resource.Handles,1,,60,32768,120,DIAGNOSTIC,1,1,1,0,0,0,0,0,0,0,,,0,0,"",1,1,0
+TRD,System.Localhost.resource.MemoryUsage,1,,60,32768,120,DIAGNOSTIC,1,1,1,0,0,0,0,0,0,0,,,0,0,"",1,1,0
+TRD,System.Localhost.resource.RAM,1,,60,32768,120,DIAGNOSTIC,1,1,1,0,0,0,0,0,0,0,,,0,0,"",1,1,0
+TRD,System.Localhost.resource.Threads,1,,60,32768,120,DIAGNOSTIC,1,1,1,0,0,0,0,0,0,0,,,0,0,"",1,1,0
+TRD,System.Localhost.resource.User,1,,60,32768,120,DIAGNOSTIC,1,1,1,0,0,0,0,0,0,0,,,0,0,"",1,1,0
+LOG,LogList01,14,32350,5,1,0,0,32768,32768,120,Unit01,,#D/#M/#Y #h:#m:#s #E #T,,,0,0,""
+LOGFORMAT,LogList01,"#@A1,#@A2"

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Note: For remote access replace localhost with public IP address of this PC and portnumber under which IIS is available! -->
+<jnlp spec="1.0+" codebase="https://localhost/classes" href="https://localhost/SAMPLEPROJECT112/webvue.jnlp">
+
+    <information>
+        <title>WebVue</title>
+        <vendor>Arc Informatique</vendor>
+    </information>
+
+    <resources>
+        <j2se version="1.7+" href="http://java.sun.com/products/autodl/j2se"/>
+        <jar href="AiWebVue-signed.jar" main="true" />
+    </resources>
+
+    <security>
+        <all-permissions/>
+    </security>
+
+    <applet-desc
+        documentBase="https://localhost/SAMPLEPROJECT112/"
+        name="WebVue"
+        main-class="svfc.launcher.WebVueClient"
+        width="1680"
+        height="1050" />
+
+    <update check="background"/>
+
+</jnlp>

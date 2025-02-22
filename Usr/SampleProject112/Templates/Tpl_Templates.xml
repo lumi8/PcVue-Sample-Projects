@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<TemplatesRoot Name="" SchemaVersion="10.0.0">
+<Template Name="AC">
+<AutoNaming_Prefix/>
+<AutoNaming_StartValue>1</AutoNaming_StartValue>
+<AutoNaming_FixedDigits>2</AutoNaming_FixedDigits>
+<AutoNaming_Step>1</AutoNaming_Step>
+<Enable_Instance>true</Enable_Instance>
+<ParametersList/>
+<TemplatesList/>
+<ObjectsList>
+<Object Name="CONSIGNE">
+<InternalType>2</InternalType>
+<SvType>2</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="Command" Reset="false" Substitute="false">-1</Property>
+<Property id="Type" Reset="false" Substitute="false">2</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="ON">
+<InternalType>2</InternalType>
+<SvType>1</SvType>
+<ObjectItem SubType="">
+<Properties/>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="Symbol01">
+<DescriptionLang1>Desc Symbol01</DescriptionLang1>
+<InternalType>4</InternalType>
+<SvType>5</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="SymbolTemplate_Name" Reset="false" Substitute="false">AC</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="INFO">
+<InternalType>2</InternalType>
+<SvType>3</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="UseExtendedAttributes" Reset="false" Substitute="false">-1</Property>
+<Property id="Type" Reset="false" Substitute="false">3</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="TEMP">
+<InternalType>2</InternalType>
+<SvType>2</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="Type" Reset="false" Substitute="false">2</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList>
+<Object Name="Trend02">
+<InternalType>5</InternalType>
+<SvType>6</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="Primary" Reset="false" Substitute="false">0</Property>
+<Property id="LogicalGroupName" Reset="false" Substitute="false">U_DB1</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="Trend01">
+<InternalType>5</InternalType>
+<SvType>7</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="TemplateArchiveUnit_Name" Reset="false" Substitute="false">Unit01</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="Thresholds">
+<InternalType>5</InternalType>
+<SvType>13</SvType>
+<ObjectItem SubType="ThresholdSystem_ThresholdSystem_2">
+<Properties>
+<Property id="Threshold_1" Reset="false" Substitute="false">-1</Property>
+<Property id="Threshold_0" Reset="false" Substitute="false">0</Property>
+<Property id="Threshold_3" Reset="false" Substitute="false">0</Property>
+<Property id="Threshold_2" Reset="false" Substitute="false">-1</Property>
+<Property id="ThresholdValue_1" Reset="false" Substitute="false">25</Property>
+<Property id="ThresholdValue_2" Reset="false" Substitute="false">15</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList>
+<Object Name="haut">
+<InternalType>5</InternalType>
+<SvType>14</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="Alarm" Reset="false" Substitute="false">-1</Property>
+<Property id="Threshold" Reset="false" Substitute="false">-1</Property>
+<Property id="ThresholdHigh" Reset="false" Substitute="false">-1</Property>
+<Property id="Log0_1" Reset="false" Substitute="false">-1</Property>
+<Property id="ThresholdSystem" Reset="false" Substitute="false">2</Property>
+<Property id="ThresholdTypeInSystem" Reset="false" Substitute="false">1</Property>
+<Property id="Log" Reset="false" Substitute="false">-1</Property>
+<Property id="Log1_0" Reset="false" Substitute="false">-1</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="bas">
+<InternalType>5</InternalType>
+<SvType>14</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="Alarm" Reset="false" Substitute="false">-1</Property>
+<Property id="Threshold" Reset="false" Substitute="false">-1</Property>
+<Property id="ThresholdHigh" Reset="false" Substitute="false">0</Property>
+<Property id="Log0_1" Reset="false" Substitute="false">-1</Property>
+<Property id="ThresholdSystem" Reset="false" Substitute="false">2</Property>
+<Property id="ThresholdTypeInSystem" Reset="false" Substitute="false">2</Property>
+<Property id="Log" Reset="false" Substitute="false">-1</Property>
+<Property id="Log1_0" Reset="false" Substitute="false">-1</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+</ObjectsList>
+</Object>
+</ObjectsList>
+</Object>
+</ObjectsList>
+<InheritedTemplatesList/>
+</Template>
+<Template Name="LT">
+<AutoNaming_Prefix/>
+<AutoNaming_StartValue>1</AutoNaming_StartValue>
+<AutoNaming_FixedDigits>2</AutoNaming_FixedDigits>
+<AutoNaming_Step>1</AutoNaming_Step>
+<Enable_Instance>true</Enable_Instance>
+<ParametersList/>
+<TemplatesList/>
+<ObjectsList>
+<Object Name="Symbol01">
+<DescriptionLang1>Desc Symbol01</DescriptionLang1>
+<InternalType>4</InternalType>
+<SvType>5</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="SymbolTemplate_Name" Reset="false" Substitute="false">Lumière</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="ON">
+<InternalType>2</InternalType>
+<SvType>1</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="Log0_1" Reset="false" Substitute="false">-1</Property>
+<Property id="Log" Reset="false" Substitute="false">-1</Property>
+<Property id="Log1_0" Reset="false" Substitute="false">-1</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList>
+<Object Name="Expression01">
+<InternalType>5</InternalType>
+<SvType>19</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="Branch" Reset="false" Substitute="true">=TemplateInstance.FullBranch</Property>
+<Property id="Expression" Reset="false" Substitute="false">CMD</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+<Object Name="Trend01">
+<InternalType>5</InternalType>
+<SvType>7</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="TemplateArchiveUnit_Name" Reset="false" Substitute="false">Unit01</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+</ObjectsList>
+</Object>
+<Object Name="CMD">
+<InternalType>2</InternalType>
+<SvType>1</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="Command" Reset="false" Substitute="false">-1</Property>
+<Property id="InitialValue" Reset="false" Substitute="false">1</Property>
+<Property id="WithInitialValue" Reset="false" Substitute="false">-1</Property>
+<Property id="Log0_1" Reset="false" Substitute="false">-1</Property>
+<Property id="Log" Reset="false" Substitute="false">-1</Property>
+<Property id="Log1_0" Reset="false" Substitute="false">-1</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+</ObjectsList>
+<InheritedTemplatesList/>
+</Template>
+<Template Name="FLOOR">
+<AutoNaming_Prefix/>
+<AutoNaming_StartValue>1</AutoNaming_StartValue>
+<AutoNaming_FixedDigits>2</AutoNaming_FixedDigits>
+<AutoNaming_Step>1</AutoNaming_Step>
+<Enable_Instance>true</Enable_Instance>
+<ParametersList/>
+<TemplatesList/>
+<ObjectsList>
+<Object Name="Mim">
+<DescriptionLang1>Desc Mimic01</DescriptionLang1>
+<InternalType>3</InternalType>
+<SvType>4</SvType>
+<ObjectItem SubType="">
+<Properties>
+<Property id="MimicTemplate_Name" Reset="false" Substitute="false">ProjectTemplate</Property>
+</Properties>
+</ObjectItem>
+<ObjectsList/>
+</Object>
+</ObjectsList>
+<InheritedTemplatesList/>
+</Template>
+<Template Name="ROOM">
+<AutoNaming_Prefix/>
+<AutoNaming_StartValue>1</AutoNaming_StartValue>
+<AutoNaming_FixedDigits>2</AutoNaming_FixedDigits>
+<AutoNaming_Step>1</AutoNaming_Step>
+<Enable_Instance>true</Enable_Instance>
+<ParametersList/>
+<TemplatesList>
+<IncludedTemplate Name="LT">
+<Branch>LT</Branch>
+<OriginTemplateName>LT</OriginTemplateName>
+</IncludedTemplate>
+<IncludedTemplate Name="AC">
+<Branch>AC</Branch>
+<OriginTemplateName>AC</OriginTemplateName>
+</IncludedTemplate>
+</TemplatesList>
+<ObjectsList/>
+<InheritedTemplatesList/>
+</Template>
+</TemplatesRoot>
+</root>

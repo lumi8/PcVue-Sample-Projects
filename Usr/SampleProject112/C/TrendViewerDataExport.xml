@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--Trend Viewer Data Export Configuration File-->
+<TrendViewerDataExportSettings>
+  <MaxCount_RequestRawDataToProcess>60000</MaxCount_RequestRawDataToProcess>
+  <MaxCount_ResponseData>12000</MaxCount_ResponseData>
+</TrendViewerDataExportSettings>

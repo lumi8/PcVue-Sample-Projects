@@ -1,0 +1,17 @@
+File,1,"HOME","",1
+File,1,"NETWORK","",1
+File,1,"TRENDS","",1
+File,1,"LOGS","",1
+File,1,"ALARMS","",1
+File,1,"Vue 01","",1
+File,1,"Vue 02","",1
+File,1,"Vue 03","",1
+File,1,"BUILDING_FLOOR_02_Mim","BUILDING.FLOOR_02",1
+File,1,"popupAC","BUILDING.FLOOR_01.ROOM_001.AC",1
+File,1,"popupAC","BUILDING.FLOOR_01.ROOM_002.AC",1
+File,1,"BUILDING_FLOOR_01_Mim","BUILDING.FLOOR_01",1
+File,1,"HdsWarning","@System.HDS.DB1.Disconn",1
+File,1,"HdsWarning","System.HDS.DB1.Disconn",1
+File,1,"HdsWarning","",1
+File,1,"popupAC","BUILDING.FLOOR_02.ROOM_002.AC",1
+

@@ -1,0 +1,1 @@
+TREATMENT,GROUPALARM,AlarmSynthesisDIAGNOSTIC,0,,,,1,,,0,29,#TATT1=DIAGNOSTIC,AlarmSyntheses.Resource.HighestPriority_OnAckAlm,AlarmSyntheses.Resource.HighestPriority_OnNoAckAlm,,,,AlarmSyntheses.Resource,Counter_OnNoAckAlm,Counter_OnAckAlm,Counter_OnAlm,Counter_OffNoAckAlm,Counter_OffAckAlm,,,,,,,,,

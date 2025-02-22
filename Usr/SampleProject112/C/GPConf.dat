@@ -1,0 +1,7 @@
+[FILTER\DIAGNOSTIC]
+Description=DIAGNOSTIC
+Sql Cmde= [Attribute01]='DIAGNOSTIC'
+Label_0=DIAGNOSTIC
+Label_1=DIAGNOSTIC
+Mask_0=
+Mask_1=

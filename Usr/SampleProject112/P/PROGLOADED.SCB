@@ -1,0 +1,43 @@
+'PROGRAM : PROGLOADED.scb
+'Loaded at start-up from the program 'INIT.scb'
+
+'[external declaration 1];
+'[external declaration 2];
+'...
+'[external declaration n];
+
+SUB main ()
+'[declaration 1];
+'.
+'[declaration n];
+'[instruction 1];
+'...
+'[instruction n];
+
+END SUB
+
+SUB ouvre()
+
+Window("OPEN", "Pieces", "BUILDING.FLOOR_01", "BUILDING_FLOOR_01_Mim", "BUILDING.FLOOR_01", 0, 0);
+
+
+END SUB
+
+SUB precharge()
+Window("PRELOAD", "BUILDING_FLOOR_01_Mim", "BUILDING.FLOOR_01" );
+Window("PRELOAD", "Pieces", "BUILDING.FLOOR_01", "BUILDING_FLOOR_01_Mim", "BUILDING.FLOOR_01", 0, 0);
+
+END SUB
+'...
+
+SUB loginadmin()
+System("LOGIN", "Admin01", "Administrator01");
+
+END SUB
+
+SUB loginope()
+System("LOGIN", "WebVue01", "WebClient01");
+
+END SUB
+
+
