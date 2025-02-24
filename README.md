@@ -1,9 +1,14 @@
 # PcVue-Sample-Projects
 The sample projects proposed on the knowledge base are now maintained thanks to this public repository.
 Contributions are appreciated. Please read this article first : https://www.pcvue.com/helpcenter/knowledge-base/how-to-create-a-sample-project/
+---
+  - [KB0373 SP\_Alarmsound](#kb0373-sp_alarmsound)
+  - [KB0376 SP\_AlarmDisplay](#kb0376-sp_alarmdisplay)
 
 ---
-## KB0373 SP_Alarmsound
+
+
+## [KB0373 SP_Alarmsound](#KB0373-sp_alarmsound)
 
 ### Description:
 
@@ -14,7 +19,7 @@ Example of playing a sound when an alarm appears. The sound repeats until it is 
 Exemple de diffusion d'un son lorsqu'une alarme apparaît. Le son est répété jusqu'à ce qu'il soit annulé. Le son peut être sélectionné dans une liste. Les niveaux d'alarme qui génèrent le son peuvent être sélectionnés. La configuration du son d'alarme est enregistrée dans un fichier qui est chargé au démarrage du projet.
 
 ---
-## KB0376 SP_AlarmDisplay
+## [KB0376 SP_AlarmDisplay](#KB0376-sp_alarmdisplay)
 
 ### Description:
 
